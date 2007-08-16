@@ -1,4 +1,4 @@
-<project name="Pentaho Report Design Wizard Core" default="compile">
+<project name="Pentaho Report Design Wizard Core" default="dist">
 
 	<description>Pentaho Report Design Wizard Core</description>
 	<property file="build.properties" />
@@ -50,7 +50,7 @@
 
 	<target name="compile" depends="init">
 		<!-- Compile all java classes -->
-		<javac destdir="bin" debug="false" optimize="true" deprecation="true" fork="true">
+		<javac destdir="bin" debug="false" optimize="true" deprecation="true" fork="true" source="1.4" target="1.4">
 			<classpath>
 				<path refid="classpath" />
 			</classpath>

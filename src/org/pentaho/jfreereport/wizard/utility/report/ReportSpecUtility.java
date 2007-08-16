@@ -43,15 +43,7 @@ public class ReportSpecUtility {
   public static final String MESSAGE_FIELD = "message-field";
   public static final String LABEL = "label";
   
-  public static final String[] REPORT_SPEC_FILTERS = new String[] { "*.xreportspec", "*.xml", "*.xreportarc" }; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 
-  public static final String[] REPORT_ARCHIVE_FILTERS = new String[] { ".xreportarc", ".zip" }; //$NON-NLS-1$ //$NON-NLS-2$
-
-  public static final String[] XML_FILTER_STRINGS = new String[] { "*.xml", "*.XML" }; //$NON-NLS-1$ //$NON-NLS-2$
-
-  public static final String[] IMAGE_FILTER_STRINGS = new String[] { "*.jpg", "*.gif", "*.png", "*.bmp" }; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
-
-  public static final String[] KETTLE_TRANSFORMATION_FILE = new String[] { "*.ktr" }; // $NON_NLS-1$
 
   public static void copyFile(String input, String output) {
     try {

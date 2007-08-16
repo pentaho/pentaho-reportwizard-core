@@ -5,5 +5,8 @@
 	<classpathentry kind="lib" path="lib/dom4j-1.6.1.jar"/>
 	<classpathentry kind="lib" path="lib/castor-1.0.5.jar"/>
 	<classpathentry kind="lib" path="lib/commons-lang-2.2.jar"/>
+	<classpathentry kind="lib" path="lib/pentaho-reporting-engine-classic-0.8.9-pre8.jar"/>
+	<classpathentry kind="lib" path="lib/pentaho-reporting-engine-classic-ext-0.8.9-pre8.jar"/>
+	<classpathentry kind="lib" path="lib/jcommon-1.0.10.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
