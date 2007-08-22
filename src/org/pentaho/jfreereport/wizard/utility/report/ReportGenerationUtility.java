@@ -908,132 +908,65 @@ public class ReportGenerationUtility {
   }
 
   /*
-   * public static void addChartElement(ReportSpec reportSpec, Field groupField, Element functionNode, Element
-   * parentElement, int y) { // image url Chart chart = reportSpec.getChart(); if (groupField != null) { chart =
-   * groupField.getChart(); } //<drawable-field x="0" y="0" fieldname="BarChart" width="600" height="400"/> Element
-   * drawableField = parentElement.addElement("drawable-field"); //$NON-NLS-1$ drawableField.addAttribute("x",
-   * (reportSpec.getHorizontalOffset() + chart.getHorizontalOffset()) + "%"); //$NON-NLS-1$ //$NON-NLS-2$
-   * drawableField.addAttribute("y", y + ""); //$NON-NLS-1$ //$NON-NLS-2$ drawableField.addAttribute("height",
-   * chart.getHeight() + ""); //$NON-NLS-1$ //$NON-NLS-2$ drawableField.addAttribute("width", chart.getWidth() + "");
-   * //$NON-NLS-1$ //$NON-NLS-2$ String chartName = groupField != null ? groupField.getName() + "Chart" : "ReportChart";
-   * //$NON-NLS-1$ //$NON-NLS-2$ String dataSourceName = groupField != null ? groupField.getName() + "ChartDataSource" :
-   * "ReportChartDataSource"; //$NON-NLS-1$ //$NON-NLS-2$ drawableField.addAttribute("fieldname", chartName);
-   * //$NON-NLS-1$ //imageurl.addAttribute("dynamic", "true"); //$NON-NLS-1$ //$NON-NLS-2$ //
-   * imageurl.addAttribute("scale", "true"); //imageurl.addAttribute("keepAspectRatio", "true"); //$NON-NLS-1$
-   * //$NON-NLS-2$ // collector Element collectorFunctionElement = functionNode.addElement("expression"); //$NON-NLS-1$
-   * collectorFunctionElement.addAttribute("name", dataSourceName); //$NON-NLS-1$ Element collectorFunctionProperties =
-   * collectorFunctionElement.addElement("properties"); //$NON-NLS-1$ // expression Element chartExpressionElement =
-   * functionNode.addElement("expression"); //$NON-NLS-1$ chartExpressionElement.addAttribute("name", chartName);
-   * //$NON-NLS-1$ Element chartFunctionProperties = chartExpressionElement.addElement("properties"); //$NON-NLS-1$ int
-   * type = chart.getType().getType(); if (type == ChartType.AREA_TYPE || type == ChartType.BAR_TYPE || type ==
-   * ChartType.LINE_TYPE || type == ChartType.PIE_MULTI_TYPE || type == ChartType.WATERFALL_TYPE) {
-   * collectorFunctionElement.addAttribute("class",
-   * "org.pentaho.plugin.jfreereport.reportcharts.CategorySetCollectorFunction"); //$NON-NLS-1$ //$NON-NLS-2$ Element
-   * categoryColumnProperty = collectorFunctionProperties.addElement("property"); //$NON-NLS-1$
-   * categoryColumnProperty.addAttribute("name", "categoryColumn"); //$NON-NLS-1$ //$NON-NLS-2$
-   * categoryColumnProperty.setText(chart.getCategoryColumn()); String series[] =
-   * ReportSpecUtility.getSeriesColumns(chart); for (int i = 0; i < series.length; i++) { Element seriesProperty =
-   * collectorFunctionProperties.addElement("property"); //$NON-NLS-1$ seriesProperty.addAttribute("name", "seriesName[" +
-   * i + "]"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ seriesProperty.setText(series[i]); } String values[] =
-   * chart.getValuesColumn(); for (int i = 0; i < values.length; i++) { Element valuesProperty =
-   * collectorFunctionProperties.addElement("property"); //$NON-NLS-1$ valuesProperty.addAttribute("name",
-   * "valueColumn[" + i + "]"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ valuesProperty.setText(values[i]); } if (type ==
-   * ChartType.AREA_TYPE || type == ChartType.BAR_TYPE) { // stacked (only allowed on area/bar Element stackedProperty =
-   * chartFunctionProperties.addElement("property"); //$NON-NLS-1$ stackedProperty.addAttribute("name", "stacked");
-   * //$NON-NLS-1$ //$NON-NLS-2$ stackedProperty.setText(chart.getIsStacked() + ""); //$NON-NLS-1$ } if (type !=
-   * ChartType.PIE_MULTI_TYPE) { // horizontal Element isHorizontalProperty =
-   * chartFunctionProperties.addElement("property"); //$NON-NLS-1$ isHorizontalProperty.addAttribute("name",
-   * "horizontal"); //$NON-NLS-1$ //$NON-NLS-2$ isHorizontalProperty.setText(chart.getIsHorizontal() + "");
-   * //$NON-NLS-1$ // label rotation Element labelRotationProperty = chartFunctionProperties.addElement("property");
-   * //$NON-NLS-1$ labelRotationProperty.addAttribute("name", "labelRotation"); //$NON-NLS-1$ //$NON-NLS-2$
-   * labelRotationProperty.setText(chart.getLabelRotation() + ""); //$NON-NLS-1$ } Series seriesArray[] =
-   * chart.getSeries(); for (int i = 0; i < seriesArray.length; i++) { if (seriesArray[i].getSeriesColor() != null &&
-   * !seriesArray[i].getSeriesColor().equals("")) { //$NON-NLS-1$ Element seriesProperty =
-   * chartFunctionProperties.addElement("property"); //$NON-NLS-1$ seriesProperty.addAttribute("name", "seriesColor[" +
-   * i + "]"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ seriesProperty.setText(seriesArray[i].getSeriesColor()); } } if
-   * (type == ChartType.AREA_TYPE) { chartExpressionElement.addAttribute("class",
-   * "org.pentaho.plugin.jfreereport.reportcharts.AreaChartExpression"); //$NON-NLS-1$ //$NON-NLS-2$ } else if (type ==
-   * ChartType.BAR_TYPE) { chartExpressionElement.addAttribute("class",
-   * "org.pentaho.plugin.jfreereport.reportcharts.BarChartExpression"); //$NON-NLS-1$ //$NON-NLS-2$ } else if (type ==
-   * ChartType.LINE_TYPE) { chartExpressionElement.addAttribute("class",
-   * "org.pentaho.plugin.jfreereport.reportcharts.LineChartExpression"); //$NON-NLS-1$ //$NON-NLS-2$ } else if (type ==
-   * ChartType.PIE_MULTI_TYPE) { chartExpressionElement.addAttribute("class",
-   * "org.pentaho.plugin.jfreereport.reportcharts.MultiPieChartExpression"); //$NON-NLS-1$ //$NON-NLS-2$ } else if (type ==
-   * ChartType.WATERFALL_TYPE) { chartExpressionElement.addAttribute("class",
-   * "org.pentaho.plugin.jfreereport.reportcharts.WaterfallChartExpressions"); //$NON-NLS-1$ //$NON-NLS-2$ } else { //
-   * so on and so forth } } if (type == ChartType.PIE_TYPE || type == ChartType.RING_TYPE) {
-   * collectorFunctionElement.addAttribute("class",
-   * "org.pentaho.plugin.jfreereport.reportcharts.PieSetCollectorFunction"); //$NON-NLS-1$ //$NON-NLS-2$ if (type ==
-   * ChartType.PIE_TYPE) { chartExpressionElement.addAttribute("class",
-   * "org.pentaho.plugin.jfreereport.reportcharts.PieChartExpression"); //$NON-NLS-1$ //$NON-NLS-2$ } else {
-   * chartExpressionElement.addAttribute("class", "org.pentaho.plugin.jfreereport.reportcharts.RingChartExpression");
-   * //$NON-NLS-1$ //$NON-NLS-2$ } String series[] = ReportSpecUtility.getSeriesColumns(chart); if (series.length > 0) {
-   * Element seriesProperty = collectorFunctionProperties.addElement("property"); //$NON-NLS-1$
-   * seriesProperty.addAttribute("name", "seriesColumn"); //$NON-NLS-1$ //$NON-NLS-2$ seriesProperty.setText(series[0]); }
-   * String values[] = chart.getValuesColumn(); if (values.length > 0) { Element valuesProperty =
-   * collectorFunctionProperties.addElement("property"); //$NON-NLS-1$ valuesProperty.addAttribute("name",
-   * "valueColumn"); //$NON-NLS-1$ //$NON-NLS-2$ valuesProperty.setText(values[0]); } // ignoreNulls Element
-   * ignoreNullsProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-   * ignoreNullsProperty.addAttribute("name", "ignoreNulls"); //$NON-NLS-1$ //$NON-NLS-2$
-   * ignoreNullsProperty.setText("true"); //$NON-NLS-1$ // ignoreZeros Element ignoreZerosProperty =
-   * chartFunctionProperties.addElement("property"); //$NON-NLS-1$ ignoreZerosProperty.addAttribute("name",
-   * "ignoreZeros"); //$NON-NLS-1$ //$NON-NLS-2$ ignoreZerosProperty.setText("true"); //$NON-NLS-1$ // Element
-   * pieLabelFormatProperty = chartFunctionProperties.addElement("property"); //
-   * pieLabelFormatProperty.addAttribute("name", "pieLabelFormatProperty"); // pieLabelFormatProperty.setText("{2}"); //
-   * Element pieLegendLabelFormatProperty = chartFunctionProperties.addElement("property"); //
-   * pieLegendLabelFormatProperty.addAttribute("name", "pieLegendLabelFormatProperty"); //
-   * pieLegendLabelFormatProperty.setText("{0}"); // Element explodeSegmentProperty =
-   * chartFunctionProperties.addElement("property"); // explodeSegmentProperty.addAttribute("name", "explodeSegment"); //
-   * explodeSegmentProperty.setText("maxValue"); // Element explodePctProperty =
-   * chartFunctionProperties.addElement("property"); // explodePctProperty.addAttribute("name", "explodePct"); //
-   * explodePctProperty.setText(".20"); } else if (chart.getType().getType() == ChartType.PIE_MULTI_TYPE) { Element
-   * multipieByRowProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-   * multipieByRowProperty.addAttribute("name", "multipieByRow"); //$NON-NLS-1$ //$NON-NLS-2$
-   * multipieByRowProperty.setText("false"); //$NON-NLS-1$ // <property name="multipieByRow">false</property> //
-   * <property name="multipieLabelFormat">{2}</property> } if (groupField != null) { Element groupProperty =
-   * collectorFunctionProperties.addElement("property"); //$NON-NLS-1$ groupProperty.addAttribute("name", "group");
-   * //$NON-NLS-1$ //$NON-NLS-2$ groupProperty.setText(groupField.getName()); } if (chart.getResetGroup() != null &&
-   * !chart.getResetGroup().equals("")) { //$NON-NLS-1$ Element resetGroupProperty =
-   * collectorFunctionProperties.addElement("property"); //$NON-NLS-1$ resetGroupProperty.addAttribute("name",
-   * "resetGroup"); //$NON-NLS-1$ //$NON-NLS-2$ resetGroupProperty.setText(chart.getResetGroup()); } // 3-D Element
-   * is3DProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ is3DProperty.addAttribute("name",
-   * "threeD"); //$NON-NLS-1$ //$NON-NLS-2$ is3DProperty.setText(chart.getIsThreeDimensional() + ""); //$NON-NLS-1$ //
-   * summary only Element summaryOnlyProperty = collectorFunctionProperties.addElement("property"); //$NON-NLS-1$
-   * summaryOnlyProperty.addAttribute("name", "summaryOnly"); //$NON-NLS-1$ //$NON-NLS-2$
-   * summaryOnlyProperty.setText(chart.getIsSummaryOnly() + ""); //$NON-NLS-1$ // data source Element datasourceProperty =
-   * chartFunctionProperties.addElement("property"); //$NON-NLS-1$ datasourceProperty.addAttribute("name",
-   * "dataSource"); //$NON-NLS-1$ //$NON-NLS-2$ datasourceProperty.setText(dataSourceName); // title Element
-   * titleProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ titleProperty.addAttribute("name",
-   * "title"); //$NON-NLS-1$ //$NON-NLS-2$ titleProperty.setText(chart.getTitle()); // background Element
-   * backgroundColorProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-   * backgroundColorProperty.addAttribute("name", "backgroundColor"); //$NON-NLS-1$ //$NON-NLS-2$
-   * backgroundColorProperty.setText(chart.getBackgroundColor()); // show border Element showBorderProperty =
-   * chartFunctionProperties.addElement("property"); //$NON-NLS-1$ showBorderProperty.addAttribute("name",
-   * "showBorder"); //$NON-NLS-1$ //$NON-NLS-2$ showBorderProperty.setText(chart.getShowBorder() + ""); //$NON-NLS-1$ //
-   * show legend Element showLegendProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-   * showLegendProperty.addAttribute("name", "showLegend"); //$NON-NLS-1$ //$NON-NLS-2$
-   * showLegendProperty.setText(chart.getShowLegend() + ""); //$NON-NLS-1$ // draw legend border Element
-   * drawLegendBorderProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-   * drawLegendBorderProperty.addAttribute("name", "drawLegendBorder"); //$NON-NLS-1$ //$NON-NLS-2$
-   * drawLegendBorderProperty.setText(chart.getDrawLegendBorder() + ""); //$NON-NLS-1$ // legend location Element
-   * legendLocationProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-   * legendLocationProperty.addAttribute("name", "legendLocation"); //$NON-NLS-1$ //$NON-NLS-2$
-   * legendLocationProperty.setText(chart.getLegendLocation().toString()); // height Element heightProperty =
-   * chartFunctionProperties.addElement("property"); //$NON-NLS-1$ heightProperty.addAttribute("name", "chartHeight");
-   * //$NON-NLS-1$ //$NON-NLS-2$ heightProperty.setText(chart.getHeight() + ""); //$NON-NLS-1$ // width Element
-   * widthProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ widthProperty.addAttribute("name",
-   * "chartWidth"); //$NON-NLS-1$ //$NON-NLS-2$ widthProperty.setText(chart.getWidth() + ""); //$NON-NLS-1$ //
-   * useDrawable Element useDrawableProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-   * useDrawableProperty.addAttribute("name", "useDrawable"); //$NON-NLS-1$ //$NON-NLS-2$
-   * useDrawableProperty.setText("true"); //$NON-NLS-1$ Element titleFontProperty =
-   * chartFunctionProperties.addElement("property"); //$NON-NLS-1$ titleFontProperty.addAttribute("name", "titleFont");
-   * //$NON-NLS-1$ //$NON-NLS-2$ titleFontProperty.setText("Arial-BOLD-14"); //$NON-NLS-1$ Element labelFontProperty =
-   * chartFunctionProperties.addElement("property"); //$NON-NLS-1$ labelFontProperty.addAttribute("name", "labelFont");
-   * //$NON-NLS-1$ //$NON-NLS-2$ labelFontProperty.setText("Arial--8"); //$NON-NLS-1$ Element legendFontProperty =
-   * chartFunctionProperties.addElement("property"); //$NON-NLS-1$ legendFontProperty.addAttribute("name",
-   * "legendFont"); //$NON-NLS-1$ //$NON-NLS-2$ legendFontProperty.setText("Arial--6"); //$NON-NLS-1$ // Element
-   * drawBarOutlineProperty = chartFunctionProperties.addElement("property"); //
-   * drawBarOutlineProperty.addAttribute("name", "drawBarOutline"); // drawBarOutlineProperty.setText("false"); }
+   * public static void addChartElement(ReportSpec reportSpec, Field groupField, Element functionNode, Element parentElement, int y) { // image url Chart chart = reportSpec.getChart(); if (groupField != null) { chart =
+   * groupField.getChart(); } //<drawable-field x="0" y="0" fieldname="BarChart" width="600" height="400"/> Element drawableField = parentElement.addElement("drawable-field"); //$NON-NLS-1$ drawableField.addAttribute("x",
+   * (reportSpec.getHorizontalOffset() + chart.getHorizontalOffset()) + "%"); //$NON-NLS-1$ //$NON-NLS-2$ drawableField.addAttribute("y", y + ""); //$NON-NLS-1$ //$NON-NLS-2$ drawableField.addAttribute("height", chart.getHeight() + "");
+   * //$NON-NLS-1$ //$NON-NLS-2$ drawableField.addAttribute("width", chart.getWidth() + ""); //$NON-NLS-1$ //$NON-NLS-2$ String chartName = groupField != null ? groupField.getName() + "Chart" : "ReportChart"; //$NON-NLS-1$ //$NON-NLS-2$
+   * String dataSourceName = groupField != null ? groupField.getName() + "ChartDataSource" : "ReportChartDataSource"; //$NON-NLS-1$ //$NON-NLS-2$ drawableField.addAttribute("fieldname", chartName); //$NON-NLS-1$
+   * //imageurl.addAttribute("dynamic", "true"); //$NON-NLS-1$ //$NON-NLS-2$ // imageurl.addAttribute("scale", "true"); //imageurl.addAttribute("keepAspectRatio", "true"); //$NON-NLS-1$ //$NON-NLS-2$ // collector Element
+   * collectorFunctionElement = functionNode.addElement("expression"); //$NON-NLS-1$ collectorFunctionElement.addAttribute("name", dataSourceName); //$NON-NLS-1$ Element collectorFunctionProperties =
+   * collectorFunctionElement.addElement("properties"); //$NON-NLS-1$ // expression Element chartExpressionElement = functionNode.addElement("expression"); //$NON-NLS-1$ chartExpressionElement.addAttribute("name", chartName); //$NON-NLS-1$
+   * Element chartFunctionProperties = chartExpressionElement.addElement("properties"); //$NON-NLS-1$ int type = chart.getType().getType(); if (type == ChartType.AREA_TYPE || type == ChartType.BAR_TYPE || type == ChartType.LINE_TYPE || type ==
+   * ChartType.PIE_MULTI_TYPE || type == ChartType.WATERFALL_TYPE) { collectorFunctionElement.addAttribute("class", "org.pentaho.plugin.jfreereport.reportcharts.CategorySetCollectorFunction"); //$NON-NLS-1$ //$NON-NLS-2$ Element
+   * categoryColumnProperty = collectorFunctionProperties.addElement("property"); //$NON-NLS-1$ categoryColumnProperty.addAttribute("name", "categoryColumn"); //$NON-NLS-1$ //$NON-NLS-2$
+   * categoryColumnProperty.setText(chart.getCategoryColumn()); String series[] = ReportSpecUtility.getSeriesColumns(chart); for (int i = 0; i < series.length; i++) { Element seriesProperty =
+   * collectorFunctionProperties.addElement("property"); //$NON-NLS-1$ seriesProperty.addAttribute("name", "seriesName[" + i + "]"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ seriesProperty.setText(series[i]); } String values[] =
+   * chart.getValuesColumn(); for (int i = 0; i < values.length; i++) { Element valuesProperty = collectorFunctionProperties.addElement("property"); //$NON-NLS-1$ valuesProperty.addAttribute("name", "valueColumn[" + i + "]"); //$NON-NLS-1$
+   * //$NON-NLS-2$ //$NON-NLS-3$ valuesProperty.setText(values[i]); } if (type == ChartType.AREA_TYPE || type == ChartType.BAR_TYPE) { // stacked (only allowed on area/bar Element stackedProperty =
+   * chartFunctionProperties.addElement("property"); //$NON-NLS-1$ stackedProperty.addAttribute("name", "stacked"); //$NON-NLS-1$ //$NON-NLS-2$ stackedProperty.setText(chart.getIsStacked() + ""); //$NON-NLS-1$ } if (type !=
+   * ChartType.PIE_MULTI_TYPE) { // horizontal Element isHorizontalProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ isHorizontalProperty.addAttribute("name", "horizontal"); //$NON-NLS-1$ //$NON-NLS-2$
+   * isHorizontalProperty.setText(chart.getIsHorizontal() + ""); //$NON-NLS-1$ // label rotation Element labelRotationProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ labelRotationProperty.addAttribute("name",
+   * "labelRotation"); //$NON-NLS-1$ //$NON-NLS-2$ labelRotationProperty.setText(chart.getLabelRotation() + ""); //$NON-NLS-1$ } Series seriesArray[] = chart.getSeries(); for (int i = 0; i < seriesArray.length; i++) { if
+   * (seriesArray[i].getSeriesColor() != null && !seriesArray[i].getSeriesColor().equals("")) { //$NON-NLS-1$ Element seriesProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ seriesProperty.addAttribute("name",
+   * "seriesColor[" + i + "]"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ seriesProperty.setText(seriesArray[i].getSeriesColor()); } } if (type == ChartType.AREA_TYPE) { chartExpressionElement.addAttribute("class",
+   * "org.pentaho.plugin.jfreereport.reportcharts.AreaChartExpression"); //$NON-NLS-1$ //$NON-NLS-2$ } else if (type == ChartType.BAR_TYPE) { chartExpressionElement.addAttribute("class",
+   * "org.pentaho.plugin.jfreereport.reportcharts.BarChartExpression"); //$NON-NLS-1$ //$NON-NLS-2$ } else if (type == ChartType.LINE_TYPE) { chartExpressionElement.addAttribute("class",
+   * "org.pentaho.plugin.jfreereport.reportcharts.LineChartExpression"); //$NON-NLS-1$ //$NON-NLS-2$ } else if (type == ChartType.PIE_MULTI_TYPE) { chartExpressionElement.addAttribute("class",
+   * "org.pentaho.plugin.jfreereport.reportcharts.MultiPieChartExpression"); //$NON-NLS-1$ //$NON-NLS-2$ } else if (type == ChartType.WATERFALL_TYPE) { chartExpressionElement.addAttribute("class",
+   * "org.pentaho.plugin.jfreereport.reportcharts.WaterfallChartExpressions"); //$NON-NLS-1$ //$NON-NLS-2$ } else { // so on and so forth } } if (type == ChartType.PIE_TYPE || type == ChartType.RING_TYPE) {
+   * collectorFunctionElement.addAttribute("class", "org.pentaho.plugin.jfreereport.reportcharts.PieSetCollectorFunction"); //$NON-NLS-1$ //$NON-NLS-2$ if (type == ChartType.PIE_TYPE) { chartExpressionElement.addAttribute("class",
+   * "org.pentaho.plugin.jfreereport.reportcharts.PieChartExpression"); //$NON-NLS-1$ //$NON-NLS-2$ } else { chartExpressionElement.addAttribute("class", "org.pentaho.plugin.jfreereport.reportcharts.RingChartExpression"); //$NON-NLS-1$
+   * //$NON-NLS-2$ } String series[] = ReportSpecUtility.getSeriesColumns(chart); if (series.length > 0) { Element seriesProperty = collectorFunctionProperties.addElement("property"); //$NON-NLS-1$ seriesProperty.addAttribute("name",
+   * "seriesColumn"); //$NON-NLS-1$ //$NON-NLS-2$ seriesProperty.setText(series[0]); } String values[] = chart.getValuesColumn(); if (values.length > 0) { Element valuesProperty = collectorFunctionProperties.addElement("property");
+   * //$NON-NLS-1$ valuesProperty.addAttribute("name", "valueColumn"); //$NON-NLS-1$ //$NON-NLS-2$ valuesProperty.setText(values[0]); } // ignoreNulls Element ignoreNullsProperty = chartFunctionProperties.addElement("property");
+   * //$NON-NLS-1$ ignoreNullsProperty.addAttribute("name", "ignoreNulls"); //$NON-NLS-1$ //$NON-NLS-2$ ignoreNullsProperty.setText("true"); //$NON-NLS-1$ // ignoreZeros Element ignoreZerosProperty =
+   * chartFunctionProperties.addElement("property"); //$NON-NLS-1$ ignoreZerosProperty.addAttribute("name", "ignoreZeros"); //$NON-NLS-1$ //$NON-NLS-2$ ignoreZerosProperty.setText("true"); //$NON-NLS-1$ // Element pieLabelFormatProperty =
+   * chartFunctionProperties.addElement("property"); // pieLabelFormatProperty.addAttribute("name", "pieLabelFormatProperty"); // pieLabelFormatProperty.setText("{2}"); // Element pieLegendLabelFormatProperty =
+   * chartFunctionProperties.addElement("property"); // pieLegendLabelFormatProperty.addAttribute("name", "pieLegendLabelFormatProperty"); // pieLegendLabelFormatProperty.setText("{0}"); // Element explodeSegmentProperty =
+   * chartFunctionProperties.addElement("property"); // explodeSegmentProperty.addAttribute("name", "explodeSegment"); // explodeSegmentProperty.setText("maxValue"); // Element explodePctProperty =
+   * chartFunctionProperties.addElement("property"); // explodePctProperty.addAttribute("name", "explodePct"); // explodePctProperty.setText(".20"); } else if (chart.getType().getType() == ChartType.PIE_MULTI_TYPE) { Element
+   * multipieByRowProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ multipieByRowProperty.addAttribute("name", "multipieByRow"); //$NON-NLS-1$ //$NON-NLS-2$ multipieByRowProperty.setText("false"); //$NON-NLS-1$ //
+   * <property name="multipieByRow">false</property> // <property name="multipieLabelFormat">{2}</property> } if (groupField != null) { Element groupProperty = collectorFunctionProperties.addElement("property"); //$NON-NLS-1$
+   * groupProperty.addAttribute("name", "group"); //$NON-NLS-1$ //$NON-NLS-2$ groupProperty.setText(groupField.getName()); } if (chart.getResetGroup() != null && !chart.getResetGroup().equals("")) { //$NON-NLS-1$ Element resetGroupProperty =
+   * collectorFunctionProperties.addElement("property"); //$NON-NLS-1$ resetGroupProperty.addAttribute("name", "resetGroup"); //$NON-NLS-1$ //$NON-NLS-2$ resetGroupProperty.setText(chart.getResetGroup()); } // 3-D Element is3DProperty =
+   * chartFunctionProperties.addElement("property"); //$NON-NLS-1$ is3DProperty.addAttribute("name", "threeD"); //$NON-NLS-1$ //$NON-NLS-2$ is3DProperty.setText(chart.getIsThreeDimensional() + ""); //$NON-NLS-1$ // summary only Element
+   * summaryOnlyProperty = collectorFunctionProperties.addElement("property"); //$NON-NLS-1$ summaryOnlyProperty.addAttribute("name", "summaryOnly"); //$NON-NLS-1$ //$NON-NLS-2$ summaryOnlyProperty.setText(chart.getIsSummaryOnly() + "");
+   * //$NON-NLS-1$ // data source Element datasourceProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ datasourceProperty.addAttribute("name", "dataSource"); //$NON-NLS-1$ //$NON-NLS-2$
+   * datasourceProperty.setText(dataSourceName); // title Element titleProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ titleProperty.addAttribute("name", "title"); //$NON-NLS-1$ //$NON-NLS-2$
+   * titleProperty.setText(chart.getTitle()); // background Element backgroundColorProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ backgroundColorProperty.addAttribute("name", "backgroundColor"); //$NON-NLS-1$
+   * //$NON-NLS-2$ backgroundColorProperty.setText(chart.getBackgroundColor()); // show border Element showBorderProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ showBorderProperty.addAttribute("name", "showBorder");
+   * //$NON-NLS-1$ //$NON-NLS-2$ showBorderProperty.setText(chart.getShowBorder() + ""); //$NON-NLS-1$ // show legend Element showLegendProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
+   * showLegendProperty.addAttribute("name", "showLegend"); //$NON-NLS-1$ //$NON-NLS-2$ showLegendProperty.setText(chart.getShowLegend() + ""); //$NON-NLS-1$ // draw legend border Element drawLegendBorderProperty =
+   * chartFunctionProperties.addElement("property"); //$NON-NLS-1$ drawLegendBorderProperty.addAttribute("name", "drawLegendBorder"); //$NON-NLS-1$ //$NON-NLS-2$ drawLegendBorderProperty.setText(chart.getDrawLegendBorder() + "");
+   * //$NON-NLS-1$ // legend location Element legendLocationProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ legendLocationProperty.addAttribute("name", "legendLocation"); //$NON-NLS-1$ //$NON-NLS-2$
+   * legendLocationProperty.setText(chart.getLegendLocation().toString()); // height Element heightProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ heightProperty.addAttribute("name", "chartHeight"); //$NON-NLS-1$
+   * //$NON-NLS-2$ heightProperty.setText(chart.getHeight() + ""); //$NON-NLS-1$ // width Element widthProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ widthProperty.addAttribute("name", "chartWidth"); //$NON-NLS-1$
+   * //$NON-NLS-2$ widthProperty.setText(chart.getWidth() + ""); //$NON-NLS-1$ // useDrawable Element useDrawableProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ useDrawableProperty.addAttribute("name",
+   * "useDrawable"); //$NON-NLS-1$ //$NON-NLS-2$ useDrawableProperty.setText("true"); //$NON-NLS-1$ Element titleFontProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ titleFontProperty.addAttribute("name",
+   * "titleFont"); //$NON-NLS-1$ //$NON-NLS-2$ titleFontProperty.setText("Arial-BOLD-14"); //$NON-NLS-1$ Element labelFontProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ labelFontProperty.addAttribute("name",
+   * "labelFont"); //$NON-NLS-1$ //$NON-NLS-2$ labelFontProperty.setText("Arial--8"); //$NON-NLS-1$ Element legendFontProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ legendFontProperty.addAttribute("name",
+   * "legendFont"); //$NON-NLS-1$ //$NON-NLS-2$ legendFontProperty.setText("Arial--6"); //$NON-NLS-1$ // Element drawBarOutlineProperty = chartFunctionProperties.addElement("property"); // drawBarOutlineProperty.addAttribute("name",
+   * "drawBarOutline"); // drawBarOutlineProperty.setText("false"); }
    */
   public static void setupDetailFieldWidths(ReportSpec reportSpec, Field details[]) {
     // number of details set to "auto" (not locked)
@@ -1588,8 +1521,11 @@ public class ReportGenerationUtility {
       switch (intFieldType) {
       case Types.DATE:
       case Types.NUMERIC:
-        messageField.addAttribute("format", group.getFormat()); //$NON-NLS-1$
+        if (!StringUtils.isEmpty(group.getFormat())) {
+          messageField.addAttribute("format", group.getFormat()); //$NON-NLS-1$
+        }
         messageField.addAttribute("fieldname", group.getName()); //$NON-NLS-1$
+        messageField.setText(group.getDisplayName());
         break;
       case Types.VARCHAR:
         messageField.addAttribute("fieldname", group.getName()); //$NON-NLS-1$
@@ -1723,14 +1659,10 @@ public class ReportGenerationUtility {
     // get font size
     int fontSize = reportSpec.getGroupFooterFontSize();
     /*
-     * Element rectangleElement = groupFooter.addElement("rectangle"); //$NON-NLS-1$
-     * rectangleElement.addAttribute("color", "white"); //$NON-NLS-1$ //$NON-NLS-2$
-     * rectangleElement.addAttribute("fill", "false"); //$NON-NLS-1$ //$NON-NLS-2$ if
-     * (reportSpec.getDoubleUnderlineExpression()) { rectangleElement.addAttribute("height", (fontSize + 11) + "");
-     * //$NON-NLS-1$ //$NON-NLS-2$ } else { rectangleElement.addAttribute("height", (fontSize + 7) + ""); //$NON-NLS-1$
-     * //$NON-NLS-2$ } rectangleElement.addAttribute("width", "0"); //$NON-NLS-1$ //$NON-NLS-2$
-     * rectangleElement.addAttribute("x", reportSpec.getHorizontalOffset() + "%"); //$NON-NLS-1$ //$NON-NLS-2$
-     * rectangleElement.addAttribute("y", yShift + ""); //$NON-NLS-1$ //$NON-NLS-2$
+     * Element rectangleElement = groupFooter.addElement("rectangle"); //$NON-NLS-1$ rectangleElement.addAttribute("color", "white"); //$NON-NLS-1$ //$NON-NLS-2$ rectangleElement.addAttribute("fill", "false"); //$NON-NLS-1$ //$NON-NLS-2$ if
+     * (reportSpec.getDoubleUnderlineExpression()) { rectangleElement.addAttribute("height", (fontSize + 11) + ""); //$NON-NLS-1$ //$NON-NLS-2$ } else { rectangleElement.addAttribute("height", (fontSize + 7) + ""); //$NON-NLS-1$
+     * //$NON-NLS-2$ } rectangleElement.addAttribute("width", "0"); //$NON-NLS-1$ //$NON-NLS-2$ rectangleElement.addAttribute("x", reportSpec.getHorizontalOffset() + "%"); //$NON-NLS-1$ //$NON-NLS-2$ rectangleElement.addAttribute("y",
+     * yShift + ""); //$NON-NLS-1$ //$NON-NLS-2$
      */
     String totalHorizontalAlignment = null;
     double totalLabelWidth = widthSum;
