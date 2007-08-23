@@ -153,19 +153,23 @@ public class ReportSpecUtility {
    * @param isLevelField boolean true if the column has a level-name attribute
    * @return String indicating the field type
    */
-	public static String getFieldType(int fieldType, String columnName, boolean isLevelField ) {
+	public static String getFieldType(int fieldType, String columnName, boolean isLevelField, boolean isGroupField ) {
 		if ( isLevelField ) {
 			return ReportSpecUtility.MESSAGE_FIELD;
 		} else if (fieldType == Types.NUMERIC) {
 			return ReportSpecUtility.NUMBER_FIELD; //$NON-NLS-1$
 		} else if (fieldType == Types.DATE) {
 			return ReportSpecUtility.DATE_FIELD; //$NON-NLS-1$
-		} else if (columnName.equals("")) { //$NON-NLS-1$
-			return ReportSpecUtility.LABEL; //$NON-NLS-1$
+		} else if (isGroupField || columnName.equals("")) { //$NON-NLS-1$
+			return ReportSpecUtility.MESSAGE_FIELD; //$NON-NLS-1$
 		}
 		return ReportSpecUtility.STRING_FIELD; //$NON-NLS-1$
 	}
 
+  public static String getFieldType(int fieldType, String columnName, boolean isLevelField) {
+    return getFieldType(fieldType, columnName, isLevelField, false);
+  }	
+	
   public static Field[] getDetails(Field fields[]) {
     if (fields == null) {
       return null;

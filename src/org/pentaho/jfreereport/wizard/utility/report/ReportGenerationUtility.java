@@ -1515,7 +1515,7 @@ public class ReportGenerationUtility {
   private static void addField(org.dom4j.Element ownerElement, Field group, String x, String y, String width,
       String height, boolean isLevelField) {
     int intFieldType = group.getType();
-    String strFieldType = ReportSpecUtility.getFieldType(intFieldType, group.getName(), isLevelField );
+    String strFieldType = ReportSpecUtility.getFieldType(intFieldType, group.getName(), isLevelField, true );
     org.dom4j.Element messageField = ownerElement.addElement(strFieldType);
     if (!isLevelField) {
       switch (intFieldType) {
