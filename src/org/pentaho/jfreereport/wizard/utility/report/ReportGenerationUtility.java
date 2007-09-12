@@ -809,24 +809,6 @@ public class ReportGenerationUtility {
       Element ignoreZerosProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
       ignoreZerosProperty.addAttribute("name", "ignoreZeros"); //$NON-NLS-1$ //$NON-NLS-2$
       ignoreZerosProperty.setText("true"); //$NON-NLS-1$
-      // Element pieLabelFormatProperty =
-      // chartFunctionProperties.addElement("property");
-      // pieLabelFormatProperty.addAttribute("name",
-      // "pieLabelFormatProperty");
-      // pieLabelFormatProperty.setText("{2}");
-      // Element pieLegendLabelFormatProperty =
-      // chartFunctionProperties.addElement("property");
-      // pieLegendLabelFormatProperty.addAttribute("name",
-      // "pieLegendLabelFormatProperty");
-      // pieLegendLabelFormatProperty.setText("{0}");
-      // Element explodeSegmentProperty =
-      // chartFunctionProperties.addElement("property");
-      // explodeSegmentProperty.addAttribute("name", "explodeSegment");
-      // explodeSegmentProperty.setText("maxValue");
-      // Element explodePctProperty =
-      // chartFunctionProperties.addElement("property");
-      // explodePctProperty.addAttribute("name", "explodePct");
-      // explodePctProperty.setText(".20");
     } else if (chart.getType().getType() == ChartType.PIE_MULTI_TYPE) {
       Element multipieByRowProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
       multipieByRowProperty.addAttribute("name", "multipieByRow"); //$NON-NLS-1$ //$NON-NLS-2$
@@ -907,67 +889,6 @@ public class ReportGenerationUtility {
     // drawBarOutlineProperty.setText("false");
   }
 
-  /*
-   * public static void addChartElement(ReportSpec reportSpec, Field groupField, Element functionNode, Element parentElement, int y) { // image url Chart chart = reportSpec.getChart(); if (groupField != null) { chart =
-   * groupField.getChart(); } //<drawable-field x="0" y="0" fieldname="BarChart" width="600" height="400"/> Element drawableField = parentElement.addElement("drawable-field"); //$NON-NLS-1$ drawableField.addAttribute("x",
-   * (reportSpec.getHorizontalOffset() + chart.getHorizontalOffset()) + "%"); //$NON-NLS-1$ //$NON-NLS-2$ drawableField.addAttribute("y", y + ""); //$NON-NLS-1$ //$NON-NLS-2$ drawableField.addAttribute("height", chart.getHeight() + "");
-   * //$NON-NLS-1$ //$NON-NLS-2$ drawableField.addAttribute("width", chart.getWidth() + ""); //$NON-NLS-1$ //$NON-NLS-2$ String chartName = groupField != null ? groupField.getName() + "Chart" : "ReportChart"; //$NON-NLS-1$ //$NON-NLS-2$
-   * String dataSourceName = groupField != null ? groupField.getName() + "ChartDataSource" : "ReportChartDataSource"; //$NON-NLS-1$ //$NON-NLS-2$ drawableField.addAttribute("fieldname", chartName); //$NON-NLS-1$
-   * //imageurl.addAttribute("dynamic", "true"); //$NON-NLS-1$ //$NON-NLS-2$ // imageurl.addAttribute("scale", "true"); //imageurl.addAttribute("keepAspectRatio", "true"); //$NON-NLS-1$ //$NON-NLS-2$ // collector Element
-   * collectorFunctionElement = functionNode.addElement("expression"); //$NON-NLS-1$ collectorFunctionElement.addAttribute("name", dataSourceName); //$NON-NLS-1$ Element collectorFunctionProperties =
-   * collectorFunctionElement.addElement("properties"); //$NON-NLS-1$ // expression Element chartExpressionElement = functionNode.addElement("expression"); //$NON-NLS-1$ chartExpressionElement.addAttribute("name", chartName); //$NON-NLS-1$
-   * Element chartFunctionProperties = chartExpressionElement.addElement("properties"); //$NON-NLS-1$ int type = chart.getType().getType(); if (type == ChartType.AREA_TYPE || type == ChartType.BAR_TYPE || type == ChartType.LINE_TYPE || type ==
-   * ChartType.PIE_MULTI_TYPE || type == ChartType.WATERFALL_TYPE) { collectorFunctionElement.addAttribute("class", "org.pentaho.plugin.jfreereport.reportcharts.CategorySetCollectorFunction"); //$NON-NLS-1$ //$NON-NLS-2$ Element
-   * categoryColumnProperty = collectorFunctionProperties.addElement("property"); //$NON-NLS-1$ categoryColumnProperty.addAttribute("name", "categoryColumn"); //$NON-NLS-1$ //$NON-NLS-2$
-   * categoryColumnProperty.setText(chart.getCategoryColumn()); String series[] = ReportSpecUtility.getSeriesColumns(chart); for (int i = 0; i < series.length; i++) { Element seriesProperty =
-   * collectorFunctionProperties.addElement("property"); //$NON-NLS-1$ seriesProperty.addAttribute("name", "seriesName[" + i + "]"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ seriesProperty.setText(series[i]); } String values[] =
-   * chart.getValuesColumn(); for (int i = 0; i < values.length; i++) { Element valuesProperty = collectorFunctionProperties.addElement("property"); //$NON-NLS-1$ valuesProperty.addAttribute("name", "valueColumn[" + i + "]"); //$NON-NLS-1$
-   * //$NON-NLS-2$ //$NON-NLS-3$ valuesProperty.setText(values[i]); } if (type == ChartType.AREA_TYPE || type == ChartType.BAR_TYPE) { // stacked (only allowed on area/bar Element stackedProperty =
-   * chartFunctionProperties.addElement("property"); //$NON-NLS-1$ stackedProperty.addAttribute("name", "stacked"); //$NON-NLS-1$ //$NON-NLS-2$ stackedProperty.setText(chart.getIsStacked() + ""); //$NON-NLS-1$ } if (type !=
-   * ChartType.PIE_MULTI_TYPE) { // horizontal Element isHorizontalProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ isHorizontalProperty.addAttribute("name", "horizontal"); //$NON-NLS-1$ //$NON-NLS-2$
-   * isHorizontalProperty.setText(chart.getIsHorizontal() + ""); //$NON-NLS-1$ // label rotation Element labelRotationProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ labelRotationProperty.addAttribute("name",
-   * "labelRotation"); //$NON-NLS-1$ //$NON-NLS-2$ labelRotationProperty.setText(chart.getLabelRotation() + ""); //$NON-NLS-1$ } Series seriesArray[] = chart.getSeries(); for (int i = 0; i < seriesArray.length; i++) { if
-   * (seriesArray[i].getSeriesColor() != null && !seriesArray[i].getSeriesColor().equals("")) { //$NON-NLS-1$ Element seriesProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ seriesProperty.addAttribute("name",
-   * "seriesColor[" + i + "]"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ seriesProperty.setText(seriesArray[i].getSeriesColor()); } } if (type == ChartType.AREA_TYPE) { chartExpressionElement.addAttribute("class",
-   * "org.pentaho.plugin.jfreereport.reportcharts.AreaChartExpression"); //$NON-NLS-1$ //$NON-NLS-2$ } else if (type == ChartType.BAR_TYPE) { chartExpressionElement.addAttribute("class",
-   * "org.pentaho.plugin.jfreereport.reportcharts.BarChartExpression"); //$NON-NLS-1$ //$NON-NLS-2$ } else if (type == ChartType.LINE_TYPE) { chartExpressionElement.addAttribute("class",
-   * "org.pentaho.plugin.jfreereport.reportcharts.LineChartExpression"); //$NON-NLS-1$ //$NON-NLS-2$ } else if (type == ChartType.PIE_MULTI_TYPE) { chartExpressionElement.addAttribute("class",
-   * "org.pentaho.plugin.jfreereport.reportcharts.MultiPieChartExpression"); //$NON-NLS-1$ //$NON-NLS-2$ } else if (type == ChartType.WATERFALL_TYPE) { chartExpressionElement.addAttribute("class",
-   * "org.pentaho.plugin.jfreereport.reportcharts.WaterfallChartExpressions"); //$NON-NLS-1$ //$NON-NLS-2$ } else { // so on and so forth } } if (type == ChartType.PIE_TYPE || type == ChartType.RING_TYPE) {
-   * collectorFunctionElement.addAttribute("class", "org.pentaho.plugin.jfreereport.reportcharts.PieSetCollectorFunction"); //$NON-NLS-1$ //$NON-NLS-2$ if (type == ChartType.PIE_TYPE) { chartExpressionElement.addAttribute("class",
-   * "org.pentaho.plugin.jfreereport.reportcharts.PieChartExpression"); //$NON-NLS-1$ //$NON-NLS-2$ } else { chartExpressionElement.addAttribute("class", "org.pentaho.plugin.jfreereport.reportcharts.RingChartExpression"); //$NON-NLS-1$
-   * //$NON-NLS-2$ } String series[] = ReportSpecUtility.getSeriesColumns(chart); if (series.length > 0) { Element seriesProperty = collectorFunctionProperties.addElement("property"); //$NON-NLS-1$ seriesProperty.addAttribute("name",
-   * "seriesColumn"); //$NON-NLS-1$ //$NON-NLS-2$ seriesProperty.setText(series[0]); } String values[] = chart.getValuesColumn(); if (values.length > 0) { Element valuesProperty = collectorFunctionProperties.addElement("property");
-   * //$NON-NLS-1$ valuesProperty.addAttribute("name", "valueColumn"); //$NON-NLS-1$ //$NON-NLS-2$ valuesProperty.setText(values[0]); } // ignoreNulls Element ignoreNullsProperty = chartFunctionProperties.addElement("property");
-   * //$NON-NLS-1$ ignoreNullsProperty.addAttribute("name", "ignoreNulls"); //$NON-NLS-1$ //$NON-NLS-2$ ignoreNullsProperty.setText("true"); //$NON-NLS-1$ // ignoreZeros Element ignoreZerosProperty =
-   * chartFunctionProperties.addElement("property"); //$NON-NLS-1$ ignoreZerosProperty.addAttribute("name", "ignoreZeros"); //$NON-NLS-1$ //$NON-NLS-2$ ignoreZerosProperty.setText("true"); //$NON-NLS-1$ // Element pieLabelFormatProperty =
-   * chartFunctionProperties.addElement("property"); // pieLabelFormatProperty.addAttribute("name", "pieLabelFormatProperty"); // pieLabelFormatProperty.setText("{2}"); // Element pieLegendLabelFormatProperty =
-   * chartFunctionProperties.addElement("property"); // pieLegendLabelFormatProperty.addAttribute("name", "pieLegendLabelFormatProperty"); // pieLegendLabelFormatProperty.setText("{0}"); // Element explodeSegmentProperty =
-   * chartFunctionProperties.addElement("property"); // explodeSegmentProperty.addAttribute("name", "explodeSegment"); // explodeSegmentProperty.setText("maxValue"); // Element explodePctProperty =
-   * chartFunctionProperties.addElement("property"); // explodePctProperty.addAttribute("name", "explodePct"); // explodePctProperty.setText(".20"); } else if (chart.getType().getType() == ChartType.PIE_MULTI_TYPE) { Element
-   * multipieByRowProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ multipieByRowProperty.addAttribute("name", "multipieByRow"); //$NON-NLS-1$ //$NON-NLS-2$ multipieByRowProperty.setText("false"); //$NON-NLS-1$ //
-   * <property name="multipieByRow">false</property> // <property name="multipieLabelFormat">{2}</property> } if (groupField != null) { Element groupProperty = collectorFunctionProperties.addElement("property"); //$NON-NLS-1$
-   * groupProperty.addAttribute("name", "group"); //$NON-NLS-1$ //$NON-NLS-2$ groupProperty.setText(groupField.getName()); } if (chart.getResetGroup() != null && !chart.getResetGroup().equals("")) { //$NON-NLS-1$ Element resetGroupProperty =
-   * collectorFunctionProperties.addElement("property"); //$NON-NLS-1$ resetGroupProperty.addAttribute("name", "resetGroup"); //$NON-NLS-1$ //$NON-NLS-2$ resetGroupProperty.setText(chart.getResetGroup()); } // 3-D Element is3DProperty =
-   * chartFunctionProperties.addElement("property"); //$NON-NLS-1$ is3DProperty.addAttribute("name", "threeD"); //$NON-NLS-1$ //$NON-NLS-2$ is3DProperty.setText(chart.getIsThreeDimensional() + ""); //$NON-NLS-1$ // summary only Element
-   * summaryOnlyProperty = collectorFunctionProperties.addElement("property"); //$NON-NLS-1$ summaryOnlyProperty.addAttribute("name", "summaryOnly"); //$NON-NLS-1$ //$NON-NLS-2$ summaryOnlyProperty.setText(chart.getIsSummaryOnly() + "");
-   * //$NON-NLS-1$ // data source Element datasourceProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ datasourceProperty.addAttribute("name", "dataSource"); //$NON-NLS-1$ //$NON-NLS-2$
-   * datasourceProperty.setText(dataSourceName); // title Element titleProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ titleProperty.addAttribute("name", "title"); //$NON-NLS-1$ //$NON-NLS-2$
-   * titleProperty.setText(chart.getTitle()); // background Element backgroundColorProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ backgroundColorProperty.addAttribute("name", "backgroundColor"); //$NON-NLS-1$
-   * //$NON-NLS-2$ backgroundColorProperty.setText(chart.getBackgroundColor()); // show border Element showBorderProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ showBorderProperty.addAttribute("name", "showBorder");
-   * //$NON-NLS-1$ //$NON-NLS-2$ showBorderProperty.setText(chart.getShowBorder() + ""); //$NON-NLS-1$ // show legend Element showLegendProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-   * showLegendProperty.addAttribute("name", "showLegend"); //$NON-NLS-1$ //$NON-NLS-2$ showLegendProperty.setText(chart.getShowLegend() + ""); //$NON-NLS-1$ // draw legend border Element drawLegendBorderProperty =
-   * chartFunctionProperties.addElement("property"); //$NON-NLS-1$ drawLegendBorderProperty.addAttribute("name", "drawLegendBorder"); //$NON-NLS-1$ //$NON-NLS-2$ drawLegendBorderProperty.setText(chart.getDrawLegendBorder() + "");
-   * //$NON-NLS-1$ // legend location Element legendLocationProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ legendLocationProperty.addAttribute("name", "legendLocation"); //$NON-NLS-1$ //$NON-NLS-2$
-   * legendLocationProperty.setText(chart.getLegendLocation().toString()); // height Element heightProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ heightProperty.addAttribute("name", "chartHeight"); //$NON-NLS-1$
-   * //$NON-NLS-2$ heightProperty.setText(chart.getHeight() + ""); //$NON-NLS-1$ // width Element widthProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ widthProperty.addAttribute("name", "chartWidth"); //$NON-NLS-1$
-   * //$NON-NLS-2$ widthProperty.setText(chart.getWidth() + ""); //$NON-NLS-1$ // useDrawable Element useDrawableProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ useDrawableProperty.addAttribute("name",
-   * "useDrawable"); //$NON-NLS-1$ //$NON-NLS-2$ useDrawableProperty.setText("true"); //$NON-NLS-1$ Element titleFontProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ titleFontProperty.addAttribute("name",
-   * "titleFont"); //$NON-NLS-1$ //$NON-NLS-2$ titleFontProperty.setText("Arial-BOLD-14"); //$NON-NLS-1$ Element labelFontProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ labelFontProperty.addAttribute("name",
-   * "labelFont"); //$NON-NLS-1$ //$NON-NLS-2$ labelFontProperty.setText("Arial--8"); //$NON-NLS-1$ Element legendFontProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$ legendFontProperty.addAttribute("name",
-   * "legendFont"); //$NON-NLS-1$ //$NON-NLS-2$ legendFontProperty.setText("Arial--6"); //$NON-NLS-1$ // Element drawBarOutlineProperty = chartFunctionProperties.addElement("property"); // drawBarOutlineProperty.addAttribute("name",
-   * "drawBarOutline"); // drawBarOutlineProperty.setText("false"); }
-   */
   public static void setupDetailFieldWidths(ReportSpec reportSpec, Field details[]) {
     // number of details set to "auto" (not locked)
     // add up all locked widths
@@ -1087,431 +1008,379 @@ public class ReportGenerationUtility {
     }
   }
 
-  public static String createJFreeReportXML(ReportSpec reportSpec) {
-    ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-    createJFreeReportXML(reportSpec, outputStream, 0, 0, false, "", 0, 0); //$NON-NLS-1$
-    return new String(outputStream.toByteArray());
+  public static void processDetailsSection(ReportSpec reportSpec, Field details[], Field groups[], Element itemsNode, Element functionNode, int itemFontSize) {
+    double percentSum = 0;
+    // create item background rectangle + item label itself
+    for (int i = 0; i < details.length; i++) {
+      Field f = details[i];
+      String detailFieldName = f.getName();
+      if (f.getIsCalculatedColumn()) {
+        createCalculatedColumnExpression(reportSpec, functionNode, f);
+        detailFieldName = f.getName() + "_calc_column_expression"; //$NON-NLS-1$
+      }
+      double width = f.getWidth().doubleValue();
+      if (f.getUseBackgroundColor() || f.getUseTrafficLighting()) {
+        org.dom4j.Element rectangleElement = itemsNode.addElement("rectangle"); //$NON-NLS-1$
+        rectangleElement.addAttribute("name", f.getName() + "BackgroundElement"); //$NON-NLS-1$ //$NON-NLS-2$
+        if (!f.getUseTrafficLighting()) {
+          rectangleElement.addAttribute("color", f.getBackgroundColor()); //$NON-NLS-1$
+        }
+        rectangleElement.addAttribute("draw", "false"); //$NON-NLS-1$ //$NON-NLS-2$
+        rectangleElement.addAttribute("fill", "true"); //$NON-NLS-1$ //$NON-NLS-2$
+        rectangleElement.addAttribute("height", (itemFontSize + 2) + ""); //$NON-NLS-1$ //$NON-NLS-2$
+        rectangleElement.addAttribute(
+            "x", reportSpec.getHorizontalOffset() + percentSum + (f.getIsWidthPercent() ? "%" : "")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+        rectangleElement.addAttribute("width", width + (f.getIsWidthPercent() ? "%" : "")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+        rectangleElement.addAttribute("y", "0"); //$NON-NLS-1$ //$NON-NLS-2$
+        // traffic lighting
+        if (f.getUseTrafficLighting()) {
+          addTrafficLighting(reportSpec, f, f.getName() + "BackgroundElement", functionNode); //$NON-NLS-1$
+        }
+      }
+      org.dom4j.Element detailField = itemsNode.addElement(ReportSpecUtility.getFieldType(f.getType(), f.getName(), false));
+      detailField.addAttribute("name", f.getName() + "Element"); //$NON-NLS-1$ //$NON-NLS-2$
+      detailField.addAttribute("nullstring", f.getNullString()); //$NON-NLS-1$
+      if (!f.getName().equals("")) { //$NON-NLS-1$
+        detailField.addAttribute("fieldname", detailFieldName); //$NON-NLS-1$
+        String format = details[i].getFormat();
+        setAttributeWithRequiredValue(detailField, "format", format); //$NON-NLS-1$
+      } else {
+        detailField.setText(""); //$NON-NLS-1$
+      }
+      detailField.addAttribute("vertical-alignment", f.getVerticalAlignment()); //$NON-NLS-1$
+      detailField.addAttribute("alignment", f.getHorizontalAlignment()); //$NON-NLS-1$
+      detailField.addAttribute("width", width + (f.getIsWidthPercent() ? "%" : "")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+      detailField.addAttribute(
+          "x", reportSpec.getHorizontalOffset() + percentSum + (f.getIsWidthPercent() ? "%" : "")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+      detailField.addAttribute("y", "0"); //$NON-NLS-1$ //$NON-NLS-2$
+      detailField.addAttribute("height", (itemFontSize + 2) + ""); //$NON-NLS-1$ //$NON-NLS-2$
+      setItemFont(reportSpec, f, detailField);
+      if (f.getUseItemHide()) {
+        org.dom4j.Element functionField = functionNode.addElement("function"); //$NON-NLS-1$
+        functionField.addAttribute("name", "headerEVSF_" + f.getName()); //$NON-NLS-1$ //$NON-NLS-2$
+        functionField.addAttribute("class", "org.pentaho.jfreereport.functions.ItemHideFunction"); //$NON-NLS-1$ //$NON-NLS-2$
+        org.dom4j.Element properties = functionField.addElement("properties"); //$NON-NLS-1$
+        org.dom4j.Element elementProperty = properties.addElement("property"); //$NON-NLS-1$
+        elementProperty.addAttribute("name", "element"); //$NON-NLS-1$ //$NON-NLS-2$
+        elementProperty.setText(f.getName() + "Element"); //$NON-NLS-1$
+        org.dom4j.Element fieldProperty = properties.addElement("property"); //$NON-NLS-1$
+        fieldProperty.addAttribute("name", "field"); //$NON-NLS-1$ //$NON-NLS-2$
+        fieldProperty.setText(detailFieldName);
+        org.dom4j.Element ignoreGroupBreaksProperty = properties.addElement("property"); //$NON-NLS-1$
+        ignoreGroupBreaksProperty.addAttribute("name", "ignoreGroupBreaks"); //$NON-NLS-1$ //$NON-NLS-2$
+        ignoreGroupBreaksProperty.setText("true"); //$NON-NLS-1$
+        org.dom4j.Element ignorePageBreaksProperty = properties.addElement("property"); //$NON-NLS-1$
+        ignorePageBreaksProperty.addAttribute("name", "ignorePageBreaks"); //$NON-NLS-1$ //$NON-NLS-2$
+        ignorePageBreaksProperty.setText("true"); //$NON-NLS-1$
+      }
+      percentSum += width;
+    }
+    // draw lines on details
+    if (details.length > 0) {
+      addVerticalGridLines(reportSpec, groups, details, itemsNode, itemFontSize);
+      addHorizontalGridLines(reportSpec, groups, details, itemsNode, itemFontSize);
+    }    
   }
 
-  public static void createJFreeReportXML(ReportSpec reportSpec, OutputStream outputStream, int pageWidth,
-      int pageHeight, boolean createTotalColumn, String totalColumnName, int totalColumnWidth, int spacerWidth) {
-    Field fields[] = reportSpec.getField();
-    Field details[] = ReportSpecUtility.getDetails(fields);
-    Field groups[] = ReportSpecUtility.getGroups(fields);
-    List spaceFields = setupSpaceFields(fields);
-    try {
-      boolean expressionExists = ReportSpecUtility.doesExpressionExist(fields);
-      setupDetailFieldWidths(reportSpec, details);
-      int itemFontSize = ReportSpecUtility.getItemFontSize(reportSpec, details);
-      // dom4j
-      Document document = DOMDocumentFactory.getInstance().createDocument();
-      document
-          .addDocType(
-              "report", "-//JFreeReport//DTD report definition//EN//simple/version 0.8.5", "http://jfreereport.sourceforge.net/report-085.dtd"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-      org.dom4j.Element reportNode = document.addElement("report"); //$NON-NLS-1$
-      // add parser-config to generated report
-      addParserConfig(reportSpec, reportNode);
-      // set report name
-      reportNode.addAttribute("name", reportSpec.getReportName()); //$NON-NLS-1$
-      // set orientation
-      reportNode.addAttribute("orientation", reportSpec.getOrientation()); //$NON-NLS-1$
-      // set page-format or page width/height
-      setPageFormat(reportSpec, reportNode, pageWidth, pageHeight);
-      // set margins
-      setMargins(reportSpec, reportNode);
-      if (reportSpec.getIncludeSrc() != null && !"".equalsIgnoreCase(reportSpec.getIncludeSrc())) { //$NON-NLS-1$
-        org.dom4j.Element includeElement = reportNode.addElement("include"); //$NON-NLS-1$
-        includeElement.addAttribute("src", "file://" + reportSpec.getIncludeSrc().replace('\\', '/')); //$NON-NLS-1$ //$NON-NLS-2$
+  public static void processDummyGroup(ReportSpec reportSpec, Field details[], Field groups[], Element groupsNode, Element functionNode, int itemFontSize, boolean expressionExists, int spacerWidth) {
+    org.dom4j.Element groupElement = groupsNode.addElement("group"); //$NON-NLS-1$
+    groupElement.addAttribute("name", "dummy"); //$NON-NLS-1$ //$NON-NLS-2$
+    // header
+    org.dom4j.Element dummyGroupHeader = groupElement.addElement("groupheader"); //$NON-NLS-1$
+    Element noDataBandElement = dummyGroupHeader.addElement("band"); //$NON-NLS-1$
+    noDataBandElement.addAttribute("name", "DummyGroupNoDataBandElement"); //$NON-NLS-1$ //$NON-NLS-2$
+    Element noDataLabelElement = noDataBandElement.addElement("label"); //$NON-NLS-1$
+    noDataLabelElement.addAttribute("height", (itemFontSize + 2) + ""); //$NON-NLS-1$ //$NON-NLS-2$
+    noDataLabelElement.addAttribute("vertical-alignment", "middle"); //$NON-NLS-1$ //$NON-NLS-2$
+    noDataLabelElement.addAttribute("alignment", "left"); //$NON-NLS-1$ //$NON-NLS-2$
+    noDataLabelElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
+    noDataLabelElement.addAttribute("x", reportSpec.getHorizontalOffset() + "%"); //$NON-NLS-1$ //$NON-NLS-2$
+    noDataLabelElement.addAttribute("y", "0"); //$NON-NLS-1$ //$NON-NLS-2$
+    noDataLabelElement.setText("No Data Available"); //$NON-NLS-1$
+    addShowIfNoData(noDataBandElement, functionNode);
+    Element dataBandElement = dummyGroupHeader.addElement("band"); //$NON-NLS-1$
+    dataBandElement.addAttribute("name", "DummyGroupDataBandElement"); //$NON-NLS-1$ //$NON-NLS-2$
+    dataBandElement.addAttribute("y", reportSpec.getColumnHeaderTopGap() + ""); //$NON-NLS-1$ //$NON-NLS-2$
+    dataBandElement.addAttribute(
+        "height", (reportSpec.getColumnHeaderHeight() + reportSpec.getColumnHeaderGap()) + ""); //$NON-NLS-1$ //$NON-NLS-2$
+    addHideIfNoData("DummyGroupDataBandElement", functionNode); //$NON-NLS-1$
+    org.dom4j.Element rectangleElement = dataBandElement.addElement("rectangle"); //$NON-NLS-1$
+    rectangleElement.addAttribute("color", reportSpec.getColumnHeaderBackgroundColor()); //$NON-NLS-1$
+    rectangleElement.addAttribute("draw", "false"); //$NON-NLS-1$ //$NON-NLS-2$
+    rectangleElement.addAttribute("fill", reportSpec.getUseColumnHeaderBackgroundColor() ? "true" : "false"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+    rectangleElement.addAttribute("height", String.valueOf(reportSpec.getColumnHeaderHeight())); //$NON-NLS-1$
+    rectangleElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
+    rectangleElement.addAttribute("x", reportSpec.getHorizontalOffset() + "%"); //$NON-NLS-1$ //$NON-NLS-2$
+    rectangleElement.addAttribute("y", "0"); //$NON-NLS-1$ //$NON-NLS-2$
+    createColumnHeaders(reportSpec, groups, details, dataBandElement, 0, 0);
+    dummyGroupHeader.addAttribute("repeat", "true"); //$NON-NLS-1$ //$NON-NLS-2$
+    dummyGroupHeader
+        .addAttribute(
+            "height", (reportSpec.getColumnHeaderTopGap() + reportSpec.getColumnHeaderHeight() + reportSpec.getColumnHeaderGap()) + ""); //$NON-NLS-1$ //$NON-NLS-2$
+    setGroupHeaderFont(reportSpec, dummyGroupHeader, true);
+    // footer
+    org.dom4j.Element dummyGroupFooter = groupElement.addElement("groupfooter"); //$NON-NLS-1$
+    dummyGroupFooter.addAttribute("name", "dummyGroupFooter"); //$NON-NLS-1$ //$NON-NLS-2$
+    addHideIfNoData("dummyGroupFooter", functionNode); //$NON-NLS-1$
+    setGroupFooterFont(reportSpec, dummyGroupFooter);
+    if (expressionExists && reportSpec.getCalculateGrandTotals()) {
+      Element dummyFooterRectangleElement = null;
+      if (reportSpec.getUseDummyGroupFooterBackgroundColor()) {
+        dummyFooterRectangleElement = dummyGroupFooter.addElement("rectangle"); //$NON-NLS-1$
+        dummyFooterRectangleElement.addAttribute("color", reportSpec.getDummyGroupFooterBackgroundColor()); //$NON-NLS-1$
+        dummyFooterRectangleElement.addAttribute("draw", "false"); //$NON-NLS-1$ //$NON-NLS-2$
+        dummyFooterRectangleElement.addAttribute("fill", "true"); //$NON-NLS-1$ //$NON-NLS-2$
+        dummyFooterRectangleElement.addAttribute("height", (reportSpec.getGroupFooterFontSize() + 5) + ""); //$NON-NLS-1$ //$NON-NLS-2$
+        dummyFooterRectangleElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
+        dummyFooterRectangleElement.addAttribute("y", "1"); //$NON-NLS-1$ //$NON-NLS-2$
       }
-      // set watermark
-      setWatermark(reportSpec, reportNode);
-      Element reportHeaderElement = reportNode.addElement("reportheader"); //$NON-NLS-1$
-      Element groupsNode = reportNode.addElement("groups"); //$NON-NLS-1$
-      Element itemsNode = reportNode.addElement("items"); //$NON-NLS-1$
-      Element functionNode = reportNode.addElement("functions"); //$NON-NLS-1$
-      if (reportSpec.getChart() != null && reportSpec.getUseChart()) {
-        addChartElement(reportSpec, null, functionNode, reportHeaderElement, 0);
+      String xStr = addExpressions(reportSpec, details, groups, null, -1, dummyGroupFooter, functionNode, true, 0);
+      if (dummyFooterRectangleElement != null) {
+        dummyFooterRectangleElement.addAttribute("x", xStr); //$NON-NLS-1$
       }
-      setItemsFont(reportSpec, itemsNode);
-      // create banding rectangle if banding is turned on
-      createRowBanding(reportSpec, details, itemsNode, functionNode, itemFontSize);
-      // programatically create details/groups section
-      double percentSum = 0;
-      // create item background rectangle + item label itself
-      for (int i = 0; i < details.length; i++) {
-        Field f = details[i];
-        String detailFieldName = f.getName();
-        if (f.getIsCalculatedColumn()) {
-          createCalculatedColumnExpression(reportSpec, functionNode, f);
-          detailFieldName = f.getName() + "_calc_column_expression"; //$NON-NLS-1$
+    }    
+  }
+  
+  public static void processNormalGroups(ReportSpec reportSpec, Field details[], Field groups[], Element groupsNode, Element functionNode, int itemFontSize, boolean expressionExists, int spacerWidth) {
+    org.dom4j.Element groupElement = groupsNode.addElement("group"); //$NON-NLS-1$
+    groupElement.addAttribute("name", "dummy"); //$NON-NLS-1$ //$NON-NLS-2$
+    org.dom4j.Element dummyGroupHeader = groupElement.addElement("groupheader"); //$NON-NLS-1$
+    dummyGroupHeader.addAttribute("name", "dummyGroupHeader"); //$NON-NLS-1$ //$NON-NLS-2$
+    Element noDataLabelElement = dummyGroupHeader.addElement("label"); //$NON-NLS-1$
+    noDataLabelElement.addAttribute("name", "noDataLabelElement"); //$NON-NLS-1$ //$NON-NLS-2$
+    noDataLabelElement.addAttribute("height", (itemFontSize + 2) + ""); //$NON-NLS-1$ //$NON-NLS-2$
+    noDataLabelElement.addAttribute("vertical-alignment", "middle"); //$NON-NLS-1$ //$NON-NLS-2$
+    noDataLabelElement.addAttribute("alignment", "left"); //$NON-NLS-1$ //$NON-NLS-2$
+    noDataLabelElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
+    noDataLabelElement.addAttribute("x", reportSpec.getHorizontalOffset() + "%"); //$NON-NLS-1$ //$NON-NLS-2$
+    noDataLabelElement.addAttribute("y", "0"); //$NON-NLS-1$ //$NON-NLS-2$
+    noDataLabelElement.addAttribute("visible", "false"); //$NON-NLS-1$ //$NON-NLS-2$
+    noDataLabelElement.setText("No Data Available"); //$NON-NLS-1$
+    addShowIfNoData(noDataLabelElement, functionNode);
+    setGroupHeaderFont(reportSpec, dummyGroupHeader, false);
+    dummyGroupHeader.addAttribute("repeat", "false"); //$NON-NLS-1$ //$NON-NLS-2$
+    org.dom4j.Element dummyGroupFooter = groupElement.addElement("groupfooter"); //$NON-NLS-1$
+    dummyGroupFooter.addAttribute("name", "dummyGroupFooter"); //$NON-NLS-1$ //$NON-NLS-2$
+    addHideIfNoData("dummyGroupFooter", functionNode); //$NON-NLS-1$
+    setGroupFooterFont(reportSpec, dummyGroupFooter);
+    // if page break after group on first group (outermost), dummy
+    // group to
+    // have column header in its footer, above calcs
+    Field innermostGroupField = groups[0];
+    Field outermostGroupField = groups[groups.length - 1];
+    int yShift = 0;
+    if (outermostGroupField.getPageBreakAfterFooter() || innermostGroupField.getPageBreakAfterFooter()) {
+      yShift = reportSpec.getColumnHeaderHeight();
+      org.dom4j.Element rectangleElement = dummyGroupFooter.addElement("rectangle"); //$NON-NLS-1$
+      rectangleElement.addAttribute("color", reportSpec.getColumnHeaderBackgroundColor()); //$NON-NLS-1$
+      rectangleElement.addAttribute("draw", "false"); //$NON-NLS-1$ //$NON-NLS-2$
+      rectangleElement.addAttribute("fill", reportSpec.getUseColumnHeaderBackgroundColor() ? "true" : "false"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+      rectangleElement.addAttribute("height", String.valueOf(reportSpec.getColumnHeaderHeight())); //$NON-NLS-1$
+      rectangleElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
+      rectangleElement.addAttribute("x", reportSpec.getHorizontalOffset() + "%"); //$NON-NLS-1$ //$NON-NLS-2$
+      rectangleElement.addAttribute("y", "0"); //$NON-NLS-1$ //$NON-NLS-2$
+      createColumnHeaders(reportSpec, groups, details, dummyGroupFooter, 0, 0);
+    }
+    if (expressionExists && reportSpec.getCalculateGrandTotals()) {
+      Element dummyFooterRectangleElement = null;
+      if (reportSpec.getUseDummyGroupFooterBackgroundColor()) {
+        dummyFooterRectangleElement = dummyGroupFooter.addElement("rectangle"); //$NON-NLS-1$
+        dummyFooterRectangleElement.addAttribute("color", reportSpec.getDummyGroupFooterBackgroundColor()); //$NON-NLS-1$
+        dummyFooterRectangleElement.addAttribute("draw", "false"); //$NON-NLS-1$ //$NON-NLS-2$
+        dummyFooterRectangleElement.addAttribute("fill", "true"); //$NON-NLS-1$ //$NON-NLS-2$
+        dummyFooterRectangleElement.addAttribute("height", (reportSpec.getGroupFooterFontSize() + 5) + ""); //$NON-NLS-1$ //$NON-NLS-2$
+        dummyFooterRectangleElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
+        dummyFooterRectangleElement.addAttribute("y", "1"); //$NON-NLS-1$ //$NON-NLS-2$
+      }
+      String xStr = addExpressions(reportSpec, details, groups, null, -1, dummyGroupFooter, functionNode, true,
+          yShift);
+      if (dummyFooterRectangleElement != null) {
+        dummyFooterRectangleElement.addAttribute("x", xStr); //$NON-NLS-1$
+      }
+    }
+    for (int i = 0; i < groups.length; i++) {
+      Field group = groups[i];
+      groupElement = groupsNode.addElement("group"); //$NON-NLS-1$
+      groupElement.addAttribute("name", group.getName()); //$NON-NLS-1$
+      org.dom4j.Element fieldsElement = groupElement.addElement("fields"); //$NON-NLS-1$
+      for (int j = 0; j <= i; j++) {
+        org.dom4j.Element fieldElement = fieldsElement.addElement("field"); //$NON-NLS-1$
+        fieldElement.setText(groups[j].getName());
+      }
+      org.dom4j.Element groupHeader = null;
+      groupHeader = groupElement.addElement("groupheader"); //$NON-NLS-1$
+      groupHeader.addAttribute("name", group.getName() + "GroupHeader"); //$NON-NLS-1$ //$NON-NLS-2$
+      addHideIfNoData(group.getName() + "GroupHeader", functionNode); //$NON-NLS-1$
+      groupHeader.addAttribute("repeat", group.getRepeatGroupHeader() ? "true" : "false"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+      groupHeader.addAttribute("pagebreak-before-print", String.valueOf(group.getPageBreakBeforeHeader())); //$NON-NLS-1$
+      groupHeader.addAttribute("pagebreak-after-print", String.valueOf(group.getPageBreakAfterHeader())); //$NON-NLS-1$
+      // add chart (if exists)
+      int chartHeight = 0;
+      boolean chartAboveHeader = group.getShowChartAboveGroupHeader();
+      if (group.getUseChart() && group.getChart() != null) {
+        chartHeight = group.getChart().getHeight();
+      }
+      if (i == groups.length - 1) {
+        int y = 0;
+        int x = 0;
+        setGroupHeaderFont(reportSpec, groupHeader, false);
+        int groupHeaderHeight = chartHeight + reportSpec.getColumnHeaderHeight();
+        if (group.getUseChart() && group.getChart() != null && chartAboveHeader) {
+          addChartElement(reportSpec, group, functionNode, groupHeader, 0);
         }
-        double width = f.getWidth().doubleValue();
-        if (f.getUseBackgroundColor() || f.getUseTrafficLighting()) {
-          org.dom4j.Element rectangleElement = itemsNode.addElement("rectangle"); //$NON-NLS-1$
-          rectangleElement.addAttribute("name", f.getName() + "BackgroundElement"); //$NON-NLS-1$ //$NON-NLS-2$
-          if (!f.getUseTrafficLighting()) {
-            rectangleElement.addAttribute("color", f.getBackgroundColor()); //$NON-NLS-1$
+        if (group.getCreateGroupHeader()) {
+          // group header background
+          groupHeaderHeight += reportSpec.getGroupHeaderFontSize() + 5;
+          if ( !StringUtils.isEmpty(group.getLevelName()) ) {
+            addField(groupHeader, group, reportSpec.getHorizontalOffset() + spacerWidth + "%", Integer //$NON-NLS-1$
+                .toString(chartAboveHeader ? chartHeight : y), "100%", Integer.toString(reportSpec //$NON-NLS-1$
+                .getGroupHeaderFontSize() + 5), true);
+            y += reportSpec.getGroupHeaderFontSize() + 5;
           }
+          org.dom4j.Element rectangleElement = groupHeader.addElement("rectangle"); //$NON-NLS-1$
+          rectangleElement.addAttribute("color", group.getBackgroundColor()); //$NON-NLS-1$
           rectangleElement.addAttribute("draw", "false"); //$NON-NLS-1$ //$NON-NLS-2$
-          rectangleElement.addAttribute("fill", "true"); //$NON-NLS-1$ //$NON-NLS-2$
-          rectangleElement.addAttribute("height", (itemFontSize + 2) + ""); //$NON-NLS-1$ //$NON-NLS-2$
-          rectangleElement.addAttribute(
-              "x", reportSpec.getHorizontalOffset() + percentSum + (f.getIsWidthPercent() ? "%" : "")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-          rectangleElement.addAttribute("width", width + (f.getIsWidthPercent() ? "%" : "")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-          rectangleElement.addAttribute("y", "0"); //$NON-NLS-1$ //$NON-NLS-2$
-          // traffic lighting
-          if (f.getUseTrafficLighting()) {
-            addTrafficLighting(reportSpec, f, f.getName() + "BackgroundElement", functionNode); //$NON-NLS-1$
+          rectangleElement.addAttribute("fill", group.getUseBackgroundColor() ? "true" : "false"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+          rectangleElement.addAttribute("height", String.valueOf(reportSpec.getGroupHeaderFontSize() + 5)); //$NON-NLS-1$
+          rectangleElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
+          rectangleElement.addAttribute("x", reportSpec.getHorizontalOffset() + "%"); //$NON-NLS-1$ //$NON-NLS-2$
+          rectangleElement.addAttribute("y", (chartAboveHeader ? chartHeight : y) + ""); //$NON-NLS-1$ //$NON-NLS-2$
+          // display field for group
+          addField(groupHeader, group, reportSpec.getHorizontalOffset() + spacerWidth + "%", Integer //$NON-NLS-1$
+              .toString(chartAboveHeader ? chartHeight : y), "100%", Integer.toString(reportSpec //$NON-NLS-1$
+              .getGroupHeaderFontSize() + 5), false);
+          // column header background
+          Element topGapRectangleElement = null;
+          if (reportSpec.getGenerateReportLevelColumnHeaders()) {
+            rectangleElement = dummyGroupHeader.addElement("rectangle"); //$NON-NLS-1$
+            topGapRectangleElement = dummyGroupHeader.addElement("rectangle"); //$NON-NLS-1$
+          } else {
+            rectangleElement = groupHeader.addElement("rectangle"); //$NON-NLS-1$
+            topGapRectangleElement = groupHeader.addElement("rectangle"); //$NON-NLS-1$
           }
-        }
-        org.dom4j.Element detailField = itemsNode.addElement(ReportSpecUtility.getFieldType(f.getType(), f.getName(), false));
-        detailField.addAttribute("name", f.getName() + "Element"); //$NON-NLS-1$ //$NON-NLS-2$
-        detailField.addAttribute("nullstring", f.getNullString()); //$NON-NLS-1$
-        if (!f.getName().equals("")) { //$NON-NLS-1$
-          detailField.addAttribute("fieldname", detailFieldName); //$NON-NLS-1$
-          String format = details[i].getFormat();
-          setAttributeWithRequiredValue(detailField, "format", format); //$NON-NLS-1$
-        } else {
-          detailField.setText(""); //$NON-NLS-1$
-        }
-        detailField.addAttribute("vertical-alignment", f.getVerticalAlignment()); //$NON-NLS-1$
-        detailField.addAttribute("alignment", f.getHorizontalAlignment()); //$NON-NLS-1$
-        detailField.addAttribute("width", width + (f.getIsWidthPercent() ? "%" : "")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-        detailField.addAttribute(
-            "x", reportSpec.getHorizontalOffset() + percentSum + (f.getIsWidthPercent() ? "%" : "")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-        detailField.addAttribute("y", "0"); //$NON-NLS-1$ //$NON-NLS-2$
-        detailField.addAttribute("height", (itemFontSize + 2) + ""); //$NON-NLS-1$ //$NON-NLS-2$
-        setItemFont(reportSpec, f, detailField);
-        if (f.getUseItemHide()) {
-          org.dom4j.Element functionField = functionNode.addElement("function"); //$NON-NLS-1$
-          functionField.addAttribute("name", "headerEVSF_" + f.getName()); //$NON-NLS-1$ //$NON-NLS-2$
-          functionField.addAttribute("class", "org.pentaho.jfreereport.functions.ItemHideFunction"); //$NON-NLS-1$ //$NON-NLS-2$
-          org.dom4j.Element properties = functionField.addElement("properties"); //$NON-NLS-1$
-          org.dom4j.Element elementProperty = properties.addElement("property"); //$NON-NLS-1$
-          elementProperty.addAttribute("name", "element"); //$NON-NLS-1$ //$NON-NLS-2$
-          elementProperty.setText(f.getName() + "Element"); //$NON-NLS-1$
-          org.dom4j.Element fieldProperty = properties.addElement("property"); //$NON-NLS-1$
-          fieldProperty.addAttribute("name", "field"); //$NON-NLS-1$ //$NON-NLS-2$
-          fieldProperty.setText(detailFieldName);
-          org.dom4j.Element ignoreGroupBreaksProperty = properties.addElement("property"); //$NON-NLS-1$
-          ignoreGroupBreaksProperty.addAttribute("name", "ignoreGroupBreaks"); //$NON-NLS-1$ //$NON-NLS-2$
-          ignoreGroupBreaksProperty.setText("true"); //$NON-NLS-1$
-          org.dom4j.Element ignorePageBreaksProperty = properties.addElement("property"); //$NON-NLS-1$
-          ignorePageBreaksProperty.addAttribute("name", "ignorePageBreaks"); //$NON-NLS-1$ //$NON-NLS-2$
-          ignorePageBreaksProperty.setText("true"); //$NON-NLS-1$
-        }
-        percentSum += width;
-      }
-      // draw lines on details
-      if (details.length > 0) {
-        addVerticalGridLines(reportSpec, groups, details, itemsNode, itemFontSize);
-        addHorizontalGridLines(reportSpec, groups, details, itemsNode, itemFontSize);
-      }
-      if (groups.length == 0) {
-        org.dom4j.Element groupElement = groupsNode.addElement("group"); //$NON-NLS-1$
-        groupElement.addAttribute("name", "dummy"); //$NON-NLS-1$ //$NON-NLS-2$
-        // header
-        org.dom4j.Element dummyGroupHeader = groupElement.addElement("groupheader"); //$NON-NLS-1$
-        Element noDataBandElement = dummyGroupHeader.addElement("band"); //$NON-NLS-1$
-        noDataBandElement.addAttribute("name", "DummyGroupNoDataBandElement"); //$NON-NLS-1$ //$NON-NLS-2$
-        Element noDataLabelElement = noDataBandElement.addElement("label"); //$NON-NLS-1$
-        noDataLabelElement.addAttribute("height", (itemFontSize + 2) + ""); //$NON-NLS-1$ //$NON-NLS-2$
-        noDataLabelElement.addAttribute("vertical-alignment", "middle"); //$NON-NLS-1$ //$NON-NLS-2$
-        noDataLabelElement.addAttribute("alignment", "left"); //$NON-NLS-1$ //$NON-NLS-2$
-        noDataLabelElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
-        noDataLabelElement.addAttribute("x", reportSpec.getHorizontalOffset() + "%"); //$NON-NLS-1$ //$NON-NLS-2$
-        noDataLabelElement.addAttribute("y", "0"); //$NON-NLS-1$ //$NON-NLS-2$
-        noDataLabelElement.setText("No Data Available"); //$NON-NLS-1$
-        addShowIfNoData(noDataBandElement, functionNode);
-        Element dataBandElement = dummyGroupHeader.addElement("band"); //$NON-NLS-1$
-        dataBandElement.addAttribute("name", "DummyGroupDataBandElement"); //$NON-NLS-1$ //$NON-NLS-2$
-        dataBandElement.addAttribute("y", reportSpec.getColumnHeaderTopGap() + ""); //$NON-NLS-1$ //$NON-NLS-2$
-        dataBandElement.addAttribute(
-            "height", (reportSpec.getColumnHeaderHeight() + reportSpec.getColumnHeaderGap()) + ""); //$NON-NLS-1$ //$NON-NLS-2$
-        addHideIfNoData("DummyGroupDataBandElement", functionNode); //$NON-NLS-1$
-        org.dom4j.Element rectangleElement = dataBandElement.addElement("rectangle"); //$NON-NLS-1$
-        rectangleElement.addAttribute("color", reportSpec.getColumnHeaderBackgroundColor()); //$NON-NLS-1$
-        rectangleElement.addAttribute("draw", "false"); //$NON-NLS-1$ //$NON-NLS-2$
-        rectangleElement.addAttribute("fill", reportSpec.getUseColumnHeaderBackgroundColor() ? "true" : "false"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-        rectangleElement.addAttribute("height", String.valueOf(reportSpec.getColumnHeaderHeight())); //$NON-NLS-1$
-        rectangleElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
-        rectangleElement.addAttribute("x", reportSpec.getHorizontalOffset() + "%"); //$NON-NLS-1$ //$NON-NLS-2$
-        rectangleElement.addAttribute("y", "0"); //$NON-NLS-1$ //$NON-NLS-2$
-        createColumnHeaders(reportSpec, groups, details, dataBandElement, 0, 0);
-        dummyGroupHeader.addAttribute("repeat", "true"); //$NON-NLS-1$ //$NON-NLS-2$
-        dummyGroupHeader
-            .addAttribute(
-                "height", (reportSpec.getColumnHeaderTopGap() + reportSpec.getColumnHeaderHeight() + reportSpec.getColumnHeaderGap()) + ""); //$NON-NLS-1$ //$NON-NLS-2$
-        setGroupHeaderFont(reportSpec, dummyGroupHeader, true);
-        // footer
-        org.dom4j.Element dummyGroupFooter = groupElement.addElement("groupfooter"); //$NON-NLS-1$
-        dummyGroupFooter.addAttribute("name", "dummyGroupFooter"); //$NON-NLS-1$ //$NON-NLS-2$
-        addHideIfNoData("dummyGroupFooter", functionNode); //$NON-NLS-1$
-        setGroupFooterFont(reportSpec, dummyGroupFooter);
-        if (expressionExists && reportSpec.getCalculateGrandTotals()) {
-          Element dummyFooterRectangleElement = null;
-          if (reportSpec.getUseDummyGroupFooterBackgroundColor()) {
-            dummyFooterRectangleElement = dummyGroupFooter.addElement("rectangle"); //$NON-NLS-1$
-            dummyFooterRectangleElement.addAttribute("color", reportSpec.getDummyGroupFooterBackgroundColor()); //$NON-NLS-1$
-            dummyFooterRectangleElement.addAttribute("draw", "false"); //$NON-NLS-1$ //$NON-NLS-2$
-            dummyFooterRectangleElement.addAttribute("fill", "true"); //$NON-NLS-1$ //$NON-NLS-2$
-            dummyFooterRectangleElement.addAttribute("height", (reportSpec.getGroupFooterFontSize() + 5) + ""); //$NON-NLS-1$ //$NON-NLS-2$
-            dummyFooterRectangleElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
-            dummyFooterRectangleElement.addAttribute("y", "1"); //$NON-NLS-1$ //$NON-NLS-2$
+          topGapRectangleElement.addAttribute("draw", "false"); //$NON-NLS-1$ //$NON-NLS-2$
+          topGapRectangleElement.addAttribute("fill", "false"); //$NON-NLS-1$ //$NON-NLS-2$
+          topGapRectangleElement.addAttribute("height", reportSpec.getColumnHeaderTopGap() + ""); //$NON-NLS-1$ //$NON-NLS-2$
+          topGapRectangleElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
+          topGapRectangleElement.addAttribute("x", reportSpec.getHorizontalOffset() + "%"); //$NON-NLS-1$ //$NON-NLS-2$
+          if (reportSpec.getGenerateReportLevelColumnHeaders()) {
+            topGapRectangleElement.addAttribute("y", (chartAboveHeader ? chartHeight : y) + ""); //$NON-NLS-1$ //$NON-NLS-2$
+          } else {
+            topGapRectangleElement.addAttribute(
+                "y", ((chartAboveHeader ? chartHeight : y) + reportSpec.getGroupHeaderFontSize() + 5) + ""); //$NON-NLS-1$ //$NON-NLS-2$
           }
-          String xStr = addExpressions(reportSpec, details, groups, null, -1, dummyGroupFooter, functionNode, true, 0);
-          if (dummyFooterRectangleElement != null) {
-            dummyFooterRectangleElement.addAttribute("x", xStr); //$NON-NLS-1$
-          }
-        }
-      } else {
-        org.dom4j.Element groupElement = groupsNode.addElement("group"); //$NON-NLS-1$
-        groupElement.addAttribute("name", "dummy"); //$NON-NLS-1$ //$NON-NLS-2$
-        org.dom4j.Element dummyGroupHeader = groupElement.addElement("groupheader"); //$NON-NLS-1$
-        dummyGroupHeader.addAttribute("name", "dummyGroupHeader"); //$NON-NLS-1$ //$NON-NLS-2$
-        Element noDataLabelElement = dummyGroupHeader.addElement("label"); //$NON-NLS-1$
-        noDataLabelElement.addAttribute("name", "noDataLabelElement"); //$NON-NLS-1$ //$NON-NLS-2$
-        noDataLabelElement.addAttribute("height", (itemFontSize + 2) + ""); //$NON-NLS-1$ //$NON-NLS-2$
-        noDataLabelElement.addAttribute("vertical-alignment", "middle"); //$NON-NLS-1$ //$NON-NLS-2$
-        noDataLabelElement.addAttribute("alignment", "left"); //$NON-NLS-1$ //$NON-NLS-2$
-        noDataLabelElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
-        noDataLabelElement.addAttribute("x", reportSpec.getHorizontalOffset() + "%"); //$NON-NLS-1$ //$NON-NLS-2$
-        noDataLabelElement.addAttribute("y", "0"); //$NON-NLS-1$ //$NON-NLS-2$
-        noDataLabelElement.addAttribute("visible", "false"); //$NON-NLS-1$ //$NON-NLS-2$
-        noDataLabelElement.setText("No Data Available"); //$NON-NLS-1$
-        addShowIfNoData(noDataLabelElement, functionNode);
-        setGroupHeaderFont(reportSpec, dummyGroupHeader, false);
-        dummyGroupHeader.addAttribute("repeat", "false"); //$NON-NLS-1$ //$NON-NLS-2$
-        org.dom4j.Element dummyGroupFooter = groupElement.addElement("groupfooter"); //$NON-NLS-1$
-        dummyGroupFooter.addAttribute("name", "dummyGroupFooter"); //$NON-NLS-1$ //$NON-NLS-2$
-        addHideIfNoData("dummyGroupFooter", functionNode); //$NON-NLS-1$
-        setGroupFooterFont(reportSpec, dummyGroupFooter);
-        // if page break after group on first group (outermost), dummy
-        // group to
-        // have column header in its footer, above calcs
-        Field innermostGroupField = groups[0];
-        Field outermostGroupField = groups[groups.length - 1];
-        int yShift = 0;
-        if (outermostGroupField.getPageBreakAfterFooter() || innermostGroupField.getPageBreakAfterFooter()) {
-          yShift = reportSpec.getColumnHeaderHeight();
-          org.dom4j.Element rectangleElement = dummyGroupFooter.addElement("rectangle"); //$NON-NLS-1$
           rectangleElement.addAttribute("color", reportSpec.getColumnHeaderBackgroundColor()); //$NON-NLS-1$
           rectangleElement.addAttribute("draw", "false"); //$NON-NLS-1$ //$NON-NLS-2$
           rectangleElement.addAttribute("fill", reportSpec.getUseColumnHeaderBackgroundColor() ? "true" : "false"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
           rectangleElement.addAttribute("height", String.valueOf(reportSpec.getColumnHeaderHeight())); //$NON-NLS-1$
           rectangleElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
           rectangleElement.addAttribute("x", reportSpec.getHorizontalOffset() + "%"); //$NON-NLS-1$ //$NON-NLS-2$
-          rectangleElement.addAttribute("y", "0"); //$NON-NLS-1$ //$NON-NLS-2$
-          createColumnHeaders(reportSpec, groups, details, dummyGroupFooter, 0, 0);
+          if (reportSpec.getGenerateReportLevelColumnHeaders()) {
+            rectangleElement.addAttribute(
+                "y", reportSpec.getColumnHeaderTopGap() + (chartAboveHeader ? chartHeight : y) + ""); //$NON-NLS-1$ //$NON-NLS-2$
+          } else {
+            rectangleElement
+                .addAttribute(
+                    "y", reportSpec.getColumnHeaderTopGap() + ((chartAboveHeader ? chartHeight : y) + reportSpec.getGroupHeaderFontSize() + 5) + ""); //$NON-NLS-1$ //$NON-NLS-2$
+            y += reportSpec.getColumnHeaderTopGap() + (chartAboveHeader ? chartHeight : 0)
+                + reportSpec.getGroupHeaderFontSize() + 5;
+          }
+        } else {
+          // column header background
+          Element rectangleElement = null;
+          if (reportSpec.getGenerateReportLevelColumnHeaders()) {
+            rectangleElement = dummyGroupHeader.addElement("rectangle"); //$NON-NLS-1$
+          } else {
+            rectangleElement = groupHeader.addElement("rectangle"); //$NON-NLS-1$
+          }
+          rectangleElement.addAttribute("color", reportSpec.getColumnHeaderBackgroundColor()); //$NON-NLS-1$
+          rectangleElement.addAttribute("draw", "false"); //$NON-NLS-1$ //$NON-NLS-2$
+          rectangleElement.addAttribute("fill", reportSpec.getUseColumnHeaderBackgroundColor() ? "true" : "false"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+          rectangleElement.addAttribute("height", String.valueOf(reportSpec.getColumnHeaderHeight())); //$NON-NLS-1$
+          rectangleElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
+          rectangleElement.addAttribute("x", reportSpec.getHorizontalOffset() + "%"); //$NON-NLS-1$ //$NON-NLS-2$
+          rectangleElement.addAttribute("y", (chartAboveHeader ? chartHeight : y) + ""); //$NON-NLS-1$ //$NON-NLS-2$
         }
-        if (expressionExists && reportSpec.getCalculateGrandTotals()) {
-          Element dummyFooterRectangleElement = null;
-          if (reportSpec.getUseDummyGroupFooterBackgroundColor()) {
-            dummyFooterRectangleElement = dummyGroupFooter.addElement("rectangle"); //$NON-NLS-1$
-            dummyFooterRectangleElement.addAttribute("color", reportSpec.getDummyGroupFooterBackgroundColor()); //$NON-NLS-1$
-            dummyFooterRectangleElement.addAttribute("draw", "false"); //$NON-NLS-1$ //$NON-NLS-2$
-            dummyFooterRectangleElement.addAttribute("fill", "true"); //$NON-NLS-1$ //$NON-NLS-2$
-            dummyFooterRectangleElement.addAttribute("height", (reportSpec.getGroupFooterFontSize() + 5) + ""); //$NON-NLS-1$ //$NON-NLS-2$
-            dummyFooterRectangleElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
-            dummyFooterRectangleElement.addAttribute("y", "1"); //$NON-NLS-1$ //$NON-NLS-2$
-          }
-          String xStr = addExpressions(reportSpec, details, groups, null, -1, dummyGroupFooter, functionNode, true,
-              yShift);
-          if (dummyFooterRectangleElement != null) {
-            dummyFooterRectangleElement.addAttribute("x", xStr); //$NON-NLS-1$
-          }
+        if (group.getUseChart() && group.getChart() != null && !chartAboveHeader) {
+          addChartElement(reportSpec, group, functionNode, groupHeader, groupHeaderHeight - chartHeight);
         }
-        for (int i = 0; i < groups.length; i++) {
-          Field group = groups[i];
-          groupElement = groupsNode.addElement("group"); //$NON-NLS-1$
-          groupElement.addAttribute("name", group.getName()); //$NON-NLS-1$
-          org.dom4j.Element fieldsElement = groupElement.addElement("fields"); //$NON-NLS-1$
-          for (int j = 0; j <= i; j++) {
-            org.dom4j.Element fieldElement = fieldsElement.addElement("field"); //$NON-NLS-1$
-            fieldElement.setText(groups[j].getName());
-          }
-          org.dom4j.Element groupHeader = null;
-          groupHeader = groupElement.addElement("groupheader"); //$NON-NLS-1$
-          groupHeader.addAttribute("name", group.getName() + "GroupHeader"); //$NON-NLS-1$ //$NON-NLS-2$
-          addHideIfNoData(group.getName() + "GroupHeader", functionNode); //$NON-NLS-1$
-          groupHeader.addAttribute("repeat", group.getRepeatGroupHeader() ? "true" : "false"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-          groupHeader.addAttribute("pagebreak-before-print", String.valueOf(group.getPageBreakBeforeHeader())); //$NON-NLS-1$
-          groupHeader.addAttribute("pagebreak-after-print", String.valueOf(group.getPageBreakAfterHeader())); //$NON-NLS-1$
-          // add chart (if exists)
-          int chartHeight = 0;
-          boolean chartAboveHeader = group.getShowChartAboveGroupHeader();
-          if (group.getUseChart() && group.getChart() != null) {
-            chartHeight = group.getChart().getHeight();
-          }
-          org.dom4j.Element messageField = null;
-          if (i == groups.length - 1) {
-            int y = 0;
-            int x = 0;
-            setGroupHeaderFont(reportSpec, groupHeader, false);
-            int groupHeaderHeight = chartHeight + reportSpec.getColumnHeaderHeight();
-            if (group.getUseChart() && group.getChart() != null && chartAboveHeader) {
-              addChartElement(reportSpec, group, functionNode, groupHeader, 0);
-            }
-            if (group.getCreateGroupHeader()) {
-              // group header background
-              groupHeaderHeight += reportSpec.getGroupHeaderFontSize() + 5;
-              if ( !StringUtils.isEmpty(group.getLevelName()) ) {
-                addField(groupHeader, group, reportSpec.getHorizontalOffset() + spacerWidth + "%", Integer //$NON-NLS-1$
-                    .toString(chartAboveHeader ? chartHeight : y), "100%", Integer.toString(reportSpec //$NON-NLS-1$
-                    .getGroupHeaderFontSize() + 5), true);
-                y += reportSpec.getGroupHeaderFontSize() + 5;
-              }
-              org.dom4j.Element rectangleElement = groupHeader.addElement("rectangle"); //$NON-NLS-1$
-              rectangleElement.addAttribute("color", group.getBackgroundColor()); //$NON-NLS-1$
-              rectangleElement.addAttribute("draw", "false"); //$NON-NLS-1$ //$NON-NLS-2$
-              rectangleElement.addAttribute("fill", group.getUseBackgroundColor() ? "true" : "false"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-              rectangleElement.addAttribute("height", String.valueOf(reportSpec.getGroupHeaderFontSize() + 5)); //$NON-NLS-1$
-              rectangleElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
-              rectangleElement.addAttribute("x", reportSpec.getHorizontalOffset() + "%"); //$NON-NLS-1$ //$NON-NLS-2$
-              rectangleElement.addAttribute("y", (chartAboveHeader ? chartHeight : y) + ""); //$NON-NLS-1$ //$NON-NLS-2$
-              // display field for group
-              addField(groupHeader, group, reportSpec.getHorizontalOffset() + spacerWidth + "%", Integer //$NON-NLS-1$
-                  .toString(chartAboveHeader ? chartHeight : y), "100%", Integer.toString(reportSpec //$NON-NLS-1$
-                  .getGroupHeaderFontSize() + 5), false);
-              // column header background
-              Element topGapRectangleElement = null;
-              if (reportSpec.getGenerateReportLevelColumnHeaders()) {
-                rectangleElement = dummyGroupHeader.addElement("rectangle"); //$NON-NLS-1$
-                topGapRectangleElement = dummyGroupHeader.addElement("rectangle"); //$NON-NLS-1$
-              } else {
-                rectangleElement = groupHeader.addElement("rectangle"); //$NON-NLS-1$
-                topGapRectangleElement = groupHeader.addElement("rectangle"); //$NON-NLS-1$
-              }
-              topGapRectangleElement.addAttribute("draw", "false"); //$NON-NLS-1$ //$NON-NLS-2$
-              topGapRectangleElement.addAttribute("fill", "false"); //$NON-NLS-1$ //$NON-NLS-2$
-              topGapRectangleElement.addAttribute("height", reportSpec.getColumnHeaderTopGap() + ""); //$NON-NLS-1$ //$NON-NLS-2$
-              topGapRectangleElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
-              topGapRectangleElement.addAttribute("x", reportSpec.getHorizontalOffset() + "%"); //$NON-NLS-1$ //$NON-NLS-2$
-              if (reportSpec.getGenerateReportLevelColumnHeaders()) {
-                topGapRectangleElement.addAttribute("y", (chartAboveHeader ? chartHeight : y) + ""); //$NON-NLS-1$ //$NON-NLS-2$
-              } else {
-                topGapRectangleElement.addAttribute(
-                    "y", ((chartAboveHeader ? chartHeight : y) + reportSpec.getGroupHeaderFontSize() + 5) + ""); //$NON-NLS-1$ //$NON-NLS-2$
-              }
-              rectangleElement.addAttribute("color", reportSpec.getColumnHeaderBackgroundColor()); //$NON-NLS-1$
-              rectangleElement.addAttribute("draw", "false"); //$NON-NLS-1$ //$NON-NLS-2$
-              rectangleElement.addAttribute("fill", reportSpec.getUseColumnHeaderBackgroundColor() ? "true" : "false"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-              rectangleElement.addAttribute("height", String.valueOf(reportSpec.getColumnHeaderHeight())); //$NON-NLS-1$
-              rectangleElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
-              rectangleElement.addAttribute("x", reportSpec.getHorizontalOffset() + "%"); //$NON-NLS-1$ //$NON-NLS-2$
-              if (reportSpec.getGenerateReportLevelColumnHeaders()) {
-                rectangleElement.addAttribute(
-                    "y", reportSpec.getColumnHeaderTopGap() + (chartAboveHeader ? chartHeight : y) + ""); //$NON-NLS-1$ //$NON-NLS-2$
-              } else {
-                rectangleElement
-                    .addAttribute(
-                        "y", reportSpec.getColumnHeaderTopGap() + ((chartAboveHeader ? chartHeight : y) + reportSpec.getGroupHeaderFontSize() + 5) + ""); //$NON-NLS-1$ //$NON-NLS-2$
-                y += reportSpec.getColumnHeaderTopGap() + (chartAboveHeader ? chartHeight : 0)
-                    + reportSpec.getGroupHeaderFontSize() + 5;
-              }
-            } else {
-              // column header background
-              Element rectangleElement = null;
-              if (reportSpec.getGenerateReportLevelColumnHeaders()) {
-                rectangleElement = dummyGroupHeader.addElement("rectangle"); //$NON-NLS-1$
-              } else {
-                rectangleElement = groupHeader.addElement("rectangle"); //$NON-NLS-1$
-              }
-              rectangleElement.addAttribute("color", reportSpec.getColumnHeaderBackgroundColor()); //$NON-NLS-1$
-              rectangleElement.addAttribute("draw", "false"); //$NON-NLS-1$ //$NON-NLS-2$
-              rectangleElement.addAttribute("fill", reportSpec.getUseColumnHeaderBackgroundColor() ? "true" : "false"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-              rectangleElement.addAttribute("height", String.valueOf(reportSpec.getColumnHeaderHeight())); //$NON-NLS-1$
-              rectangleElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
-              rectangleElement.addAttribute("x", reportSpec.getHorizontalOffset() + "%"); //$NON-NLS-1$ //$NON-NLS-2$
-              rectangleElement.addAttribute("y", (chartAboveHeader ? chartHeight : y) + ""); //$NON-NLS-1$ //$NON-NLS-2$
-            }
-            if (group.getUseChart() && group.getChart() != null && !chartAboveHeader) {
-              addChartElement(reportSpec, group, functionNode, groupHeader, groupHeaderHeight - chartHeight);
-            }
-            if (reportSpec.getGenerateReportLevelColumnHeaders()) {
-              createColumnHeaders(reportSpec, groups, details, dummyGroupHeader, x, y);
-              dummyGroupHeader
-                  .addAttribute(
-                      "height", reportSpec.getColumnHeaderTopGap() + groupHeaderHeight + reportSpec.getColumnHeaderGap() + ""); //$NON-NLS-1$ //$NON-NLS-2$
-            } else {
-              createColumnHeaders(reportSpec, groups, details, groupHeader, x, y);
-              groupHeader
-                  .addAttribute(
-                      "height", reportSpec.getColumnHeaderTopGap() + groupHeaderHeight + reportSpec.getColumnHeaderGap() + ""); //$NON-NLS-1$ //$NON-NLS-2$
-            }
-          } else if (group.getCreateGroupHeader()) {
-            int y = 0;
-            setGroupHeaderFont(reportSpec, groupHeader, false);
-            if ( !StringUtils.isEmpty( group.getLevelName() ) ) {
-              addField(groupHeader, group, reportSpec.getHorizontalOffset() + spacerWidth + "%", Integer //$NON-NLS-1$
-                  .toString(chartAboveHeader ? chartHeight : y), "100%", Integer.toString(reportSpec //$NON-NLS-1$
-                  .getGroupHeaderFontSize() + 5), true);
-              y += reportSpec.getGroupHeaderFontSize() + 5;
-            }
-            Element rectangleElement = groupHeader.addElement("rectangle"); //$NON-NLS-1$
-            rectangleElement.addAttribute("color", group.getBackgroundColor()); //$NON-NLS-1$
-            rectangleElement.addAttribute("draw", "false"); //$NON-NLS-1$ //$NON-NLS-2$
-            rectangleElement.addAttribute("fill", group.getUseBackgroundColor() ? "true" : "false"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-            rectangleElement.addAttribute("height", (reportSpec.getGroupHeaderFontSize() + 5) + ""); //$NON-NLS-1$ //$NON-NLS-2$
-            rectangleElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
-            rectangleElement.addAttribute("x", reportSpec.getHorizontalOffset() + "%"); //$NON-NLS-1$ //$NON-NLS-2$
-            rectangleElement.addAttribute("y", (chartAboveHeader ? chartHeight : y) + ""); //$NON-NLS-1$ //$NON-NLS-2$
-            // display field for group
-            addField(groupHeader, group, reportSpec.getHorizontalOffset() + spacerWidth + "%", Integer //$NON-NLS-1$
-                .toString(chartAboveHeader ? chartHeight : y), "100%", Integer.toString(reportSpec //$NON-NLS-1$
-                .getGroupHeaderFontSize() + 5), false);
-            if (group.getUseChart() && group.getChart() != null && chartAboveHeader) {
-              addChartElement(reportSpec, group, functionNode, groupHeader, 0);
-            } else if (group.getUseChart() && group.getChart() != null && !chartAboveHeader) {
-              addChartElement(reportSpec, group, functionNode, groupHeader, reportSpec.getGroupHeaderFontSize() + 5);
-            }
-          }
-          Element groupFooter = groupElement.addElement("groupfooter"); //$NON-NLS-1$
-          groupFooter.addAttribute("name", group.getName() + "GroupFooter"); //$NON-NLS-1$ //$NON-NLS-2$
-          addHideIfNoData(group.getName() + "GroupFooter", functionNode); //$NON-NLS-1$
-          setGroupFooterFont(reportSpec, groupFooter);
-          groupFooter.addAttribute("pagebreak-before-print", String.valueOf(group.getPageBreakBeforeFooter())); //$NON-NLS-1$
-          groupFooter.addAttribute("pagebreak-after-print", String.valueOf(group.getPageBreakAfterFooter())); //$NON-NLS-1$
-          // add rectangle for group-footer background color, if
-          // desired
-          if (expressionExists && group.getCalculateGroupTotals()) {
-            Element rectangleElement = null;
-            if (group.getUseGroupFooterBackgroundColor()) {
-              rectangleElement = groupFooter.addElement("rectangle"); //$NON-NLS-1$
-              rectangleElement.addAttribute("color", group.getGroupFooterBackgroundColor()); //$NON-NLS-1$
-              rectangleElement.addAttribute("draw", "false"); //$NON-NLS-1$ //$NON-NLS-2$
-              rectangleElement.addAttribute("fill", "true"); //$NON-NLS-1$ //$NON-NLS-2$
-              rectangleElement.addAttribute("height", (reportSpec.getGroupFooterFontSize() + 5) + ""); //$NON-NLS-1$ //$NON-NLS-2$
-              rectangleElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
-              rectangleElement.addAttribute("y", "1"); //$NON-NLS-1$ //$NON-NLS-2$
-            }
-            String xStr = addExpressions(reportSpec, details, groups, group, i, groupFooter, functionNode, false, 0);
-            if (rectangleElement != null) {
-              rectangleElement.addAttribute("x", xStr); //$NON-NLS-1$
-            }
-          }
-        } // end for groups
+        if (reportSpec.getGenerateReportLevelColumnHeaders()) {
+          createColumnHeaders(reportSpec, groups, details, dummyGroupHeader, x, y);
+          dummyGroupHeader
+              .addAttribute(
+                  "height", reportSpec.getColumnHeaderTopGap() + groupHeaderHeight + reportSpec.getColumnHeaderGap() + ""); //$NON-NLS-1$ //$NON-NLS-2$
+        } else {
+          createColumnHeaders(reportSpec, groups, details, groupHeader, x, y);
+          groupHeader
+              .addAttribute(
+                  "height", reportSpec.getColumnHeaderTopGap() + groupHeaderHeight + reportSpec.getColumnHeaderGap() + ""); //$NON-NLS-1$ //$NON-NLS-2$
+        }
+      } else if (group.getCreateGroupHeader()) {
+        int y = 0;
+        setGroupHeaderFont(reportSpec, groupHeader, false);
+        if ( !StringUtils.isEmpty( group.getLevelName() ) ) {
+          addField(groupHeader, group, reportSpec.getHorizontalOffset() + spacerWidth + "%", Integer //$NON-NLS-1$
+              .toString(chartAboveHeader ? chartHeight : y), "100%", Integer.toString(reportSpec //$NON-NLS-1$
+              .getGroupHeaderFontSize() + 5), true);
+          y += reportSpec.getGroupHeaderFontSize() + 5;
+        }
+        Element rectangleElement = groupHeader.addElement("rectangle"); //$NON-NLS-1$
+        rectangleElement.addAttribute("color", group.getBackgroundColor()); //$NON-NLS-1$
+        rectangleElement.addAttribute("draw", "false"); //$NON-NLS-1$ //$NON-NLS-2$
+        rectangleElement.addAttribute("fill", group.getUseBackgroundColor() ? "true" : "false"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+        rectangleElement.addAttribute("height", (reportSpec.getGroupHeaderFontSize() + 5) + ""); //$NON-NLS-1$ //$NON-NLS-2$
+        rectangleElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
+        rectangleElement.addAttribute("x", reportSpec.getHorizontalOffset() + "%"); //$NON-NLS-1$ //$NON-NLS-2$
+        rectangleElement.addAttribute("y", (chartAboveHeader ? chartHeight : y) + ""); //$NON-NLS-1$ //$NON-NLS-2$
+        // display field for group
+        addField(groupHeader, group, reportSpec.getHorizontalOffset() + spacerWidth + "%", Integer //$NON-NLS-1$
+            .toString(chartAboveHeader ? chartHeight : y), "100%", Integer.toString(reportSpec //$NON-NLS-1$
+            .getGroupHeaderFontSize() + 5), false);
+        if (group.getUseChart() && group.getChart() != null && chartAboveHeader) {
+          addChartElement(reportSpec, group, functionNode, groupHeader, 0);
+        } else if (group.getUseChart() && group.getChart() != null && !chartAboveHeader) {
+          addChartElement(reportSpec, group, functionNode, groupHeader, reportSpec.getGroupHeaderFontSize() + 5);
+        }
       }
-      // Element configElement = reportNode.addElement("configuration");
-      // Element configSetting = configElement.addElement("property");
-      // configSetting.addAttribute("name",
-      // "org.jfree.report.layout.fontrenderer.UseMaxCharBounds");
-      // configSetting.setText("true");
-      OutputFormat format = OutputFormat.createPrettyPrint();
-      XMLWriter writer = new XMLWriter(outputStream, format);
-      writer.write(document);
-      writer.close();
-      // put _SPACE_ fields back in place as they were
-      for (int i = 0; i < spaceFields.size(); i++) {
-        Field f = (Field) spaceFields.get(i);
-        f.setName("_SPACE_" + (i + 1)); //$NON-NLS-1$
-        f.setDisplayName("_SPACE_" + (i + 1)); //$NON-NLS-1$
+      Element groupFooter = groupElement.addElement("groupfooter"); //$NON-NLS-1$
+      groupFooter.addAttribute("name", group.getName() + "GroupFooter"); //$NON-NLS-1$ //$NON-NLS-2$
+      addHideIfNoData(group.getName() + "GroupFooter", functionNode); //$NON-NLS-1$
+      setGroupFooterFont(reportSpec, groupFooter);
+      groupFooter.addAttribute("pagebreak-before-print", String.valueOf(group.getPageBreakBeforeFooter())); //$NON-NLS-1$
+      groupFooter.addAttribute("pagebreak-after-print", String.valueOf(group.getPageBreakAfterFooter())); //$NON-NLS-1$
+      // add rectangle for group-footer background color, if
+      // desired
+      if (expressionExists && group.getCalculateGroupTotals()) {
+        Element rectangleElement = null;
+        if (group.getUseGroupFooterBackgroundColor()) {
+          rectangleElement = groupFooter.addElement("rectangle"); //$NON-NLS-1$
+          rectangleElement.addAttribute("color", group.getGroupFooterBackgroundColor()); //$NON-NLS-1$
+          rectangleElement.addAttribute("draw", "false"); //$NON-NLS-1$ //$NON-NLS-2$
+          rectangleElement.addAttribute("fill", "true"); //$NON-NLS-1$ //$NON-NLS-2$
+          rectangleElement.addAttribute("height", (reportSpec.getGroupFooterFontSize() + 5) + ""); //$NON-NLS-1$ //$NON-NLS-2$
+          rectangleElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
+          rectangleElement.addAttribute("y", "1"); //$NON-NLS-1$ //$NON-NLS-2$
+        }
+        String xStr = addExpressions(reportSpec, details, groups, group, i, groupFooter, functionNode, false, 0);
+        if (rectangleElement != null) {
+          rectangleElement.addAttribute("x", xStr); //$NON-NLS-1$
+        }
       }
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
+    } // end for groups
+    
   }
-
+  
+  public static void processGroupsSection(ReportSpec reportSpec, Field details[], Field groups[], Element groupsNode, Element functionNode, int itemFontSize, boolean expressionExists, int spacerWidth) {
+    if (groups.length == 0) {
+      // create dummy group for header/footer, there are no groups but we need
+      // to create a group to stuff the column headers and group calculations in
+      processDummyGroup(reportSpec, details, groups, groupsNode, functionNode, itemFontSize, expressionExists, spacerWidth);
+    } else {
+      // process normal groups
+      processNormalGroups(reportSpec, details, groups, groupsNode, functionNode, itemFontSize, expressionExists, spacerWidth);
+    }    
+  }
+  
   private static void addField(org.dom4j.Element ownerElement, Field group, String x, String y, String width,
       String height, boolean isLevelField) {
     int intFieldType = group.getType();
@@ -1658,12 +1527,6 @@ public class ReportGenerationUtility {
     double widthSum = 0;
     // get font size
     int fontSize = reportSpec.getGroupFooterFontSize();
-    /*
-     * Element rectangleElement = groupFooter.addElement("rectangle"); //$NON-NLS-1$ rectangleElement.addAttribute("color", "white"); //$NON-NLS-1$ //$NON-NLS-2$ rectangleElement.addAttribute("fill", "false"); //$NON-NLS-1$ //$NON-NLS-2$ if
-     * (reportSpec.getDoubleUnderlineExpression()) { rectangleElement.addAttribute("height", (fontSize + 11) + ""); //$NON-NLS-1$ //$NON-NLS-2$ } else { rectangleElement.addAttribute("height", (fontSize + 7) + ""); //$NON-NLS-1$
-     * //$NON-NLS-2$ } rectangleElement.addAttribute("width", "0"); //$NON-NLS-1$ //$NON-NLS-2$ rectangleElement.addAttribute("x", reportSpec.getHorizontalOffset() + "%"); //$NON-NLS-1$ //$NON-NLS-2$ rectangleElement.addAttribute("y",
-     * yShift + ""); //$NON-NLS-1$ //$NON-NLS-2$
-     */
     String totalHorizontalAlignment = null;
     double totalLabelWidth = widthSum;
     boolean foundCalc = false;
@@ -1672,21 +1535,6 @@ public class ReportGenerationUtility {
       Field f = details[j];
       width = f.getWidth().doubleValue();
       if (expressionName == null || expressionName.equals("none")) { //$NON-NLS-1$
-        // fill space
-        // Element messageField = groupFooter.addElement("label");
-        // //$NON-NLS-1$
-        // messageField.addAttribute("height", (fontSize + 4) + "");
-        // //$NON-NLS-1$ //$NON-NLS-2$
-        // messageField.addAttribute("width", width +
-        // (f.getIsWidthPercent() ?
-        // "%" : "")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-        // messageField.addAttribute("x", String.valueOf(widthSum) +
-        // (f.getIsWidthPercent() ? "%" : "")); //$NON-NLS-1$
-        // //$NON-NLS-2$
-        // //$NON-NLS-3$
-        // messageField.addAttribute("y", yShift + 2 + "");
-        // //$NON-NLS-1$
-        // //$NON-NLS-2$
         if (totalHorizontalAlignment == null) {
           totalHorizontalAlignment = f.getHorizontalAlignment();
         }
@@ -1871,4 +1719,85 @@ public class ReportGenerationUtility {
     }
     return xStr;
   }
+  
+  
+  
+  
+  
+  public static String createJFreeReportXML(ReportSpec reportSpec) {
+    ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+    createJFreeReportXML(reportSpec, outputStream, 0, 0, false, "", 0, 0); //$NON-NLS-1$
+    return new String(outputStream.toByteArray());
+  }
+
+  public static void createJFreeReportXML(ReportSpec reportSpec, OutputStream outputStream, int pageWidth,
+      int pageHeight, boolean createTotalColumn, String totalColumnName, int totalColumnWidth, int spacerWidth) {
+    Field fields[] = reportSpec.getField();
+    Field details[] = ReportSpecUtility.getDetails(fields);
+    Field groups[] = ReportSpecUtility.getGroups(fields);
+    List spaceFields = setupSpaceFields(fields);
+    try {
+      boolean expressionExists = ReportSpecUtility.doesExpressionExist(fields);
+      setupDetailFieldWidths(reportSpec, details);
+      int itemFontSize = ReportSpecUtility.getItemFontSize(reportSpec, details);
+      // dom4j
+      Document document = DOMDocumentFactory.getInstance().createDocument();
+
+      document
+          .addDocType(
+              "report", "-//JFreeReport//DTD report definition//EN//simple/version 0.8.5", "http://jfreereport.sourceforge.net/report-085.dtd"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+      org.dom4j.Element reportNode = document.addElement("report"); //$NON-NLS-1$
+// reportNode.addAttribute("xmlns", "http://jfreereport.sourceforge.net/namespaces/reports/legacy/simple");
+      // add parser-config to generated report
+      addParserConfig(reportSpec, reportNode);
+      // set report name
+      reportNode.addAttribute("name", reportSpec.getReportName()); //$NON-NLS-1$
+      // set orientation
+      reportNode.addAttribute("orientation", reportSpec.getOrientation()); //$NON-NLS-1$
+      // set page-format or page width/height
+      setPageFormat(reportSpec, reportNode, pageWidth, pageHeight);
+      // set margins
+      setMargins(reportSpec, reportNode);
+      if (reportSpec.getIncludeSrc() != null && !"".equalsIgnoreCase(reportSpec.getIncludeSrc())) { //$NON-NLS-1$
+        org.dom4j.Element includeElement = reportNode.addElement("include"); //$NON-NLS-1$
+        includeElement.addAttribute("src", "file://" + reportSpec.getIncludeSrc().replace('\\', '/')); //$NON-NLS-1$ //$NON-NLS-2$
+      }
+      // set watermark
+      setWatermark(reportSpec, reportNode);
+      Element groupsNode = reportNode.addElement("groups"); //$NON-NLS-1$
+      Element itemsNode = reportNode.addElement("items"); //$NON-NLS-1$
+      Element functionNode = reportNode.addElement("functions"); //$NON-NLS-1$
+      if (reportSpec.getChart() != null && reportSpec.getUseChart()) {
+        Element reportHeaderElement = reportNode.addElement("reportheader"); //$NON-NLS-1$
+        addChartElement(reportSpec, null, functionNode, reportHeaderElement, 0);
+      }
+      setItemsFont(reportSpec, itemsNode);
+      // create banding rectangle if banding is turned on
+      createRowBanding(reportSpec, details, itemsNode, functionNode, itemFontSize);
+      // programatically create details section
+      processDetailsSection(reportSpec, details, groups, itemsNode, functionNode, itemFontSize);
+      // programatically create groups section
+      processGroupsSection(reportSpec, details, groups, groupsNode, functionNode, itemFontSize, expressionExists, spacerWidth);
+      
+      // spit out report xml definition
+      OutputFormat format = OutputFormat.createPrettyPrint();
+      XMLWriter writer = new XMLWriter(outputStream, format);
+      writer.write(document);
+      writer.close();
+      // put _SPACE_ fields back in place as they were
+      for (int i = 0; i < spaceFields.size(); i++) {
+        Field f = (Field) spaceFields.get(i);
+        f.setName("_SPACE_" + (i + 1)); //$NON-NLS-1$
+        f.setDisplayName("_SPACE_" + (i + 1)); //$NON-NLS-1$
+      }
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }  
+  
+  
+  
+  
+  
+  
 }
