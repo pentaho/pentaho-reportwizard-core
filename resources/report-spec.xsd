@@ -241,6 +241,8 @@
 
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="field" />
       </xs:sequence>
+      <xs:attribute name="tool" type="xs:string" />
+      <xs:attribute name="tool-version" type="xs:string" />
     </xs:complexType>
   </xs:element>
 </xs:schema>
