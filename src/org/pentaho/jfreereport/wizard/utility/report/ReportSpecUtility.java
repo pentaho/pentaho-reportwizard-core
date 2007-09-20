@@ -37,11 +37,11 @@ import org.pentaho.jfreereport.castormodel.reportspec.ReportSpec;
  */
 public class ReportSpecUtility {
   
-  public static final String NUMBER_FIELD = "number-field";
-  public static final String DATE_FIELD = "date-field";
-  public static final String STRING_FIELD = "string-field";
-  public static final String MESSAGE_FIELD = "message-field";
-  public static final String LABEL = "label";
+  public static final String NUMBER_FIELD = "number-field"; //$NON-NLS-1$
+  public static final String DATE_FIELD = "date-field"; //$NON-NLS-1$
+  public static final String STRING_FIELD = "string-field"; //$NON-NLS-1$
+  public static final String MESSAGE_FIELD = "message-field"; //$NON-NLS-1$
+  public static final String LABEL = "label"; //$NON-NLS-1$
   
 
 
@@ -150,25 +150,18 @@ public class ReportSpecUtility {
    * 
    * @param fieldType int one of the java.sql.Types, see http://java.sun.com/j2se/1.5.0/docs/api/java/sql/Types.html
    * @param columnName String the name of the column that we want the type for.
-   * @param isLevelField boolean true if the column has a level-name attribute
+   * @param isGroupField boolean true if the column is a group field
    * @return String indicating the field type
    */
-	public static String getFieldType(int fieldType, String columnName, boolean isLevelField, boolean isGroupField ) {
-		if ( isLevelField ) {
-			return ReportSpecUtility.MESSAGE_FIELD;
-		} else if (fieldType == Types.NUMERIC) {
-			return ReportSpecUtility.NUMBER_FIELD; //$NON-NLS-1$
+	public static String getFieldType(int fieldType ) {
+		if (fieldType == Types.NUMERIC) {
+			return ReportSpecUtility.NUMBER_FIELD;
 		} else if (fieldType == Types.DATE) {
-			return ReportSpecUtility.DATE_FIELD; //$NON-NLS-1$
-		} else if (isGroupField || columnName.equals("")) { //$NON-NLS-1$
-			return ReportSpecUtility.MESSAGE_FIELD; //$NON-NLS-1$
+			return ReportSpecUtility.DATE_FIELD;
+		} else {
+		  return ReportSpecUtility.STRING_FIELD;
 		}
-		return ReportSpecUtility.STRING_FIELD; //$NON-NLS-1$
 	}
-
-  public static String getFieldType(int fieldType, String columnName, boolean isLevelField) {
-    return getFieldType(fieldType, columnName, isLevelField, false);
-  }	
 	
   public static Field[] getDetails(Field fields[]) {
     if (fields == null) {
