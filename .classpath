@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.5.0_06"/>
-	<classpathentry kind="lib" path="lib/dom4j-1.6.1.jar"/>
 	<classpathentry kind="lib" path="lib/castor-1.0.5.jar"/>
 	<classpathentry kind="lib" path="lib/commons-lang-2.2.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/jcommon-1.0.10.jar"/>
 	<classpathentry kind="lib" path="lib/pentaho-reporting-engine-classic-0.8.9-pre8.jar"/>
 	<classpathentry kind="lib" path="lib/pentaho-reporting-engine-classic-ext-0.8.9-pre8.jar"/>
-	<classpathentry kind="lib" path="lib/jcommon-1.0.10.jar"/>
+	<classpathentry kind="lib" path="lib/trang.jar"/>
+	<classpathentry kind="lib" path="lib/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="lib/xml-apis.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
