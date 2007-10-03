@@ -1065,7 +1065,7 @@ public class ReportGenerationUtility {
         if (f.getUseItemHide()) {
           org.dom4j.Element functionField = functionNode.addElement("function"); //$NON-NLS-1$
           functionField.addAttribute("name", "headerEVSF_" + f.getName()); //$NON-NLS-1$ //$NON-NLS-2$
-          functionField.addAttribute("class", "org.pentaho.jfreereport.functions.ItemHideFunction"); //$NON-NLS-1$ //$NON-NLS-2$
+          functionField.addAttribute("class", "org.jfree.report.function.ItemHideFunction"); //$NON-NLS-1$ //$NON-NLS-2$
           org.dom4j.Element properties = functionField.addElement("properties"); //$NON-NLS-1$
           org.dom4j.Element elementProperty = properties.addElement("property"); //$NON-NLS-1$
           elementProperty.addAttribute("name", "element"); //$NON-NLS-1$ //$NON-NLS-2$
