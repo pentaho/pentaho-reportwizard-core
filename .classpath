@@ -6,8 +6,8 @@
 	<classpathentry kind="lib" path="lib/commons-logging.jar"/>
 	<classpathentry kind="lib" path="lib/dom4j-1.6.1.jar"/>
 	<classpathentry kind="lib" path="lib/jcommon-1.0.10.jar"/>
-	<classpathentry kind="lib" path="lib/pentaho-reporting-engine-classic-0.8.9-rc1a.jar"/>
-	<classpathentry kind="lib" path="lib/pentaho-reporting-engine-classic-ext-0.8.9-rc1a.jar"/>
+	<classpathentry kind="lib" path="lib/pentaho-reporting-engine-classic-0.8.9-rc3.jar"/>
+	<classpathentry kind="lib" path="lib/pentaho-reporting-engine-classic-ext-0.8.9-rc3.jar"/>
 	<classpathentry kind="lib" path="lib/trang.jar"/>
 	<classpathentry kind="lib" path="lib/xercesImpl.jar"/>
 	<classpathentry kind="lib" path="lib/xml-apis.jar"/>
