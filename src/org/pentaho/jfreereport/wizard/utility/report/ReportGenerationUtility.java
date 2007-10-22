@@ -26,6 +26,7 @@ import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.lang.StringEscapeUtils;
 import org.apache.commons.lang.StringUtils;
 import org.dom4j.Attribute;
 import org.dom4j.Document;
@@ -1861,7 +1862,7 @@ public class ReportGenerationUtility {
       // add parser-config to generated report
       addParserConfig(reportSpec, reportNode);
       // set report name
-      reportNode.addAttribute("name", reportSpec.getReportName()); //$NON-NLS-1$
+      reportNode.addAttribute("name", StringEscapeUtils.escapeXml(  reportSpec.getReportName() ) ); //$NON-NLS-1$
       // set orientation
       reportNode.addAttribute("orientation", reportSpec.getOrientation()); //$NON-NLS-1$
       // set page-format or page width/height
