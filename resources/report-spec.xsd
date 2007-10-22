@@ -243,6 +243,7 @@
       </xs:sequence>
       <xs:attribute name="tool" type="xs:string" />
       <xs:attribute name="tool-version" type="xs:string" />
+      <xs:attribute name="template-name" type="xs:string" use="optional"/>
     </xs:complexType>
   </xs:element>
 </xs:schema>
