@@ -27,6 +27,21 @@ public class ReportSpec implements java.io.Serializable {
     //--------------------------/
 
     /**
+     * Field _tool
+     */
+    private java.lang.String _tool;
+
+    /**
+     * Field _toolVersion
+     */
+    private java.lang.String _toolVersion;
+
+    /**
+     * Field _templateName
+     */
+    private java.lang.String _templateName;
+
+    /**
      * Field _reportSpecChoice
      */
     private org.pentaho.jfreereport.castormodel.reportspec.ReportSpecChoice _reportSpecChoice;
@@ -1486,6 +1501,16 @@ public class ReportSpec implements java.io.Serializable {
     } //-- boolean getRowBandingInitialState() 
 
     /**
+     * Returns the value of field 'templateName'.
+     * 
+     * @return the value of field 'TemplateName'.
+     */
+    public java.lang.String getTemplateName()
+    {
+        return this._templateName;
+    } //-- java.lang.String getTemplateName() 
+
+    /**
      * Returns the value of field 'templateSrc'.
      * 
      * @return the value of field 'TemplateSrc'.
@@ -1494,6 +1519,26 @@ public class ReportSpec implements java.io.Serializable {
     {
         return this._templateSrc;
     } //-- java.lang.String getTemplateSrc() 
+
+    /**
+     * Returns the value of field 'tool'.
+     * 
+     * @return the value of field 'Tool'.
+     */
+    public java.lang.String getTool()
+    {
+        return this._tool;
+    } //-- java.lang.String getTool() 
+
+    /**
+     * Returns the value of field 'toolVersion'.
+     * 
+     * @return the value of field 'ToolVersion'.
+     */
+    public java.lang.String getToolVersion()
+    {
+        return this._toolVersion;
+    } //-- java.lang.String getToolVersion() 
 
     /**
      * Returns the value of field 'topMargin'.
@@ -3005,6 +3050,16 @@ public class ReportSpec implements java.io.Serializable {
     } //-- void setRowBandingInitialState(boolean) 
 
     /**
+     * Sets the value of field 'templateName'.
+     * 
+     * @param templateName the value of field 'templateName'.
+     */
+    public void setTemplateName(java.lang.String templateName)
+    {
+        this._templateName = templateName;
+    } //-- void setTemplateName(java.lang.String) 
+
+    /**
      * Sets the value of field 'templateSrc'.
      * 
      * @param templateSrc the value of field 'templateSrc'.
@@ -3013,6 +3068,26 @@ public class ReportSpec implements java.io.Serializable {
     {
         this._templateSrc = templateSrc;
     } //-- void setTemplateSrc(java.lang.String) 
+
+    /**
+     * Sets the value of field 'tool'.
+     * 
+     * @param tool the value of field 'tool'.
+     */
+    public void setTool(java.lang.String tool)
+    {
+        this._tool = tool;
+    } //-- void setTool(java.lang.String) 
+
+    /**
+     * Sets the value of field 'toolVersion'.
+     * 
+     * @param toolVersion the value of field 'toolVersion'.
+     */
+    public void setToolVersion(java.lang.String toolVersion)
+    {
+        this._toolVersion = toolVersion;
+    } //-- void setToolVersion(java.lang.String) 
 
     /**
      * Sets the value of field 'topMargin'.
