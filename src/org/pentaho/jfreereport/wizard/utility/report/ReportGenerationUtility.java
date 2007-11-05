@@ -28,6 +28,8 @@ import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringEscapeUtils;
 import org.apache.commons.lang.StringUtils;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.dom4j.Attribute;
 import org.dom4j.Document;
 import org.dom4j.Element;
@@ -43,6 +45,11 @@ import org.pentaho.jfreereport.castormodel.reportspec.Series;
 import org.pentaho.jfreereport.castormodel.reportspec.types.ChartType;
 
 public class ReportGenerationUtility {
+  
+  public static Log getLogger() {
+    return LogFactory.getLog(ReportGenerationUtility.class);
+  }
+  
   public static void setGroupHeaderFont(ReportSpec reportSpec, org.dom4j.Element groupHeader, boolean setHeight) {
     groupHeader.addAttribute("color", reportSpec.getGroupHeaderFontColor()); //$NON-NLS-1$
     groupHeader.addAttribute("fontname", reportSpec.getGroupHeaderFontName()); //$NON-NLS-1$
@@ -328,7 +335,7 @@ public class ReportGenerationUtility {
       Document generatedDoc = reader.read(generatedJFreeReportFile);
       mergeTemplate(templateDoc, generatedDoc, mergeStream);
     } catch (Exception e) {
-      e.printStackTrace();
+      getLogger().error(e.getMessage(), e);
     }
   }
 
@@ -676,7 +683,7 @@ public class ReportGenerationUtility {
       writer.write(templateDoc);
       writer.close();
     } catch (Exception e) {
-      e.printStackTrace();
+      getLogger().error(e.getMessage(), e);
     }
   }
 
@@ -1902,7 +1909,7 @@ public class ReportGenerationUtility {
         f.setDisplayName("_SPACE_" + (i + 1)); //$NON-NLS-1$
       }
     } catch (Exception e) {
-      e.printStackTrace();
+      getLogger().error(e.getMessage(), e);
     }
   }  
 }
