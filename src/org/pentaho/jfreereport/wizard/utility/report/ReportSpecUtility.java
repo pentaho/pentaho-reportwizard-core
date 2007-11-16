@@ -253,18 +253,33 @@ public class ReportSpecUtility {
     return (String[]) list.toArray(new String[0]);
   }
 
+  /**
+   * Find the effective font size for the item. Find the max 
+   * font size of each column, the report's column-header-font-size
+   * attribute's value, and the report's items-font-size attribute's value.
+   * Return that value as the effective font size.
+   * 
+   * @param reportSpec ReportSpec
+   * @param details Field[]
+   * @return int the effective font size for an item.
+   */
   public static int getItemFontSize(ReportSpec reportSpec, Field details[]) {
-    int itemFontSize = reportSpec.getItemsFontSize();
+    int maxDetailFontSize = Integer.MIN_VALUE;
     for (int i = 0; i < details.length; i++) {
       Field f = details[i];
-      if (f.getIsRowHeader() && reportSpec.getColumnHeaderFontSize() > f.getFontSize()) {
-        itemFontSize = reportSpec.getColumnHeaderFontSize() + 2;
-        break;
-      }
+      maxDetailFontSize = Math.max( maxDetailFontSize, f.getFontSize() );
     }
-    return itemFontSize;
-  }
 
+    if (reportSpec.getColumnHeaderFontSize() > maxDetailFontSize) {
+      maxDetailFontSize = reportSpec.getColumnHeaderFontSize();
+    }
+    
+    return Math.max( reportSpec.getItemsFontSize(), maxDetailFontSize );
+  }
+  
+  public static int getRowHeight(ReportSpec reportSpec, Field details[]) {
+    return getItemFontSize( reportSpec, details ) + 2;
+  }
   /**
    * @param expression
    * @return $objectType$

@@ -160,7 +160,7 @@ public class ReportGenerationUtility {
   }
 
   public static void addHorizontalGridLines(ReportSpec reportSpec, Field[] groups, Field[] details, Element itemsNode,
-      int itemFontSize) {
+      int itemRowHeight) {
     if (reportSpec.getUseHorizontalGridlines()) {
       int percentSum = 0;
       // top line
@@ -185,14 +185,14 @@ public class ReportGenerationUtility {
       } else {
         lineElement.addAttribute("x1", (reportSpec.getHorizontalOffset() + percentSum) + ""); //$NON-NLS-1$ //$NON-NLS-2$ 
       }
-      lineElement.addAttribute("y1", (itemFontSize + 2) + ""); //$NON-NLS-1$ //$NON-NLS-2$ 
+      lineElement.addAttribute("y1", itemRowHeight + ""); //$NON-NLS-1$ //$NON-NLS-2$ 
       lineElement.addAttribute("x2", "100%"); //$NON-NLS-1$ //$NON-NLS-2$ 
-      lineElement.addAttribute("y2", (itemFontSize + 2) + ""); //$NON-NLS-1$ //$NON-NLS-2$
+      lineElement.addAttribute("y2", itemRowHeight + ""); //$NON-NLS-1$ //$NON-NLS-2$
     }
   }
 
   public static void addVerticalGridLines(ReportSpec reportSpec, Field[] groups, Field[] details, Element itemsNode,
-      int itemFontSize) {
+      int itemRowHeight) {
     if (reportSpec.getUseVerticalGridlines()) {
       double percentSum = 0;
       for (int i = 0; i < details.length; i++) {
@@ -208,7 +208,7 @@ public class ReportGenerationUtility {
           lineElement.addAttribute("y1", "0"); //$NON-NLS-1$ //$NON-NLS-2$
           lineElement.addAttribute(
               "x2", (reportSpec.getHorizontalOffset() + percentSum) + (f.getIsWidthPercent() ? "%" : "")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-          lineElement.addAttribute("y2", (itemFontSize + 2) + ""); //$NON-NLS-1$ //$NON-NLS-2$
+          lineElement.addAttribute("y2", itemRowHeight + ""); //$NON-NLS-1$ //$NON-NLS-2$
         }
         percentSum += width.doubleValue();
         // right line
@@ -230,7 +230,7 @@ public class ReportGenerationUtility {
           lineElement.addAttribute(
               "x2", (reportSpec.getHorizontalOffset() + percentSum) + (f.getIsWidthPercent() ? "%" : "")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
         }
-        lineElement.addAttribute("y2", (itemFontSize + 2) + ""); //$NON-NLS-1$ //$NON-NLS-2$
+        lineElement.addAttribute("y2", itemRowHeight + ""); //$NON-NLS-1$ //$NON-NLS-2$
       }
     }
   }
@@ -339,6 +339,12 @@ public class ReportGenerationUtility {
     }
   }
 
+  public static ByteArrayOutputStream mergeTemplateAsStream( Document templateDoc, Document generatedDoc ) {
+    ByteArrayOutputStream jfreeMergedOutputStream = new ByteArrayOutputStream();
+    mergeTemplate( templateDoc,  generatedDoc, jfreeMergedOutputStream );
+    return jfreeMergedOutputStream;
+  }
+  
   public static void mergeTemplate(Document templateDoc, Document generatedDoc, OutputStream mergeStream) {
     try {
       // replace parser-config settings in templateDoc from generatedDoc
@@ -991,14 +997,14 @@ public class ReportGenerationUtility {
   }
 
   public static void createRowBanding(ReportSpec reportSpec, Field details[], Element itemsNode, Element functionNode,
-      int itemFontSize) {
+      int itemRowHeight) {
     if (reportSpec.getUseRowBanding() && details.length > 0) {
       org.dom4j.Element rectangleElement = itemsNode.addElement("rectangle"); //$NON-NLS-1$
       rectangleElement.addAttribute("name", "rowBandingElement"); //$NON-NLS-1$ //$NON-NLS-2$
       rectangleElement.addAttribute("color", reportSpec.getRowBandingColor()); //$NON-NLS-1$
       rectangleElement.addAttribute("draw", "false"); //$NON-NLS-1$ //$NON-NLS-2$
       rectangleElement.addAttribute("fill", "true"); //$NON-NLS-1$ //$NON-NLS-2$
-      rectangleElement.addAttribute("height", (itemFontSize + 2) + ""); //$NON-NLS-1$ //$NON-NLS-2$
+      rectangleElement.addAttribute("height", itemRowHeight + ""); //$NON-NLS-1$ //$NON-NLS-2$
       rectangleElement.addAttribute("x", reportSpec.getHorizontalOffset() + "%"); //$NON-NLS-1$ //$NON-NLS-2$
       rectangleElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
       rectangleElement.addAttribute("y", "0"); //$NON-NLS-1$ //$NON-NLS-2$
@@ -1018,7 +1024,7 @@ public class ReportGenerationUtility {
     }
   }
 
-  public static void processDetailsSection(ReportSpec reportSpec, Field details[], Field groups[], Element itemsNode, Element functionNode, int itemFontSize) {
+  public static void processDetailsSection(ReportSpec reportSpec, Field details[], Field groups[], Element itemsNode, Element functionNode, int itemRowHeight) {
       double percentSum = 0;
       // create item background rectangle + item label itself
       for (int i = 0; i < details.length; i++) {
@@ -1037,7 +1043,7 @@ public class ReportGenerationUtility {
           }
           rectangleElement.addAttribute("draw", "false"); //$NON-NLS-1$ //$NON-NLS-2$
           rectangleElement.addAttribute("fill", "true"); //$NON-NLS-1$ //$NON-NLS-2$
-          rectangleElement.addAttribute("height", (itemFontSize + 2) + ""); //$NON-NLS-1$ //$NON-NLS-2$
+          rectangleElement.addAttribute("height", itemRowHeight + ""); //$NON-NLS-1$ //$NON-NLS-2$
           rectangleElement.addAttribute(
               "x", reportSpec.getHorizontalOffset() + percentSum + (f.getIsWidthPercent() ? "%" : "")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
           rectangleElement.addAttribute("width", width + (f.getIsWidthPercent() ? "%" : "")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
@@ -1068,7 +1074,7 @@ public class ReportGenerationUtility {
         detailField.addAttribute(
             "x", reportSpec.getHorizontalOffset() + percentSum + (f.getIsWidthPercent() ? "%" : "")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
         detailField.addAttribute("y", "0"); //$NON-NLS-1$ //$NON-NLS-2$
-        detailField.addAttribute("height", (itemFontSize + 2) + ""); //$NON-NLS-1$ //$NON-NLS-2$
+        detailField.addAttribute("height", itemRowHeight + ""); //$NON-NLS-1$ //$NON-NLS-2$
         setItemFont(reportSpec, f, detailField);
         if (f.getUseItemHide()) {
           org.dom4j.Element functionField = functionNode.addElement("function"); //$NON-NLS-1$
@@ -1092,12 +1098,12 @@ public class ReportGenerationUtility {
       }
       // draw lines on details
       if (details.length > 0) {
-        addVerticalGridLines(reportSpec, groups, details, itemsNode, itemFontSize);
-        addHorizontalGridLines(reportSpec, groups, details, itemsNode, itemFontSize);
+        addVerticalGridLines(reportSpec, groups, details, itemsNode, itemRowHeight);
+        addHorizontalGridLines(reportSpec, groups, details, itemsNode, itemRowHeight);
     }    
       }
 
-  public static void processDummyGroup(ReportSpec reportSpec, Field details[], Field groups[], Element groupsNode, Element functionNode, int itemFontSize, boolean expressionExists, int spacerWidth) {
+  public static void processDummyGroup(ReportSpec reportSpec, Field details[], Field groups[], Element groupsNode, Element functionNode, int itemRowHeight, boolean expressionExists, int spacerWidth) {
     org.dom4j.Element groupElement = groupsNode.addElement("group"); //$NON-NLS-1$
     groupElement.addAttribute("name", "dummy"); //$NON-NLS-1$ //$NON-NLS-2$
     // header
@@ -1105,7 +1111,7 @@ public class ReportGenerationUtility {
     Element noDataBandElement = dummyGroupHeader.addElement("band"); //$NON-NLS-1$
     noDataBandElement.addAttribute("name", "DummyGroupNoDataBandElement"); //$NON-NLS-1$ //$NON-NLS-2$
     Element noDataLabelElement = noDataBandElement.addElement("label"); //$NON-NLS-1$
-    noDataLabelElement.addAttribute("height", (itemFontSize + 2) + ""); //$NON-NLS-1$ //$NON-NLS-2$
+    noDataLabelElement.addAttribute("height", itemRowHeight + ""); //$NON-NLS-1$ //$NON-NLS-2$
     noDataLabelElement.addAttribute("vertical-alignment", "middle"); //$NON-NLS-1$ //$NON-NLS-2$
     noDataLabelElement.addAttribute("alignment", "left"); //$NON-NLS-1$ //$NON-NLS-2$
     noDataLabelElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
@@ -1156,14 +1162,14 @@ public class ReportGenerationUtility {
     }
   }
   
-  public static void processNormalGroups(ReportSpec reportSpec, Field details[], Field groups[], Element groupsNode, Element functionNode, int itemFontSize, boolean expressionExists, int spacerWidth) {
+  public static void processNormalGroups(ReportSpec reportSpec, Field details[], Field groups[], Element groupsNode, Element functionNode, int itemRowHeight, boolean expressionExists, int spacerWidth) {
         org.dom4j.Element groupElement = groupsNode.addElement("group"); //$NON-NLS-1$
         groupElement.addAttribute("name", "dummy"); //$NON-NLS-1$ //$NON-NLS-2$
         org.dom4j.Element dummyGroupHeader = groupElement.addElement("groupheader"); //$NON-NLS-1$
         dummyGroupHeader.addAttribute("name", "dummyGroupHeader"); //$NON-NLS-1$ //$NON-NLS-2$
         Element noDataLabelElement = dummyGroupHeader.addElement("label"); //$NON-NLS-1$
         noDataLabelElement.addAttribute("name", "noDataLabelElement"); //$NON-NLS-1$ //$NON-NLS-2$
-        noDataLabelElement.addAttribute("height", (itemFontSize + 2) + ""); //$NON-NLS-1$ //$NON-NLS-2$
+        noDataLabelElement.addAttribute("height", itemRowHeight + ""); //$NON-NLS-1$ //$NON-NLS-2$
         noDataLabelElement.addAttribute("vertical-alignment", "middle"); //$NON-NLS-1$ //$NON-NLS-2$
         noDataLabelElement.addAttribute("alignment", "left"); //$NON-NLS-1$ //$NON-NLS-2$
         noDataLabelElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
@@ -1381,14 +1387,14 @@ public class ReportGenerationUtility {
         } // end for groups
       }
   
-  public static void processGroupsSection(ReportSpec reportSpec, Field details[], Field groups[], Element groupsNode, Element functionNode, int itemFontSize, boolean expressionExists, int spacerWidth) {
+  public static void processGroupsSection(ReportSpec reportSpec, Field details[], Field groups[], Element groupsNode, Element functionNode, int itemRowHeight, boolean expressionExists, int spacerWidth) {
     if (groups.length == 0) {
       // create dummy group for header/footer, there are no groups but we need
       // to create a group to stuff the column headers and group calculations in
-      processDummyGroup(reportSpec, details, groups, groupsNode, functionNode, itemFontSize, expressionExists, spacerWidth);
+      processDummyGroup(reportSpec, details, groups, groupsNode, functionNode, itemRowHeight, expressionExists, spacerWidth);
     } else {
       // process normal groups
-      processNormalGroups(reportSpec, details, groups, groupsNode, functionNode, itemFontSize, expressionExists, spacerWidth);
+      processNormalGroups(reportSpec, details, groups, groupsNode, functionNode, itemRowHeight, expressionExists, spacerWidth);
     }
   }
 
@@ -1842,9 +1848,14 @@ public class ReportGenerationUtility {
     return xStr;
   }
   
-  public static String createJFreeReportXML(ReportSpec reportSpec) {
+  public static ByteArrayOutputStream createJFreeReportXMLAsStream(ReportSpec reportSpec) {
     ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
     createJFreeReportXML(reportSpec, outputStream, 0, 0, false, "", 0, 0); //$NON-NLS-1$
+    return outputStream;
+  }
+  
+  public static String createJFreeReportXML(ReportSpec reportSpec) {
+    ByteArrayOutputStream outputStream = createJFreeReportXMLAsStream(reportSpec );
     return new String(outputStream.toByteArray());
   }
 
@@ -1857,7 +1868,7 @@ public class ReportGenerationUtility {
     try {
       boolean expressionExists = ReportSpecUtility.doesExpressionExist(fields);
       setupDetailFieldWidths(reportSpec, details);
-      int itemFontSize = ReportSpecUtility.getItemFontSize(reportSpec, details);
+      int itemRowHeight = ReportSpecUtility.getRowHeight(reportSpec, details);
       // dom4j
       Document document = DOMDocumentFactory.getInstance().createDocument();
 
@@ -1891,11 +1902,11 @@ public class ReportGenerationUtility {
       }
       setItemsFont(reportSpec, itemsNode);
       // create banding rectangle if banding is turned on
-      createRowBanding(reportSpec, details, itemsNode, functionNode, itemFontSize);
+      createRowBanding(reportSpec, details, itemsNode, functionNode, itemRowHeight);
       // programatically create details section
-      processDetailsSection(reportSpec, details, groups, itemsNode, functionNode, itemFontSize);
+      processDetailsSection(reportSpec, details, groups, itemsNode, functionNode, itemRowHeight);
       // programatically create groups section
-      processGroupsSection(reportSpec, details, groups, groupsNode, functionNode, itemFontSize, expressionExists, spacerWidth);
+      processGroupsSection(reportSpec, details, groups, groupsNode, functionNode, itemRowHeight, expressionExists, spacerWidth);
       
       // spit out report xml definition
       OutputFormat format = OutputFormat.createPrettyPrint();
