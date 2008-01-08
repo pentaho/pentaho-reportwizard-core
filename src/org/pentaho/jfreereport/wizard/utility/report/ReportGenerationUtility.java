@@ -37,6 +37,7 @@ import org.dom4j.dom.DOMDocumentFactory;
 import org.dom4j.io.OutputFormat;
 import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
+import org.jfree.report.modules.output.table.html.HtmlTableModule;
 import org.pentaho.jfreereport.castormodel.reportspec.Chart;
 import org.pentaho.jfreereport.castormodel.reportspec.Field;
 import org.pentaho.jfreereport.castormodel.reportspec.FieldMapping;
@@ -129,37 +130,37 @@ public class ReportGenerationUtility {
       Element functionNode) {
     Element trafficLightFunctionNode = functionNode.addElement("expression"); //$NON-NLS-1$
     trafficLightFunctionNode.addAttribute("class", "org.jfree.report.function.ElementTrafficLightFunction"); //$NON-NLS-1$ //$NON-NLS-2$
-    trafficLightFunctionNode.addAttribute("name", "trafficLight" + f.getName()); //$NON-NLS-1$ //$NON-NLS-2$
+    trafficLightFunctionNode.addAttribute(NAME_ATTRIBUTE_NAME, "trafficLight" + f.getName()); //$NON-NLS-1$
     Element propertiesNode = trafficLightFunctionNode.addElement("properties"); //$NON-NLS-1$
-    Element property = propertiesNode.addElement("property"); //$NON-NLS-1$
-    property.addAttribute("name", "element"); //$NON-NLS-1$ //$NON-NLS-2$
+    Element property = propertiesNode.addElement(PROPERTY_ELEMENT_NAME);
+    property.addAttribute(NAME_ATTRIBUTE_NAME, "element"); //$NON-NLS-1$
     property.setText(trafficLightElementName);
-    property = propertiesNode.addElement("property"); //$NON-NLS-1$
-    property.addAttribute("name", "field"); //$NON-NLS-1$ //$NON-NLS-2$
+    property = propertiesNode.addElement(PROPERTY_ELEMENT_NAME);
+    property.addAttribute(NAME_ATTRIBUTE_NAME, "field"); //$NON-NLS-1$
     property.setText(f.getName());
-    property = propertiesNode.addElement("property"); //$NON-NLS-1$
-    property.addAttribute("name", "color[0]"); //$NON-NLS-1$ //$NON-NLS-2$
+    property = propertiesNode.addElement(PROPERTY_ELEMENT_NAME);
+    property.addAttribute(NAME_ATTRIBUTE_NAME, "color[0]"); //$NON-NLS-1$
     property.setText(f.getTrafficLightingRedColor());
-    property = propertiesNode.addElement("property"); //$NON-NLS-1$
-    property.addAttribute("name", "color[1]"); //$NON-NLS-1$ //$NON-NLS-2$
+    property = propertiesNode.addElement(PROPERTY_ELEMENT_NAME);
+    property.addAttribute(NAME_ATTRIBUTE_NAME, "color[1]"); //$NON-NLS-1$
     property.setText(f.getTrafficLightingYellowColor());
-    property = propertiesNode.addElement("property"); //$NON-NLS-1$
-    property.addAttribute("name", "color[2]"); //$NON-NLS-1$ //$NON-NLS-2$
+    property = propertiesNode.addElement(PROPERTY_ELEMENT_NAME);
+    property.addAttribute(NAME_ATTRIBUTE_NAME, "color[2]"); //$NON-NLS-1$
     property.setText(f.getTrafficLightingGreenColor());
-    // property = propertiesNode.addElement("property"); //$NON-NLS-1$
-    // property.addAttribute("name", "limit[0]"); //$NON-NLS-1$ //$NON-NLS-2$
+    // property = propertiesNode.addElement(PROPERTY_ELEMENT_NAME); //$NON-NLS-1$
+    // property.addAttribute(NAME_ATTRIBUTE_NAME, "limit[0]"); //$NON-NLS-1$ //$NON-NLS-2$
     // property.setText(String.valueOf(f.getTrafficLightingRedValue()));
-    property = propertiesNode.addElement("property"); //$NON-NLS-1$
-    property.addAttribute("name", "limit[0]"); //$NON-NLS-1$ //$NON-NLS-2$
+    property = propertiesNode.addElement(PROPERTY_ELEMENT_NAME);
+    property.addAttribute(NAME_ATTRIBUTE_NAME, "limit[0]"); //$NON-NLS-1$
     property.setText(String.valueOf(f.getTrafficLightingYellowValue()));
-    property = propertiesNode.addElement("property"); //$NON-NLS-1$
-    property.addAttribute("name", "limit[1]"); //$NON-NLS-1$ //$NON-NLS-2$
+    property = propertiesNode.addElement(PROPERTY_ELEMENT_NAME);
+    property.addAttribute(NAME_ATTRIBUTE_NAME, "limit[1]"); //$NON-NLS-1$
     property.setText(String.valueOf(f.getTrafficLightingGreenValue()));
-    property = propertiesNode.addElement("property"); //$NON-NLS-1$
-    property.addAttribute("name", "useAbsoluteValue"); //$NON-NLS-1$ //$NON-NLS-2$
+    property = propertiesNode.addElement(PROPERTY_ELEMENT_NAME);
+    property.addAttribute(NAME_ATTRIBUTE_NAME, "useAbsoluteValue"); //$NON-NLS-1$
     property.setText(String.valueOf(f.getTrafficLightingUseAbsoluteValue()));
-    property = propertiesNode.addElement("property"); //$NON-NLS-1$
-    property.addAttribute("name", "useOppositeLogic"); //$NON-NLS-1$ //$NON-NLS-2$
+    property = propertiesNode.addElement(PROPERTY_ELEMENT_NAME);
+    property.addAttribute(NAME_ATTRIBUTE_NAME, "useOppositeLogic"); //$NON-NLS-1$
     property.setText(String.valueOf(f.getTrafficLightingUseOppositeLogic()));
   }
 
@@ -639,10 +640,10 @@ public class ReportGenerationUtility {
         // need to merge 'dummy' group if we're doing grand totals
         for (int i = 0; i < generatedGroups.size(); i++) {
           Element generatedGroup = (Element) generatedGroups.get(i);
-          if (generatedGroup.attributeValue("name").equals("dummy")) { //$NON-NLS-1$ //$NON-NLS-2$
+          if (generatedGroup.attributeValue(NAME_ATTRIBUTE_NAME).equals("dummy")) { //$NON-NLS-1$
             for (int j = 0; j < groups.size(); j++) {
               Element group = (Element) groups.get(j);
-              if (group.attributeValue("name").equals("dummy")) { //$NON-NLS-1$ //$NON-NLS-2$
+              if (group.attributeValue(NAME_ATTRIBUTE_NAME).equals("dummy")) { //$NON-NLS-1$
                 Element groupsElement = (Element) templateReportNode.selectSingleNode("groups"); //$NON-NLS-1$
                 generatedGroup.detach();
                 group.detach();
@@ -703,8 +704,8 @@ public class ReportGenerationUtility {
       Element parserConfigElement = reportNode.addElement("parser-config"); //$NON-NLS-1$
       for (int i = 0; i < fieldMappings.length; i++) {
         FieldMapping fieldMap = fieldMappings[i];
-        Element property = parserConfigElement.addElement("property"); //$NON-NLS-1$
-        property.addAttribute("name", fieldMap.getKey()); //$NON-NLS-1$
+        Element property = parserConfigElement.addElement(PROPERTY_ELEMENT_NAME);
+        property.addAttribute(NAME_ATTRIBUTE_NAME, fieldMap.getKey());
         // property.addComment(fieldMap.getType());
         property.setText(fieldMap.getValue());
       }
@@ -735,53 +736,53 @@ public class ReportGenerationUtility {
     // //$NON-NLS-2$
     // collector
     Element collectorFunctionElement = functionNode.addElement("expression"); //$NON-NLS-1$
-    collectorFunctionElement.addAttribute("name", dataSourceName); //$NON-NLS-1$
+    collectorFunctionElement.addAttribute(NAME_ATTRIBUTE_NAME, dataSourceName);
     Element collectorFunctionProperties = collectorFunctionElement.addElement("properties"); //$NON-NLS-1$
     // expression
     Element chartExpressionElement = functionNode.addElement("expression"); //$NON-NLS-1$
-    chartExpressionElement.addAttribute("name", chartName); //$NON-NLS-1$
+    chartExpressionElement.addAttribute(NAME_ATTRIBUTE_NAME, chartName);
     Element chartFunctionProperties = chartExpressionElement.addElement("properties"); //$NON-NLS-1$
     int type = chart.getType().getType();
     if (type == ChartType.AREA_TYPE || type == ChartType.BAR_TYPE || type == ChartType.LINE_TYPE
         || type == ChartType.PIE_MULTI_TYPE || type == ChartType.WATERFALL_TYPE) {
       collectorFunctionElement.addAttribute(
           "class", "org.pentaho.plugin.jfreereport.reportcharts.CategorySetCollectorFunction"); //$NON-NLS-1$ //$NON-NLS-2$
-      Element categoryColumnProperty = collectorFunctionProperties.addElement("property"); //$NON-NLS-1$
-      categoryColumnProperty.addAttribute("name", "categoryColumn"); //$NON-NLS-1$ //$NON-NLS-2$
+      Element categoryColumnProperty = collectorFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+      categoryColumnProperty.addAttribute(NAME_ATTRIBUTE_NAME, "categoryColumn"); //$NON-NLS-1$
       categoryColumnProperty.setText(chart.getCategoryColumn());
       String series[] = ReportSpecUtility.getSeriesColumns(chart);
       for (int i = 0; i < series.length; i++) {
-        Element seriesProperty = collectorFunctionProperties.addElement("property"); //$NON-NLS-1$
-        seriesProperty.addAttribute("name", "seriesName[" + i + "]"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+        Element seriesProperty = collectorFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+        seriesProperty.addAttribute(NAME_ATTRIBUTE_NAME, "seriesName[" + i + "]"); //$NON-NLS-1$ //$NON-NLS-2$
         seriesProperty.setText(series[i]);
       }
       String values[] = chart.getValuesColumn();
       for (int i = 0; i < values.length; i++) {
-        Element valuesProperty = collectorFunctionProperties.addElement("property"); //$NON-NLS-1$
-        valuesProperty.addAttribute("name", "valueColumn[" + i + "]"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+        Element valuesProperty = collectorFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+        valuesProperty.addAttribute(NAME_ATTRIBUTE_NAME, "valueColumn[" + i + "]"); //$NON-NLS-1$ //$NON-NLS-2$
         valuesProperty.setText(values[i]);
       }
       if (type == ChartType.AREA_TYPE || type == ChartType.BAR_TYPE) {
         // stacked (only allowed on area/bar
-        Element stackedProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-        stackedProperty.addAttribute("name", "stacked"); //$NON-NLS-1$ //$NON-NLS-2$
+        Element stackedProperty = chartFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+        stackedProperty.addAttribute(NAME_ATTRIBUTE_NAME, "stacked"); //$NON-NLS-1$
         stackedProperty.setText(chart.getIsStacked() + ""); //$NON-NLS-1$
       }
       if (type != ChartType.PIE_MULTI_TYPE) {
         // horizontal
-        Element isHorizontalProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-        isHorizontalProperty.addAttribute("name", "horizontal"); //$NON-NLS-1$ //$NON-NLS-2$
+        Element isHorizontalProperty = chartFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+        isHorizontalProperty.addAttribute(NAME_ATTRIBUTE_NAME, "horizontal"); //$NON-NLS-1$
         isHorizontalProperty.setText(chart.getIsHorizontal() + ""); //$NON-NLS-1$
         // label rotation
-        Element labelRotationProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-        labelRotationProperty.addAttribute("name", "labelRotation"); //$NON-NLS-1$ //$NON-NLS-2$
+        Element labelRotationProperty = chartFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+        labelRotationProperty.addAttribute(NAME_ATTRIBUTE_NAME, "labelRotation"); //$NON-NLS-1$
         labelRotationProperty.setText(chart.getLabelRotation() + ""); //$NON-NLS-1$
       }
       Series seriesArray[] = chart.getSeries();
       for (int i = 0; i < seriesArray.length; i++) {
         if (seriesArray[i].getSeriesColor() != null && !seriesArray[i].getSeriesColor().equals("")) { //$NON-NLS-1$
-          Element seriesProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-          seriesProperty.addAttribute("name", "seriesColor[" + i + "]"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+          Element seriesProperty = chartFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+          seriesProperty.addAttribute(NAME_ATTRIBUTE_NAME, "seriesColor[" + i + "]"); //$NON-NLS-1$ //$NON-NLS-2$
           seriesProperty.setText(seriesArray[i].getSeriesColor());
         }
       }
@@ -811,101 +812,101 @@ public class ReportGenerationUtility {
       }
       String series[] = ReportSpecUtility.getSeriesColumns(chart);
       if (series.length > 0) {
-        Element seriesProperty = collectorFunctionProperties.addElement("property"); //$NON-NLS-1$
-        seriesProperty.addAttribute("name", "seriesColumn"); //$NON-NLS-1$ //$NON-NLS-2$
+        Element seriesProperty = collectorFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+        seriesProperty.addAttribute(NAME_ATTRIBUTE_NAME, "seriesColumn"); //$NON-NLS-1$
         seriesProperty.setText(series[0]);
       }
       String values[] = chart.getValuesColumn();
       if (values.length > 0) {
-        Element valuesProperty = collectorFunctionProperties.addElement("property"); //$NON-NLS-1$
-        valuesProperty.addAttribute("name", "valueColumn"); //$NON-NLS-1$ //$NON-NLS-2$
+        Element valuesProperty = collectorFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+        valuesProperty.addAttribute(NAME_ATTRIBUTE_NAME, "valueColumn"); //$NON-NLS-1$
         valuesProperty.setText(values[0]);
       }
       // ignoreNulls
-      Element ignoreNullsProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-      ignoreNullsProperty.addAttribute("name", "ignoreNulls"); //$NON-NLS-1$ //$NON-NLS-2$
+      Element ignoreNullsProperty = chartFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+      ignoreNullsProperty.addAttribute(NAME_ATTRIBUTE_NAME, "ignoreNulls"); //$NON-NLS-1$
       ignoreNullsProperty.setText("true"); //$NON-NLS-1$
       // ignoreZeros
-      Element ignoreZerosProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-      ignoreZerosProperty.addAttribute("name", "ignoreZeros"); //$NON-NLS-1$ //$NON-NLS-2$
+      Element ignoreZerosProperty = chartFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+      ignoreZerosProperty.addAttribute(NAME_ATTRIBUTE_NAME, "ignoreZeros"); //$NON-NLS-1$
       ignoreZerosProperty.setText("true"); //$NON-NLS-1$
     } else if (chart.getType().getType() == ChartType.PIE_MULTI_TYPE) {
-      Element multipieByRowProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-      multipieByRowProperty.addAttribute("name", "multipieByRow"); //$NON-NLS-1$ //$NON-NLS-2$
+      Element multipieByRowProperty = chartFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+      multipieByRowProperty.addAttribute(NAME_ATTRIBUTE_NAME, "multipieByRow"); //$NON-NLS-1$
       multipieByRowProperty.setText("false"); //$NON-NLS-1$
       // <property name="multipieByRow">false</property>
       // <property name="multipieLabelFormat">{2}</property>
     }
     if (groupField != null) {
-      Element groupProperty = collectorFunctionProperties.addElement("property"); //$NON-NLS-1$
-      groupProperty.addAttribute("name", "group"); //$NON-NLS-1$ //$NON-NLS-2$
+      Element groupProperty = collectorFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+      groupProperty.addAttribute(NAME_ATTRIBUTE_NAME, "group"); //$NON-NLS-1$
       groupProperty.setText(groupField.getName());
     }
     if (chart.getResetGroup() != null && !chart.getResetGroup().equals("")) { //$NON-NLS-1$
-      Element resetGroupProperty = collectorFunctionProperties.addElement("property"); //$NON-NLS-1$
-      resetGroupProperty.addAttribute("name", "resetGroup"); //$NON-NLS-1$ //$NON-NLS-2$
+      Element resetGroupProperty = collectorFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+      resetGroupProperty.addAttribute(NAME_ATTRIBUTE_NAME, "resetGroup"); //$NON-NLS-1$
       resetGroupProperty.setText(chart.getResetGroup());
     }
     // 3-D
-    Element is3DProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-    is3DProperty.addAttribute("name", "threeD"); //$NON-NLS-1$ //$NON-NLS-2$
+    Element is3DProperty = chartFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+    is3DProperty.addAttribute(NAME_ATTRIBUTE_NAME, "threeD"); //$NON-NLS-1$
     is3DProperty.setText(chart.getIsThreeDimensional() + ""); //$NON-NLS-1$
     // summary only
-    Element summaryOnlyProperty = collectorFunctionProperties.addElement("property"); //$NON-NLS-1$
-    summaryOnlyProperty.addAttribute("name", "summaryOnly"); //$NON-NLS-1$ //$NON-NLS-2$
+    Element summaryOnlyProperty = collectorFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+    summaryOnlyProperty.addAttribute(NAME_ATTRIBUTE_NAME, "summaryOnly"); //$NON-NLS-1$
     summaryOnlyProperty.setText(chart.getIsSummaryOnly() + ""); //$NON-NLS-1$
     // data source
-    Element datasourceProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-    datasourceProperty.addAttribute("name", "dataSource"); //$NON-NLS-1$ //$NON-NLS-2$
+    Element datasourceProperty = chartFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+    datasourceProperty.addAttribute(NAME_ATTRIBUTE_NAME, "dataSource"); //$NON-NLS-1$
     datasourceProperty.setText(dataSourceName);
     // title
-    Element titleProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-    titleProperty.addAttribute("name", "title"); //$NON-NLS-1$ //$NON-NLS-2$
+    Element titleProperty = chartFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+    titleProperty.addAttribute(NAME_ATTRIBUTE_NAME, "title"); //$NON-NLS-1$
     titleProperty.setText(chart.getTitle());
     // background
-    Element backgroundColorProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-    backgroundColorProperty.addAttribute("name", "backgroundColor"); //$NON-NLS-1$ //$NON-NLS-2$
+    Element backgroundColorProperty = chartFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+    backgroundColorProperty.addAttribute(NAME_ATTRIBUTE_NAME, "backgroundColor"); //$NON-NLS-1$
     backgroundColorProperty.setText(chart.getBackgroundColor());
     // show border
-    Element showBorderProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-    showBorderProperty.addAttribute("name", "showBorder"); //$NON-NLS-1$ //$NON-NLS-2$
+    Element showBorderProperty = chartFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+    showBorderProperty.addAttribute(NAME_ATTRIBUTE_NAME, "showBorder"); //$NON-NLS-1$
     showBorderProperty.setText(chart.getShowBorder() + ""); //$NON-NLS-1$
     // show legend
-    Element showLegendProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-    showLegendProperty.addAttribute("name", "showLegend"); //$NON-NLS-1$ //$NON-NLS-2$
+    Element showLegendProperty = chartFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+    showLegendProperty.addAttribute(NAME_ATTRIBUTE_NAME, "showLegend"); //$NON-NLS-1$
     showLegendProperty.setText(chart.getShowLegend() + ""); //$NON-NLS-1$
     // draw legend border
-    Element drawLegendBorderProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-    drawLegendBorderProperty.addAttribute("name", "drawLegendBorder"); //$NON-NLS-1$ //$NON-NLS-2$
+    Element drawLegendBorderProperty = chartFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+    drawLegendBorderProperty.addAttribute(NAME_ATTRIBUTE_NAME, "drawLegendBorder"); //$NON-NLS-1$
     drawLegendBorderProperty.setText(chart.getDrawLegendBorder() + ""); //$NON-NLS-1$
     // legend location
-    Element legendLocationProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-    legendLocationProperty.addAttribute("name", "legendLocation"); //$NON-NLS-1$ //$NON-NLS-2$
+    Element legendLocationProperty = chartFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+    legendLocationProperty.addAttribute(NAME_ATTRIBUTE_NAME, "legendLocation"); //$NON-NLS-1$ 
     legendLocationProperty.setText(chart.getLegendLocation().toString());
     // height
-    Element heightProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-    heightProperty.addAttribute("name", "chartHeight"); //$NON-NLS-1$ //$NON-NLS-2$
+    Element heightProperty = chartFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+    heightProperty.addAttribute(NAME_ATTRIBUTE_NAME, "chartHeight"); //$NON-NLS-1$
     heightProperty.setText(chart.getHeight() + ""); //$NON-NLS-1$
     // width
-    Element widthProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-    widthProperty.addAttribute("name", "chartWidth"); //$NON-NLS-1$ //$NON-NLS-2$
+    Element widthProperty = chartFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+    widthProperty.addAttribute(NAME_ATTRIBUTE_NAME, "chartWidth"); //$NON-NLS-1$
     widthProperty.setText(chart.getWidth() + ""); //$NON-NLS-1$
     // useDrawable
-    Element useDrawableProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-    useDrawableProperty.addAttribute("name", "useDrawable"); //$NON-NLS-1$ //$NON-NLS-2$
+    Element useDrawableProperty = chartFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+    useDrawableProperty.addAttribute(NAME_ATTRIBUTE_NAME, "useDrawable"); //$NON-NLS-1$
     useDrawableProperty.setText("true"); //$NON-NLS-1$
-    Element titleFontProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-    titleFontProperty.addAttribute("name", "titleFont"); //$NON-NLS-1$ //$NON-NLS-2$
+    Element titleFontProperty = chartFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+    titleFontProperty.addAttribute(NAME_ATTRIBUTE_NAME, "titleFont"); //$NON-NLS-1$
     titleFontProperty.setText("Arial-BOLD-14"); //$NON-NLS-1$
-    Element labelFontProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-    labelFontProperty.addAttribute("name", "labelFont"); //$NON-NLS-1$ //$NON-NLS-2$
+    Element labelFontProperty = chartFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+    labelFontProperty.addAttribute(NAME_ATTRIBUTE_NAME, "labelFont"); //$NON-NLS-1$
     labelFontProperty.setText("Arial--8"); //$NON-NLS-1$
-    Element legendFontProperty = chartFunctionProperties.addElement("property"); //$NON-NLS-1$
-    legendFontProperty.addAttribute("name", "legendFont"); //$NON-NLS-1$ //$NON-NLS-2$
+    Element legendFontProperty = chartFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+    legendFontProperty.addAttribute(NAME_ATTRIBUTE_NAME, "legendFont"); //$NON-NLS-1$
     legendFontProperty.setText("Arial--6"); //$NON-NLS-1$
     // Element drawBarOutlineProperty =
-    // chartFunctionProperties.addElement("property");
-    // drawBarOutlineProperty.addAttribute("name", "drawBarOutline");
+    // chartFunctionProperties.addElement(PROPERTY_ELEMENT_NAME);
+    // drawBarOutlineProperty.addAttribute(NAME_ATTRIBUTE_NAME, "drawBarOutline");
     // drawBarOutlineProperty.setText("false");
   }
 
@@ -990,7 +991,7 @@ public class ReportGenerationUtility {
       imagerefElement.addAttribute("y", reportSpec.getWatermark().getY() + "%"); //$NON-NLS-1$ //$NON-NLS-2$
       imagerefElement.addAttribute("scale", String.valueOf(reportSpec.getWatermark().getScale())); //$NON-NLS-1$
       imagerefElement.addAttribute("keepAspectRatio", String.valueOf(reportSpec.getWatermark().getKeepAspectRatio())); //$NON-NLS-1$
-      imagerefElement.addAttribute("name", "watermark"); //$NON-NLS-1$ //$NON-NLS-2$
+      imagerefElement.addAttribute(NAME_ATTRIBUTE_NAME, "watermark"); //$NON-NLS-1$
       File wmf = new File(reportSpec.getWatermark().getSrc());
       try {
         String watermarkSrc = "file://" + wmf.getCanonicalPath().replace('\\', '/'); //$NON-NLS-1$
@@ -1004,7 +1005,7 @@ public class ReportGenerationUtility {
       int itemRowHeight) {
     if (reportSpec.getUseRowBanding() && details.length > 0) {
       org.dom4j.Element rectangleElement = itemsNode.addElement("rectangle"); //$NON-NLS-1$
-      rectangleElement.addAttribute("name", "rowBandingElement"); //$NON-NLS-1$ //$NON-NLS-2$
+      rectangleElement.addAttribute(NAME_ATTRIBUTE_NAME, "rowBandingElement"); //$NON-NLS-1$
       rectangleElement.addAttribute("color", reportSpec.getRowBandingColor()); //$NON-NLS-1$
       rectangleElement.addAttribute("draw", "false"); //$NON-NLS-1$ //$NON-NLS-2$
       rectangleElement.addAttribute("fill", "true"); //$NON-NLS-1$ //$NON-NLS-2$
@@ -1013,17 +1014,17 @@ public class ReportGenerationUtility {
       rectangleElement.addAttribute("width", "100%"); //$NON-NLS-1$ //$NON-NLS-2$
       rectangleElement.addAttribute("y", "0"); //$NON-NLS-1$ //$NON-NLS-2$
       org.dom4j.Element bandingFunctionField = functionNode.addElement("function"); //$NON-NLS-1$
-      bandingFunctionField.addAttribute("name", "backgroundTrigger"); //$NON-NLS-1$ //$NON-NLS-2$
+      bandingFunctionField.addAttribute(NAME_ATTRIBUTE_NAME, "backgroundTrigger"); //$NON-NLS-1$
       bandingFunctionField.addAttribute("class", "org.jfree.report.function.ElementVisibilitySwitchFunction"); //$NON-NLS-1$ //$NON-NLS-2$
       org.dom4j.Element properties = bandingFunctionField.addElement("properties"); //$NON-NLS-1$
-      org.dom4j.Element property = properties.addElement("property"); //$NON-NLS-1$
-      property.addAttribute("name", "element"); //$NON-NLS-1$ //$NON-NLS-2$
+      org.dom4j.Element property = properties.addElement(PROPERTY_ELEMENT_NAME);
+      property.addAttribute(NAME_ATTRIBUTE_NAME, "element"); //$NON-NLS-1$
       property.setText("rowBandingElement"); //$NON-NLS-1$
-      property = properties.addElement("property"); //$NON-NLS-1$
-      property.addAttribute("name", "numberOfElements"); //$NON-NLS-1$ //$NON-NLS-2$
+      property = properties.addElement(PROPERTY_ELEMENT_NAME); 
+      property.addAttribute(NAME_ATTRIBUTE_NAME, "numberOfElements"); //$NON-NLS-1$
       property.setText("1"); //$NON-NLS-1$
-      property = properties.addElement("property"); //$NON-NLS-1$
-      property.addAttribute("name", "initialState"); //$NON-NLS-1$ //$NON-NLS-2$
+      property = properties.addElement(PROPERTY_ELEMENT_NAME);
+      property.addAttribute(NAME_ATTRIBUTE_NAME, "initialState"); //$NON-NLS-1$ 
       property.setText(reportSpec.getRowBandingInitialState() ? "true" : "false"); //$NON-NLS-1$ //$NON-NLS-2$
     }
   }
@@ -1041,7 +1042,7 @@ public class ReportGenerationUtility {
         double width = f.getWidth().doubleValue();
         if (f.getUseBackgroundColor() || f.getUseTrafficLighting()) {
           org.dom4j.Element rectangleElement = itemsNode.addElement("rectangle"); //$NON-NLS-1$
-          rectangleElement.addAttribute("name", f.getName() + "BackgroundElement"); //$NON-NLS-1$ //$NON-NLS-2$
+          rectangleElement.addAttribute(NAME_ATTRIBUTE_NAME, f.getName() + "BackgroundElement"); //$NON-NLS-1$ 
           if (!f.getUseTrafficLighting()) {
             rectangleElement.addAttribute("color", f.getBackgroundColor()); //$NON-NLS-1$
           }
@@ -1062,7 +1063,7 @@ public class ReportGenerationUtility {
           ? ReportSpecUtility.MESSAGE_FIELD
           : ReportSpecUtility.getFieldType(f.getType() );
         org.dom4j.Element detailField = itemsNode.addElement( elementType );
-        detailField.addAttribute("name", f.getName() + "Element"); //$NON-NLS-1$ //$NON-NLS-2$
+        detailField.addAttribute(NAME_ATTRIBUTE_NAME, f.getName() + "Element"); //$NON-NLS-1$
         detailField.addAttribute("nullstring", f.getNullString()); //$NON-NLS-1$
         
         if (elementType != ReportSpecUtility.MESSAGE_FIELD ) {
@@ -1082,20 +1083,20 @@ public class ReportGenerationUtility {
         setItemFont(reportSpec, f, detailField);
         if (f.getUseItemHide()) {
           org.dom4j.Element functionField = functionNode.addElement("function"); //$NON-NLS-1$
-          functionField.addAttribute("name", "headerEVSF_" + f.getName()); //$NON-NLS-1$ //$NON-NLS-2$
+          functionField.addAttribute(NAME_ATTRIBUTE_NAME, "headerEVSF_" + f.getName()); //$NON-NLS-1$
           functionField.addAttribute("class", "org.jfree.report.function.ItemHideFunction"); //$NON-NLS-1$ //$NON-NLS-2$
           org.dom4j.Element properties = functionField.addElement("properties"); //$NON-NLS-1$
-          org.dom4j.Element elementProperty = properties.addElement("property"); //$NON-NLS-1$
-          elementProperty.addAttribute("name", "element"); //$NON-NLS-1$ //$NON-NLS-2$
+          org.dom4j.Element elementProperty = properties.addElement(PROPERTY_ELEMENT_NAME);
+          elementProperty.addAttribute(NAME_ATTRIBUTE_NAME, "element"); //$NON-NLS-1$
           elementProperty.setText(f.getName() + "Element"); //$NON-NLS-1$
-          org.dom4j.Element fieldProperty = properties.addElement("property"); //$NON-NLS-1$
-          fieldProperty.addAttribute("name", "field"); //$NON-NLS-1$ //$NON-NLS-2$
+          org.dom4j.Element fieldProperty = properties.addElement(PROPERTY_ELEMENT_NAME);
+          fieldProperty.addAttribute(NAME_ATTRIBUTE_NAME, "field"); //$NON-NLS-1$
           fieldProperty.setText(detailFieldName);
-          org.dom4j.Element ignoreGroupBreaksProperty = properties.addElement("property"); //$NON-NLS-1$
-          ignoreGroupBreaksProperty.addAttribute("name", "ignoreGroupBreaks"); //$NON-NLS-1$ //$NON-NLS-2$
+          org.dom4j.Element ignoreGroupBreaksProperty = properties.addElement(PROPERTY_ELEMENT_NAME);
+          ignoreGroupBreaksProperty.addAttribute(NAME_ATTRIBUTE_NAME, "ignoreGroupBreaks"); //$NON-NLS-1$
           ignoreGroupBreaksProperty.setText("true"); //$NON-NLS-1$
-          org.dom4j.Element ignorePageBreaksProperty = properties.addElement("property"); //$NON-NLS-1$
-          ignorePageBreaksProperty.addAttribute("name", "ignorePageBreaks"); //$NON-NLS-1$ //$NON-NLS-2$
+          org.dom4j.Element ignorePageBreaksProperty = properties.addElement(PROPERTY_ELEMENT_NAME);
+          ignorePageBreaksProperty.addAttribute(NAME_ATTRIBUTE_NAME, "ignorePageBreaks"); //$NON-NLS-1$
           ignorePageBreaksProperty.setText("true"); //$NON-NLS-1$
         }
         percentSum += width;
@@ -1109,11 +1110,11 @@ public class ReportGenerationUtility {
 
   public static void processDummyGroup(ReportSpec reportSpec, Field details[], Field groups[], Element groupsNode, Element functionNode, int itemRowHeight, boolean expressionExists, int spacerWidth) {
     org.dom4j.Element groupElement = groupsNode.addElement("group"); //$NON-NLS-1$
-    groupElement.addAttribute("name", "dummy"); //$NON-NLS-1$ //$NON-NLS-2$
+    groupElement.addAttribute(NAME_ATTRIBUTE_NAME, "dummy"); //$NON-NLS-1$
     // header
     org.dom4j.Element dummyGroupHeader = groupElement.addElement("groupheader"); //$NON-NLS-1$
     Element noDataBandElement = dummyGroupHeader.addElement("band"); //$NON-NLS-1$
-    noDataBandElement.addAttribute("name", "DummyGroupNoDataBandElement"); //$NON-NLS-1$ //$NON-NLS-2$
+    noDataBandElement.addAttribute(NAME_ATTRIBUTE_NAME, "DummyGroupNoDataBandElement"); //$NON-NLS-1$
     Element noDataLabelElement = noDataBandElement.addElement("label"); //$NON-NLS-1$
     noDataLabelElement.addAttribute("height", itemRowHeight + ""); //$NON-NLS-1$ //$NON-NLS-2$
     noDataLabelElement.addAttribute("vertical-alignment", "middle"); //$NON-NLS-1$ //$NON-NLS-2$
@@ -1124,7 +1125,7 @@ public class ReportGenerationUtility {
     noDataLabelElement.setText("No Data Available"); //$NON-NLS-1$
     addShowIfNoData(noDataBandElement, functionNode);
     Element dataBandElement = dummyGroupHeader.addElement("band"); //$NON-NLS-1$
-    dataBandElement.addAttribute("name", "DummyGroupDataBandElement"); //$NON-NLS-1$ //$NON-NLS-2$
+    dataBandElement.addAttribute(NAME_ATTRIBUTE_NAME, "DummyGroupDataBandElement"); //$NON-NLS-1$
     dataBandElement.addAttribute("y", reportSpec.getColumnHeaderTopGap() + ""); //$NON-NLS-1$ //$NON-NLS-2$
     dataBandElement.addAttribute(
         "height", (reportSpec.getColumnHeaderHeight() + reportSpec.getColumnHeaderGap()) + ""); //$NON-NLS-1$ //$NON-NLS-2$
@@ -1145,7 +1146,7 @@ public class ReportGenerationUtility {
     setGroupHeaderFont(reportSpec, dummyGroupHeader, true);
     // footer
     org.dom4j.Element dummyGroupFooter = groupElement.addElement("groupfooter"); //$NON-NLS-1$
-    dummyGroupFooter.addAttribute("name", "dummyGroupFooter"); //$NON-NLS-1$ //$NON-NLS-2$
+    dummyGroupFooter.addAttribute(NAME_ATTRIBUTE_NAME, "dummyGroupFooter"); //$NON-NLS-1$
     addHideIfNoData("dummyGroupFooter", functionNode); //$NON-NLS-1$
     setGroupFooterFont(reportSpec, dummyGroupFooter);
     if (expressionExists && reportSpec.getCalculateGrandTotals()) {
@@ -1168,11 +1169,11 @@ public class ReportGenerationUtility {
   
   public static void processNormalGroups(ReportSpec reportSpec, Field details[], Field groups[], Element groupsNode, Element functionNode, int itemRowHeight, boolean expressionExists, int spacerWidth) {
         org.dom4j.Element groupElement = groupsNode.addElement("group"); //$NON-NLS-1$
-        groupElement.addAttribute("name", "dummy"); //$NON-NLS-1$ //$NON-NLS-2$
+        groupElement.addAttribute(NAME_ATTRIBUTE_NAME, "dummy"); //$NON-NLS-1$ 
         org.dom4j.Element dummyGroupHeader = groupElement.addElement("groupheader"); //$NON-NLS-1$
-        dummyGroupHeader.addAttribute("name", "dummyGroupHeader"); //$NON-NLS-1$ //$NON-NLS-2$
+        dummyGroupHeader.addAttribute(NAME_ATTRIBUTE_NAME, "dummyGroupHeader"); //$NON-NLS-1$
         Element noDataLabelElement = dummyGroupHeader.addElement("label"); //$NON-NLS-1$
-        noDataLabelElement.addAttribute("name", "noDataLabelElement"); //$NON-NLS-1$ //$NON-NLS-2$
+        noDataLabelElement.addAttribute(NAME_ATTRIBUTE_NAME, "noDataLabelElement"); //$NON-NLS-1$ 
         noDataLabelElement.addAttribute("height", itemRowHeight + ""); //$NON-NLS-1$ //$NON-NLS-2$
         noDataLabelElement.addAttribute("vertical-alignment", "middle"); //$NON-NLS-1$ //$NON-NLS-2$
         noDataLabelElement.addAttribute("alignment", "left"); //$NON-NLS-1$ //$NON-NLS-2$
@@ -1185,7 +1186,7 @@ public class ReportGenerationUtility {
         setGroupHeaderFont(reportSpec, dummyGroupHeader, false);
         dummyGroupHeader.addAttribute("repeat", "false"); //$NON-NLS-1$ //$NON-NLS-2$
         org.dom4j.Element dummyGroupFooter = groupElement.addElement("groupfooter"); //$NON-NLS-1$
-        dummyGroupFooter.addAttribute("name", "dummyGroupFooter"); //$NON-NLS-1$ //$NON-NLS-2$
+        dummyGroupFooter.addAttribute(NAME_ATTRIBUTE_NAME, "dummyGroupFooter"); //$NON-NLS-1$
         addHideIfNoData("dummyGroupFooter", functionNode); //$NON-NLS-1$
         setGroupFooterFont(reportSpec, dummyGroupFooter);
         // if page break after group on first group (outermost), dummy
@@ -1226,7 +1227,7 @@ public class ReportGenerationUtility {
         for (int i = 0; i < groups.length; i++) {
           Field group = groups[i];
           groupElement = groupsNode.addElement("group"); //$NON-NLS-1$
-          groupElement.addAttribute("name", group.getName()); //$NON-NLS-1$
+          groupElement.addAttribute(NAME_ATTRIBUTE_NAME, group.getName()); 
           org.dom4j.Element fieldsElement = groupElement.addElement("fields"); //$NON-NLS-1$
           for (int j = 0; j <= i; j++) {
             org.dom4j.Element fieldElement = fieldsElement.addElement("field"); //$NON-NLS-1$
@@ -1234,7 +1235,7 @@ public class ReportGenerationUtility {
           }
           org.dom4j.Element groupHeader = null;
           groupHeader = groupElement.addElement("groupheader"); //$NON-NLS-1$
-          groupHeader.addAttribute("name", group.getName() + "GroupHeader"); //$NON-NLS-1$ //$NON-NLS-2$
+          groupHeader.addAttribute(NAME_ATTRIBUTE_NAME, group.getName() + "GroupHeader"); //$NON-NLS-1$
           addHideIfNoData(group.getName() + "GroupHeader", functionNode); //$NON-NLS-1$
           groupHeader.addAttribute("repeat", group.getRepeatGroupHeader() ? "true" : "false"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
           groupHeader.addAttribute("pagebreak-before-print", String.valueOf(group.getPageBreakBeforeHeader())); //$NON-NLS-1$
@@ -1365,7 +1366,7 @@ public class ReportGenerationUtility {
             }
           }
           Element groupFooter = groupElement.addElement("groupfooter"); //$NON-NLS-1$
-          groupFooter.addAttribute("name", group.getName() + "GroupFooter"); //$NON-NLS-1$ //$NON-NLS-2$
+          groupFooter.addAttribute(NAME_ATTRIBUTE_NAME, group.getName() + "GroupFooter"); //$NON-NLS-1$
           addHideIfNoData(group.getName() + "GroupFooter", functionNode); //$NON-NLS-1$
           setGroupFooterFont(reportSpec, groupFooter);
           groupFooter.addAttribute("pagebreak-before-print", String.valueOf(group.getPageBreakBeforeFooter())); //$NON-NLS-1$
@@ -1551,10 +1552,10 @@ public class ReportGenerationUtility {
   public static void createCalculatedColumnExpression(ReportSpec reportSpec, Element functionNode, Field f) {
     Element expression = functionNode.addElement("expression"); //$NON-NLS-1$
     expression.addAttribute("class", "org.jfree.report.modules.misc.beanshell.BSHExpression"); //$NON-NLS-1$ //$NON-NLS-2$
-    expression.addAttribute("name", f.getName() + "_calc_column_expression"); //$NON-NLS-1$ //$NON-NLS-2$
+    expression.addAttribute(NAME_ATTRIBUTE_NAME, f.getName() + "_calc_column_expression"); //$NON-NLS-1$
     Element properties = expression.addElement("properties"); //$NON-NLS-1$
-    Element property = properties.addElement("property"); //$NON-NLS-1$
-    property.addAttribute("name", "expression"); //$NON-NLS-1$ //$NON-NLS-2$
+    Element property = properties.addElement(PROPERTY_ELEMENT_NAME);
+    property.addAttribute(NAME_ATTRIBUTE_NAME, "expression"); //$NON-NLS-1$
     StringBuffer nameArrayStrBuf = new StringBuffer();
     nameArrayStrBuf.append("{"); //$NON-NLS-1$
     for (int i = 0; i < f.getCalculatedColumnsCount(); i++) {
@@ -1634,10 +1635,10 @@ public class ReportGenerationUtility {
     Element hideIfNullTriggerExpressionField = functionNode.addElement("expression"); //$NON-NLS-1$
     hideIfNullTriggerExpressionField.addAttribute(
         "class", "org.jfree.report.function.ShowElementIfDataAvailableExpression"); //$NON-NLS-1$ //$NON-NLS-2$
-    hideIfNullTriggerExpressionField.addAttribute("name", elementName + "HideIfNullTrigger"); //$NON-NLS-1$ //$NON-NLS-2$
+    hideIfNullTriggerExpressionField.addAttribute(NAME_ATTRIBUTE_NAME, elementName + "HideIfNullTrigger"); //$NON-NLS-1$ 
     Element hideIfNullTriggerProperties = hideIfNullTriggerExpressionField.addElement("properties"); //$NON-NLS-1$
-    Element hideIfNullTriggerProperty = hideIfNullTriggerProperties.addElement("property"); //$NON-NLS-1$
-    hideIfNullTriggerProperty.addAttribute("name", "element"); //$NON-NLS-1$ //$NON-NLS-2$
+    Element hideIfNullTriggerProperty = hideIfNullTriggerProperties.addElement(PROPERTY_ELEMENT_NAME); 
+    hideIfNullTriggerProperty.addAttribute(NAME_ATTRIBUTE_NAME, "element"); //$NON-NLS-1$
     hideIfNullTriggerProperty.setText(elementName);
   }
 
@@ -1646,11 +1647,11 @@ public class ReportGenerationUtility {
     Element showIfNullTriggerExpressionField = functionNode.addElement("expression"); //$NON-NLS-1$
     showIfNullTriggerExpressionField.addAttribute(
         "class", "org.jfree.report.function.HideElementIfDataAvailableExpression"); //$NON-NLS-1$ //$NON-NLS-2$
-    showIfNullTriggerExpressionField.addAttribute("name", element.attributeValue("name") + "HideIfNullTrigger"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+    showIfNullTriggerExpressionField.addAttribute(NAME_ATTRIBUTE_NAME, element.attributeValue(NAME_ATTRIBUTE_NAME) + "HideIfNullTrigger"); //$NON-NLS-1$ 
     Element showIfNullTriggerProperties = showIfNullTriggerExpressionField.addElement("properties"); //$NON-NLS-1$
-    Element showIfNullTriggerProperty = showIfNullTriggerProperties.addElement("property"); //$NON-NLS-1$
-    showIfNullTriggerProperty.addAttribute("name", "element"); //$NON-NLS-1$ //$NON-NLS-2$
-    showIfNullTriggerProperty.setText(element.attributeValue("name")); //$NON-NLS-1$
+    Element showIfNullTriggerProperty = showIfNullTriggerProperties.addElement(PROPERTY_ELEMENT_NAME);
+    showIfNullTriggerProperty.addAttribute(NAME_ATTRIBUTE_NAME, "element"); //$NON-NLS-1$
+    showIfNullTriggerProperty.setText(element.attributeValue(NAME_ATTRIBUTE_NAME));
   }
 
   public static String addExpressions(ReportSpec reportSpec, Field details[], Field groups[], Field group, int i,
@@ -1687,34 +1688,34 @@ public class ReportGenerationUtility {
         // add expression to functions
         Element expressionField = functionNode.addElement("expression"); //$NON-NLS-1$
         expressionField.addAttribute("class", ReportSpecUtility.getJFreeExpressionClass(expressionName)); //$NON-NLS-1$
-        expressionField.addAttribute("name", fieldName); //$NON-NLS-1$
+        expressionField.addAttribute(NAME_ATTRIBUTE_NAME, fieldName);
         Element properties = expressionField.addElement("properties"); //$NON-NLS-1$
         if (expressionName.equals("group-count")) { //$NON-NLS-1$
-          Element groupProperty = properties.addElement("property"); //$NON-NLS-1$
-          groupProperty.addAttribute("name", "group"); //$NON-NLS-1$ //$NON-NLS-2$
+          Element groupProperty = properties.addElement(PROPERTY_ELEMENT_NAME);
+          groupProperty.addAttribute(NAME_ATTRIBUTE_NAME, "group"); //$NON-NLS-1$ 
           groupProperty.setText(group == null ? "dummy" : group.getName()); //$NON-NLS-1$
           if (i > 0) {
-            Element parentProperty = properties.addElement("property"); //$NON-NLS-1$
-            parentProperty.addAttribute("name", "parentGroup"); //$NON-NLS-1$ //$NON-NLS-2$
+            Element parentProperty = properties.addElement(PROPERTY_ELEMENT_NAME);
+            parentProperty.addAttribute(NAME_ATTRIBUTE_NAME, "parentGroup"); //$NON-NLS-1$
             parentProperty.setText(group == null ? "dummy" : group.getName()); //$NON-NLS-1$
           }
         } else if (expressionName.equals("item-count")) { //$NON-NLS-1$
-          Element groupProperty = properties.addElement("property"); //$NON-NLS-1$
-          groupProperty.addAttribute("name", "group"); //$NON-NLS-1$ //$NON-NLS-2$
+          Element groupProperty = properties.addElement(PROPERTY_ELEMENT_NAME);
+          groupProperty.addAttribute(NAME_ATTRIBUTE_NAME, "group"); //$NON-NLS-1$
           groupProperty.setText(group == null ? "dummy" : group.getName()); //$NON-NLS-1$
         } else {
           String format = f.getFormat();
           setAttributeWithRequiredValue(numberField, "format", format); //$NON-NLS-1$
-          Element fieldProperty = properties.addElement("property"); //$NON-NLS-1$
-          fieldProperty.addAttribute("name", "field"); //$NON-NLS-1$ //$NON-NLS-2$
+          Element fieldProperty = properties.addElement(PROPERTY_ELEMENT_NAME);
+          fieldProperty.addAttribute(NAME_ATTRIBUTE_NAME, "field"); //$NON-NLS-1$
           if (f.getIsCalculatedColumn()) {
             fieldProperty.setText(f.getName() + "_calc_column_expression"); //$NON-NLS-1$
           } else {
             fieldProperty.setText(f.getName());
           }
           if (!isSummary) {
-            Element groupProperty = properties.addElement("property"); //$NON-NLS-1$
-            groupProperty.addAttribute("name", "group"); //$NON-NLS-1$ //$NON-NLS-2$
+            Element groupProperty = properties.addElement(PROPERTY_ELEMENT_NAME);
+            groupProperty.addAttribute(NAME_ATTRIBUTE_NAME, "group"); //$NON-NLS-1$
             groupProperty.setText(group == null ? "dummy" : group.getName()); //$NON-NLS-1$
           }
         }
@@ -1817,7 +1818,7 @@ public class ReportGenerationUtility {
     }
     String xStr = "0"; //$NON-NLS-1$
     if (foundCalc) {
-      Element messageField = groupFooter.addElement(ReportSpecUtility.MESSAGE_FIELD); //$NON-NLS-1$
+      Element messageField = groupFooter.addElement(ReportSpecUtility.MESSAGE_FIELD);
       messageField.addAttribute("height", (fontSize + 4) + ""); //$NON-NLS-1$ //$NON-NLS-2$
       // look for x coordinate of potentially matching column in headers
       // use group to look in details[]
@@ -1835,7 +1836,7 @@ public class ReportGenerationUtility {
       if (foundColumn != null) {
         double tmpwidth = reportSpec.getHorizontalOffset() + cumulativeWidth;
         xStr = tmpwidth + (foundColumn.getIsWidthPercent() ? "%" : ""); //$NON-NLS-1$ //$NON-NLS-2$
-        messageField.addAttribute("x", xStr); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+        messageField.addAttribute("x", xStr); //$NON-NLS-1$
         messageField.addAttribute("width", (totalLabelWidth - tmpwidth) + (details[0].getIsWidthPercent() ? "%" : "")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
       } else {
         xStr = reportSpec.getHorizontalOffset() + (details[0].getIsWidthPercent() ? "%" : ""); //$NON-NLS-1$ //$NON-NLS-2$
@@ -1956,7 +1957,7 @@ public class ReportGenerationUtility {
       // add parser-config to generated report
       addParserConfig(reportSpec, reportNode);
       // set report name
-      reportNode.addAttribute("name", StringEscapeUtils.escapeXml(  reportSpec.getReportName() ) ); //$NON-NLS-1$
+      reportNode.addAttribute(NAME_ATTRIBUTE_NAME, StringEscapeUtils.escapeXml(  reportSpec.getReportName() ) );
       // set orientation
       reportNode.addAttribute("orientation", reportSpec.getOrientation()); //$NON-NLS-1$
       // set page-format or page width/height
@@ -2001,5 +2002,5 @@ public class ReportGenerationUtility {
     } catch (Exception e) {
       getLogger().error(e.getMessage(), e);
     }
-  }
+  }  
 }
