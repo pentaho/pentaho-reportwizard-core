@@ -45,6 +45,10 @@ import org.pentaho.jfreereport.castormodel.reportspec.Series;
 import org.pentaho.jfreereport.castormodel.reportspec.types.ChartType;
 
 public class ReportGenerationUtility {
+
+  private static final String PROPERTY_ELEMENT_NAME = "property"; //$NON-NLS-1$
+  private static final String CONFIGURATION_ELEMENT_NAME = "configuration"; //$NON-NLS-1$
+  private static final String NAME_ATTRIBUTE_NAME = "name"; //$NON-NLS-1$
   
   public static Log getLogger() {
     return LogFactory.getLog(ReportGenerationUtility.class);
@@ -1848,19 +1852,84 @@ public class ReportGenerationUtility {
     return xStr;
   }
   
-  public static ByteArrayOutputStream createJFreeReportXMLAsStream(ReportSpec reportSpec) {
+  /**
+   * Add the appropriate elements to the configuration element so that JFree Report
+   * can determine the encoding for HTML and PDF output. In particular, add
+   * this XML to the configuration node:
+   * 
+   *  <property name="org.jfree.report.modules.output.table.html.Encoding">UTF-8</property>
+   *  <property name="org.jfree.report.modules.output.pageable.pdf.Encoding">UTF-8</property>
+   * 
+   * @param configuration Element the configuration element of the JFree Report
+   * XML document.
+   * @param encoding String The name of a supported
+   *         {@link java.nio.charset.Charset </code>charset<code>}
+   */
+  private static void addEncoding( Element configuration, String encoding )
+  {
+    Element property = configuration.addElement( PROPERTY_ELEMENT_NAME );
+    property.addAttribute( NAME_ATTRIBUTE_NAME, "org.jfree.report.modules.output.table.html.Encoding" ); //$NON-NLS-1$
+    //property.addAttribute( NAME_ATTRIBUTE_NAME, HtmlTableModule.ENCODING );
+    property.setText( encoding );
+    
+    property = configuration.addElement( PROPERTY_ELEMENT_NAME );
+    property.addAttribute( NAME_ATTRIBUTE_NAME, "org.jfree.report.modules.output.pageable.pdf.Encoding" ); //$NON-NLS-1$
+    property.setText( encoding );
+  }
+  
+  public static ByteArrayOutputStream createJFreeReportXMLAsStream(ReportSpec reportSpec, String encoding ) {
     ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-    createJFreeReportXML(reportSpec, outputStream, 0, 0, false, "", 0, 0); //$NON-NLS-1$
+    createJFreeReportXML(reportSpec, outputStream, encoding, 0, 0, false, "", 0, 0); //$NON-NLS-1$
     return outputStream;
   }
   
-  public static String createJFreeReportXML(ReportSpec reportSpec) {
-    ByteArrayOutputStream outputStream = createJFreeReportXMLAsStream(reportSpec );
+  public static String createJFreeReportXML(ReportSpec reportSpec, String encoding ) {
+    ByteArrayOutputStream outputStream = createJFreeReportXMLAsStream(reportSpec, encoding );
     return new String(outputStream.toByteArray());
   }
 
+  /**
+   * @deprecated The caller needs to be able to specify the character encoding for the
+   * information in the reportSpec. This method does not allow the caller to do that. Instead
+   * use: void createJFreeReportXML(ReportSpec reportSpec, OutputStream outputStream, String encoding,
+   *  int pageWidth, int pageHeight, boolean createTotalColumn, String totalColumnName, int totalColumnWidth,
+   *  int spacerWidth)
+   * 
+   * @param reportSpec
+   * @param outputStream
+   * @param pageWidth
+   * @param pageHeight
+   * @param createTotalColumn
+   * @param totalColumnName
+   * @param totalColumnWidth
+   * @param spacerWidth
+   */
   public static void createJFreeReportXML(ReportSpec reportSpec, OutputStream outputStream, int pageWidth,
       int pageHeight, boolean createTotalColumn, String totalColumnName, int totalColumnWidth, int spacerWidth) {
+    
+    createJFreeReportXML(reportSpec, outputStream, null, pageWidth,
+        pageHeight, createTotalColumn, totalColumnName, totalColumnWidth, spacerWidth );
+  }
+  
+  /**
+   * From the report description in the <param>reportSpec</param> parameter, create 
+   * a JFree Report report definition in XML format, and return the XML via
+   * the <param>outputStream</param> parameter.
+   * 
+   * @param reportSpec
+   * @param outputStream
+   * @param encoding
+   * @param pageWidth
+   * @param pageHeight
+   * @param createTotalColumn
+   * @param totalColumnName
+   * @param totalColumnWidth
+   * @param spacerWidth
+   */
+  public static void createJFreeReportXML(ReportSpec reportSpec, OutputStream outputStream, String encoding,
+      int pageWidth, int pageHeight, boolean createTotalColumn, String totalColumnName, int totalColumnWidth,
+      int spacerWidth) {
+
     Field fields[] = reportSpec.getField();
     Field details[] = ReportSpecUtility.getDetails(fields);
     Field groups[] = ReportSpecUtility.getGroups(fields);
@@ -1876,6 +1945,13 @@ public class ReportGenerationUtility {
           .addDocType(
               "report", "-//JFreeReport//DTD report definition//EN//simple/version 0.8.5", "http://jfreereport.sourceforge.net/report-085.dtd"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
       org.dom4j.Element reportNode = document.addElement("report"); //$NON-NLS-1$
+      Element configuration = reportNode.addElement( CONFIGURATION_ELEMENT_NAME );
+      
+      if ( null != encoding ) {
+        document.setXMLEncoding( encoding );
+        addEncoding( configuration, encoding );
+      }
+      
 // reportNode.addAttribute("xmlns", "http://jfreereport.sourceforge.net/namespaces/reports/legacy/simple");
       // add parser-config to generated report
       addParserConfig(reportSpec, reportNode);
@@ -1910,6 +1986,9 @@ public class ReportGenerationUtility {
       
       // spit out report xml definition
       OutputFormat format = OutputFormat.createPrettyPrint();
+      if ( null != encoding ) {
+        format.setEncoding( encoding );   // TODO sbarkull, not sure this is necessary
+      }
       XMLWriter writer = new XMLWriter(outputStream, format);
       writer.write(document);
       writer.close();
@@ -1922,5 +2001,5 @@ public class ReportGenerationUtility {
     } catch (Exception e) {
       getLogger().error(e.getMessage(), e);
     }
-  }  
+  }
 }

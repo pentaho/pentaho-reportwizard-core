@@ -20,6 +20,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.Writer;
+
 import org.exolab.castor.xml.Marshaller;
 import org.exolab.castor.xml.Unmarshaller;
 
@@ -44,11 +46,33 @@ public class CastorUtility {
     return o;
   }
 
-  public Object readCastorObject(InputStream inputStream, Class expectedClass) {
+  /**
+   * Create an object instance representing the contents of the XML document 
+   * contained in <param>inputStream</param>
+   * 
+   * @param inputStream InputStream the input stream containing the text of the xml document.
+   * @param expectedClass
+   * @param encoding This should be the encoding of the document-text contained in <param>inputStream</param>.
+   * Typically this will be the encoding specified in the processing instruction in the xml document, for instance:
+   * <? version='1.0' encoding='UTF-8'?>. The caller may want to use CleanXmlHelper.getEncoding()
+   * on the string that created inputStream to determine the encoding in the XML text.
+   * A null value is acceptable ONLY for backward compatibility. If the encoding is null, 
+   * the default character set will be used. This is generally NOT the desired behavior.
+   * 
+   * @return Object an instance of the class specified by the <param>expectedClass</param>
+   * parameter, initialized with the contents of the XML text in the <param>inputStream</param>.
+   */
+  public Object readCastorObject(InputStream inputStream, Class expectedClass, String encoding) {
+
     Object o = null;
     try {
       // read in the object
-      InputStreamReader reader = new InputStreamReader(inputStream);
+      InputStreamReader reader = null;
+      if (null != encoding) {
+        reader = new InputStreamReader(inputStream, encoding);
+      } else {
+        reader = new InputStreamReader(inputStream);
+      }
       o = Unmarshaller.unmarshal(expectedClass, reader);
     } catch (Exception e) {
       e.printStackTrace(System.err);
@@ -56,10 +80,23 @@ public class CastorUtility {
     return o;
   }
 
+  /**
+   * @deprecated This method does not provide a mechanism for the caller to provide a 
+   * valid character encoding. The caller should always provide a valid character encoding. 
+   * Instead use: Object readCastorObject(InputStream inputStream, Class expectedClass, String encoding )
+   * 
+   * @param inputStream
+   * @param expectedClass
+   * @return
+   */
+  public Object readCastorObject(InputStream inputStream, Class expectedClass) {
+    return readCastorObject(inputStream, expectedClass, null);
+  }
+
   public File writeCastorObject(Object object, String outputFileName) {
     // marshal the changed properties back to disk
     File file = null;
-    FileWriter fileWriter = null;
+    Writer fileWriter = null;
     try {
       file = new File(outputFileName);
       fileWriter = new FileWriter(file);
