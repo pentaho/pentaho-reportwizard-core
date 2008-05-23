@@ -110,11 +110,10 @@ public class ReportGenerationUtility {
       } else {
         itemElement.addAttribute("fontsize", reportSpec.getItemsFontSize() + ""); //$NON-NLS-1$ //$NON-NLS-2$
       }
-      if (itemField.getFontStyle() != -1) {
-        itemElement.addAttribute("fontstyle", ReportSpecUtility.getFontStyleString(itemField.getFontStyle())); //$NON-NLS-1$
-      } else {
-        itemElement.addAttribute("fontsize", reportSpec.getItemsFontSize() + ""); //$NON-NLS-1$ //$NON-NLS-2$
-      }
+      int style = (itemField.getFontStyle() != -1)
+        ? itemField.getFontStyle()
+        : reportSpec.getItemsFontStyle();
+      itemElement.addAttribute("fontstyle", ReportSpecUtility.getFontStyleString( style ) );
     }
   }
 
@@ -344,12 +343,17 @@ public class ReportGenerationUtility {
     }
   }
 
-  public static ByteArrayOutputStream mergeTemplateAsStream( Document templateDoc, Document generatedDoc ) {
-    ByteArrayOutputStream jfreeMergedOutputStream = new ByteArrayOutputStream();
+  public static void mergeTemplateAsStream( Document templateDoc, Document generatedDoc, OutputStream jfreeMergedOutputStream ) {
     mergeTemplate( templateDoc,  generatedDoc, jfreeMergedOutputStream );
-    return jfreeMergedOutputStream;
   }
   
+  /**
+   * NOTE: the templateDoc is the target of the merge.
+   * 
+   * @param templateDoc
+   * @param generatedDoc
+   * @param mergeStream
+   */
   public static void mergeTemplate(Document templateDoc, Document generatedDoc, OutputStream mergeStream) {
     try {
       // replace parser-config settings in templateDoc from generatedDoc
@@ -369,19 +373,23 @@ public class ReportGenerationUtility {
         generatedReportNode.remove(attribute);
         templateReportNode.add(attribute);
       }
-      List parserConfigProps = templateReportNode.selectNodes("parser-config/*"); //$NON-NLS-1$
+      List templateParserConfigProps = templateReportNode.selectNodes("parser-config/*"); //$NON-NLS-1$
+      List generatedParserConfigProps = generatedReportNode.selectNodes("parser-config/*"); //$NON-NLS-1$
       Element templateParserConfigElement = (Element) templateReportNode.selectSingleNode("parser-config"); //$NON-NLS-1$
       Element generatedParserConfigElement = (Element) generatedReportNode.selectSingleNode("parser-config"); //$NON-NLS-1$
-      for (int i = 0; i < parserConfigProps.size(); i++) {
-        Element parserConfigElement = (Element) parserConfigProps.get(i);
-        templateParserConfigElement.remove(parserConfigElement);
+      // replace any empty elements in the generated doc with the corresponding contents of the template doc 
+      for (int i = 0; i < generatedParserConfigProps.size(); i++) {
+        Element generatedParserConfigProp = (Element) generatedParserConfigProps.get(i);
+        Element templateParserConfigProp = (Element) templateParserConfigProps.get(i);
+
+        String generatedText = generatedParserConfigProp.getText();
+        if ( !StringUtils.isEmpty( generatedText ) ) {
+          generatedParserConfigElement.remove(generatedParserConfigProp);
+          templateParserConfigElement.remove(templateParserConfigProp);
+          templateParserConfigElement.add(generatedParserConfigProp);
+        }
       }
-      parserConfigProps = generatedReportNode.selectNodes("parser-config/*"); //$NON-NLS-1$
-      for (int i = 0; i < parserConfigProps.size(); i++) {
-        Element parserConfigElement = (Element) parserConfigProps.get(i);
-        generatedParserConfigElement.remove(parserConfigElement);
-        templateParserConfigElement.add(parserConfigElement);
-      }
+      
       // replace items section in templateDoc from generatedDoc
       if (templateReportNode.selectSingleNode("items") != null) { //$NON-NLS-1$
         templateReportNode.remove(templateReportNode.selectSingleNode("items")); //$NON-NLS-1$
@@ -1878,14 +1886,13 @@ public class ReportGenerationUtility {
     property.setText( encoding );
   }
   
-  public static ByteArrayOutputStream createJFreeReportXMLAsStream(ReportSpec reportSpec, String encoding ) {
-    ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+  public static void createJFreeReportXMLAsStream(ReportSpec reportSpec, String encoding, OutputStream outputStream ) {
     createJFreeReportXML(reportSpec, outputStream, encoding, 0, 0, false, "", 0, 0); //$NON-NLS-1$
-    return outputStream;
   }
   
   public static String createJFreeReportXML(ReportSpec reportSpec, String encoding ) {
-    ByteArrayOutputStream outputStream = createJFreeReportXMLAsStream(reportSpec, encoding );
+    ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+    createJFreeReportXMLAsStream(reportSpec, encoding, outputStream );
     return new String(outputStream.toByteArray());
   }
 
