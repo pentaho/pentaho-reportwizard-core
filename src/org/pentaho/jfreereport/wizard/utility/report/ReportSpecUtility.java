@@ -42,8 +42,10 @@ public class ReportSpecUtility {
   public static final String STRING_FIELD = "string-field"; //$NON-NLS-1$
   public static final String MESSAGE_FIELD = "message-field"; //$NON-NLS-1$
   public static final String LABEL = "label"; //$NON-NLS-1$
-  
 
+  private static final int BOLD = 0x00000001;
+  private static final int ITALIC =  0x00000002;
+  private static final int BOLD_ITALIC =  (BOLD | ITALIC);
 
   public static void copyFile(String input, String output) {
     try {
@@ -198,16 +200,29 @@ public class ReportSpecUtility {
     }
     return false;
   }
-
+  
+  public static boolean isFontStyleBoldAndItalic( int fontStyle ) {
+    return ( fontStyle & BOLD_ITALIC ) == BOLD_ITALIC;
+  }
+  
+  public static boolean isFontStyleItalic( int fontStyle ) {
+    return ( fontStyle & ITALIC ) == ITALIC;
+  }
+  
+  public static boolean isFontStyleBold( int fontStyle ) {
+    return ( fontStyle & BOLD ) == BOLD;
+  }
+  
   public static String getFontStyleString(int fontStyle) {
-    if ((fontStyle & (1 << 0)) == 1 && (fontStyle & (1 << 1)) == 1) {
+    if ( isFontStyleBoldAndItalic( fontStyle ) ) {
       return "bold-italic"; //$NON-NLS-1$
-    } else if (fontStyle == (1 << 1)) {
+    } else if ( isFontStyleItalic( fontStyle ) ) {
       return "italic"; //$NON-NLS-1$
-    } else if (fontStyle == (1 << 0)) {
+    } else if ( isFontStyleBold( fontStyle ) ) {
       return "bold"; //$NON-NLS-1$
+    } else {
+      return "plain"; //$NON-NLS-1$
     }
-    return "plain"; //$NON-NLS-1$
   }
 
   public static int getActualColumnCount(Field groups[], Field details[]) {
@@ -245,12 +260,12 @@ public class ReportSpecUtility {
   }
 
   public static String[] enumerationToStringArray(Enumeration e) {
-    List list = new LinkedList();
+    List<String> list = new LinkedList<String>();
     while (e.hasMoreElements()) {
       String element = e.nextElement().toString();
       list.add(element);
     }
-    return (String[]) list.toArray(new String[0]);
+    return list.toArray(new String[0]);
   }
 
   /**
@@ -303,7 +318,7 @@ public class ReportSpecUtility {
     return jfreeExpression;
   }
 
-  private static HashMap templateGroupMap = new HashMap();
+  private static HashMap<String, Integer> templateGroupMap = new HashMap<String, Integer>();
   
   public static int getNumberOfGroupsInTemplate(String templatePath) {
       // create DOM for templateFile
@@ -316,7 +331,7 @@ public class ReportSpecUtility {
         Document templateDoc = reader.read(templatePath);
         templateGroupMap.put(templatePath, new Integer(getNumberOfGroupsInTemplate(templateDoc)));
       }
-      return ((Integer)templateGroupMap.get(templatePath)).intValue();
+      return templateGroupMap.get(templatePath).intValue();
     } catch (Exception e) {
     }
     return 0;
@@ -340,8 +355,8 @@ public class ReportSpecUtility {
     return numGroups;
   }
 
-  public static List getParserConfigElements(String reportPath) {
-    List elements = new LinkedList();
+  public static List<Element> getParserConfigElements(String reportPath) {
+    List<Element> elements = new LinkedList<Element>();
     SAXReader reader = new SAXReader();
     try {
       File in = new File(reportPath);
@@ -373,8 +388,8 @@ public class ReportSpecUtility {
     return false;
   }
 
-  public static List getParserConfigKeys(String reportPath, String type) {
-    List list = new LinkedList();
+  public static List<String> getParserConfigKeys(String reportPath, String type) {
+    List<String> list = new LinkedList<String>();
     SAXReader reader = new SAXReader();
     try {
       File in = new File(reportPath);
@@ -396,8 +411,8 @@ public class ReportSpecUtility {
     return list;
   }
 
-  public static List getParserConfigValues(String reportPath, String type) {
-    List list = new LinkedList();
+  public static List<String> getParserConfigValues(String reportPath, String type) {
+    List<String> list = new LinkedList<String>();
     SAXReader reader = new SAXReader();
     try {
       File in = new File(reportPath);
