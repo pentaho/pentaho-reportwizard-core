@@ -205,6 +205,15 @@ public class ReportSpecUtility {
     return ( fontStyle & BOLD_ITALIC ) == BOLD_ITALIC;
   }
   
+  public static int addFontStyleItalic( int fontStyle ) {
+    return fontStyle & ITALIC;
+  }
+ 
+  public static int addFontStyleBold( int fontStyle ) {
+    return fontStyle & BOLD;
+  }
+  // TODO someday add setters/clearers
+  
   public static boolean isFontStyleItalic( int fontStyle ) {
     return ( fontStyle & ITALIC ) == ITALIC;
   }
