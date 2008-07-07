@@ -333,7 +333,7 @@ public class ReportGenerationUtility {
     if (!templateFile.exists() || !generatedJFreeReportFile.exists()) {
       return;
     }
-    SAXReader reader = new SAXReader();
+    SAXReader reader = new SAXReader(false);
     try {
       Document templateDoc = reader.read(templateFile);
       Document generatedDoc = reader.read(generatedJFreeReportFile);
