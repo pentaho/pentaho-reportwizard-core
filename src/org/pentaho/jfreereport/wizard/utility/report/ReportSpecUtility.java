@@ -274,7 +274,7 @@ public class ReportSpecUtility {
       String element = e.nextElement().toString();
       list.add(element);
     }
-    return list.toArray(new String[0]);
+    return (String[])list.toArray(new String[0]);
   }
 
   /**
@@ -327,7 +327,7 @@ public class ReportSpecUtility {
     return jfreeExpression;
   }
 
-  private static HashMap<String, Integer> templateGroupMap = new HashMap<String, Integer>();
+  private static HashMap templateGroupMap = new HashMap();
   
   public static int getNumberOfGroupsInTemplate(String templatePath) {
       // create DOM for templateFile
@@ -340,7 +340,7 @@ public class ReportSpecUtility {
         Document templateDoc = reader.read(templatePath);
         templateGroupMap.put(templatePath, new Integer(getNumberOfGroupsInTemplate(templateDoc)));
       }
-      return templateGroupMap.get(templatePath).intValue();
+      return ((Integer)templateGroupMap.get(templatePath)).intValue();
     } catch (Exception e) {
     }
     return 0;
