@@ -269,7 +269,7 @@ public class ReportSpecUtility {
   }
 
   public static String[] enumerationToStringArray(Enumeration e) {
-    List<String> list = new LinkedList<String>();
+    List list = new LinkedList();
     while (e.hasMoreElements()) {
       String element = e.nextElement().toString();
       list.add(element);
@@ -397,8 +397,8 @@ public class ReportSpecUtility {
     return false;
   }
 
-  public static List<String> getParserConfigKeys(String reportPath, String type) {
-    List<String> list = new LinkedList<String>();
+  public static List getParserConfigKeys(String reportPath, String type) {
+    List list = new LinkedList();
     SAXReader reader = new SAXReader();
     try {
       File in = new File(reportPath);
@@ -420,8 +420,8 @@ public class ReportSpecUtility {
     return list;
   }
 
-  public static List<String> getParserConfigValues(String reportPath, String type) {
-    List<String> list = new LinkedList<String>();
+  public static List getParserConfigValues(String reportPath, String type) {
+    List list = new LinkedList();
     SAXReader reader = new SAXReader();
     try {
       File in = new File(reportPath);
