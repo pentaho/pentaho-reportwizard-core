@@ -1,0 +1,66 @@
+<project name="Pentaho Report Design Wizard Core" default="dist">
+
+	<description>Pentaho Report Design Wizard Core</description>
+	<property file="dev_build.properties" />
+
+	<path id="classpath">
+		<pathelement path="bin" />
+		<fileset dir="lib">
+			<include name="*.jar" />
+			<include name="*.zip" />
+		</fileset>
+	</path>
+
+	<target name="init">
+		<!-- make build directory -->
+		<mkdir dir="bin" />
+	</target>
+
+	<target name="clean">
+		<!-- remove build directory -->
+		<delete dir="bin" />
+		<delete>
+			<fileset dir="src/org/pentaho/jfreereport/castormodel/reportspec" includes="**/*.java" />
+		</delete>
+	</target>
+
+	<target name="clean-dist">
+		<delete dir="dist"/>
+	</target>
+
+	<target name="generate-castor-src" depends="init" description="Generate Java source files from XSD.">
+		<taskdef name="castor-srcgen" classname="org.exolab.castor.tools.ant.taskdefs.CastorSourceGenTask" classpathref="classpath" />
+		<castor-srcgen file="${report-spec-xsd}" todir="src" package="org.pentaho.jfreereport.castormodel.reportspec" types="j2" warnings="false" testable="false"/>
+		<!--castor-srcgen file="${report-xsd}" todir="src" package="org.pentaho.jfreereport.castormodel.jfree" types="j2" warnings="false" /-->
+	</target>
+
+	<target name="generate-castor-src-nomarshall" depends="init" description="Generate Java source files from XSD.">
+		<taskdef name="castor-srcgen" classname="org.exolab.castor.tools.ant.taskdefs.CastorSourceGenTask" classpathref="classpath" />
+		<castor-srcgen file="${report-spec-xsd}" todir="src" package="org.pentaho.jfreereport.castormodel.reportspec" types="j2" warnings="false" nomarshall="true" testable="false"/>
+		<!-- castor-srcgen file="${report-xsd}" todir="src" package="org.pentaho.jfreereport.castormodel.jfree" types="j2" warnings="false" nomarshall="true"/-->
+	</target>
+
+	<target name="generateXSD" depends="init" description="Generates XSD from report-XXX.dtd.">
+		<java classname="com.thaiopensource.relaxng.translate.Driver" failonerror="true">
+			<arg value="${trang-report-dtd}" />
+			<arg value="${trang-report-xsd}" />
+			<classpath refid="classpath" />
+		</java>
+	</target>
+
+	<target name="compile" depends="init">
+		<!-- Compile all java classes -->
+		<javac destdir="bin" debug="false" optimize="true" deprecation="true" fork="true" source="1.4" target="1.4">
+			<classpath>
+				<path refid="classpath" />
+			</classpath>
+			<src path="src" />
+		</javac>
+	</target>
+
+	<target name="dist" depends="clean, clean-dist, generate-castor-src, compile" description="Creates a ZIP distribution of the Report Wizard.">
+		<mkdir dir="dist" />
+		<zip destfile="dist/pentaho-report-wizard-core.jar" basedir="bin"/>
+	</target>
+	
+</project>
