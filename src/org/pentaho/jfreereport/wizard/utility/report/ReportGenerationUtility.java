@@ -37,7 +37,6 @@ import org.dom4j.dom.DOMDocumentFactory;
 import org.dom4j.io.OutputFormat;
 import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
-import org.jfree.report.modules.output.table.html.HtmlTableModule;
 import org.pentaho.jfreereport.castormodel.reportspec.Chart;
 import org.pentaho.jfreereport.castormodel.reportspec.Field;
 import org.pentaho.jfreereport.castormodel.reportspec.FieldMapping;

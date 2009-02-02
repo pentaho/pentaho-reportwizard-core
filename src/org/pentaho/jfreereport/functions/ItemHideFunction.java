@@ -49,13 +49,14 @@
 package org.pentaho.jfreereport.functions;
 
 import java.io.Serializable;
-import org.jfree.report.DataRow;
-import org.jfree.report.Element;
-import org.jfree.report.event.PageEventListener;
-import org.jfree.report.event.ReportEvent;
-import org.jfree.report.function.AbstractFunction;
-import org.jfree.report.function.Expression;
-import org.jfree.util.ObjectUtilities;
+
+import org.pentaho.reporting.engine.classic.core.DataRow;
+import org.pentaho.reporting.engine.classic.core.Element;
+import org.pentaho.reporting.engine.classic.core.event.PageEventListener;
+import org.pentaho.reporting.engine.classic.core.event.ReportEvent;
+import org.pentaho.reporting.engine.classic.core.function.AbstractFunction;
+import org.pentaho.reporting.engine.classic.core.function.Expression;
+import org.pentaho.reporting.libraries.base.util.ObjectUtilities;
 
 /**
  * The ItemHideFunction hides equal values in a group. Only the first changed value is printed. This function uses the property <code>element</code> to define the name of the element in the ItemBand that should be made visible or

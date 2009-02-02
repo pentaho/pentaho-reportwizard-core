@@ -22,8 +22,9 @@
 	    <dependency org="dom4j" name="dom4j" rev="1.6.1">
 	      <exclude org="xml-apis" name="xml-apis" />
 	    </dependency>
-    	<dependency org="jfree" name="jcommon" rev="1.0.14" />
-	    <dependency org="${ivy.artifact.group}" name="pentaho-reporting-engine-classic-ext" rev="0.8.9.10" />
+    	
+        <dependency org="pentaho-reporting-engine" name="classic-extensions" rev="${dependency.pentaho-reporting-engine}" changing="true" />
+	    
 	    <dependency org="com.thaiopensource" name="trang" rev="2003.6.19" conf="codegen->default" />
 	    <dependency org="xerces" name="xercesImpl" rev="2.8.1" conf="codegen->default">
 	      <exclude org="xml-apis" name="xml-apis" />

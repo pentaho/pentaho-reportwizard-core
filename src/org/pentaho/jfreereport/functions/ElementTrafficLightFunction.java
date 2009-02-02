@@ -44,11 +44,12 @@
 package org.pentaho.jfreereport.functions;
 
 import java.awt.Color;
-import org.jfree.report.Band;
-import org.jfree.report.Element;
-import org.jfree.report.function.AbstractElementFormatFunction;
-import org.jfree.report.function.FunctionUtilities;
-import org.jfree.report.style.ElementStyleSheet;
+
+import org.pentaho.reporting.engine.classic.core.Band;
+import org.pentaho.reporting.engine.classic.core.Element;
+import org.pentaho.reporting.engine.classic.core.function.AbstractElementFormatFunction;
+import org.pentaho.reporting.engine.classic.core.function.FunctionUtilities;
+import org.pentaho.reporting.engine.classic.core.style.ElementStyleSheet;
 
 /**
  * A function that performs basic traffic lighting based on a range of values
