@@ -23,7 +23,7 @@
 	      <exclude org="xml-apis" name="xml-apis" />
 	    </dependency>
     	
-        <dependency org="pentaho-reporting-engine" name="pentaho-reporting-engine-classic-extensions" rev="${dependency.pentaho-reporting.revision}" changing="true" />
+        <dependency org="${dependency.reporting-engine.group}" name="pentaho-reporting-engine-classic-extensions" rev="${dependency.pentaho-reporting.revision}" changing="true" />
 	    
 	    <dependency org="com.thaiopensource" name="trang" rev="2003.6.19" conf="codegen->default" />
 	    <dependency org="xerces" name="xercesImpl" rev="2.8.1" conf="codegen->default">
