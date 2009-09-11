@@ -1580,60 +1580,60 @@ public class ReportGenerationUtility {
           + ";" //$NON-NLS-1$
           +
           // "double calc = ((Number)dataRow.get(names[0])).doubleValue(); " +
-          "double calc = 0; " + "try { " + "  for (int x=0;x&lt; names.length; x++) { " //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+          "double calc = 0; " + "try { " + "  for (int x=0;x < names.length; x++) { " //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
           + "    Object value = dataRow.get(names[x]); " //$NON-NLS-1$
-          + "    if (value != null &amp;&amp; value instanceof Number) { " + calcString + "    } " + "  }" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+          + "    if (value != null && value instanceof Number) { " + calcString + "    } " + "  }" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
           + "  return new Double(calc);" + "} catch (Exception e) { " + "  e.prinStackTrace();" + "}" + "}"; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$
-      property.setText(text);
+      property.addCDATA(text);
     } else if ("diff".equals(f.getCalculatedColumnFunction())) { //$NON-NLS-1$
       String calcString = "calc -= ((Number)value).doubleValue();"; //$NON-NLS-1$
       String text = "Object getValue() { " + "String[] names = " + nameArrayStrBuf.toString() + ";" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
           + "double calc = ((Number)dataRow.get(names[0])).doubleValue(); " + "try { " //$NON-NLS-1$ //$NON-NLS-2$
-          + "  for (int x=1;x&lt; names.length; x++) { " + "    Object value = dataRow.get(names[x]); " //$NON-NLS-1$ //$NON-NLS-2$
-          + "    if (value != null &amp;&amp; value instanceof Number) { " + calcString + "    } " + "  }" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+          + "  for (int x=1;x < names.length; x++) { " + "    Object value = dataRow.get(names[x]); " //$NON-NLS-1$ //$NON-NLS-2$
+          + "    if (value != null && value instanceof Number) { " + calcString + "    } " + "  }" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
           + "  return new Double(calc);" + "} catch (Exception e) { " + "  e.prinStackTrace();" + "}" + "}"; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$
-      property.setText(text);
+      property.addCDATA(text);
     } else if ("absdiff".equals(f.getCalculatedColumnFunction())) { //$NON-NLS-1$
       String calcString = "calc -= ((Number)value).doubleValue();"; //$NON-NLS-1$
       String text = "Object getValue() { " + "String[] names = " + nameArrayStrBuf.toString() + ";" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
           + "double calc = ((Number)dataRow.get(names[0])).doubleValue(); " + "try { " //$NON-NLS-1$ //$NON-NLS-2$
-          + "  for (int x=1;x&lt; names.length; x++) { " + "    Object value = dataRow.get(names[x]); " //$NON-NLS-1$ //$NON-NLS-2$
-          + "    if (value != null &amp;&amp; value instanceof Number) { " + calcString + "    } " + "  }" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+          + "  for (int x=1;x < names.length; x++) { " + "    Object value = dataRow.get(names[x]); " //$NON-NLS-1$ //$NON-NLS-2$
+          + "    if (value != null && value instanceof Number) { " + calcString + "    } " + "  }" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
           + "  return new Double(Math.abs(calc));" + "} catch (Exception e) { " + "  e.prinStackTrace();" + "}" + "}"; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$
-      property.setText(text);
+      property.addCDATA(text);
     } else if ("mult".equals(f.getCalculatedColumnFunction())) { //$NON-NLS-1$
       String calcString = "calc *= ((Number)value).doubleValue();"; //$NON-NLS-1$
       String text = "Object getValue() { " + "String[] names = " + nameArrayStrBuf.toString() + ";" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
           + "double calc = ((Number)dataRow.get(names[0])).doubleValue(); " + "try { " //$NON-NLS-1$ //$NON-NLS-2$
-          + "  for (int x=1;x&lt; names.length; x++) { " + "    Object value = dataRow.get(names[x]); " //$NON-NLS-1$ //$NON-NLS-2$
-          + "    if (value != null &amp;&amp; value instanceof Number) { " + calcString + "    } " + "  }" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+          + "  for (int x=1;x < names.length; x++) { " + "    Object value = dataRow.get(names[x]); " //$NON-NLS-1$ //$NON-NLS-2$
+          + "    if (value != null && value instanceof Number) { " + calcString + "    } " + "  }" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
           + "  return new Double(calc);" + "} catch (Exception e) { " + "  e.prinStackTrace();" + "}" + "}"; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$
-      property.setText(text);
+      property.addCDATA(text);
     } else if ("avg".equals(f.getCalculatedColumnFunction())) { //$NON-NLS-1$
       String calcString = "calc += ((Number)value).doubleValue();"; //$NON-NLS-1$
       String text = "Object getValue() { " + "String[] names = " + nameArrayStrBuf.toString() + ";" + "int numSum = 0;" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
-          + "double calc = 0; " + "try { " + "  for (int x=0;x&lt; names.length; x++) { " //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+          + "double calc = 0; " + "try { " + "  for (int x=0;x < names.length; x++) { " //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
           + "    Object value = dataRow.get(names[x]); " //$NON-NLS-1$
-          + "    if (value != null &amp;&amp; value instanceof Number) { " + "      numSum++;" + calcString + "    } " //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+          + "    if (value != null && value instanceof Number) { " + "      numSum++;" + calcString + "    } " //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
           + "  }" + "  return new Double(calc / numSum);" + "} catch (Exception e) { " + "  e.prinStackTrace();" + "}" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$
           + "}"; //$NON-NLS-1$
-      property.setText(text);
+      property.addCDATA(text);
     } else if ("min".equals(f.getCalculatedColumnFunction())) { //$NON-NLS-1$
       String text = "Object getValue() { " + "String[] names = " + nameArrayStrBuf.toString() + ";" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-          + "double min = Double.MAX_VALUE;" + "try { " + "  for (int x=0;x&lt; names.length; x++) { " //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+          + "double min = Double.MAX_VALUE;" + "try { " + "  for (int x=0;x < names.length; x++) { " //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
           + "    Object value = dataRow.get(names[x]); " //$NON-NLS-1$
-          + "    if (value != null &amp;&amp; value instanceof Number) { " //$NON-NLS-1$
+          + "    if (value != null && value instanceof Number) { " //$NON-NLS-1$
           + "      min = Math.min(min, ((Number)value).doubleValue());" + "    } " + "  }" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
           + "  return new Double(min);" + "} catch (Exception e) { " + "  e.prinStackTrace();" + "}" + "}"; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$
-      property.setText(text);
+      property.addCDATA(text);
     } else if ("max".equals(f.getCalculatedColumnFunction())) { //$NON-NLS-1$
       String text = "Object getValue() { " + "String[] names = " + nameArrayStrBuf.toString() + ";" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-          + "double max = Double.MIN_VALUE;" + "try { " + "  for (int x=0;x&lt; names.length; x++) { " //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+          + "double max = Double.MIN_VALUE;" + "try { " + "  for (int x=0;x < names.length; x++) { " //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
           + "    Object value = dataRow.get(names[x]); " //$NON-NLS-1$
-          + "    if (value != null &amp;&amp; value instanceof Number) { " //$NON-NLS-1$
+          + "    if (value != null && value instanceof Number) { " //$NON-NLS-1$
           + "      max = Math.max(max, ((Number)value).doubleValue());" + "    } " + "  }" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
           + "  return new Double(max);" + "} catch (Exception e) { " + "  e.prinStackTrace();" + "}" + "}"; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$
-      property.setText(text);
+      property.addCDATA(text);
     }
   }
 
