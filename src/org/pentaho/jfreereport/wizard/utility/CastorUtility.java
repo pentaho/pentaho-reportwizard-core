@@ -22,12 +22,18 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Writer;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.exolab.castor.xml.Marshaller;
 import org.exolab.castor.xml.Unmarshaller;
 
 public class CastorUtility {
   private static CastorUtility instance;
 
+  public static Log getLogger() {
+    return LogFactory.getLog(CastorUtility.class);
+  }  
+  
   public static CastorUtility getInstance() {
     if (instance == null) {
       instance = new CastorUtility();
@@ -41,7 +47,7 @@ public class CastorUtility {
       // read in the object
       o = Unmarshaller.unmarshal(expectedClass, new FileReader(inputFileName));
     } catch (Exception e) {
-      e.printStackTrace(System.err);
+      getLogger().error(e.getMessage(), e);
     }
     return o;
   }
@@ -75,7 +81,7 @@ public class CastorUtility {
       }
       o = Unmarshaller.unmarshal(expectedClass, reader);
     } catch (Exception e) {
-      e.printStackTrace(System.err);
+      getLogger().error(e.getMessage(), e);
     }
     return o;
   }
@@ -103,17 +109,15 @@ public class CastorUtility {
       Marshaller.marshal(object, fileWriter);
       fileWriter.close();
     } catch (Exception e) {
-      e.printStackTrace(System.err);
+      getLogger().error(e.getMessage(), e);
     } finally {
       try {
         fileWriter.flush();
-      } catch (Exception e) {
-        // e.printStackTrace();
+      } catch (Exception ignored) {
       }
       try {
         fileWriter.close();
-      } catch (Exception e) {
-        // e.printStackTrace();
+      } catch (Exception ignored) {
       }
     }
     return file;
