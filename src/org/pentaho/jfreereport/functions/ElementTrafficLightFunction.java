@@ -49,7 +49,7 @@ import org.pentaho.reporting.engine.classic.core.Band;
 import org.pentaho.reporting.engine.classic.core.Element;
 import org.pentaho.reporting.engine.classic.core.function.AbstractElementFormatFunction;
 import org.pentaho.reporting.engine.classic.core.function.FunctionUtilities;
-import org.pentaho.reporting.engine.classic.core.style.ElementStyleSheet;
+import org.pentaho.reporting.engine.classic.core.style.ElementStyleKeys;
 
 /**
  * A function that performs basic traffic lighting based on a range of values
@@ -141,7 +141,7 @@ public class ElementTrafficLightFunction extends AbstractElementFormatFunction {
       }
     }
     for (int i = 0; i < elements.length; i++) {
-      elements[i].getStyle().setStyleProperty(ElementStyleSheet.PAINT, color);
+      elements[i].getStyle().setStyleProperty(ElementStyleKeys.PAINT, color);
     }
   }
 
