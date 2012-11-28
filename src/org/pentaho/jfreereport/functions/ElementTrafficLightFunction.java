@@ -45,10 +45,8 @@ package org.pentaho.jfreereport.functions;
 
 import java.awt.Color;
 
-import org.pentaho.reporting.engine.classic.core.Band;
-import org.pentaho.reporting.engine.classic.core.Element;
+import org.pentaho.reporting.engine.classic.core.ReportElement;
 import org.pentaho.reporting.engine.classic.core.function.AbstractElementFormatFunction;
-import org.pentaho.reporting.engine.classic.core.function.FunctionUtilities;
 import org.pentaho.reporting.engine.classic.core.style.ElementStyleKeys;
 
 /**
@@ -62,6 +60,9 @@ import org.pentaho.reporting.engine.classic.core.style.ElementStyleKeys;
  * @author Michael D'Amour
  */
 public class ElementTrafficLightFunction extends AbstractElementFormatFunction {
+  
+  private static final long serialVersionUID = -6498098209717367376L;
+  
   /**
    * the color if the field is TRUE.
    */
@@ -80,6 +81,33 @@ public class ElementTrafficLightFunction extends AbstractElementFormatFunction {
   public ElementTrafficLightFunction() {
   }
 
+  @Override
+  protected boolean evaluateElement(ReportElement element) {
+    Color color = colorYellow;
+    if (getDataRow().get(field) instanceof Number) {
+      Number n = (Number) getDataRow().get(field);
+      double d = n.doubleValue();
+      if (useAbsoluteValue) {
+        d = Math.abs(d);
+      }
+      if (useOppositeLogic) {
+        if (d >= redValue) {
+          color = colorRed;
+        } else if (d < greenValue) {
+          color = colorGreen;
+        }
+      } else {
+        if (d >= greenValue) {
+          color = colorGreen;
+        } else if (d < redValue) {
+          color = colorRed;
+        }
+      }
+    }
+    element.getStyle().setStyleProperty(ElementStyleKeys.PAINT, color);
+    return true;
+  }
+  
   /**
    * Returns the field used by the function.
    * <P>
@@ -104,45 +132,6 @@ public class ElementTrafficLightFunction extends AbstractElementFormatFunction {
       throw new NullPointerException();
     }
     this.field = field;
-  }
-
-  /**
-   * Process the given band and color the named element of that band if it
-   * exists.
-   * 
-   * @param b
-   *          the band that should be colored.
-   */
-  protected void processRootBand(final Band b) {
-    final Element[] elements = FunctionUtilities.findAllElements(b, getElement());
-    if (elements.length == 0) {
-      // there is no such element ! (we searched it by its name)
-      return;
-    }
-    Color color = colorYellow;
-    if (getDataRow().get(field) instanceof Number) {
-      Number n = (Number) getDataRow().get(field);
-      double d = n.doubleValue();
-      if (useAbsoluteValue) {
-        d = Math.abs(d);
-      }
-      if (useOppositeLogic) {
-        if (d >= redValue) {
-          color = colorRed;
-        } else if (d < greenValue) {
-          color = colorGreen;
-        }
-      } else {
-        if (d >= greenValue) {
-          color = colorGreen;
-        } else if (d < redValue) {
-          color = colorRed;
-        }
-      }
-    }
-    for (int i = 0; i < elements.length; i++) {
-      elements[i].getStyle().setStyleProperty(ElementStyleKeys.PAINT, color);
-    }
   }
 
   /**
