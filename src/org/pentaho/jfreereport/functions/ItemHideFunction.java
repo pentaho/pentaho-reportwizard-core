@@ -1,51 +1,52 @@
 /*
- * Copyright 2006 Pentaho Corporation.  All rights reserved. 
- * This software was developed by Pentaho Corporation and is provided under the terms 
- * of the Mozilla Public License, Version 1.1, or any later version. You may not use 
- * this file except in compliance with the license. If you need a copy of the license, 
- * please go to http://www.mozilla.org/MPL/MPL-1.1.txt. The Original Code is the Pentaho 
- * BI Platform.  The Initial Developer is Pentaho Corporation.
- *
- * Software distributed under the Mozilla Public License is distributed on an "AS IS" 
- * basis, WITHOUT WARRANTY OF ANY KIND, either express or  implied. Please refer to 
- * the license for the specific language governing your rights and limitations.
+* Copyright 2002 - 2013 Pentaho Corporation.  All rights reserved.
+* 
+* This software was developed by Pentaho Corporation and is provided under the terms
+* of the Mozilla Public License, Version 1.1, or any later version. You may not use
+* this file except in compliance with the license. If you need a copy of the license,
+* please go to http://www.mozilla.org/MPL/MPL-1.1.txt. TThe Initial Developer is Pentaho Corporation.
+*
+* Software distributed under the Mozilla Public License is distributed on an "AS IS"
+* basis, WITHOUT WARRANTY OF ANY KIND, either express or  implied. Please refer to
+* the license for the specific language governing your rights and limitations.
 */
+
 /**
- * ========================================
- * JFreeReport : a free Java report library
- * ========================================
- *
- * Project Info:  http://www.jfree.org/jfreereport/index.html
- * Project Lead:  Thomas Morgner;
- *
- * (C) Copyright 2000-2002, by Simba Management Limited and Contributors.
- *
- * This library is free software; you can redistribute it and/or modify it under the terms
- * of the GNU Lesser General Public License as published by the Free Software Foundation;
- * either version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
- * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License along with this
- * library; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330,
- * Boston, MA 02111-1307, USA.
- *
- * ---------------------
- * ItemHideFunction.java
- * ---------------------
- * (C)opyright 2000-2002, by Thomas Morgner and Contributors.
- *
- * Original Author:  Thomas Morgner;
- * Contributor(s):   David Gilbert (for Simba Management Limited);
- *
- * $Id: ItemHideFunction.java,v 1.13 2005/09/07 14:25:10 taqua Exp $
- *
- * Changes
- * -------
- * 27-Aug-2002 : Initial version
- */
+* ========================================
+* JFreeReport : a free Java report library
+* ========================================
+*
+* Project Info:  http://www.jfree.org/jfreereport/index.html
+* Project Lead:  Thomas Morgner;
+*
+* (C) Copyright 2000-2002, by Simba Management Limited and Contributors.
+*
+* This library is free software; you can redistribute it and/or modify it under the terms
+* of the GNU Lesser General Public License as published by the Free Software Foundation;
+* either version 2.1 of the License, or (at your option) any later version.
+*
+* This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+* without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+* See the GNU Lesser General Public License for more details.
+*
+* You should have received a copy of the GNU Lesser General Public License along with this
+* library; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330,
+* Boston, MA 02111-1307, USA.
+*
+* ---------------------
+* ItemHideFunction.java
+* ---------------------
+* (C)opyright 2000-2002, by Thomas Morgner and Contributors.
+*
+* Original Author:  Thomas Morgner;
+* Contributor(s):   David Gilbert (for Simba Management Limited);
+*
+*
+* Changes
+* -------
+* 27-Aug-2002 : Initial version
+*/
+
 package org.pentaho.jfreereport.functions;
 
 import java.io.Serializable;
