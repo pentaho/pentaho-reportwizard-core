@@ -18,7 +18,7 @@
     <dependencies defaultconf="default->default">
     	<dependency org="commons-logging" name="commons-logging" rev="1.1" />
     	<dependency org="commons-lang" name="commons-lang" rev="2.2" />
-    	<dependency org="org.codehaus.castor" name="castor" rev="1.0.5" transitive="false" />
+    	<dependency org="org.codehaus.castor" name="castor" rev="1.0.5" transitive="false" conf="codegen->default"/>
 	    <dependency org="dom4j" name="dom4j" rev="1.6.1">
 	      <exclude org="xml-apis" name="xml-apis" />
 	    </dependency>

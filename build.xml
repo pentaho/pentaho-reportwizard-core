@@ -36,7 +36,7 @@
   	<antcall target="generate-castor-src"></antcall>
   </target>
 
-  	<target name="generate-castor-src" depends="init" description="Generate Java source files from XSD.">
+  	<target name="generate-castor-src" depends="init,resolve-codegen" description="Generate Java source files from XSD.">
   		<taskdef name="castor-srcgen" classname="org.exolab.castor.tools.ant.taskdefs.CastorSourceGenTask" classpathref="classpath" />
   		<castor-srcgen file="${report-spec-xsd}" todir="src" package="org.pentaho.jfreereport.castormodel.reportspec" types="j2" warnings="false" testable="false"/>
   		<!--castor-srcgen file="${report-xsd}" todir="src" package="org.pentaho.jfreereport.castormodel.jfree" types="j2" warnings="false" /-->
@@ -55,6 +55,5 @@
   			<classpath refid="classpath" />
   		</java>
   	</target>
-  
 
 </project>
