@@ -1,259 +1,280 @@
 /*
  * This class was automatically generated with 
- * <a href="http://www.castor.org">Castor 1.0.5</a>, using an XML
+ * <a href="http://www.castor.org">Castor 1.4.1</a>, using an XML
  * Schema.
  * $Id$
  */
 
-package org.pentaho.jfreereport.castormodel.reportspec;
+package org.pentaho.jfreereport.castormodel.reportspec.descriptors;
+
+  //---------------------------------/
+ //- Imported classes and packages -/
+//---------------------------------/
+
+import org.pentaho.jfreereport.castormodel.reportspec.ReportSpec;
 
 /**
- * Class ReportSpecDescriptor.
+ * 
  * 
  * @version $Revision$ $Date$
  */
 public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDescriptorImpl {
 
-
-      //--------------------------/
-     //- Class/Member Variables -/
-    //--------------------------/
+    /**
+     * Field _elementDefinition.
+     */
+    private boolean _elementDefinition;
 
     /**
-     * Field elementDefinition
+     * Field _nsPrefix.
      */
-    private boolean elementDefinition;
+    private java.lang.String _nsPrefix;
 
     /**
-     * Field nsPrefix
+     * Field _nsURI.
      */
-    private java.lang.String nsPrefix;
+    private java.lang.String _nsURI;
 
     /**
-     * Field nsURI
+     * Field _xmlName.
      */
-    private java.lang.String nsURI;
+    private java.lang.String _xmlName;
 
     /**
-     * Field xmlName
+     * Field _identity.
      */
-    private java.lang.String xmlName;
+    private org.exolab.castor.xml.XMLFieldDescriptor _identity;
 
-    /**
-     * Field identity
-     */
-    private org.exolab.castor.xml.XMLFieldDescriptor identity;
-
-
-      //----------------/
-     //- Constructors -/
-    //----------------/
-
-    public ReportSpecDescriptor() 
-     {
+    public ReportSpecDescriptor() {
         super();
-        xmlName = "report-spec";
-        elementDefinition = true;
-        
+        _xmlName = "report-spec";
+        _elementDefinition = true;
+
         //-- set grouping compositor
         setCompositorAsSequence();
         org.exolab.castor.xml.util.XMLFieldDescriptorImpl  desc           = null;
         org.exolab.castor.mapping.FieldHandler             handler        = null;
         org.exolab.castor.xml.FieldValidator               fieldValidator = null;
         //-- initialize attribute descriptors
-        
-        //-- _tool
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_tool", "tool", org.exolab.castor.xml.NodeType.Attribute);
+
+        //-- tool
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "tool", "tool", org.exolab.castor.xml.NodeType.Attribute);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getTool();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setTool( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _tool
+
+        //-- validation code for: tool
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _toolVersion
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_toolVersion", "tool-version", org.exolab.castor.xml.NodeType.Attribute);
+        //-- toolVersion
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "toolVersion", "tool-version", org.exolab.castor.xml.NodeType.Attribute);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getToolVersion();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setToolVersion( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _toolVersion
+
+        //-- validation code for: toolVersion
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _templateName
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_templateName", "template-name", org.exolab.castor.xml.NodeType.Attribute);
+        //-- templateName
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "templateName", "template-name", org.exolab.castor.xml.NodeType.Attribute);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getTemplateName();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setTemplateName( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _templateName
+
+        //-- validation code for: templateName
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
         //-- initialize element descriptors
-        
-        //-- _reportSpecChoice
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(org.pentaho.jfreereport.castormodel.reportspec.ReportSpecChoice.class, "_reportSpecChoice", "-error-if-this-is-used-", org.exolab.castor.xml.NodeType.Element);
+
+        //-- reportSpecChoice
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(org.pentaho.jfreereport.castormodel.reportspec.ReportSpecChoice.class, "reportSpecChoice", "-error-if-this-is-used-", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getReportSpecChoice();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setReportSpecChoice( (org.pentaho.jfreereport.castormodel.reportspec.ReportSpecChoice) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return new org.pentaho.jfreereport.castormodel.reportspec.ReportSpecChoice();
             }
         };
+        desc.setSchemaType("org.pentaho.jfreereport.castormodel.reportspec.ReportSpecChoice");
         desc.setHandler(handler);
         desc.setContainer(true);
-        desc.setClassDescriptor(new org.pentaho.jfreereport.castormodel.reportspec.ReportSpecChoiceDescriptor());
+        desc.setClassDescriptor(new org.pentaho.jfreereport.castormodel.reportspec.descriptors.ReportSpecChoiceDescriptor());
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _reportSpecChoice
+        addSequenceElement(desc);
+
+        //-- validation code for: reportSpecChoice
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
         }
         desc.setValidator(fieldValidator);
-        //-- _chart
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(org.pentaho.jfreereport.castormodel.reportspec.Chart.class, "_chart", "chart", org.exolab.castor.xml.NodeType.Element);
+        //-- chart
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(org.pentaho.jfreereport.castormodel.reportspec.Chart.class, "chart", "chart", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getChart();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setChart( (org.pentaho.jfreereport.castormodel.reportspec.Chart) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return new org.pentaho.jfreereport.castormodel.reportspec.Chart();
             }
         };
+        desc.setSchemaType("org.pentaho.jfreereport.castormodel.reportspec.Chart");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _chart
+        addSequenceElement(desc);
+
+        //-- validation code for: chart
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
         }
         desc.setValidator(fieldValidator);
-        //-- _useChart
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_useChart", "use-chart", org.exolab.castor.xml.NodeType.Element);
+        //-- useChart
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "useChart", "use-chart", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasUseChart())
-                    return null;
+                if (!target.hasUseChart()) { return null; }
                 return (target.getUseChart() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -264,116 +285,133 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteUseChart();
                         return;
                     }
-                    target.setUseChart( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setUseChart( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _useChart
+        addSequenceElement(desc);
+
+        //-- validation code for: useChart
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _reportName
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_reportName", "report-name", org.exolab.castor.xml.NodeType.Element);
+        //-- reportName
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "reportName", "report-name", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getReportName();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setReportName( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setRequired(true);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _reportName
+        addSequenceElement(desc);
+
+        //-- validation code for: reportName
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         fieldValidator.setMinOccurs(1);
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _reportDesc
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_reportDesc", "report-desc", org.exolab.castor.xml.NodeType.Element);
+        //-- reportDesc
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "reportDesc", "report-desc", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getReportDesc();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setReportDesc( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setRequired(true);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _reportDesc
+        addSequenceElement(desc);
+
+        //-- validation code for: reportDesc
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         fieldValidator.setMinOccurs(1);
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _isMQL
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_isMQL", "isMQL", org.exolab.castor.xml.NodeType.Element);
+        //-- isMQL
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "isMQL", "isMQL", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasIsMQL())
-                    return null;
+                if (!target.hasIsMQL()) { return null; }
                 return (target.getIsMQL() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -384,75 +422,86 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteIsMQL();
                         return;
                     }
-                    target.setIsMQL( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setIsMQL( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _isMQL
+        addSequenceElement(desc);
+
+        //-- validation code for: isMQL
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _xmiPath
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_xmiPath", "xmi-path", org.exolab.castor.xml.NodeType.Element);
+        //-- xmiPath
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "xmiPath", "xmi-path", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getXmiPath();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setXmiPath( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _xmiPath
+        addSequenceElement(desc);
+
+        //-- validation code for: xmiPath
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _isMDX
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_isMDX", "isMDX", org.exolab.castor.xml.NodeType.Element);
+        //-- isMDX
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "isMDX", "isMDX", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasIsMDX())
-                    return null;
+                if (!target.hasIsMDX()) { return null; }
                 return (target.getIsMDX() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -463,266 +512,307 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteIsMDX();
                         return;
                     }
-                    target.setIsMDX( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setIsMDX( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _isMDX
+        addSequenceElement(desc);
+
+        //-- validation code for: isMDX
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _mondrianCubeDefinitionPath
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_mondrianCubeDefinitionPath", "mondrian-cube-definition-path", org.exolab.castor.xml.NodeType.Element);
+        //-- mondrianCubeDefinitionPath
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "mondrianCubeDefinitionPath", "mondrian-cube-definition-path", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getMondrianCubeDefinitionPath();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setMondrianCubeDefinitionPath( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _mondrianCubeDefinitionPath
+        addSequenceElement(desc);
+
+        //-- validation code for: mondrianCubeDefinitionPath
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _kettleStep
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_kettleStep", "kettle-step", org.exolab.castor.xml.NodeType.Element);
+        //-- kettleStep
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "kettleStep", "kettle-step", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getKettleStep();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setKettleStep( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _kettleStep
+        addSequenceElement(desc);
+
+        //-- validation code for: kettleStep
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _query
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_query", "query", org.exolab.castor.xml.NodeType.Element);
+        //-- query
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "query", "query", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getQuery();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setQuery( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _query
+        addSequenceElement(desc);
+
+        //-- validation code for: query
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _mqlQuery
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_mqlQuery", "mql-query", org.exolab.castor.xml.NodeType.Element);
+        //-- mqlQuery
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "mqlQuery", "mql-query", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getMqlQuery();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setMqlQuery( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _mqlQuery
+        addSequenceElement(desc);
+
+        //-- validation code for: mqlQuery
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _includeSrc
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_includeSrc", "include-src", org.exolab.castor.xml.NodeType.Element);
+        //-- includeSrc
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "includeSrc", "include-src", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getIncludeSrc();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setIncludeSrc( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _includeSrc
+        addSequenceElement(desc);
+
+        //-- validation code for: includeSrc
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _templateSrc
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_templateSrc", "template-src", org.exolab.castor.xml.NodeType.Element);
+        //-- templateSrc
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "templateSrc", "template-src", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getTemplateSrc();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setTemplateSrc( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _templateSrc
+        addSequenceElement(desc);
+
+        //-- validation code for: templateSrc
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _fieldMappingList
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(org.pentaho.jfreereport.castormodel.reportspec.FieldMapping.class, "_fieldMappingList", "field-mapping", org.exolab.castor.xml.NodeType.Element);
+        //-- fieldMappingList
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(org.pentaho.jfreereport.castormodel.reportspec.FieldMapping.class, "fieldMappingList", "field-mapping", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getFieldMapping();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.addFieldMapping( (org.pentaho.jfreereport.castormodel.reportspec.FieldMapping) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
@@ -734,101 +824,118 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return new org.pentaho.jfreereport.castormodel.reportspec.FieldMapping();
             }
         };
+        desc.setSchemaType("list");
+        desc.setComponentType("org.pentaho.jfreereport.castormodel.reportspec.FieldMapping");
         desc.setHandler(handler);
         desc.setMultivalued(true);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _fieldMappingList
+        addSequenceElement(desc);
+
+        //-- validation code for: fieldMappingList
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         fieldValidator.setMinOccurs(0);
         { //-- local scope
         }
         desc.setValidator(fieldValidator);
-        //-- _watermark
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(org.pentaho.jfreereport.castormodel.reportspec.Watermark.class, "_watermark", "watermark", org.exolab.castor.xml.NodeType.Element);
+        //-- watermark
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(org.pentaho.jfreereport.castormodel.reportspec.Watermark.class, "watermark", "watermark", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getWatermark();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setWatermark( (org.pentaho.jfreereport.castormodel.reportspec.Watermark) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return new org.pentaho.jfreereport.castormodel.reportspec.Watermark();
             }
         };
+        desc.setSchemaType("org.pentaho.jfreereport.castormodel.reportspec.Watermark");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _watermark
+        addSequenceElement(desc);
+
+        //-- validation code for: watermark
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
         }
         desc.setValidator(fieldValidator);
-        //-- _pageFormat
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_pageFormat", "page-format", org.exolab.castor.xml.NodeType.Element);
+        //-- pageFormat
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "pageFormat", "page-format", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getPageFormat();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setPageFormat( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _pageFormat
+        addSequenceElement(desc);
+
+        //-- validation code for: pageFormat
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _useCustomPageFormat
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_useCustomPageFormat", "use-custom-page-format", org.exolab.castor.xml.NodeType.Element);
+        //-- useCustomPageFormat
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "useCustomPageFormat", "use-custom-page-format", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasUseCustomPageFormat())
-                    return null;
+                if (!target.hasUseCustomPageFormat()) { return null; }
                 return (target.getUseCustomPageFormat() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -839,38 +946,43 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteUseCustomPageFormat();
                         return;
                     }
-                    target.setUseCustomPageFormat( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setUseCustomPageFormat( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _useCustomPageFormat
+        addSequenceElement(desc);
+
+        //-- validation code for: useCustomPageFormat
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _customPageFormatWidth
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_customPageFormatWidth", "custom-page-format-width", org.exolab.castor.xml.NodeType.Element);
+        //-- customPageFormatWidth
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "customPageFormatWidth", "custom-page-format-width", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasCustomPageFormatWidth())
-                    return null;
+                if (!target.hasCustomPageFormatWidth()) { return null; }
                 return new java.lang.Integer(target.getCustomPageFormatWidth());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -881,38 +993,45 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteCustomPageFormatWidth();
                         return;
                     }
-                    target.setCustomPageFormatWidth( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setCustomPageFormatWidth( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _customPageFormatWidth
+        addSequenceElement(desc);
+
+        //-- validation code for: customPageFormatWidth
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _customPageFormatHeight
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_customPageFormatHeight", "custom-page-format-height", org.exolab.castor.xml.NodeType.Element);
+        //-- customPageFormatHeight
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "customPageFormatHeight", "custom-page-format-height", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasCustomPageFormatHeight())
-                    return null;
+                if (!target.hasCustomPageFormatHeight()) { return null; }
                 return new java.lang.Integer(target.getCustomPageFormatHeight());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -923,75 +1042,88 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteCustomPageFormatHeight();
                         return;
                     }
-                    target.setCustomPageFormatHeight( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setCustomPageFormatHeight( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _customPageFormatHeight
+        addSequenceElement(desc);
+
+        //-- validation code for: customPageFormatHeight
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _orientation
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_orientation", "orientation", org.exolab.castor.xml.NodeType.Element);
+        //-- orientation
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "orientation", "orientation", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getOrientation();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setOrientation( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _orientation
+        addSequenceElement(desc);
+
+        //-- validation code for: orientation
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _useRowBanding
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_useRowBanding", "use-row-banding", org.exolab.castor.xml.NodeType.Element);
+        //-- useRowBanding
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "useRowBanding", "use-row-banding", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasUseRowBanding())
-                    return null;
+                if (!target.hasUseRowBanding()) { return null; }
                 return (target.getUseRowBanding() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1002,75 +1134,86 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteUseRowBanding();
                         return;
                     }
-                    target.setUseRowBanding( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setUseRowBanding( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _useRowBanding
+        addSequenceElement(desc);
+
+        //-- validation code for: useRowBanding
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _rowBandingColor
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_rowBandingColor", "row-banding-color", org.exolab.castor.xml.NodeType.Element);
+        //-- rowBandingColor
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "rowBandingColor", "row-banding-color", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getRowBandingColor();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setRowBandingColor( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _rowBandingColor
+        addSequenceElement(desc);
+
+        //-- validation code for: rowBandingColor
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _rowBandingInitialState
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_rowBandingInitialState", "row-banding-initial-state", org.exolab.castor.xml.NodeType.Element);
+        //-- rowBandingInitialState
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "rowBandingInitialState", "row-banding-initial-state", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasRowBandingInitialState())
-                    return null;
+                if (!target.hasRowBandingInitialState()) { return null; }
                 return (target.getRowBandingInitialState() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1081,38 +1224,43 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteRowBandingInitialState();
                         return;
                     }
-                    target.setRowBandingInitialState( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setRowBandingInitialState( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _rowBandingInitialState
+        addSequenceElement(desc);
+
+        //-- validation code for: rowBandingInitialState
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _useExpressionUnderlining
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_useExpressionUnderlining", "use-expression-underlining", org.exolab.castor.xml.NodeType.Element);
+        //-- useExpressionUnderlining
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "useExpressionUnderlining", "use-expression-underlining", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasUseExpressionUnderlining())
-                    return null;
+                if (!target.hasUseExpressionUnderlining()) { return null; }
                 return (target.getUseExpressionUnderlining() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1123,38 +1271,43 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteUseExpressionUnderlining();
                         return;
                     }
-                    target.setUseExpressionUnderlining( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setUseExpressionUnderlining( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _useExpressionUnderlining
+        addSequenceElement(desc);
+
+        //-- validation code for: useExpressionUnderlining
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _doubleUnderlineExpression
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_doubleUnderlineExpression", "double-underline-expression", org.exolab.castor.xml.NodeType.Element);
+        //-- doubleUnderlineExpression
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "doubleUnderlineExpression", "double-underline-expression", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasDoubleUnderlineExpression())
-                    return null;
+                if (!target.hasDoubleUnderlineExpression()) { return null; }
                 return (target.getDoubleUnderlineExpression() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1165,38 +1318,43 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteDoubleUnderlineExpression();
                         return;
                     }
-                    target.setDoubleUnderlineExpression( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setDoubleUnderlineExpression( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _doubleUnderlineExpression
+        addSequenceElement(desc);
+
+        //-- validation code for: doubleUnderlineExpression
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _useMasterDetail
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_useMasterDetail", "use-master-detail", org.exolab.castor.xml.NodeType.Element);
+        //-- useMasterDetail
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "useMasterDetail", "use-master-detail", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasUseMasterDetail())
-                    return null;
+                if (!target.hasUseMasterDetail()) { return null; }
                 return (target.getUseMasterDetail() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1207,38 +1365,43 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteUseMasterDetail();
                         return;
                     }
-                    target.setUseMasterDetail( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setUseMasterDetail( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _useMasterDetail
+        addSequenceElement(desc);
+
+        //-- validation code for: useMasterDetail
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _useMasterDetailGridlines
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_useMasterDetailGridlines", "use-master-detail-gridlines", org.exolab.castor.xml.NodeType.Element);
+        //-- useMasterDetailGridlines
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "useMasterDetailGridlines", "use-master-detail-gridlines", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasUseMasterDetailGridlines())
-                    return null;
+                if (!target.hasUseMasterDetailGridlines()) { return null; }
                 return (target.getUseMasterDetailGridlines() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1249,38 +1412,43 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteUseMasterDetailGridlines();
                         return;
                     }
-                    target.setUseMasterDetailGridlines( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setUseMasterDetailGridlines( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _useMasterDetailGridlines
+        addSequenceElement(desc);
+
+        //-- validation code for: useMasterDetailGridlines
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _useMasterDetailBanding
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_useMasterDetailBanding", "use-master-detail-banding", org.exolab.castor.xml.NodeType.Element);
+        //-- useMasterDetailBanding
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "useMasterDetailBanding", "use-master-detail-banding", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasUseMasterDetailBanding())
-                    return null;
+                if (!target.hasUseMasterDetailBanding()) { return null; }
                 return (target.getUseMasterDetailBanding() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1291,38 +1459,43 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteUseMasterDetailBanding();
                         return;
                     }
-                    target.setUseMasterDetailBanding( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setUseMasterDetailBanding( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _useMasterDetailBanding
+        addSequenceElement(desc);
+
+        //-- validation code for: useMasterDetailBanding
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _generateReportLevelColumnHeaders
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_generateReportLevelColumnHeaders", "generate-report-level-column-headers", org.exolab.castor.xml.NodeType.Element);
+        //-- generateReportLevelColumnHeaders
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "generateReportLevelColumnHeaders", "generate-report-level-column-headers", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasGenerateReportLevelColumnHeaders())
-                    return null;
+                if (!target.hasGenerateReportLevelColumnHeaders()) { return null; }
                 return (target.getGenerateReportLevelColumnHeaders() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1333,38 +1506,43 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteGenerateReportLevelColumnHeaders();
                         return;
                     }
-                    target.setGenerateReportLevelColumnHeaders( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setGenerateReportLevelColumnHeaders( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _generateReportLevelColumnHeaders
+        addSequenceElement(desc);
+
+        //-- validation code for: generateReportLevelColumnHeaders
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _useColumnHeaderBackgroundColor
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_useColumnHeaderBackgroundColor", "use-column-header-background-color", org.exolab.castor.xml.NodeType.Element);
+        //-- useColumnHeaderBackgroundColor
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "useColumnHeaderBackgroundColor", "use-column-header-background-color", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasUseColumnHeaderBackgroundColor())
-                    return null;
+                if (!target.hasUseColumnHeaderBackgroundColor()) { return null; }
                 return (target.getUseColumnHeaderBackgroundColor() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1375,75 +1553,86 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteUseColumnHeaderBackgroundColor();
                         return;
                     }
-                    target.setUseColumnHeaderBackgroundColor( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setUseColumnHeaderBackgroundColor( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _useColumnHeaderBackgroundColor
+        addSequenceElement(desc);
+
+        //-- validation code for: useColumnHeaderBackgroundColor
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _columnHeaderBackgroundColor
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_columnHeaderBackgroundColor", "column-header-background-color", org.exolab.castor.xml.NodeType.Element);
+        //-- columnHeaderBackgroundColor
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "columnHeaderBackgroundColor", "column-header-background-color", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getColumnHeaderBackgroundColor();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setColumnHeaderBackgroundColor( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _columnHeaderBackgroundColor
+        addSequenceElement(desc);
+
+        //-- validation code for: columnHeaderBackgroundColor
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _columnHeaderHeight
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_columnHeaderHeight", "column-header-height", org.exolab.castor.xml.NodeType.Element);
+        //-- columnHeaderHeight
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "columnHeaderHeight", "column-header-height", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasColumnHeaderHeight())
-                    return null;
+                if (!target.hasColumnHeaderHeight()) { return null; }
                 return new java.lang.Integer(target.getColumnHeaderHeight());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1454,38 +1643,45 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteColumnHeaderHeight();
                         return;
                     }
-                    target.setColumnHeaderHeight( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setColumnHeaderHeight( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _columnHeaderHeight
+        addSequenceElement(desc);
+
+        //-- validation code for: columnHeaderHeight
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _calculateGrandTotals
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_calculateGrandTotals", "calculate-grand-totals", org.exolab.castor.xml.NodeType.Element);
+        //-- calculateGrandTotals
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "calculateGrandTotals", "calculate-grand-totals", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasCalculateGrandTotals())
-                    return null;
+                if (!target.hasCalculateGrandTotals()) { return null; }
                 return (target.getCalculateGrandTotals() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1496,112 +1692,129 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteCalculateGrandTotals();
                         return;
                     }
-                    target.setCalculateGrandTotals( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setCalculateGrandTotals( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _calculateGrandTotals
+        addSequenceElement(desc);
+
+        //-- validation code for: calculateGrandTotals
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _grandTotalsLabel
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_grandTotalsLabel", "grand-totals-label", org.exolab.castor.xml.NodeType.Element);
+        //-- grandTotalsLabel
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "grandTotalsLabel", "grand-totals-label", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getGrandTotalsLabel();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setGrandTotalsLabel( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _grandTotalsLabel
+        addSequenceElement(desc);
+
+        //-- validation code for: grandTotalsLabel
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _grandTotalsHorizontalAlignment
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_grandTotalsHorizontalAlignment", "grand-totals-horizontal-alignment", org.exolab.castor.xml.NodeType.Element);
+        //-- grandTotalsHorizontalAlignment
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "grandTotalsHorizontalAlignment", "grand-totals-horizontal-alignment", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getGrandTotalsHorizontalAlignment();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setGrandTotalsHorizontalAlignment( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _grandTotalsHorizontalAlignment
+        addSequenceElement(desc);
+
+        //-- validation code for: grandTotalsHorizontalAlignment
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _useDummyGroupFooterBackgroundColor
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_useDummyGroupFooterBackgroundColor", "use-dummy-group-footer-background-color", org.exolab.castor.xml.NodeType.Element);
+        //-- useDummyGroupFooterBackgroundColor
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "useDummyGroupFooterBackgroundColor", "use-dummy-group-footer-background-color", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasUseDummyGroupFooterBackgroundColor())
-                    return null;
+                if (!target.hasUseDummyGroupFooterBackgroundColor()) { return null; }
                 return (target.getUseDummyGroupFooterBackgroundColor() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1612,75 +1825,86 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteUseDummyGroupFooterBackgroundColor();
                         return;
                     }
-                    target.setUseDummyGroupFooterBackgroundColor( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setUseDummyGroupFooterBackgroundColor( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _useDummyGroupFooterBackgroundColor
+        addSequenceElement(desc);
+
+        //-- validation code for: useDummyGroupFooterBackgroundColor
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _dummyGroupFooterBackgroundColor
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_dummyGroupFooterBackgroundColor", "dummy-group-footer-background-color", org.exolab.castor.xml.NodeType.Element);
+        //-- dummyGroupFooterBackgroundColor
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "dummyGroupFooterBackgroundColor", "dummy-group-footer-background-color", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getDummyGroupFooterBackgroundColor();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setDummyGroupFooterBackgroundColor( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _dummyGroupFooterBackgroundColor
+        addSequenceElement(desc);
+
+        //-- validation code for: dummyGroupFooterBackgroundColor
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _useHorizontalGridlines
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_useHorizontalGridlines", "use-horizontal-gridlines", org.exolab.castor.xml.NodeType.Element);
+        //-- useHorizontalGridlines
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "useHorizontalGridlines", "use-horizontal-gridlines", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasUseHorizontalGridlines())
-                    return null;
+                if (!target.hasUseHorizontalGridlines()) { return null; }
                 return (target.getUseHorizontalGridlines() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1691,38 +1915,43 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteUseHorizontalGridlines();
                         return;
                     }
-                    target.setUseHorizontalGridlines( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setUseHorizontalGridlines( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _useHorizontalGridlines
+        addSequenceElement(desc);
+
+        //-- validation code for: useHorizontalGridlines
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _useVerticalGridlines
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_useVerticalGridlines", "use-vertical-gridlines", org.exolab.castor.xml.NodeType.Element);
+        //-- useVerticalGridlines
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "useVerticalGridlines", "use-vertical-gridlines", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasUseVerticalGridlines())
-                    return null;
+                if (!target.hasUseVerticalGridlines()) { return null; }
                 return (target.getUseVerticalGridlines() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1733,149 +1962,172 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteUseVerticalGridlines();
                         return;
                     }
-                    target.setUseVerticalGridlines( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setUseVerticalGridlines( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _useVerticalGridlines
+        addSequenceElement(desc);
+
+        //-- validation code for: useVerticalGridlines
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _horizontalGridlinesColor
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_horizontalGridlinesColor", "horizontal-gridlines-color", org.exolab.castor.xml.NodeType.Element);
+        //-- horizontalGridlinesColor
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "horizontalGridlinesColor", "horizontal-gridlines-color", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getHorizontalGridlinesColor();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setHorizontalGridlinesColor( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _horizontalGridlinesColor
+        addSequenceElement(desc);
+
+        //-- validation code for: horizontalGridlinesColor
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _verticalGridlinesColor
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_verticalGridlinesColor", "vertical-gridlines-color", org.exolab.castor.xml.NodeType.Element);
+        //-- verticalGridlinesColor
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "verticalGridlinesColor", "vertical-gridlines-color", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getVerticalGridlinesColor();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setVerticalGridlinesColor( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _verticalGridlinesColor
+        addSequenceElement(desc);
+
+        //-- validation code for: verticalGridlinesColor
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _groupHeaderFontName
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_groupHeaderFontName", "group-header-font-name", org.exolab.castor.xml.NodeType.Element);
+        //-- groupHeaderFontName
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "groupHeaderFontName", "group-header-font-name", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getGroupHeaderFontName();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setGroupHeaderFontName( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _groupHeaderFontName
+        addSequenceElement(desc);
+
+        //-- validation code for: groupHeaderFontName
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _groupHeaderFontStyle
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_groupHeaderFontStyle", "group-header-font-style", org.exolab.castor.xml.NodeType.Element);
+        //-- groupHeaderFontStyle
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "groupHeaderFontStyle", "group-header-font-style", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasGroupHeaderFontStyle())
-                    return null;
+                if (!target.hasGroupHeaderFontStyle()) { return null; }
                 return new java.lang.Integer(target.getGroupHeaderFontStyle());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1886,38 +2138,45 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteGroupHeaderFontStyle();
                         return;
                     }
-                    target.setGroupHeaderFontStyle( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setGroupHeaderFontStyle( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _groupHeaderFontStyle
+        addSequenceElement(desc);
+
+        //-- validation code for: groupHeaderFontStyle
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _groupHeaderFontSize
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_groupHeaderFontSize", "group-header-font-size", org.exolab.castor.xml.NodeType.Element);
+        //-- groupHeaderFontSize
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "groupHeaderFontSize", "group-header-font-size", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasGroupHeaderFontSize())
-                    return null;
+                if (!target.hasGroupHeaderFontSize()) { return null; }
                 return new java.lang.Integer(target.getGroupHeaderFontSize());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1928,112 +2187,131 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteGroupHeaderFontSize();
                         return;
                     }
-                    target.setGroupHeaderFontSize( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setGroupHeaderFontSize( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _groupHeaderFontSize
+        addSequenceElement(desc);
+
+        //-- validation code for: groupHeaderFontSize
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _groupHeaderFontColor
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_groupHeaderFontColor", "group-header-font-color", org.exolab.castor.xml.NodeType.Element);
+        //-- groupHeaderFontColor
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "groupHeaderFontColor", "group-header-font-color", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getGroupHeaderFontColor();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setGroupHeaderFontColor( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _groupHeaderFontColor
+        addSequenceElement(desc);
+
+        //-- validation code for: groupHeaderFontColor
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _groupFooterFontName
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_groupFooterFontName", "group-footer-font-name", org.exolab.castor.xml.NodeType.Element);
+        //-- groupFooterFontName
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "groupFooterFontName", "group-footer-font-name", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getGroupFooterFontName();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setGroupFooterFontName( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _groupFooterFontName
+        addSequenceElement(desc);
+
+        //-- validation code for: groupFooterFontName
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _groupFooterFontStyle
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_groupFooterFontStyle", "group-footer-font-style", org.exolab.castor.xml.NodeType.Element);
+        //-- groupFooterFontStyle
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "groupFooterFontStyle", "group-footer-font-style", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasGroupFooterFontStyle())
-                    return null;
+                if (!target.hasGroupFooterFontStyle()) { return null; }
                 return new java.lang.Integer(target.getGroupFooterFontStyle());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -2044,38 +2322,45 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteGroupFooterFontStyle();
                         return;
                     }
-                    target.setGroupFooterFontStyle( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setGroupFooterFontStyle( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _groupFooterFontStyle
+        addSequenceElement(desc);
+
+        //-- validation code for: groupFooterFontStyle
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _groupFooterFontSize
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_groupFooterFontSize", "group-footer-font-size", org.exolab.castor.xml.NodeType.Element);
+        //-- groupFooterFontSize
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "groupFooterFontSize", "group-footer-font-size", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasGroupFooterFontSize())
-                    return null;
+                if (!target.hasGroupFooterFontSize()) { return null; }
                 return new java.lang.Integer(target.getGroupFooterFontSize());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -2086,112 +2371,131 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteGroupFooterFontSize();
                         return;
                     }
-                    target.setGroupFooterFontSize( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setGroupFooterFontSize( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _groupFooterFontSize
+        addSequenceElement(desc);
+
+        //-- validation code for: groupFooterFontSize
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _groupFooterFontColor
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_groupFooterFontColor", "group-footer-font-color", org.exolab.castor.xml.NodeType.Element);
+        //-- groupFooterFontColor
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "groupFooterFontColor", "group-footer-font-color", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getGroupFooterFontColor();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setGroupFooterFontColor( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _groupFooterFontColor
+        addSequenceElement(desc);
+
+        //-- validation code for: groupFooterFontColor
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _columnHeaderFontName
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_columnHeaderFontName", "column-header-font-name", org.exolab.castor.xml.NodeType.Element);
+        //-- columnHeaderFontName
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "columnHeaderFontName", "column-header-font-name", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getColumnHeaderFontName();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setColumnHeaderFontName( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _columnHeaderFontName
+        addSequenceElement(desc);
+
+        //-- validation code for: columnHeaderFontName
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _columnHeaderFontStyle
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_columnHeaderFontStyle", "column-header-font-style", org.exolab.castor.xml.NodeType.Element);
+        //-- columnHeaderFontStyle
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "columnHeaderFontStyle", "column-header-font-style", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasColumnHeaderFontStyle())
-                    return null;
+                if (!target.hasColumnHeaderFontStyle()) { return null; }
                 return new java.lang.Integer(target.getColumnHeaderFontStyle());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -2202,38 +2506,45 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteColumnHeaderFontStyle();
                         return;
                     }
-                    target.setColumnHeaderFontStyle( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setColumnHeaderFontStyle( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _columnHeaderFontStyle
+        addSequenceElement(desc);
+
+        //-- validation code for: columnHeaderFontStyle
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _columnHeaderFontSize
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_columnHeaderFontSize", "column-header-font-size", org.exolab.castor.xml.NodeType.Element);
+        //-- columnHeaderFontSize
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "columnHeaderFontSize", "column-header-font-size", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasColumnHeaderFontSize())
-                    return null;
+                if (!target.hasColumnHeaderFontSize()) { return null; }
                 return new java.lang.Integer(target.getColumnHeaderFontSize());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -2244,75 +2555,88 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteColumnHeaderFontSize();
                         return;
                     }
-                    target.setColumnHeaderFontSize( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setColumnHeaderFontSize( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _columnHeaderFontSize
+        addSequenceElement(desc);
+
+        //-- validation code for: columnHeaderFontSize
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _columnHeaderFontColor
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_columnHeaderFontColor", "column-header-font-color", org.exolab.castor.xml.NodeType.Element);
+        //-- columnHeaderFontColor
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "columnHeaderFontColor", "column-header-font-color", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getColumnHeaderFontColor();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setColumnHeaderFontColor( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _columnHeaderFontColor
+        addSequenceElement(desc);
+
+        //-- validation code for: columnHeaderFontColor
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _columnHeaderGap
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_columnHeaderGap", "column-header-gap", org.exolab.castor.xml.NodeType.Element);
+        //-- columnHeaderGap
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "columnHeaderGap", "column-header-gap", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasColumnHeaderGap())
-                    return null;
+                if (!target.hasColumnHeaderGap()) { return null; }
                 return new java.lang.Integer(target.getColumnHeaderGap());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -2323,38 +2647,45 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteColumnHeaderGap();
                         return;
                     }
-                    target.setColumnHeaderGap( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setColumnHeaderGap( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _columnHeaderGap
+        addSequenceElement(desc);
+
+        //-- validation code for: columnHeaderGap
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _columnHeaderTopGap
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_columnHeaderTopGap", "column-header-top-gap", org.exolab.castor.xml.NodeType.Element);
+        //-- columnHeaderTopGap
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "columnHeaderTopGap", "column-header-top-gap", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasColumnHeaderTopGap())
-                    return null;
+                if (!target.hasColumnHeaderTopGap()) { return null; }
                 return new java.lang.Integer(target.getColumnHeaderTopGap());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -2365,75 +2696,88 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteColumnHeaderTopGap();
                         return;
                     }
-                    target.setColumnHeaderTopGap( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setColumnHeaderTopGap( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _columnHeaderTopGap
+        addSequenceElement(desc);
+
+        //-- validation code for: columnHeaderTopGap
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _itemsFontName
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_itemsFontName", "items-font-name", org.exolab.castor.xml.NodeType.Element);
+        //-- itemsFontName
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "itemsFontName", "items-font-name", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getItemsFontName();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setItemsFontName( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _itemsFontName
+        addSequenceElement(desc);
+
+        //-- validation code for: itemsFontName
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _itemsFontStyle
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_itemsFontStyle", "items-font-style", org.exolab.castor.xml.NodeType.Element);
+        //-- itemsFontStyle
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "itemsFontStyle", "items-font-style", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasItemsFontStyle())
-                    return null;
+                if (!target.hasItemsFontStyle()) { return null; }
                 return new java.lang.Integer(target.getItemsFontStyle());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -2444,38 +2788,45 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteItemsFontStyle();
                         return;
                     }
-                    target.setItemsFontStyle( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setItemsFontStyle( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _itemsFontStyle
+        addSequenceElement(desc);
+
+        //-- validation code for: itemsFontStyle
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _itemsFontSize
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_itemsFontSize", "items-font-size", org.exolab.castor.xml.NodeType.Element);
+        //-- itemsFontSize
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "itemsFontSize", "items-font-size", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasItemsFontSize())
-                    return null;
+                if (!target.hasItemsFontSize()) { return null; }
                 return new java.lang.Integer(target.getItemsFontSize());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -2486,75 +2837,88 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteItemsFontSize();
                         return;
                     }
-                    target.setItemsFontSize( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setItemsFontSize( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _itemsFontSize
+        addSequenceElement(desc);
+
+        //-- validation code for: itemsFontSize
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _itemsFontColor
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_itemsFontColor", "items-font-color", org.exolab.castor.xml.NodeType.Element);
+        //-- itemsFontColor
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "itemsFontColor", "items-font-color", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getItemsFontColor();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.setItemsFontColor( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _itemsFontColor
+        addSequenceElement(desc);
+
+        //-- validation code for: itemsFontColor
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _horizontalOffset
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_horizontalOffset", "horizontal-offset", org.exolab.castor.xml.NodeType.Element);
+        //-- horizontalOffset
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "horizontalOffset", "horizontal-offset", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasHorizontalOffset())
-                    return null;
+                if (!target.hasHorizontalOffset()) { return null; }
                 return new java.lang.Integer(target.getHorizontalOffset());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -2565,38 +2929,45 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteHorizontalOffset();
                         return;
                     }
-                    target.setHorizontalOffset( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setHorizontalOffset( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _horizontalOffset
+        addSequenceElement(desc);
+
+        //-- validation code for: horizontalOffset
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _leftMargin
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_leftMargin", "left-margin", org.exolab.castor.xml.NodeType.Element);
+        //-- leftMargin
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "leftMargin", "left-margin", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasLeftMargin())
-                    return null;
+                if (!target.hasLeftMargin()) { return null; }
                 return new java.lang.Integer(target.getLeftMargin());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -2607,38 +2978,45 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteLeftMargin();
                         return;
                     }
-                    target.setLeftMargin( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setLeftMargin( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _leftMargin
+        addSequenceElement(desc);
+
+        //-- validation code for: leftMargin
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _rightMargin
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_rightMargin", "right-margin", org.exolab.castor.xml.NodeType.Element);
+        //-- rightMargin
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "rightMargin", "right-margin", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasRightMargin())
-                    return null;
+                if (!target.hasRightMargin()) { return null; }
                 return new java.lang.Integer(target.getRightMargin());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -2649,38 +3027,45 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteRightMargin();
                         return;
                     }
-                    target.setRightMargin( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setRightMargin( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _rightMargin
+        addSequenceElement(desc);
+
+        //-- validation code for: rightMargin
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _topMargin
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_topMargin", "top-margin", org.exolab.castor.xml.NodeType.Element);
+        //-- topMargin
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "topMargin", "top-margin", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasTopMargin())
-                    return null;
+                if (!target.hasTopMargin()) { return null; }
                 return new java.lang.Integer(target.getTopMargin());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -2691,38 +3076,45 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteTopMargin();
                         return;
                     }
-                    target.setTopMargin( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setTopMargin( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _topMargin
+        addSequenceElement(desc);
+
+        //-- validation code for: topMargin
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _bottomMargin
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_bottomMargin", "bottom-margin", org.exolab.castor.xml.NodeType.Element);
+        //-- bottomMargin
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "bottomMargin", "bottom-margin", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
-                if(!target.hasBottomMargin())
-                    return null;
+                if (!target.hasBottomMargin()) { return null; }
                 return new java.lang.Integer(target.getBottomMargin());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -2733,44 +3125,51 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                         target.deleteBottomMargin();
                         return;
                     }
-                    target.setBottomMargin( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setBottomMargin( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _bottomMargin
+        addSequenceElement(desc);
+
+        //-- validation code for: bottomMargin
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _fieldList
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(org.pentaho.jfreereport.castormodel.reportspec.Field.class, "_fieldList", "field", org.exolab.castor.xml.NodeType.Element);
+        //-- fieldList
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(org.pentaho.jfreereport.castormodel.reportspec.Field.class, "fieldList", "field", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 ReportSpec target = (ReportSpec) object;
                 return target.getField();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     ReportSpec target = (ReportSpec) object;
                     target.addField( (org.pentaho.jfreereport.castormodel.reportspec.Field) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
@@ -2782,139 +3181,109 @@ public class ReportSpecDescriptor extends org.exolab.castor.xml.util.XMLClassDes
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return new org.pentaho.jfreereport.castormodel.reportspec.Field();
             }
         };
+        desc.setSchemaType("list");
+        desc.setComponentType("org.pentaho.jfreereport.castormodel.reportspec.Field");
         desc.setHandler(handler);
         desc.setMultivalued(true);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _fieldList
+        addSequenceElement(desc);
+
+        //-- validation code for: fieldList
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         fieldValidator.setMinOccurs(0);
         { //-- local scope
         }
         desc.setValidator(fieldValidator);
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.ReportSpecDescriptor()
-
-
-      //-----------/
-     //- Methods -/
-    //-----------/
+    }
 
     /**
-     * Method getAccessMode
-     * 
-     * 
+     * Method getAccessMode.
      * 
      * @return the access mode specified for this class.
      */
-    public org.exolab.castor.mapping.AccessMode getAccessMode()
-    {
+    @Override()
+    public org.exolab.castor.mapping.AccessMode getAccessMode() {
         return null;
-    } //-- org.exolab.castor.mapping.AccessMode getAccessMode() 
+    }
 
     /**
-     * Method getExtends
-     * 
-     * 
-     * 
-     * @return the class descriptor of the class extended by this
-     * class.
-     */
-    public org.exolab.castor.mapping.ClassDescriptor getExtends()
-    {
-        return null;
-    } //-- org.exolab.castor.mapping.ClassDescriptor getExtends() 
-
-    /**
-     * Method getIdentity
-     * 
-     * 
+     * Method getIdentity.
      * 
      * @return the identity field, null if this class has no
      * identity.
      */
-    public org.exolab.castor.mapping.FieldDescriptor getIdentity()
-    {
-        return identity;
-    } //-- org.exolab.castor.mapping.FieldDescriptor getIdentity() 
+    @Override()
+    public org.exolab.castor.mapping.FieldDescriptor getIdentity() {
+        return _identity;
+    }
 
     /**
-     * Method getJavaClass
-     * 
-     * 
+     * Method getJavaClass.
      * 
      * @return the Java class represented by this descriptor.
      */
-    public java.lang.Class getJavaClass()
-    {
+    @Override()
+    public java.lang.Class getJavaClass() {
         return org.pentaho.jfreereport.castormodel.reportspec.ReportSpec.class;
-    } //-- java.lang.Class getJavaClass() 
+    }
 
     /**
-     * Method getNameSpacePrefix
+     * Method getNameSpacePrefix.
      * 
-     * 
-     * 
-     * @return the namespace prefix to use when marshalling as XML.
+     * @return the namespace prefix to use when marshaling as XML.
      */
-    public java.lang.String getNameSpacePrefix()
-    {
-        return nsPrefix;
-    } //-- java.lang.String getNameSpacePrefix() 
+    @Override()
+    public java.lang.String getNameSpacePrefix() {
+        return _nsPrefix;
+    }
 
     /**
-     * Method getNameSpaceURI
+     * Method getNameSpaceURI.
      * 
-     * 
-     * 
-     * @return the namespace URI used when marshalling and
-     * unmarshalling as XML.
+     * @return the namespace URI used when marshaling and
+     * unmarshaling as XML.
      */
-    public java.lang.String getNameSpaceURI()
-    {
-        return nsURI;
-    } //-- java.lang.String getNameSpaceURI() 
+    @Override()
+    public java.lang.String getNameSpaceURI() {
+        return _nsURI;
+    }
 
     /**
-     * Method getValidator
-     * 
-     * 
+     * Method getValidator.
      * 
      * @return a specific validator for the class described by this
      * ClassDescriptor.
      */
-    public org.exolab.castor.xml.TypeValidator getValidator()
-    {
+    @Override()
+    public org.exolab.castor.xml.TypeValidator getValidator() {
         return this;
-    } //-- org.exolab.castor.xml.TypeValidator getValidator() 
+    }
 
     /**
-     * Method getXMLName
-     * 
-     * 
+     * Method getXMLName.
      * 
      * @return the XML Name for the Class being described.
      */
-    public java.lang.String getXMLName()
-    {
-        return xmlName;
-    } //-- java.lang.String getXMLName() 
+    @Override()
+    public java.lang.String getXMLName() {
+        return _xmlName;
+    }
 
     /**
-     * Method isElementDefinition
-     * 
-     * 
+     * Method isElementDefinition.
      * 
      * @return true if XML schema definition of this Class is that
      * of a global
      * element or element with anonymous type definition.
      */
-    public boolean isElementDefinition()
-    {
-        return elementDefinition;
-    } //-- boolean isElementDefinition() 
+    public boolean isElementDefinition() {
+        return _elementDefinition;
+    }
 
 }

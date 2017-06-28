@@ -1,5 +1,5 @@
 /*
-* Copyright 2002 - 2013 Pentaho Corporation.  All rights reserved.
+* Copyright 2002 - 2017 Pentaho Corporation.  All rights reserved.
 * 
 * This software was developed by Pentaho Corporation and is provided under the terms
 * of the Mozilla Public License, Version 1.1, or any later version. You may not use
@@ -29,93 +29,93 @@ public class CastorUtility {
   private static CastorUtility instance;
 
   public static Log getLogger() {
-    return LogFactory.getLog(CastorUtility.class);
-  }  
-  
+    return LogFactory.getLog( CastorUtility.class );
+  }
+
   public static CastorUtility getInstance() {
-    if (instance == null) {
+    if ( instance == null ) {
       instance = new CastorUtility();
     }
     return instance;
   }
 
-  public Object readCastorObject(String inputFileName, Class expectedClass) {
+  public Object readCastorObject( String inputFileName, Class expectedClass ) {
     Object o = null;
     try {
       // read in the object
-      o = Unmarshaller.unmarshal(expectedClass, new FileReader(inputFileName));
-    } catch (Exception e) {
-      getLogger().error(e.getMessage(), e);
+      o = Unmarshaller.unmarshal( expectedClass, new FileReader( inputFileName ) );
+    } catch ( Exception e ) {
+      getLogger().error( e.getMessage(), e );
     }
     return o;
   }
 
   /**
-   * Create an object instance representing the contents of the XML document 
+   * Create an object instance representing the contents of the XML document
    * contained in <param>inputStream</param>
-   * 
-   * @param inputStream InputStream the input stream containing the text of the xml document.
+   *
+   * @param inputStream   InputStream the input stream containing the text of the xml document.
    * @param expectedClass
-   * @param encoding This should be the encoding of the document-text contained in <param>inputStream</param>.
-   * Typically this will be the encoding specified in the processing instruction in the xml document, for instance:
-   * <? version='1.0' encoding='UTF-8'?>. The caller may want to use CleanXmlHelper.getEncoding()
-   * on the string that created inputStream to determine the encoding in the XML text.
-   * A null value is acceptable ONLY for backward compatibility. If the encoding is null, 
-   * the default character set will be used. This is generally NOT the desired behavior.
-   * 
-   * @return Object an instance of the class specified by the <param>expectedClass</param>
-   * parameter, initialized with the contents of the XML text in the <param>inputStream</param>.
+   * @param encoding      This should be the encoding of the document-text contained in <param>inputStream</param>.
+   *                      Typically this will be the encoding specified in the processing instruction in the xml
+   *                      document, for instance: <? version='1.0' encoding='UTF-8'?>. The caller may want to use
+   *                      CleanXmlHelper.getEncoding() on the string that created inputStream to determine the encoding
+   *                      in the XML text. A null value is acceptable ONLY for backward compatibility. If the encoding
+   *                      is null, the default character set will be used. This is generally NOT the desired behavior.
+   * @return Object an instance of the class specified by the <param>expectedClass</param> parameter, initialized with
+   * the contents of the XML text in the <param>inputStream</param>.
    */
-  public Object readCastorObject(InputStream inputStream, Class expectedClass, String encoding) {
+  public Object readCastorObject( InputStream inputStream, Class expectedClass, String encoding ) {
 
     Object o = null;
     try {
       // read in the object
       InputStreamReader reader = null;
-      if (null != encoding) {
-        reader = new InputStreamReader(inputStream, encoding);
+      if ( null != encoding ) {
+        reader = new InputStreamReader( inputStream, encoding );
       } else {
-        reader = new InputStreamReader(inputStream);
+        reader = new InputStreamReader( inputStream );
       }
-      o = Unmarshaller.unmarshal(expectedClass, reader);
-    } catch (Exception e) {
-      getLogger().error(e.getMessage(), e);
+      o = Unmarshaller.unmarshal( expectedClass, reader );
+    } catch ( Exception e ) {
+      getLogger().error( e.getMessage(), e );
     }
     return o;
   }
 
   /**
-   * @deprecated This method does not provide a mechanism for the caller to provide a 
-   * valid character encoding. The caller should always provide a valid character encoding. 
-   * Instead use: Object readCastorObject(InputStream inputStream, Class expectedClass, String encoding )
-   * 
    * @param inputStream
    * @param expectedClass
    * @return
+   * @deprecated This method does not provide a mechanism for the caller to provide a valid character encoding. The
+   * caller should always provide a valid character encoding. Instead use: Object readCastorObject(InputStream
+   * inputStream, Class expectedClass, String encoding )
    */
-  public Object readCastorObject(InputStream inputStream, Class expectedClass) {
-    return readCastorObject(inputStream, expectedClass, null);
+  public Object readCastorObject( InputStream inputStream, Class expectedClass ) {
+    return readCastorObject( inputStream, expectedClass, null );
   }
 
-  public File writeCastorObject(Object object, String outputFileName) {
+  public File writeCastorObject( Object object, String outputFileName ) {
     // marshal the changed properties back to disk
     File file = null;
     Writer fileWriter = null;
     try {
-      file = new File(outputFileName);
-      fileWriter = new FileWriter(file);
-      Marshaller.marshal(object, fileWriter);
+      file = new File( outputFileName );
+      fileWriter = new FileWriter( file );
+      Marshaller.marshal( object, fileWriter );
       fileWriter.close();
-    } catch (Exception e) {
-      getLogger().error(e.getMessage(), e);
+    } catch ( Exception e ) {
+      getLogger().error( e.getMessage(), e );
     } finally {
       try {
         fileWriter.flush();
-      } catch (Exception ignored) {
+      } catch ( Exception ignored ) {
+        //ignored
       }
       try {
         fileWriter.close();
-      } catch (Exception ignored) {
+      } catch ( Exception ignored ) {
+        //ignored
       }
     }
     return file;

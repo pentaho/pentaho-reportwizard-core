@@ -1,397 +1,336 @@
 /*
  * This class was automatically generated with 
- * <a href="http://www.castor.org">Castor 1.0.5</a>, using an XML
+ * <a href="http://www.castor.org">Castor 1.4.1</a>, using an XML
  * Schema.
  * $Id$
  */
 
 package org.pentaho.jfreereport.castormodel.reportspec;
 
-  //---------------------------------/
- //- Imported classes and packages -/
-//---------------------------------/
-
-import org.exolab.castor.xml.Marshaller;
-import org.exolab.castor.xml.Unmarshaller;
-
 /**
- * Class Watermark.
+ * 
  * 
  * @version $Revision$ $Date$
  */
+@SuppressWarnings("serial")
 public class Watermark implements java.io.Serializable {
 
-
-      //--------------------------/
-     //- Class/Member Variables -/
-    //--------------------------/
+    /**
+     * Field name.
+     */
+    private java.lang.String name = "watermark";
 
     /**
-     * Field _name
+     * Field src.
      */
-    private java.lang.String _name = "watermark";
+    private java.lang.String src;
 
     /**
-     * Field _src
+     * Field x.
      */
-    private java.lang.String _src;
+    private int x;
 
     /**
-     * Field _x
+     * Keeps track of whether primitive field x has been set already
      */
-    private int _x;
+    private boolean _hasx;
 
     /**
-     * keeps track of state for field: _x
+     * Field y.
      */
-    private boolean _has_x;
+    private int y;
 
     /**
-     * Field _y
+     * Keeps track of whether primitive field y has been set already
      */
-    private int _y;
+    private boolean _hasy;
 
     /**
-     * keeps track of state for field: _y
+     * Field width.
      */
-    private boolean _has_y;
+    private int width = 100;
 
     /**
-     * Field _width
+     * Keeps track of whether primitive field width has been set
+     * already.
      */
-    private int _width = 100;
+    private boolean _haswidth;
 
     /**
-     * keeps track of state for field: _width
+     * Field height.
      */
-    private boolean _has_width;
+    private int height = 100;
 
     /**
-     * Field _height
+     * Keeps track of whether primitive field height has been set
+     * already.
      */
-    private int _height = 100;
+    private boolean _hasheight;
 
     /**
-     * keeps track of state for field: _height
+     * Field scale.
      */
-    private boolean _has_height;
+    private boolean scale = true;
 
     /**
-     * Field _scale
+     * Keeps track of whether primitive field scale has been set
+     * already.
      */
-    private boolean _scale = true;
+    private boolean _hasscale;
 
     /**
-     * keeps track of state for field: _scale
+     * Field keepAspectRatio.
      */
-    private boolean _has_scale;
+    private boolean keepAspectRatio = true;
 
     /**
-     * Field _keepAspectRatio
+     * Keeps track of whether primitive field keepAspectRatio has
+     * been set already.
      */
-    private boolean _keepAspectRatio = true;
+    private boolean _haskeepAspectRatio;
 
     /**
-     * keeps track of state for field: _keepAspectRatio
+     * Field useWatermark.
      */
-    private boolean _has_keepAspectRatio;
+    private boolean useWatermark = true;
 
     /**
-     * Field _useWatermark
+     * Keeps track of whether primitive field useWatermark has been
+     * set already.
      */
-    private boolean _useWatermark = true;
+    private boolean _hasuseWatermark;
 
-    /**
-     * keeps track of state for field: _useWatermark
-     */
-    private boolean _has_useWatermark;
-
-
-      //----------------/
-     //- Constructors -/
-    //----------------/
-
-    public Watermark() 
-     {
+    public Watermark() {
         super();
         setName("watermark");
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.Watermark()
-
-
-      //-----------/
-     //- Methods -/
-    //-----------/
+    }
 
     /**
      */
-    public void deleteHeight()
-    {
-        this._has_height= false;
-    } //-- void deleteHeight() 
+    public void deleteHeight() {
+        this._hasheight= false;
+    }
 
     /**
      */
-    public void deleteKeepAspectRatio()
-    {
-        this._has_keepAspectRatio= false;
-    } //-- void deleteKeepAspectRatio() 
+    public void deleteKeepAspectRatio() {
+        this._haskeepAspectRatio= false;
+    }
 
     /**
      */
-    public void deleteScale()
-    {
-        this._has_scale= false;
-    } //-- void deleteScale() 
+    public void deleteScale() {
+        this._hasscale= false;
+    }
 
     /**
      */
-    public void deleteUseWatermark()
-    {
-        this._has_useWatermark= false;
-    } //-- void deleteUseWatermark() 
+    public void deleteUseWatermark() {
+        this._hasuseWatermark= false;
+    }
 
     /**
      */
-    public void deleteWidth()
-    {
-        this._has_width= false;
-    } //-- void deleteWidth() 
+    public void deleteWidth() {
+        this._haswidth= false;
+    }
 
     /**
      */
-    public void deleteX()
-    {
-        this._has_x= false;
-    } //-- void deleteX() 
+    public void deleteX() {
+        this._hasx= false;
+    }
 
     /**
      */
-    public void deleteY()
-    {
-        this._has_y= false;
-    } //-- void deleteY() 
+    public void deleteY() {
+        this._hasy= false;
+    }
 
     /**
      * Returns the value of field 'height'.
      * 
      * @return the value of field 'Height'.
      */
-    public int getHeight()
-    {
-        return this._height;
-    } //-- int getHeight() 
+    public int getHeight() {
+        return this.height;
+    }
 
     /**
      * Returns the value of field 'keepAspectRatio'.
      * 
      * @return the value of field 'KeepAspectRatio'.
      */
-    public boolean getKeepAspectRatio()
-    {
-        return this._keepAspectRatio;
-    } //-- boolean getKeepAspectRatio() 
+    public boolean getKeepAspectRatio() {
+        return this.keepAspectRatio;
+    }
 
     /**
      * Returns the value of field 'name'.
      * 
      * @return the value of field 'Name'.
      */
-    public java.lang.String getName()
-    {
-        return this._name;
-    } //-- java.lang.String getName() 
+    public java.lang.String getName() {
+        return this.name;
+    }
 
     /**
      * Returns the value of field 'scale'.
      * 
      * @return the value of field 'Scale'.
      */
-    public boolean getScale()
-    {
-        return this._scale;
-    } //-- boolean getScale() 
+    public boolean getScale() {
+        return this.scale;
+    }
 
     /**
      * Returns the value of field 'src'.
      * 
      * @return the value of field 'Src'.
      */
-    public java.lang.String getSrc()
-    {
-        return this._src;
-    } //-- java.lang.String getSrc() 
+    public java.lang.String getSrc() {
+        return this.src;
+    }
 
     /**
      * Returns the value of field 'useWatermark'.
      * 
      * @return the value of field 'UseWatermark'.
      */
-    public boolean getUseWatermark()
-    {
-        return this._useWatermark;
-    } //-- boolean getUseWatermark() 
+    public boolean getUseWatermark() {
+        return this.useWatermark;
+    }
 
     /**
      * Returns the value of field 'width'.
      * 
      * @return the value of field 'Width'.
      */
-    public int getWidth()
-    {
-        return this._width;
-    } //-- int getWidth() 
+    public int getWidth() {
+        return this.width;
+    }
 
     /**
      * Returns the value of field 'x'.
      * 
      * @return the value of field 'X'.
      */
-    public int getX()
-    {
-        return this._x;
-    } //-- int getX() 
+    public int getX() {
+        return this.x;
+    }
 
     /**
      * Returns the value of field 'y'.
      * 
      * @return the value of field 'Y'.
      */
-    public int getY()
-    {
-        return this._y;
-    } //-- int getY() 
+    public int getY() {
+        return this.y;
+    }
 
     /**
-     * Method hasHeight
-     * 
-     * 
+     * Method hasHeight.
      * 
      * @return true if at least one Height has been added
      */
-    public boolean hasHeight()
-    {
-        return this._has_height;
-    } //-- boolean hasHeight() 
+    public boolean hasHeight() {
+        return this._hasheight;
+    }
 
     /**
-     * Method hasKeepAspectRatio
-     * 
-     * 
+     * Method hasKeepAspectRatio.
      * 
      * @return true if at least one KeepAspectRatio has been added
      */
-    public boolean hasKeepAspectRatio()
-    {
-        return this._has_keepAspectRatio;
-    } //-- boolean hasKeepAspectRatio() 
+    public boolean hasKeepAspectRatio() {
+        return this._haskeepAspectRatio;
+    }
 
     /**
-     * Method hasScale
-     * 
-     * 
+     * Method hasScale.
      * 
      * @return true if at least one Scale has been added
      */
-    public boolean hasScale()
-    {
-        return this._has_scale;
-    } //-- boolean hasScale() 
+    public boolean hasScale() {
+        return this._hasscale;
+    }
 
     /**
-     * Method hasUseWatermark
-     * 
-     * 
+     * Method hasUseWatermark.
      * 
      * @return true if at least one UseWatermark has been added
      */
-    public boolean hasUseWatermark()
-    {
-        return this._has_useWatermark;
-    } //-- boolean hasUseWatermark() 
+    public boolean hasUseWatermark() {
+        return this._hasuseWatermark;
+    }
 
     /**
-     * Method hasWidth
-     * 
-     * 
+     * Method hasWidth.
      * 
      * @return true if at least one Width has been added
      */
-    public boolean hasWidth()
-    {
-        return this._has_width;
-    } //-- boolean hasWidth() 
+    public boolean hasWidth() {
+        return this._haswidth;
+    }
 
     /**
-     * Method hasX
-     * 
-     * 
+     * Method hasX.
      * 
      * @return true if at least one X has been added
      */
-    public boolean hasX()
-    {
-        return this._has_x;
-    } //-- boolean hasX() 
+    public boolean hasX() {
+        return this._hasx;
+    }
 
     /**
-     * Method hasY
-     * 
-     * 
+     * Method hasY.
      * 
      * @return true if at least one Y has been added
      */
-    public boolean hasY()
-    {
-        return this._has_y;
-    } //-- boolean hasY() 
+    public boolean hasY() {
+        return this._hasy;
+    }
 
     /**
      * Returns the value of field 'keepAspectRatio'.
      * 
      * @return the value of field 'KeepAspectRatio'.
      */
-    public boolean isKeepAspectRatio()
-    {
-        return this._keepAspectRatio;
-    } //-- boolean isKeepAspectRatio() 
+    public boolean isKeepAspectRatio() {
+        return this.keepAspectRatio;
+    }
 
     /**
      * Returns the value of field 'scale'.
      * 
      * @return the value of field 'Scale'.
      */
-    public boolean isScale()
-    {
-        return this._scale;
-    } //-- boolean isScale() 
+    public boolean isScale() {
+        return this.scale;
+    }
 
     /**
      * Returns the value of field 'useWatermark'.
      * 
      * @return the value of field 'UseWatermark'.
      */
-    public boolean isUseWatermark()
-    {
-        return this._useWatermark;
-    } //-- boolean isUseWatermark() 
+    public boolean isUseWatermark() {
+        return this.useWatermark;
+    }
 
     /**
-     * Method isValid
-     * 
-     * 
+     * Method isValid.
      * 
      * @return true if this object is valid according to the schema
      */
-    public boolean isValid()
-    {
+    public boolean isValid() {
         try {
             validate();
-        }
-        catch (org.exolab.castor.xml.ValidationException vex) {
+        } catch (org.exolab.castor.xml.ValidationException vex) {
             return false;
         }
         return true;
-    } //-- boolean isValid() 
+    }
 
     /**
      * 
@@ -402,12 +341,9 @@ public class Watermark implements java.io.Serializable {
      * @throws org.exolab.castor.xml.ValidationException if this
      * object is an invalid instance according to the schema
      */
-    public void marshal(java.io.Writer out)
-        throws org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException
-    {
-        
-        Marshaller.marshal(this, out);
-    } //-- void marshal(java.io.Writer) 
+    public void marshal(final java.io.Writer out) throws org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException {
+        org.exolab.castor.xml.Marshaller.marshal(this, out);
+    }
 
     /**
      * 
@@ -420,114 +356,100 @@ public class Watermark implements java.io.Serializable {
      * @throws org.exolab.castor.xml.MarshalException if object is
      * null or if any SAXException is thrown during marshaling
      */
-    public void marshal(org.xml.sax.ContentHandler handler)
-        throws java.io.IOException, org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException
-    {
-        
-        Marshaller.marshal(this, handler);
-    } //-- void marshal(org.xml.sax.ContentHandler) 
+    public void marshal(final org.xml.sax.ContentHandler handler) throws java.io.IOException, org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException {
+        org.exolab.castor.xml.Marshaller.marshal(this, handler);
+    }
 
     /**
      * Sets the value of field 'height'.
      * 
      * @param height the value of field 'height'.
      */
-    public void setHeight(int height)
-    {
-        this._height = height;
-        this._has_height = true;
-    } //-- void setHeight(int) 
+    public void setHeight(final int height) {
+        this.height = height;
+        this._hasheight = true;
+    }
 
     /**
      * Sets the value of field 'keepAspectRatio'.
      * 
      * @param keepAspectRatio the value of field 'keepAspectRatio'.
      */
-    public void setKeepAspectRatio(boolean keepAspectRatio)
-    {
-        this._keepAspectRatio = keepAspectRatio;
-        this._has_keepAspectRatio = true;
-    } //-- void setKeepAspectRatio(boolean) 
+    public void setKeepAspectRatio(final boolean keepAspectRatio) {
+        this.keepAspectRatio = keepAspectRatio;
+        this._haskeepAspectRatio = true;
+    }
 
     /**
      * Sets the value of field 'name'.
      * 
      * @param name the value of field 'name'.
      */
-    public void setName(java.lang.String name)
-    {
-        this._name = name;
-    } //-- void setName(java.lang.String) 
+    public void setName(final java.lang.String name) {
+        this.name = name;
+    }
 
     /**
      * Sets the value of field 'scale'.
      * 
      * @param scale the value of field 'scale'.
      */
-    public void setScale(boolean scale)
-    {
-        this._scale = scale;
-        this._has_scale = true;
-    } //-- void setScale(boolean) 
+    public void setScale(final boolean scale) {
+        this.scale = scale;
+        this._hasscale = true;
+    }
 
     /**
      * Sets the value of field 'src'.
      * 
      * @param src the value of field 'src'.
      */
-    public void setSrc(java.lang.String src)
-    {
-        this._src = src;
-    } //-- void setSrc(java.lang.String) 
+    public void setSrc(final java.lang.String src) {
+        this.src = src;
+    }
 
     /**
      * Sets the value of field 'useWatermark'.
      * 
      * @param useWatermark the value of field 'useWatermark'.
      */
-    public void setUseWatermark(boolean useWatermark)
-    {
-        this._useWatermark = useWatermark;
-        this._has_useWatermark = true;
-    } //-- void setUseWatermark(boolean) 
+    public void setUseWatermark(final boolean useWatermark) {
+        this.useWatermark = useWatermark;
+        this._hasuseWatermark = true;
+    }
 
     /**
      * Sets the value of field 'width'.
      * 
      * @param width the value of field 'width'.
      */
-    public void setWidth(int width)
-    {
-        this._width = width;
-        this._has_width = true;
-    } //-- void setWidth(int) 
+    public void setWidth(final int width) {
+        this.width = width;
+        this._haswidth = true;
+    }
 
     /**
      * Sets the value of field 'x'.
      * 
      * @param x the value of field 'x'.
      */
-    public void setX(int x)
-    {
-        this._x = x;
-        this._has_x = true;
-    } //-- void setX(int) 
+    public void setX(final int x) {
+        this.x = x;
+        this._hasx = true;
+    }
 
     /**
      * Sets the value of field 'y'.
      * 
      * @param y the value of field 'y'.
      */
-    public void setY(int y)
-    {
-        this._y = y;
-        this._has_y = true;
-    } //-- void setY(int) 
+    public void setY(final int y) {
+        this.y = y;
+        this._hasy = true;
+    }
 
     /**
-     * Method unmarshal
-     * 
-     * 
+     * Method unmarshal.
      * 
      * @param reader
      * @throws org.exolab.castor.xml.MarshalException if object is
@@ -537,11 +459,9 @@ public class Watermark implements java.io.Serializable {
      * @return the unmarshaled
      * org.pentaho.jfreereport.castormodel.reportspec.Watermark
      */
-    public static org.pentaho.jfreereport.castormodel.reportspec.Watermark unmarshal(java.io.Reader reader)
-        throws org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException
-    {
-        return (org.pentaho.jfreereport.castormodel.reportspec.Watermark) Unmarshaller.unmarshal(org.pentaho.jfreereport.castormodel.reportspec.Watermark.class, reader);
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.Watermark unmarshal(java.io.Reader) 
+    public static org.pentaho.jfreereport.castormodel.reportspec.Watermark unmarshal(final java.io.Reader reader) throws org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException {
+        return (org.pentaho.jfreereport.castormodel.reportspec.Watermark) org.exolab.castor.xml.Unmarshaller.unmarshal(org.pentaho.jfreereport.castormodel.reportspec.Watermark.class, reader);
+    }
 
     /**
      * 
@@ -549,11 +469,9 @@ public class Watermark implements java.io.Serializable {
      * @throws org.exolab.castor.xml.ValidationException if this
      * object is an invalid instance according to the schema
      */
-    public void validate()
-        throws org.exolab.castor.xml.ValidationException
-    {
+    public void validate() throws org.exolab.castor.xml.ValidationException {
         org.exolab.castor.xml.Validator validator = new org.exolab.castor.xml.Validator();
         validator.validate(this);
-    } //-- void validate() 
+    }
 
 }

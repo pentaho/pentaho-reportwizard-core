@@ -1,206 +1,189 @@
 /*
  * This class was automatically generated with 
- * <a href="http://www.castor.org">Castor 1.0.5</a>, using an XML
+ * <a href="http://www.castor.org">Castor 1.4.1</a>, using an XML
  * Schema.
  * $Id$
  */
 
 package org.pentaho.jfreereport.castormodel.reportspec;
 
-  //---------------------------------/
- //- Imported classes and packages -/
-//---------------------------------/
-
-import org.exolab.castor.xml.Marshaller;
-import org.exolab.castor.xml.Unmarshaller;
-
 /**
- * Class Chart.
+ * 
  * 
  * @version $Revision$ $Date$
  */
+@SuppressWarnings("serial")
 public class Chart implements java.io.Serializable {
 
-
-      //--------------------------/
-     //- Class/Member Variables -/
-    //--------------------------/
+    /**
+     * Field type.
+     */
+    private org.pentaho.jfreereport.castormodel.reportspec.types.ChartType type = org.pentaho.jfreereport.castormodel.reportspec.types.ChartType.fromValue("bar");
 
     /**
-     * Field _type
+     * Field categoryColumn.
      */
-    private org.pentaho.jfreereport.castormodel.reportspec.types.ChartType _type = org.pentaho.jfreereport.castormodel.reportspec.types.ChartType.valueOf("bar");
+    private java.lang.String categoryColumn;
 
     /**
-     * Field _categoryColumn
+     * Field group.
      */
-    private java.lang.String _categoryColumn;
+    private java.lang.String group;
 
     /**
-     * Field _group
+     * Field resetGroup.
      */
-    private java.lang.String _group;
+    private java.lang.String resetGroup;
 
     /**
-     * Field _resetGroup
+     * Field title.
      */
-    private java.lang.String _resetGroup;
+    private java.lang.String title = "Chart Title";
 
     /**
-     * Field _title
+     * Field backgroundColor.
      */
-    private java.lang.String _title = "Chart Title";
+    private java.lang.String backgroundColor = "#FFFFFF";
 
     /**
-     * Field _backgroundColor
+     * Field isThreeDimensional.
      */
-    private java.lang.String _backgroundColor = "#FFFFFF";
+    private boolean isThreeDimensional = true;
 
     /**
-     * Field _isThreeDimensional
+     * Keeps track of whether primitive field isThreeDimensional
+     * has been set already.
      */
-    private boolean _isThreeDimensional = true;
+    private boolean _hasisThreeDimensional;
 
     /**
-     * keeps track of state for field: _isThreeDimensional
+     * Field isStacked.
      */
-    private boolean _has_isThreeDimensional;
+    private boolean isStacked = false;
 
     /**
-     * Field _isStacked
+     * Keeps track of whether primitive field isStacked has been
+     * set already.
      */
-    private boolean _isStacked = false;
+    private boolean _hasisStacked;
 
     /**
-     * keeps track of state for field: _isStacked
+     * Field isSummaryOnly.
      */
-    private boolean _has_isStacked;
+    private boolean isSummaryOnly = false;
 
     /**
-     * Field _isSummaryOnly
+     * Keeps track of whether primitive field isSummaryOnly has
+     * been set already.
      */
-    private boolean _isSummaryOnly = false;
+    private boolean _hasisSummaryOnly;
 
     /**
-     * keeps track of state for field: _isSummaryOnly
+     * Field showLegend.
      */
-    private boolean _has_isSummaryOnly;
+    private boolean showLegend = true;
 
     /**
-     * Field _showLegend
+     * Keeps track of whether primitive field showLegend has been
+     * set already.
      */
-    private boolean _showLegend = true;
+    private boolean _hasshowLegend;
 
     /**
-     * keeps track of state for field: _showLegend
+     * Field drawLegendBorder.
      */
-    private boolean _has_showLegend;
+    private boolean drawLegendBorder = true;
 
     /**
-     * Field _drawLegendBorder
+     * Keeps track of whether primitive field drawLegendBorder has
+     * been set already.
      */
-    private boolean _drawLegendBorder = true;
+    private boolean _hasdrawLegendBorder;
 
     /**
-     * keeps track of state for field: _drawLegendBorder
+     * Field legendLocation.
      */
-    private boolean _has_drawLegendBorder;
+    private org.pentaho.jfreereport.castormodel.reportspec.types.LegendLocation legendLocation = org.pentaho.jfreereport.castormodel.reportspec.types.LegendLocation.fromValue("bottom");
 
     /**
-     * Field _legendLocation
+     * Field labelRotation.
      */
-    private org.pentaho.jfreereport.castormodel.reportspec.types.LegendLocation _legendLocation = org.pentaho.jfreereport.castormodel.reportspec.types.LegendLocation.valueOf("bottom");
+    private int labelRotation = 7;
 
     /**
-     * Field _labelRotation
+     * Keeps track of whether primitive field labelRotation has
+     * been set already.
      */
-    private int _labelRotation = 7;
+    private boolean _haslabelRotation;
 
     /**
-     * keeps track of state for field: _labelRotation
+     * Field showBorder.
      */
-    private boolean _has_labelRotation;
+    private boolean showBorder = false;
 
     /**
-     * Field _showBorder
+     * Keeps track of whether primitive field showBorder has been
+     * set already.
      */
-    private boolean _showBorder = false;
+    private boolean _hasshowBorder;
 
     /**
-     * keeps track of state for field: _showBorder
+     * Field isHorizontal.
      */
-    private boolean _has_showBorder;
+    private boolean isHorizontal = false;
 
     /**
-     * Field _isHorizontal
+     * Keeps track of whether primitive field isHorizontal has been
+     * set already.
      */
-    private boolean _isHorizontal = false;
+    private boolean _hasisHorizontal;
 
     /**
-     * keeps track of state for field: _isHorizontal
+     * Field height.
      */
-    private boolean _has_isHorizontal;
+    private int height = 400;
 
     /**
-     * Field _height
+     * Keeps track of whether primitive field height has been set
+     * already.
      */
-    private int _height = 400;
+    private boolean _hasheight;
 
     /**
-     * keeps track of state for field: _height
+     * Field width.
      */
-    private boolean _has_height;
+    private int width = 600;
 
     /**
-     * Field _width
+     * Keeps track of whether primitive field width has been set
+     * already.
      */
-    private int _width = 600;
+    private boolean _haswidth;
 
     /**
-     * keeps track of state for field: _width
+     * Field horizontalOffset.
      */
-    private boolean _has_width;
+    private int horizontalOffset = 0;
 
     /**
-     * Field _horizontalOffset
+     * Keeps track of whether primitive field horizontalOffset has
+     * been set already.
      */
-    private int _horizontalOffset = 0;
+    private boolean _hashorizontalOffset;
 
-    /**
-     * keeps track of state for field: _horizontalOffset
-     */
-    private boolean _has_horizontalOffset;
+    private java.util.List<org.pentaho.jfreereport.castormodel.reportspec.Series> seriesList;
 
-    /**
-     * Field _seriesList
-     */
-    private java.util.List _seriesList;
+    private java.util.List<java.lang.String> valuesColumnList;
 
-    /**
-     * Field _valuesColumnList
-     */
-    private java.util.List _valuesColumnList;
-
-
-      //----------------/
-     //- Constructors -/
-    //----------------/
-
-    public Chart() 
-     {
+    public Chart() {
         super();
-        setType(org.pentaho.jfreereport.castormodel.reportspec.types.ChartType.valueOf("bar"));
+        setType(org.pentaho.jfreereport.castormodel.reportspec.types.ChartType.fromValue("bar"));
         setTitle("Chart Title");
         setBackgroundColor("#FFFFFF");
-        setLegendLocation(org.pentaho.jfreereport.castormodel.reportspec.types.LegendLocation.valueOf("bottom"));
-        this._seriesList = new java.util.ArrayList();
-        this._valuesColumnList = new java.util.ArrayList();
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.Chart()
-
-
-      //-----------/
-     //- Methods -/
-    //-----------/
+        setLegendLocation(org.pentaho.jfreereport.castormodel.reportspec.types.LegendLocation.fromValue("bottom"));
+        this.seriesList = new java.util.ArrayList<org.pentaho.jfreereport.castormodel.reportspec.Series>();
+        this.valuesColumnList = new java.util.ArrayList<java.lang.String>();
+    }
 
     /**
      * 
@@ -209,11 +192,9 @@ public class Chart implements java.io.Serializable {
      * @throws java.lang.IndexOutOfBoundsException if the index
      * given is outside the bounds of the collection
      */
-    public void addSeries(org.pentaho.jfreereport.castormodel.reportspec.Series vSeries)
-        throws java.lang.IndexOutOfBoundsException
-    {
-        this._seriesList.add(vSeries);
-    } //-- void addSeries(org.pentaho.jfreereport.castormodel.reportspec.Series) 
+    public void addSeries(final org.pentaho.jfreereport.castormodel.reportspec.Series vSeries) throws java.lang.IndexOutOfBoundsException {
+        this.seriesList.add(vSeries);
+    }
 
     /**
      * 
@@ -223,11 +204,9 @@ public class Chart implements java.io.Serializable {
      * @throws java.lang.IndexOutOfBoundsException if the index
      * given is outside the bounds of the collection
      */
-    public void addSeries(int index, org.pentaho.jfreereport.castormodel.reportspec.Series vSeries)
-        throws java.lang.IndexOutOfBoundsException
-    {
-        this._seriesList.add(index, vSeries);
-    } //-- void addSeries(int, org.pentaho.jfreereport.castormodel.reportspec.Series) 
+    public void addSeries(final int index,final org.pentaho.jfreereport.castormodel.reportspec.Series vSeries) throws java.lang.IndexOutOfBoundsException {
+        this.seriesList.add(index, vSeries);
+    }
 
     /**
      * 
@@ -236,11 +215,9 @@ public class Chart implements java.io.Serializable {
      * @throws java.lang.IndexOutOfBoundsException if the index
      * given is outside the bounds of the collection
      */
-    public void addValuesColumn(java.lang.String vValuesColumn)
-        throws java.lang.IndexOutOfBoundsException
-    {
-        this._valuesColumnList.add(vValuesColumn);
-    } //-- void addValuesColumn(java.lang.String) 
+    public void addValuesColumn(final java.lang.String vValuesColumn) throws java.lang.IndexOutOfBoundsException {
+        this.valuesColumnList.add(vValuesColumn);
+    }
 
     /**
      * 
@@ -250,249 +227,215 @@ public class Chart implements java.io.Serializable {
      * @throws java.lang.IndexOutOfBoundsException if the index
      * given is outside the bounds of the collection
      */
-    public void addValuesColumn(int index, java.lang.String vValuesColumn)
-        throws java.lang.IndexOutOfBoundsException
-    {
-        this._valuesColumnList.add(index, vValuesColumn);
-    } //-- void addValuesColumn(int, java.lang.String) 
+    public void addValuesColumn(final int index,final java.lang.String vValuesColumn) throws java.lang.IndexOutOfBoundsException {
+        this.valuesColumnList.add(index, vValuesColumn);
+    }
 
     /**
      */
-    public void deleteDrawLegendBorder()
-    {
-        this._has_drawLegendBorder= false;
-    } //-- void deleteDrawLegendBorder() 
+    public void deleteDrawLegendBorder() {
+        this._hasdrawLegendBorder= false;
+    }
 
     /**
      */
-    public void deleteHeight()
-    {
-        this._has_height= false;
-    } //-- void deleteHeight() 
+    public void deleteHeight() {
+        this._hasheight= false;
+    }
 
     /**
      */
-    public void deleteHorizontalOffset()
-    {
-        this._has_horizontalOffset= false;
-    } //-- void deleteHorizontalOffset() 
+    public void deleteHorizontalOffset() {
+        this._hashorizontalOffset= false;
+    }
 
     /**
      */
-    public void deleteIsHorizontal()
-    {
-        this._has_isHorizontal= false;
-    } //-- void deleteIsHorizontal() 
+    public void deleteIsHorizontal() {
+        this._hasisHorizontal= false;
+    }
 
     /**
      */
-    public void deleteIsStacked()
-    {
-        this._has_isStacked= false;
-    } //-- void deleteIsStacked() 
+    public void deleteIsStacked() {
+        this._hasisStacked= false;
+    }
 
     /**
      */
-    public void deleteIsSummaryOnly()
-    {
-        this._has_isSummaryOnly= false;
-    } //-- void deleteIsSummaryOnly() 
+    public void deleteIsSummaryOnly() {
+        this._hasisSummaryOnly= false;
+    }
 
     /**
      */
-    public void deleteIsThreeDimensional()
-    {
-        this._has_isThreeDimensional= false;
-    } //-- void deleteIsThreeDimensional() 
+    public void deleteIsThreeDimensional() {
+        this._hasisThreeDimensional= false;
+    }
 
     /**
      */
-    public void deleteLabelRotation()
-    {
-        this._has_labelRotation= false;
-    } //-- void deleteLabelRotation() 
+    public void deleteLabelRotation() {
+        this._haslabelRotation= false;
+    }
 
     /**
      */
-    public void deleteShowBorder()
-    {
-        this._has_showBorder= false;
-    } //-- void deleteShowBorder() 
+    public void deleteShowBorder() {
+        this._hasshowBorder= false;
+    }
 
     /**
      */
-    public void deleteShowLegend()
-    {
-        this._has_showLegend= false;
-    } //-- void deleteShowLegend() 
+    public void deleteShowLegend() {
+        this._hasshowLegend= false;
+    }
 
     /**
      */
-    public void deleteWidth()
-    {
-        this._has_width= false;
-    } //-- void deleteWidth() 
+    public void deleteWidth() {
+        this._haswidth= false;
+    }
 
     /**
-     * Method enumerateSeries
-     * 
-     * 
+     * Method enumerateSeries.
      * 
      * @return an Enumeration over all possible elements of this
      * collection
      */
-    public java.util.Enumeration enumerateSeries()
-    {
-        return java.util.Collections.enumeration(this._seriesList);
-    } //-- java.util.Enumeration enumerateSeries() 
+    public java.util.Enumeration<? extends org.pentaho.jfreereport.castormodel.reportspec.Series> enumerateSeries() {
+        return java.util.Collections.enumeration(this.seriesList);
+    }
 
     /**
-     * Method enumerateValuesColumn
-     * 
-     * 
+     * Method enumerateValuesColumn.
      * 
      * @return an Enumeration over all possible elements of this
      * collection
      */
-    public java.util.Enumeration enumerateValuesColumn()
-    {
-        return java.util.Collections.enumeration(this._valuesColumnList);
-    } //-- java.util.Enumeration enumerateValuesColumn() 
+    public java.util.Enumeration<? extends java.lang.String> enumerateValuesColumn() {
+        return java.util.Collections.enumeration(this.valuesColumnList);
+    }
 
     /**
      * Returns the value of field 'backgroundColor'.
      * 
      * @return the value of field 'BackgroundColor'.
      */
-    public java.lang.String getBackgroundColor()
-    {
-        return this._backgroundColor;
-    } //-- java.lang.String getBackgroundColor() 
+    public java.lang.String getBackgroundColor() {
+        return this.backgroundColor;
+    }
 
     /**
      * Returns the value of field 'categoryColumn'.
      * 
      * @return the value of field 'CategoryColumn'.
      */
-    public java.lang.String getCategoryColumn()
-    {
-        return this._categoryColumn;
-    } //-- java.lang.String getCategoryColumn() 
+    public java.lang.String getCategoryColumn() {
+        return this.categoryColumn;
+    }
 
     /**
      * Returns the value of field 'drawLegendBorder'.
      * 
      * @return the value of field 'DrawLegendBorder'.
      */
-    public boolean getDrawLegendBorder()
-    {
-        return this._drawLegendBorder;
-    } //-- boolean getDrawLegendBorder() 
+    public boolean getDrawLegendBorder() {
+        return this.drawLegendBorder;
+    }
 
     /**
      * Returns the value of field 'group'.
      * 
      * @return the value of field 'Group'.
      */
-    public java.lang.String getGroup()
-    {
-        return this._group;
-    } //-- java.lang.String getGroup() 
+    public java.lang.String getGroup() {
+        return this.group;
+    }
 
     /**
      * Returns the value of field 'height'.
      * 
      * @return the value of field 'Height'.
      */
-    public int getHeight()
-    {
-        return this._height;
-    } //-- int getHeight() 
+    public int getHeight() {
+        return this.height;
+    }
 
     /**
      * Returns the value of field 'horizontalOffset'.
      * 
      * @return the value of field 'HorizontalOffset'.
      */
-    public int getHorizontalOffset()
-    {
-        return this._horizontalOffset;
-    } //-- int getHorizontalOffset() 
+    public int getHorizontalOffset() {
+        return this.horizontalOffset;
+    }
 
     /**
      * Returns the value of field 'isHorizontal'.
      * 
      * @return the value of field 'IsHorizontal'.
      */
-    public boolean getIsHorizontal()
-    {
-        return this._isHorizontal;
-    } //-- boolean getIsHorizontal() 
+    public boolean getIsHorizontal() {
+        return this.isHorizontal;
+    }
 
     /**
      * Returns the value of field 'isStacked'.
      * 
      * @return the value of field 'IsStacked'.
      */
-    public boolean getIsStacked()
-    {
-        return this._isStacked;
-    } //-- boolean getIsStacked() 
+    public boolean getIsStacked() {
+        return this.isStacked;
+    }
 
     /**
      * Returns the value of field 'isSummaryOnly'.
      * 
      * @return the value of field 'IsSummaryOnly'.
      */
-    public boolean getIsSummaryOnly()
-    {
-        return this._isSummaryOnly;
-    } //-- boolean getIsSummaryOnly() 
+    public boolean getIsSummaryOnly() {
+        return this.isSummaryOnly;
+    }
 
     /**
      * Returns the value of field 'isThreeDimensional'.
      * 
      * @return the value of field 'IsThreeDimensional'.
      */
-    public boolean getIsThreeDimensional()
-    {
-        return this._isThreeDimensional;
-    } //-- boolean getIsThreeDimensional() 
+    public boolean getIsThreeDimensional() {
+        return this.isThreeDimensional;
+    }
 
     /**
      * Returns the value of field 'labelRotation'.
      * 
      * @return the value of field 'LabelRotation'.
      */
-    public int getLabelRotation()
-    {
-        return this._labelRotation;
-    } //-- int getLabelRotation() 
+    public int getLabelRotation() {
+        return this.labelRotation;
+    }
 
     /**
      * Returns the value of field 'legendLocation'.
      * 
      * @return the value of field 'LegendLocation'.
      */
-    public org.pentaho.jfreereport.castormodel.reportspec.types.LegendLocation getLegendLocation()
-    {
-        return this._legendLocation;
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.types.LegendLocation getLegendLocation() 
+    public org.pentaho.jfreereport.castormodel.reportspec.types.LegendLocation getLegendLocation() {
+        return this.legendLocation;
+    }
 
     /**
      * Returns the value of field 'resetGroup'.
      * 
      * @return the value of field 'ResetGroup'.
      */
-    public java.lang.String getResetGroup()
-    {
-        return this._resetGroup;
-    } //-- java.lang.String getResetGroup() 
+    public java.lang.String getResetGroup() {
+        return this.resetGroup;
+    }
 
     /**
-     * Method getSeries
-     * 
-     * 
+     * Method getSeries.
      * 
      * @param index
      * @throws java.lang.IndexOutOfBoundsException if the index
@@ -501,393 +444,319 @@ public class Chart implements java.io.Serializable {
      * org.pentaho.jfreereport.castormodel.reportspec.Series at the
      * given index
      */
-    public org.pentaho.jfreereport.castormodel.reportspec.Series getSeries(int index)
-        throws java.lang.IndexOutOfBoundsException
-    {
+    public org.pentaho.jfreereport.castormodel.reportspec.Series getSeries(final int index) throws java.lang.IndexOutOfBoundsException {
         // check bounds for index
-        if (index < 0 || index >= this._seriesList.size()) {
-            throw new IndexOutOfBoundsException("getSeries: Index value '" + index + "' not in range [0.." + (this._seriesList.size() - 1) + "]");
+        if (index < 0 || index >= this.seriesList.size()) {
+            throw new IndexOutOfBoundsException("getSeries: Index value '" + index + "' not in range [0.." + (this.seriesList.size() - 1) + "]");
         }
-        
-        return (org.pentaho.jfreereport.castormodel.reportspec.Series) _seriesList.get(index);
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.Series getSeries(int) 
+
+        return seriesList.get(index);
+    }
 
     /**
-     * Method getSeries
-     * 
-     * 
+     * Method getSeries.Returns the contents of the collection in
+     * an Array.  <p>Note:  Just in case the collection contents
+     * are changing in another thread, we pass a 0-length Array of
+     * the correct type into the API call.  This way we <i>know</i>
+     * that the Array returned is of exactly the correct length.
      * 
      * @return this collection as an Array
      */
-    public org.pentaho.jfreereport.castormodel.reportspec.Series[] getSeries()
-    {
-        int size = this._seriesList.size();
-        org.pentaho.jfreereport.castormodel.reportspec.Series[] array = new org.pentaho.jfreereport.castormodel.reportspec.Series[size];
-        for (int index = 0; index < size; index++){
-            array[index] = (org.pentaho.jfreereport.castormodel.reportspec.Series) _seriesList.get(index);
-        }
-        
-        return array;
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.Series[] getSeries() 
+    public org.pentaho.jfreereport.castormodel.reportspec.Series[] getSeries() {
+        org.pentaho.jfreereport.castormodel.reportspec.Series[] array = new org.pentaho.jfreereport.castormodel.reportspec.Series[0];
+        return this.seriesList.toArray(array);
+    }
 
     /**
-     * Method getSeriesCount
-     * 
-     * 
+     * Method getSeriesCount.
      * 
      * @return the size of this collection
      */
-    public int getSeriesCount()
-    {
-        return this._seriesList.size();
-    } //-- int getSeriesCount() 
+    public int getSeriesCount() {
+        return this.seriesList.size();
+    }
 
     /**
      * Returns the value of field 'showBorder'.
      * 
      * @return the value of field 'ShowBorder'.
      */
-    public boolean getShowBorder()
-    {
-        return this._showBorder;
-    } //-- boolean getShowBorder() 
+    public boolean getShowBorder() {
+        return this.showBorder;
+    }
 
     /**
      * Returns the value of field 'showLegend'.
      * 
      * @return the value of field 'ShowLegend'.
      */
-    public boolean getShowLegend()
-    {
-        return this._showLegend;
-    } //-- boolean getShowLegend() 
+    public boolean getShowLegend() {
+        return this.showLegend;
+    }
 
     /**
      * Returns the value of field 'title'.
      * 
      * @return the value of field 'Title'.
      */
-    public java.lang.String getTitle()
-    {
-        return this._title;
-    } //-- java.lang.String getTitle() 
+    public java.lang.String getTitle() {
+        return this.title;
+    }
 
     /**
      * Returns the value of field 'type'.
      * 
      * @return the value of field 'Type'.
      */
-    public org.pentaho.jfreereport.castormodel.reportspec.types.ChartType getType()
-    {
-        return this._type;
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.types.ChartType getType() 
+    public org.pentaho.jfreereport.castormodel.reportspec.types.ChartType getType() {
+        return this.type;
+    }
 
     /**
-     * Method getValuesColumn
-     * 
-     * 
+     * Method getValuesColumn.
      * 
      * @param index
      * @throws java.lang.IndexOutOfBoundsException if the index
      * given is outside the bounds of the collection
      * @return the value of the java.lang.String at the given index
      */
-    public java.lang.String getValuesColumn(int index)
-        throws java.lang.IndexOutOfBoundsException
-    {
+    public java.lang.String getValuesColumn(final int index) throws java.lang.IndexOutOfBoundsException {
         // check bounds for index
-        if (index < 0 || index >= this._valuesColumnList.size()) {
-            throw new IndexOutOfBoundsException("getValuesColumn: Index value '" + index + "' not in range [0.." + (this._valuesColumnList.size() - 1) + "]");
+        if (index < 0 || index >= this.valuesColumnList.size()) {
+            throw new IndexOutOfBoundsException("getValuesColumn: Index value '" + index + "' not in range [0.." + (this.valuesColumnList.size() - 1) + "]");
         }
-        
-        return (String)_valuesColumnList.get(index);
-    } //-- java.lang.String getValuesColumn(int) 
+
+        return (java.lang.String) valuesColumnList.get(index);
+    }
 
     /**
-     * Method getValuesColumn
-     * 
-     * 
+     * Method getValuesColumn.Returns the contents of the
+     * collection in an Array.  <p>Note:  Just in case the
+     * collection contents are changing in another thread, we pass
+     * a 0-length Array of the correct type into the API call. 
+     * This way we <i>know</i> that the Array returned is of
+     * exactly the correct length.
      * 
      * @return this collection as an Array
      */
-    public java.lang.String[] getValuesColumn()
-    {
-        int size = this._valuesColumnList.size();
-        java.lang.String[] array = new java.lang.String[size];
-        for (int index = 0; index < size; index++){
-            array[index] = (String)_valuesColumnList.get(index);
-        }
-        
-        return array;
-    } //-- java.lang.String[] getValuesColumn() 
+    public java.lang.String[] getValuesColumn() {
+        java.lang.String[] array = new java.lang.String[0];
+        return this.valuesColumnList.toArray(array);
+    }
 
     /**
-     * Method getValuesColumnCount
-     * 
-     * 
+     * Method getValuesColumnCount.
      * 
      * @return the size of this collection
      */
-    public int getValuesColumnCount()
-    {
-        return this._valuesColumnList.size();
-    } //-- int getValuesColumnCount() 
+    public int getValuesColumnCount() {
+        return this.valuesColumnList.size();
+    }
 
     /**
      * Returns the value of field 'width'.
      * 
      * @return the value of field 'Width'.
      */
-    public int getWidth()
-    {
-        return this._width;
-    } //-- int getWidth() 
+    public int getWidth() {
+        return this.width;
+    }
 
     /**
-     * Method hasDrawLegendBorder
-     * 
-     * 
+     * Method hasDrawLegendBorder.
      * 
      * @return true if at least one DrawLegendBorder has been added
      */
-    public boolean hasDrawLegendBorder()
-    {
-        return this._has_drawLegendBorder;
-    } //-- boolean hasDrawLegendBorder() 
+    public boolean hasDrawLegendBorder() {
+        return this._hasdrawLegendBorder;
+    }
 
     /**
-     * Method hasHeight
-     * 
-     * 
+     * Method hasHeight.
      * 
      * @return true if at least one Height has been added
      */
-    public boolean hasHeight()
-    {
-        return this._has_height;
-    } //-- boolean hasHeight() 
+    public boolean hasHeight() {
+        return this._hasheight;
+    }
 
     /**
-     * Method hasHorizontalOffset
-     * 
-     * 
+     * Method hasHorizontalOffset.
      * 
      * @return true if at least one HorizontalOffset has been added
      */
-    public boolean hasHorizontalOffset()
-    {
-        return this._has_horizontalOffset;
-    } //-- boolean hasHorizontalOffset() 
+    public boolean hasHorizontalOffset() {
+        return this._hashorizontalOffset;
+    }
 
     /**
-     * Method hasIsHorizontal
-     * 
-     * 
+     * Method hasIsHorizontal.
      * 
      * @return true if at least one IsHorizontal has been added
      */
-    public boolean hasIsHorizontal()
-    {
-        return this._has_isHorizontal;
-    } //-- boolean hasIsHorizontal() 
+    public boolean hasIsHorizontal() {
+        return this._hasisHorizontal;
+    }
 
     /**
-     * Method hasIsStacked
-     * 
-     * 
+     * Method hasIsStacked.
      * 
      * @return true if at least one IsStacked has been added
      */
-    public boolean hasIsStacked()
-    {
-        return this._has_isStacked;
-    } //-- boolean hasIsStacked() 
+    public boolean hasIsStacked() {
+        return this._hasisStacked;
+    }
 
     /**
-     * Method hasIsSummaryOnly
-     * 
-     * 
+     * Method hasIsSummaryOnly.
      * 
      * @return true if at least one IsSummaryOnly has been added
      */
-    public boolean hasIsSummaryOnly()
-    {
-        return this._has_isSummaryOnly;
-    } //-- boolean hasIsSummaryOnly() 
+    public boolean hasIsSummaryOnly() {
+        return this._hasisSummaryOnly;
+    }
 
     /**
-     * Method hasIsThreeDimensional
-     * 
-     * 
+     * Method hasIsThreeDimensional.
      * 
      * @return true if at least one IsThreeDimensional has been adde
      */
-    public boolean hasIsThreeDimensional()
-    {
-        return this._has_isThreeDimensional;
-    } //-- boolean hasIsThreeDimensional() 
+    public boolean hasIsThreeDimensional() {
+        return this._hasisThreeDimensional;
+    }
 
     /**
-     * Method hasLabelRotation
-     * 
-     * 
+     * Method hasLabelRotation.
      * 
      * @return true if at least one LabelRotation has been added
      */
-    public boolean hasLabelRotation()
-    {
-        return this._has_labelRotation;
-    } //-- boolean hasLabelRotation() 
+    public boolean hasLabelRotation() {
+        return this._haslabelRotation;
+    }
 
     /**
-     * Method hasShowBorder
-     * 
-     * 
+     * Method hasShowBorder.
      * 
      * @return true if at least one ShowBorder has been added
      */
-    public boolean hasShowBorder()
-    {
-        return this._has_showBorder;
-    } //-- boolean hasShowBorder() 
+    public boolean hasShowBorder() {
+        return this._hasshowBorder;
+    }
 
     /**
-     * Method hasShowLegend
-     * 
-     * 
+     * Method hasShowLegend.
      * 
      * @return true if at least one ShowLegend has been added
      */
-    public boolean hasShowLegend()
-    {
-        return this._has_showLegend;
-    } //-- boolean hasShowLegend() 
+    public boolean hasShowLegend() {
+        return this._hasshowLegend;
+    }
 
     /**
-     * Method hasWidth
-     * 
-     * 
+     * Method hasWidth.
      * 
      * @return true if at least one Width has been added
      */
-    public boolean hasWidth()
-    {
-        return this._has_width;
-    } //-- boolean hasWidth() 
+    public boolean hasWidth() {
+        return this._haswidth;
+    }
 
     /**
      * Returns the value of field 'drawLegendBorder'.
      * 
      * @return the value of field 'DrawLegendBorder'.
      */
-    public boolean isDrawLegendBorder()
-    {
-        return this._drawLegendBorder;
-    } //-- boolean isDrawLegendBorder() 
+    public boolean isDrawLegendBorder() {
+        return this.drawLegendBorder;
+    }
 
     /**
      * Returns the value of field 'isHorizontal'.
      * 
      * @return the value of field 'IsHorizontal'.
      */
-    public boolean isIsHorizontal()
-    {
-        return this._isHorizontal;
-    } //-- boolean isIsHorizontal() 
+    public boolean isIsHorizontal() {
+        return this.isHorizontal;
+    }
 
     /**
      * Returns the value of field 'isStacked'.
      * 
      * @return the value of field 'IsStacked'.
      */
-    public boolean isIsStacked()
-    {
-        return this._isStacked;
-    } //-- boolean isIsStacked() 
+    public boolean isIsStacked() {
+        return this.isStacked;
+    }
 
     /**
      * Returns the value of field 'isSummaryOnly'.
      * 
      * @return the value of field 'IsSummaryOnly'.
      */
-    public boolean isIsSummaryOnly()
-    {
-        return this._isSummaryOnly;
-    } //-- boolean isIsSummaryOnly() 
+    public boolean isIsSummaryOnly() {
+        return this.isSummaryOnly;
+    }
 
     /**
      * Returns the value of field 'isThreeDimensional'.
      * 
      * @return the value of field 'IsThreeDimensional'.
      */
-    public boolean isIsThreeDimensional()
-    {
-        return this._isThreeDimensional;
-    } //-- boolean isIsThreeDimensional() 
+    public boolean isIsThreeDimensional() {
+        return this.isThreeDimensional;
+    }
 
     /**
      * Returns the value of field 'showBorder'.
      * 
      * @return the value of field 'ShowBorder'.
      */
-    public boolean isShowBorder()
-    {
-        return this._showBorder;
-    } //-- boolean isShowBorder() 
+    public boolean isShowBorder() {
+        return this.showBorder;
+    }
 
     /**
      * Returns the value of field 'showLegend'.
      * 
      * @return the value of field 'ShowLegend'.
      */
-    public boolean isShowLegend()
-    {
-        return this._showLegend;
-    } //-- boolean isShowLegend() 
+    public boolean isShowLegend() {
+        return this.showLegend;
+    }
 
     /**
-     * Method isValid
-     * 
-     * 
+     * Method isValid.
      * 
      * @return true if this object is valid according to the schema
      */
-    public boolean isValid()
-    {
+    public boolean isValid() {
         try {
             validate();
-        }
-        catch (org.exolab.castor.xml.ValidationException vex) {
+        } catch (org.exolab.castor.xml.ValidationException vex) {
             return false;
         }
         return true;
-    } //-- boolean isValid() 
+    }
 
     /**
-     * Method iterateSeries
-     * 
-     * 
+     * Method iterateSeries.
      * 
      * @return an Iterator over all possible elements in this
      * collection
      */
-    public java.util.Iterator iterateSeries()
-    {
-        return this._seriesList.iterator();
-    } //-- java.util.Iterator iterateSeries() 
+    public java.util.Iterator<? extends org.pentaho.jfreereport.castormodel.reportspec.Series> iterateSeries() {
+        return this.seriesList.iterator();
+    }
 
     /**
-     * Method iterateValuesColumn
-     * 
-     * 
+     * Method iterateValuesColumn.
      * 
      * @return an Iterator over all possible elements in this
      * collection
      */
-    public java.util.Iterator iterateValuesColumn()
-    {
-        return this._valuesColumnList.iterator();
-    } //-- java.util.Iterator iterateValuesColumn() 
+    public java.util.Iterator<? extends java.lang.String> iterateValuesColumn() {
+        return this.valuesColumnList.iterator();
+    }
 
     /**
      * 
@@ -898,12 +767,9 @@ public class Chart implements java.io.Serializable {
      * @throws org.exolab.castor.xml.ValidationException if this
      * object is an invalid instance according to the schema
      */
-    public void marshal(java.io.Writer out)
-        throws org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException
-    {
-        
-        Marshaller.marshal(this, out);
-    } //-- void marshal(java.io.Writer) 
+    public void marshal(final java.io.Writer out) throws org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException {
+        org.exolab.castor.xml.Marshaller.marshal(this, out);
+    }
 
     /**
      * 
@@ -916,178 +782,152 @@ public class Chart implements java.io.Serializable {
      * @throws org.exolab.castor.xml.MarshalException if object is
      * null or if any SAXException is thrown during marshaling
      */
-    public void marshal(org.xml.sax.ContentHandler handler)
-        throws java.io.IOException, org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException
-    {
-        
-        Marshaller.marshal(this, handler);
-    } //-- void marshal(org.xml.sax.ContentHandler) 
+    public void marshal(final org.xml.sax.ContentHandler handler) throws java.io.IOException, org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException {
+        org.exolab.castor.xml.Marshaller.marshal(this, handler);
+    }
 
     /**
      */
-    public void removeAllSeries()
-    {
-        this._seriesList.clear();
-    } //-- void removeAllSeries() 
+    public void removeAllSeries() {
+        this.seriesList.clear();
+    }
 
     /**
      */
-    public void removeAllValuesColumn()
-    {
-        this._valuesColumnList.clear();
-    } //-- void removeAllValuesColumn() 
+    public void removeAllValuesColumn() {
+        this.valuesColumnList.clear();
+    }
 
     /**
-     * Method removeSeries
-     * 
-     * 
+     * Method removeSeries.
      * 
      * @param vSeries
      * @return true if the object was removed from the collection.
      */
-    public boolean removeSeries(org.pentaho.jfreereport.castormodel.reportspec.Series vSeries)
-    {
-        boolean removed = _seriesList.remove(vSeries);
+    public boolean removeSeries(final org.pentaho.jfreereport.castormodel.reportspec.Series vSeries) {
+        boolean removed = seriesList.remove(vSeries);
         return removed;
-    } //-- boolean removeSeries(org.pentaho.jfreereport.castormodel.reportspec.Series) 
+    }
 
     /**
-     * Method removeSeriesAt
-     * 
-     * 
+     * Method removeSeriesAt.
      * 
      * @param index
      * @return the element removed from the collection
      */
-    public org.pentaho.jfreereport.castormodel.reportspec.Series removeSeriesAt(int index)
-    {
-        Object obj = this._seriesList.remove(index);
+    public org.pentaho.jfreereport.castormodel.reportspec.Series removeSeriesAt(final int index) {
+        java.lang.Object obj = this.seriesList.remove(index);
         return (org.pentaho.jfreereport.castormodel.reportspec.Series) obj;
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.Series removeSeriesAt(int) 
+    }
 
     /**
-     * Method removeValuesColumn
-     * 
-     * 
+     * Method removeValuesColumn.
      * 
      * @param vValuesColumn
      * @return true if the object was removed from the collection.
      */
-    public boolean removeValuesColumn(java.lang.String vValuesColumn)
-    {
-        boolean removed = _valuesColumnList.remove(vValuesColumn);
+    public boolean removeValuesColumn(final java.lang.String vValuesColumn) {
+        boolean removed = valuesColumnList.remove(vValuesColumn);
         return removed;
-    } //-- boolean removeValuesColumn(java.lang.String) 
+    }
 
     /**
-     * Method removeValuesColumnAt
-     * 
-     * 
+     * Method removeValuesColumnAt.
      * 
      * @param index
      * @return the element removed from the collection
      */
-    public java.lang.String removeValuesColumnAt(int index)
-    {
-        Object obj = this._valuesColumnList.remove(index);
-        return (String)obj;
-    } //-- java.lang.String removeValuesColumnAt(int) 
+    public java.lang.String removeValuesColumnAt(final int index) {
+        java.lang.Object obj = this.valuesColumnList.remove(index);
+        return (java.lang.String) obj;
+    }
 
     /**
      * Sets the value of field 'backgroundColor'.
      * 
      * @param backgroundColor the value of field 'backgroundColor'.
      */
-    public void setBackgroundColor(java.lang.String backgroundColor)
-    {
-        this._backgroundColor = backgroundColor;
-    } //-- void setBackgroundColor(java.lang.String) 
+    public void setBackgroundColor(final java.lang.String backgroundColor) {
+        this.backgroundColor = backgroundColor;
+    }
 
     /**
      * Sets the value of field 'categoryColumn'.
      * 
      * @param categoryColumn the value of field 'categoryColumn'.
      */
-    public void setCategoryColumn(java.lang.String categoryColumn)
-    {
-        this._categoryColumn = categoryColumn;
-    } //-- void setCategoryColumn(java.lang.String) 
+    public void setCategoryColumn(final java.lang.String categoryColumn) {
+        this.categoryColumn = categoryColumn;
+    }
 
     /**
      * Sets the value of field 'drawLegendBorder'.
      * 
      * @param drawLegendBorder the value of field 'drawLegendBorder'
      */
-    public void setDrawLegendBorder(boolean drawLegendBorder)
-    {
-        this._drawLegendBorder = drawLegendBorder;
-        this._has_drawLegendBorder = true;
-    } //-- void setDrawLegendBorder(boolean) 
+    public void setDrawLegendBorder(final boolean drawLegendBorder) {
+        this.drawLegendBorder = drawLegendBorder;
+        this._hasdrawLegendBorder = true;
+    }
 
     /**
      * Sets the value of field 'group'.
      * 
      * @param group the value of field 'group'.
      */
-    public void setGroup(java.lang.String group)
-    {
-        this._group = group;
-    } //-- void setGroup(java.lang.String) 
+    public void setGroup(final java.lang.String group) {
+        this.group = group;
+    }
 
     /**
      * Sets the value of field 'height'.
      * 
      * @param height the value of field 'height'.
      */
-    public void setHeight(int height)
-    {
-        this._height = height;
-        this._has_height = true;
-    } //-- void setHeight(int) 
+    public void setHeight(final int height) {
+        this.height = height;
+        this._hasheight = true;
+    }
 
     /**
      * Sets the value of field 'horizontalOffset'.
      * 
      * @param horizontalOffset the value of field 'horizontalOffset'
      */
-    public void setHorizontalOffset(int horizontalOffset)
-    {
-        this._horizontalOffset = horizontalOffset;
-        this._has_horizontalOffset = true;
-    } //-- void setHorizontalOffset(int) 
+    public void setHorizontalOffset(final int horizontalOffset) {
+        this.horizontalOffset = horizontalOffset;
+        this._hashorizontalOffset = true;
+    }
 
     /**
      * Sets the value of field 'isHorizontal'.
      * 
      * @param isHorizontal the value of field 'isHorizontal'.
      */
-    public void setIsHorizontal(boolean isHorizontal)
-    {
-        this._isHorizontal = isHorizontal;
-        this._has_isHorizontal = true;
-    } //-- void setIsHorizontal(boolean) 
+    public void setIsHorizontal(final boolean isHorizontal) {
+        this.isHorizontal = isHorizontal;
+        this._hasisHorizontal = true;
+    }
 
     /**
      * Sets the value of field 'isStacked'.
      * 
      * @param isStacked the value of field 'isStacked'.
      */
-    public void setIsStacked(boolean isStacked)
-    {
-        this._isStacked = isStacked;
-        this._has_isStacked = true;
-    } //-- void setIsStacked(boolean) 
+    public void setIsStacked(final boolean isStacked) {
+        this.isStacked = isStacked;
+        this._hasisStacked = true;
+    }
 
     /**
      * Sets the value of field 'isSummaryOnly'.
      * 
      * @param isSummaryOnly the value of field 'isSummaryOnly'.
      */
-    public void setIsSummaryOnly(boolean isSummaryOnly)
-    {
-        this._isSummaryOnly = isSummaryOnly;
-        this._has_isSummaryOnly = true;
-    } //-- void setIsSummaryOnly(boolean) 
+    public void setIsSummaryOnly(final boolean isSummaryOnly) {
+        this.isSummaryOnly = isSummaryOnly;
+        this._hasisSummaryOnly = true;
+    }
 
     /**
      * Sets the value of field 'isThreeDimensional'.
@@ -1095,42 +935,38 @@ public class Chart implements java.io.Serializable {
      * @param isThreeDimensional the value of field
      * 'isThreeDimensional'.
      */
-    public void setIsThreeDimensional(boolean isThreeDimensional)
-    {
-        this._isThreeDimensional = isThreeDimensional;
-        this._has_isThreeDimensional = true;
-    } //-- void setIsThreeDimensional(boolean) 
+    public void setIsThreeDimensional(final boolean isThreeDimensional) {
+        this.isThreeDimensional = isThreeDimensional;
+        this._hasisThreeDimensional = true;
+    }
 
     /**
      * Sets the value of field 'labelRotation'.
      * 
      * @param labelRotation the value of field 'labelRotation'.
      */
-    public void setLabelRotation(int labelRotation)
-    {
-        this._labelRotation = labelRotation;
-        this._has_labelRotation = true;
-    } //-- void setLabelRotation(int) 
+    public void setLabelRotation(final int labelRotation) {
+        this.labelRotation = labelRotation;
+        this._haslabelRotation = true;
+    }
 
     /**
      * Sets the value of field 'legendLocation'.
      * 
      * @param legendLocation the value of field 'legendLocation'.
      */
-    public void setLegendLocation(org.pentaho.jfreereport.castormodel.reportspec.types.LegendLocation legendLocation)
-    {
-        this._legendLocation = legendLocation;
-    } //-- void setLegendLocation(org.pentaho.jfreereport.castormodel.reportspec.types.LegendLocation) 
+    public void setLegendLocation(final org.pentaho.jfreereport.castormodel.reportspec.types.LegendLocation legendLocation) {
+        this.legendLocation = legendLocation;
+    }
 
     /**
      * Sets the value of field 'resetGroup'.
      * 
      * @param resetGroup the value of field 'resetGroup'.
      */
-    public void setResetGroup(java.lang.String resetGroup)
-    {
-        this._resetGroup = resetGroup;
-    } //-- void setResetGroup(java.lang.String) 
+    public void setResetGroup(final java.lang.String resetGroup) {
+        this.resetGroup = resetGroup;
+    }
 
     /**
      * 
@@ -1140,73 +976,66 @@ public class Chart implements java.io.Serializable {
      * @throws java.lang.IndexOutOfBoundsException if the index
      * given is outside the bounds of the collection
      */
-    public void setSeries(int index, org.pentaho.jfreereport.castormodel.reportspec.Series vSeries)
-        throws java.lang.IndexOutOfBoundsException
-    {
+    public void setSeries(final int index,final org.pentaho.jfreereport.castormodel.reportspec.Series vSeries) throws java.lang.IndexOutOfBoundsException {
         // check bounds for index
-        if (index < 0 || index >= this._seriesList.size()) {
-            throw new IndexOutOfBoundsException("setSeries: Index value '" + index + "' not in range [0.." + (this._seriesList.size() - 1) + "]");
+        if (index < 0 || index >= this.seriesList.size()) {
+            throw new IndexOutOfBoundsException("setSeries: Index value '" + index + "' not in range [0.." + (this.seriesList.size() - 1) + "]");
         }
-        
-        this._seriesList.set(index, vSeries);
-    } //-- void setSeries(int, org.pentaho.jfreereport.castormodel.reportspec.Series) 
+
+        this.seriesList.set(index, vSeries);
+    }
 
     /**
      * 
      * 
      * @param vSeriesArray
      */
-    public void setSeries(org.pentaho.jfreereport.castormodel.reportspec.Series[] vSeriesArray)
-    {
+    public void setSeries(final org.pentaho.jfreereport.castormodel.reportspec.Series[] vSeriesArray) {
         //-- copy array
-        _seriesList.clear();
-        
+        seriesList.clear();
+
         for (int i = 0; i < vSeriesArray.length; i++) {
-                this._seriesList.add(vSeriesArray[i]);
+                this.seriesList.add(vSeriesArray[i]);
         }
-    } //-- void setSeries(org.pentaho.jfreereport.castormodel.reportspec.Series) 
+    }
 
     /**
      * Sets the value of field 'showBorder'.
      * 
      * @param showBorder the value of field 'showBorder'.
      */
-    public void setShowBorder(boolean showBorder)
-    {
-        this._showBorder = showBorder;
-        this._has_showBorder = true;
-    } //-- void setShowBorder(boolean) 
+    public void setShowBorder(final boolean showBorder) {
+        this.showBorder = showBorder;
+        this._hasshowBorder = true;
+    }
 
     /**
      * Sets the value of field 'showLegend'.
      * 
      * @param showLegend the value of field 'showLegend'.
      */
-    public void setShowLegend(boolean showLegend)
-    {
-        this._showLegend = showLegend;
-        this._has_showLegend = true;
-    } //-- void setShowLegend(boolean) 
+    public void setShowLegend(final boolean showLegend) {
+        this.showLegend = showLegend;
+        this._hasshowLegend = true;
+    }
 
     /**
      * Sets the value of field 'title'.
      * 
      * @param title the value of field 'title'.
      */
-    public void setTitle(java.lang.String title)
-    {
-        this._title = title;
-    } //-- void setTitle(java.lang.String) 
+    public void setTitle(final java.lang.String title) {
+        this.title = title;
+    }
 
     /**
      * Sets the value of field 'type'.
      * 
      * @param type the value of field 'type'.
      */
-    public void setType(org.pentaho.jfreereport.castormodel.reportspec.types.ChartType type)
-    {
-        this._type = type;
-    } //-- void setType(org.pentaho.jfreereport.castormodel.reportspec.types.ChartType) 
+    public void setType(final org.pentaho.jfreereport.castormodel.reportspec.types.ChartType type) {
+        this.type = type;
+    }
 
     /**
      * 
@@ -1216,47 +1045,41 @@ public class Chart implements java.io.Serializable {
      * @throws java.lang.IndexOutOfBoundsException if the index
      * given is outside the bounds of the collection
      */
-    public void setValuesColumn(int index, java.lang.String vValuesColumn)
-        throws java.lang.IndexOutOfBoundsException
-    {
+    public void setValuesColumn(final int index,final java.lang.String vValuesColumn) throws java.lang.IndexOutOfBoundsException {
         // check bounds for index
-        if (index < 0 || index >= this._valuesColumnList.size()) {
-            throw new IndexOutOfBoundsException("setValuesColumn: Index value '" + index + "' not in range [0.." + (this._valuesColumnList.size() - 1) + "]");
+        if (index < 0 || index >= this.valuesColumnList.size()) {
+            throw new IndexOutOfBoundsException("setValuesColumn: Index value '" + index + "' not in range [0.." + (this.valuesColumnList.size() - 1) + "]");
         }
-        
-        this._valuesColumnList.set(index, vValuesColumn);
-    } //-- void setValuesColumn(int, java.lang.String) 
+
+        this.valuesColumnList.set(index, vValuesColumn);
+    }
 
     /**
      * 
      * 
      * @param vValuesColumnArray
      */
-    public void setValuesColumn(java.lang.String[] vValuesColumnArray)
-    {
+    public void setValuesColumn(final java.lang.String[] vValuesColumnArray) {
         //-- copy array
-        _valuesColumnList.clear();
-        
+        valuesColumnList.clear();
+
         for (int i = 0; i < vValuesColumnArray.length; i++) {
-                this._valuesColumnList.add(vValuesColumnArray[i]);
+                this.valuesColumnList.add(vValuesColumnArray[i]);
         }
-    } //-- void setValuesColumn(java.lang.String) 
+    }
 
     /**
      * Sets the value of field 'width'.
      * 
      * @param width the value of field 'width'.
      */
-    public void setWidth(int width)
-    {
-        this._width = width;
-        this._has_width = true;
-    } //-- void setWidth(int) 
+    public void setWidth(final int width) {
+        this.width = width;
+        this._haswidth = true;
+    }
 
     /**
-     * Method unmarshal
-     * 
-     * 
+     * Method unmarshal.
      * 
      * @param reader
      * @throws org.exolab.castor.xml.MarshalException if object is
@@ -1266,11 +1089,9 @@ public class Chart implements java.io.Serializable {
      * @return the unmarshaled
      * org.pentaho.jfreereport.castormodel.reportspec.Chart
      */
-    public static org.pentaho.jfreereport.castormodel.reportspec.Chart unmarshal(java.io.Reader reader)
-        throws org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException
-    {
-        return (org.pentaho.jfreereport.castormodel.reportspec.Chart) Unmarshaller.unmarshal(org.pentaho.jfreereport.castormodel.reportspec.Chart.class, reader);
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.Chart unmarshal(java.io.Reader) 
+    public static org.pentaho.jfreereport.castormodel.reportspec.Chart unmarshal(final java.io.Reader reader) throws org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException {
+        return (org.pentaho.jfreereport.castormodel.reportspec.Chart) org.exolab.castor.xml.Unmarshaller.unmarshal(org.pentaho.jfreereport.castormodel.reportspec.Chart.class, reader);
+    }
 
     /**
      * 
@@ -1278,11 +1099,9 @@ public class Chart implements java.io.Serializable {
      * @throws org.exolab.castor.xml.ValidationException if this
      * object is an invalid instance according to the schema
      */
-    public void validate()
-        throws org.exolab.castor.xml.ValidationException
-    {
+    public void validate() throws org.exolab.castor.xml.ValidationException {
         org.exolab.castor.xml.Validator validator = new org.exolab.castor.xml.Validator();
         validator.validate(this);
-    } //-- void validate() 
+    }
 
 }

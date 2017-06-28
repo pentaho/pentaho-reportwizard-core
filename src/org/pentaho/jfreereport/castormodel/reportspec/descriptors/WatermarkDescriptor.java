@@ -1,151 +1,157 @@
 /*
  * This class was automatically generated with 
- * <a href="http://www.castor.org">Castor 1.0.5</a>, using an XML
+ * <a href="http://www.castor.org">Castor 1.4.1</a>, using an XML
  * Schema.
  * $Id$
  */
 
-package org.pentaho.jfreereport.castormodel.reportspec;
+package org.pentaho.jfreereport.castormodel.reportspec.descriptors;
+
+  //---------------------------------/
+ //- Imported classes and packages -/
+//---------------------------------/
+
+import org.pentaho.jfreereport.castormodel.reportspec.Watermark;
 
 /**
- * Class WatermarkDescriptor.
+ * 
  * 
  * @version $Revision$ $Date$
  */
 public class WatermarkDescriptor extends org.exolab.castor.xml.util.XMLClassDescriptorImpl {
 
-
-      //--------------------------/
-     //- Class/Member Variables -/
-    //--------------------------/
+    /**
+     * Field _elementDefinition.
+     */
+    private boolean _elementDefinition;
 
     /**
-     * Field elementDefinition
+     * Field _nsPrefix.
      */
-    private boolean elementDefinition;
+    private java.lang.String _nsPrefix;
 
     /**
-     * Field nsPrefix
+     * Field _nsURI.
      */
-    private java.lang.String nsPrefix;
+    private java.lang.String _nsURI;
 
     /**
-     * Field nsURI
+     * Field _xmlName.
      */
-    private java.lang.String nsURI;
+    private java.lang.String _xmlName;
 
     /**
-     * Field xmlName
+     * Field _identity.
      */
-    private java.lang.String xmlName;
+    private org.exolab.castor.xml.XMLFieldDescriptor _identity;
 
-    /**
-     * Field identity
-     */
-    private org.exolab.castor.xml.XMLFieldDescriptor identity;
-
-
-      //----------------/
-     //- Constructors -/
-    //----------------/
-
-    public WatermarkDescriptor() 
-     {
+    public WatermarkDescriptor() {
         super();
-        xmlName = "watermark";
-        elementDefinition = true;
+        _xmlName = "watermark";
+        _elementDefinition = true;
         org.exolab.castor.xml.util.XMLFieldDescriptorImpl  desc           = null;
         org.exolab.castor.mapping.FieldHandler             handler        = null;
         org.exolab.castor.xml.FieldValidator               fieldValidator = null;
         //-- initialize attribute descriptors
-        
-        //-- _name
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_name", "name", org.exolab.castor.xml.NodeType.Attribute);
+
+        //-- name
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "name", "name", org.exolab.castor.xml.NodeType.Attribute);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Watermark target = (Watermark) object;
                 return target.getName();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     Watermark target = (Watermark) object;
                     target.setName( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _name
+
+        //-- validation code for: name
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _src
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_src", "src", org.exolab.castor.xml.NodeType.Attribute);
+        //-- src
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "src", "src", org.exolab.castor.xml.NodeType.Attribute);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Watermark target = (Watermark) object;
                 return target.getSrc();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     Watermark target = (Watermark) object;
                     target.setSrc( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setRequired(true);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _src
+
+        //-- validation code for: src
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         fieldValidator.setMinOccurs(1);
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _x
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_x", "x", org.exolab.castor.xml.NodeType.Attribute);
+        //-- x
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "x", "x", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Watermark target = (Watermark) object;
-                if(!target.hasX())
-                    return null;
+                if (!target.hasX()) { return null; }
                 return new java.lang.Integer(target.getX());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -156,38 +162,44 @@ public class WatermarkDescriptor extends org.exolab.castor.xml.util.XMLClassDesc
                         target.deleteX();
                         return;
                     }
-                    target.setX( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setX( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _x
+
+        //-- validation code for: x
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _y
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_y", "y", org.exolab.castor.xml.NodeType.Attribute);
+        //-- y
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "y", "y", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Watermark target = (Watermark) object;
-                if(!target.hasY())
-                    return null;
+                if (!target.hasY()) { return null; }
                 return new java.lang.Integer(target.getY());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -198,38 +210,44 @@ public class WatermarkDescriptor extends org.exolab.castor.xml.util.XMLClassDesc
                         target.deleteY();
                         return;
                     }
-                    target.setY( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setY( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _y
+
+        //-- validation code for: y
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _width
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_width", "width", org.exolab.castor.xml.NodeType.Attribute);
+        //-- width
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "width", "width", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Watermark target = (Watermark) object;
-                if(!target.hasWidth())
-                    return null;
+                if (!target.hasWidth()) { return null; }
                 return new java.lang.Integer(target.getWidth());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -240,38 +258,44 @@ public class WatermarkDescriptor extends org.exolab.castor.xml.util.XMLClassDesc
                         target.deleteWidth();
                         return;
                     }
-                    target.setWidth( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setWidth( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _width
+
+        //-- validation code for: width
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _height
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_height", "height", org.exolab.castor.xml.NodeType.Attribute);
+        //-- height
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "height", "height", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Watermark target = (Watermark) object;
-                if(!target.hasHeight())
-                    return null;
+                if (!target.hasHeight()) { return null; }
                 return new java.lang.Integer(target.getHeight());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -282,38 +306,44 @@ public class WatermarkDescriptor extends org.exolab.castor.xml.util.XMLClassDesc
                         target.deleteHeight();
                         return;
                     }
-                    target.setHeight( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setHeight( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _height
+
+        //-- validation code for: height
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _scale
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_scale", "scale", org.exolab.castor.xml.NodeType.Attribute);
+        //-- scale
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "scale", "scale", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Watermark target = (Watermark) object;
-                if(!target.hasScale())
-                    return null;
+                if (!target.hasScale()) { return null; }
                 return (target.getScale() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -324,38 +354,42 @@ public class WatermarkDescriptor extends org.exolab.castor.xml.util.XMLClassDesc
                         target.deleteScale();
                         return;
                     }
-                    target.setScale( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setScale( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _scale
+
+        //-- validation code for: scale
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _keepAspectRatio
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_keepAspectRatio", "keep-aspect-ratio", org.exolab.castor.xml.NodeType.Attribute);
+        //-- keepAspectRatio
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "keepAspectRatio", "keep-aspect-ratio", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Watermark target = (Watermark) object;
-                if(!target.hasKeepAspectRatio())
-                    return null;
+                if (!target.hasKeepAspectRatio()) { return null; }
                 return (target.getKeepAspectRatio() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -366,38 +400,42 @@ public class WatermarkDescriptor extends org.exolab.castor.xml.util.XMLClassDesc
                         target.deleteKeepAspectRatio();
                         return;
                     }
-                    target.setKeepAspectRatio( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setKeepAspectRatio( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _keepAspectRatio
+
+        //-- validation code for: keepAspectRatio
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _useWatermark
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_useWatermark", "use-watermark", org.exolab.castor.xml.NodeType.Attribute);
+        //-- useWatermark
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "useWatermark", "use-watermark", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Watermark target = (Watermark) object;
-                if(!target.hasUseWatermark())
-                    return null;
+                if (!target.hasUseWatermark()) { return null; }
                 return (target.getUseWatermark() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -408,148 +446,116 @@ public class WatermarkDescriptor extends org.exolab.castor.xml.util.XMLClassDesc
                         target.deleteUseWatermark();
                         return;
                     }
-                    target.setUseWatermark( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setUseWatermark( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _useWatermark
+
+        //-- validation code for: useWatermark
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
         //-- initialize element descriptors
-        
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.WatermarkDescriptor()
 
-
-      //-----------/
-     //- Methods -/
-    //-----------/
+    }
 
     /**
-     * Method getAccessMode
-     * 
-     * 
+     * Method getAccessMode.
      * 
      * @return the access mode specified for this class.
      */
-    public org.exolab.castor.mapping.AccessMode getAccessMode()
-    {
+    @Override()
+    public org.exolab.castor.mapping.AccessMode getAccessMode() {
         return null;
-    } //-- org.exolab.castor.mapping.AccessMode getAccessMode() 
+    }
 
     /**
-     * Method getExtends
-     * 
-     * 
-     * 
-     * @return the class descriptor of the class extended by this
-     * class.
-     */
-    public org.exolab.castor.mapping.ClassDescriptor getExtends()
-    {
-        return null;
-    } //-- org.exolab.castor.mapping.ClassDescriptor getExtends() 
-
-    /**
-     * Method getIdentity
-     * 
-     * 
+     * Method getIdentity.
      * 
      * @return the identity field, null if this class has no
      * identity.
      */
-    public org.exolab.castor.mapping.FieldDescriptor getIdentity()
-    {
-        return identity;
-    } //-- org.exolab.castor.mapping.FieldDescriptor getIdentity() 
+    @Override()
+    public org.exolab.castor.mapping.FieldDescriptor getIdentity() {
+        return _identity;
+    }
 
     /**
-     * Method getJavaClass
-     * 
-     * 
+     * Method getJavaClass.
      * 
      * @return the Java class represented by this descriptor.
      */
-    public java.lang.Class getJavaClass()
-    {
+    @Override()
+    public java.lang.Class getJavaClass() {
         return org.pentaho.jfreereport.castormodel.reportspec.Watermark.class;
-    } //-- java.lang.Class getJavaClass() 
+    }
 
     /**
-     * Method getNameSpacePrefix
+     * Method getNameSpacePrefix.
      * 
-     * 
-     * 
-     * @return the namespace prefix to use when marshalling as XML.
+     * @return the namespace prefix to use when marshaling as XML.
      */
-    public java.lang.String getNameSpacePrefix()
-    {
-        return nsPrefix;
-    } //-- java.lang.String getNameSpacePrefix() 
+    @Override()
+    public java.lang.String getNameSpacePrefix() {
+        return _nsPrefix;
+    }
 
     /**
-     * Method getNameSpaceURI
+     * Method getNameSpaceURI.
      * 
-     * 
-     * 
-     * @return the namespace URI used when marshalling and
-     * unmarshalling as XML.
+     * @return the namespace URI used when marshaling and
+     * unmarshaling as XML.
      */
-    public java.lang.String getNameSpaceURI()
-    {
-        return nsURI;
-    } //-- java.lang.String getNameSpaceURI() 
+    @Override()
+    public java.lang.String getNameSpaceURI() {
+        return _nsURI;
+    }
 
     /**
-     * Method getValidator
-     * 
-     * 
+     * Method getValidator.
      * 
      * @return a specific validator for the class described by this
      * ClassDescriptor.
      */
-    public org.exolab.castor.xml.TypeValidator getValidator()
-    {
+    @Override()
+    public org.exolab.castor.xml.TypeValidator getValidator() {
         return this;
-    } //-- org.exolab.castor.xml.TypeValidator getValidator() 
+    }
 
     /**
-     * Method getXMLName
-     * 
-     * 
+     * Method getXMLName.
      * 
      * @return the XML Name for the Class being described.
      */
-    public java.lang.String getXMLName()
-    {
-        return xmlName;
-    } //-- java.lang.String getXMLName() 
+    @Override()
+    public java.lang.String getXMLName() {
+        return _xmlName;
+    }
 
     /**
-     * Method isElementDefinition
-     * 
-     * 
+     * Method isElementDefinition.
      * 
      * @return true if XML schema definition of this Class is that
      * of a global
      * element or element with anonymous type definition.
      */
-    public boolean isElementDefinition()
-    {
-        return elementDefinition;
-    } //-- boolean isElementDefinition() 
+    public boolean isElementDefinition() {
+        return _elementDefinition;
+    }
 
 }
