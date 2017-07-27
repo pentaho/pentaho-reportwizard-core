@@ -1,567 +1,576 @@
 /*
  * This class was automatically generated with 
- * <a href="http://www.castor.org">Castor 1.0.5</a>, using an XML
+ * <a href="http://www.castor.org">Castor 1.4.1</a>, using an XML
  * Schema.
  * $Id$
  */
 
 package org.pentaho.jfreereport.castormodel.reportspec;
 
-  //---------------------------------/
- //- Imported classes and packages -/
-//---------------------------------/
-
-import org.exolab.castor.xml.Marshaller;
-import org.exolab.castor.xml.Unmarshaller;
-
 /**
- * Class ReportSpec.
+ * 
  * 
  * @version $Revision$ $Date$
  */
+@SuppressWarnings("serial")
 public class ReportSpec implements java.io.Serializable {
 
-
-      //--------------------------/
-     //- Class/Member Variables -/
-    //--------------------------/
-
-    /**
-     * Field _tool
-     */
-    private java.lang.String _tool;
-
     /**
-     * Field _toolVersion
+     * Field tool.
      */
-    private java.lang.String _toolVersion;
+    private java.lang.String tool;
 
     /**
-     * Field _templateName
+     * Field toolVersion.
      */
-    private java.lang.String _templateName;
+    private java.lang.String toolVersion;
 
     /**
-     * Field _reportSpecChoice
+     * Field templateName.
      */
-    private org.pentaho.jfreereport.castormodel.reportspec.ReportSpecChoice _reportSpecChoice;
+    private java.lang.String templateName;
 
     /**
-     * Field _chart
+     * Field reportSpecChoice.
      */
-    private org.pentaho.jfreereport.castormodel.reportspec.Chart _chart;
+    private org.pentaho.jfreereport.castormodel.reportspec.ReportSpecChoice reportSpecChoice;
 
     /**
-     * Field _useChart
+     * Field chart.
      */
-    private boolean _useChart = false;
+    private org.pentaho.jfreereport.castormodel.reportspec.Chart chart;
 
     /**
-     * keeps track of state for field: _useChart
+     * Field useChart.
      */
-    private boolean _has_useChart;
+    private boolean useChart = false;
 
     /**
-     * Field _reportName
+     * Keeps track of whether primitive field useChart has been set
+     * already.
      */
-    private java.lang.String _reportName = "JFreeReport-WizardReport";
+    private boolean _hasuseChart;
 
     /**
-     * Field _reportDesc
+     * Field reportName.
      */
-    private java.lang.String _reportDesc = "Description";
+    private java.lang.String reportName = "JFreeReport-WizardReport";
 
     /**
-     * Field _isMQL
+     * Field reportDesc.
      */
-    private boolean _isMQL = false;
+    private java.lang.String reportDesc = "Description";
 
     /**
-     * keeps track of state for field: _isMQL
+     * Field isMQL.
      */
-    private boolean _has_isMQL;
+    private boolean isMQL = false;
 
     /**
-     * Field _xmiPath
+     * Keeps track of whether primitive field isMQL has been set
+     * already.
      */
-    private java.lang.String _xmiPath;
+    private boolean _hasisMQL;
 
     /**
-     * Field _isMDX
+     * Field xmiPath.
      */
-    private boolean _isMDX = false;
+    private java.lang.String xmiPath;
 
     /**
-     * keeps track of state for field: _isMDX
+     * Field isMDX.
      */
-    private boolean _has_isMDX;
+    private boolean isMDX = false;
 
     /**
-     * Field _mondrianCubeDefinitionPath
+     * Keeps track of whether primitive field isMDX has been set
+     * already.
      */
-    private java.lang.String _mondrianCubeDefinitionPath;
+    private boolean _hasisMDX;
 
     /**
-     * Field _kettleStep
+     * Field mondrianCubeDefinitionPath.
      */
-    private java.lang.String _kettleStep;
+    private java.lang.String mondrianCubeDefinitionPath;
 
     /**
-     * Field _query
+     * Field kettleStep.
      */
-    private java.lang.String _query = "";
+    private java.lang.String kettleStep;
 
     /**
-     * Field _mqlQuery
+     * Field query.
      */
-    private java.lang.String _mqlQuery = "";
+    private java.lang.String query = "";
 
     /**
-     * Field _includeSrc
+     * Field mqlQuery.
      */
-    private java.lang.String _includeSrc;
+    private java.lang.String mqlQuery = "";
 
     /**
-     * Field _templateSrc
+     * Field includeSrc.
      */
-    private java.lang.String _templateSrc;
+    private java.lang.String includeSrc;
 
     /**
-     * Field _fieldMappingList
+     * Field templateSrc.
      */
-    private java.util.List _fieldMappingList;
+    private java.lang.String templateSrc;
 
-    /**
-     * Field _watermark
-     */
-    private org.pentaho.jfreereport.castormodel.reportspec.Watermark _watermark;
+    private java.util.List<org.pentaho.jfreereport.castormodel.reportspec.FieldMapping> fieldMappingList;
 
     /**
-     * Field _pageFormat
+     * Field watermark.
      */
-    private java.lang.String _pageFormat = "LETTER";
+    private org.pentaho.jfreereport.castormodel.reportspec.Watermark watermark;
 
     /**
-     * Field _useCustomPageFormat
+     * Field pageFormat.
      */
-    private boolean _useCustomPageFormat = false;
+    private java.lang.String pageFormat = "LETTER";
 
     /**
-     * keeps track of state for field: _useCustomPageFormat
+     * Field useCustomPageFormat.
      */
-    private boolean _has_useCustomPageFormat;
+    private boolean useCustomPageFormat = false;
 
     /**
-     * Field _customPageFormatWidth
+     * Keeps track of whether primitive field useCustomPageFormat
+     * has been set already.
      */
-    private int _customPageFormatWidth;
+    private boolean _hasuseCustomPageFormat;
 
     /**
-     * keeps track of state for field: _customPageFormatWidth
+     * Field customPageFormatWidth.
      */
-    private boolean _has_customPageFormatWidth;
+    private int customPageFormatWidth;
 
     /**
-     * Field _customPageFormatHeight
+     * Keeps track of whether primitive field customPageFormatWidth
+     * has been set already.
      */
-    private int _customPageFormatHeight;
+    private boolean _hascustomPageFormatWidth;
 
     /**
-     * keeps track of state for field: _customPageFormatHeight
+     * Field customPageFormatHeight.
      */
-    private boolean _has_customPageFormatHeight;
+    private int customPageFormatHeight;
 
     /**
-     * Field _orientation
+     * Keeps track of whether primitive field
+     * customPageFormatHeight has been set already.
      */
-    private java.lang.String _orientation = "landscape";
+    private boolean _hascustomPageFormatHeight;
 
     /**
-     * Field _useRowBanding
+     * Field orientation.
      */
-    private boolean _useRowBanding = true;
+    private java.lang.String orientation = "landscape";
 
     /**
-     * keeps track of state for field: _useRowBanding
+     * Field useRowBanding.
      */
-    private boolean _has_useRowBanding;
+    private boolean useRowBanding = true;
 
     /**
-     * Field _rowBandingColor
+     * Keeps track of whether primitive field useRowBanding has
+     * been set already.
      */
-    private java.lang.String _rowBandingColor = "#E0E0E0";
+    private boolean _hasuseRowBanding;
 
     /**
-     * Field _rowBandingInitialState
+     * Field rowBandingColor.
      */
-    private boolean _rowBandingInitialState = true;
+    private java.lang.String rowBandingColor = "#E0E0E0";
 
     /**
-     * keeps track of state for field: _rowBandingInitialState
+     * Field rowBandingInitialState.
      */
-    private boolean _has_rowBandingInitialState;
+    private boolean rowBandingInitialState = true;
 
     /**
-     * Field _useExpressionUnderlining
+     * Keeps track of whether primitive field
+     * rowBandingInitialState has been set already.
      */
-    private boolean _useExpressionUnderlining;
+    private boolean _hasrowBandingInitialState;
 
     /**
-     * keeps track of state for field: _useExpressionUnderlining
+     * Field useExpressionUnderlining.
      */
-    private boolean _has_useExpressionUnderlining;
+    private boolean useExpressionUnderlining;
 
     /**
-     * Field _doubleUnderlineExpression
+     * Keeps track of whether primitive field
+     * useExpressionUnderlining has been set already.
      */
-    private boolean _doubleUnderlineExpression;
+    private boolean _hasuseExpressionUnderlining;
 
     /**
-     * keeps track of state for field: _doubleUnderlineExpression
+     * Field doubleUnderlineExpression.
      */
-    private boolean _has_doubleUnderlineExpression;
+    private boolean doubleUnderlineExpression;
 
     /**
-     * Field _useMasterDetail
+     * Keeps track of whether primitive field
+     * doubleUnderlineExpression has been set already.
      */
-    private boolean _useMasterDetail = false;
+    private boolean _hasdoubleUnderlineExpression;
 
     /**
-     * keeps track of state for field: _useMasterDetail
+     * Field useMasterDetail.
      */
-    private boolean _has_useMasterDetail;
+    private boolean useMasterDetail = false;
 
     /**
-     * Field _useMasterDetailGridlines
+     * Keeps track of whether primitive field useMasterDetail has
+     * been set already.
      */
-    private boolean _useMasterDetailGridlines = true;
+    private boolean _hasuseMasterDetail;
 
     /**
-     * keeps track of state for field: _useMasterDetailGridlines
+     * Field useMasterDetailGridlines.
      */
-    private boolean _has_useMasterDetailGridlines;
+    private boolean useMasterDetailGridlines = true;
 
     /**
-     * Field _useMasterDetailBanding
+     * Keeps track of whether primitive field
+     * useMasterDetailGridlines has been set already.
      */
-    private boolean _useMasterDetailBanding = true;
+    private boolean _hasuseMasterDetailGridlines;
 
     /**
-     * keeps track of state for field: _useMasterDetailBanding
+     * Field useMasterDetailBanding.
      */
-    private boolean _has_useMasterDetailBanding;
+    private boolean useMasterDetailBanding = true;
 
     /**
-     * Field _generateReportLevelColumnHeaders
+     * Keeps track of whether primitive field
+     * useMasterDetailBanding has been set already.
      */
-    private boolean _generateReportLevelColumnHeaders = false;
+    private boolean _hasuseMasterDetailBanding;
 
     /**
-     * keeps track of state for field:
-     * _generateReportLevelColumnHeaders
+     * Field generateReportLevelColumnHeaders.
      */
-    private boolean _has_generateReportLevelColumnHeaders;
+    private boolean generateReportLevelColumnHeaders = false;
 
     /**
-     * Field _useColumnHeaderBackgroundColor
+     * Keeps track of whether primitive field
+     * generateReportLevelColumnHeaders has been set already.
      */
-    private boolean _useColumnHeaderBackgroundColor = true;
+    private boolean _hasgenerateReportLevelColumnHeaders;
 
     /**
-     * keeps track of state for field:
-     * _useColumnHeaderBackgroundColor
+     * Field useColumnHeaderBackgroundColor.
      */
-    private boolean _has_useColumnHeaderBackgroundColor;
+    private boolean useColumnHeaderBackgroundColor = true;
 
     /**
-     * Field _columnHeaderBackgroundColor
+     * Keeps track of whether primitive field
+     * useColumnHeaderBackgroundColor has been set already.
      */
-    private java.lang.String _columnHeaderBackgroundColor = "#C0C0C0";
+    private boolean _hasuseColumnHeaderBackgroundColor;
 
     /**
-     * Field _columnHeaderHeight
+     * Field columnHeaderBackgroundColor.
      */
-    private int _columnHeaderHeight = 18;
+    private java.lang.String columnHeaderBackgroundColor = "#C0C0C0";
 
     /**
-     * keeps track of state for field: _columnHeaderHeight
+     * Field columnHeaderHeight.
      */
-    private boolean _has_columnHeaderHeight;
+    private int columnHeaderHeight = 18;
 
     /**
-     * Field _calculateGrandTotals
+     * Keeps track of whether primitive field columnHeaderHeight
+     * has been set already.
      */
-    private boolean _calculateGrandTotals = true;
+    private boolean _hascolumnHeaderHeight;
 
     /**
-     * keeps track of state for field: _calculateGrandTotals
+     * Field calculateGrandTotals.
      */
-    private boolean _has_calculateGrandTotals;
+    private boolean calculateGrandTotals = true;
 
     /**
-     * Field _grandTotalsLabel
+     * Keeps track of whether primitive field calculateGrandTotals
+     * has been set already.
      */
-    private java.lang.String _grandTotalsLabel = "Grand Total";
+    private boolean _hascalculateGrandTotals;
 
     /**
-     * Field _grandTotalsHorizontalAlignment
+     * Field grandTotalsLabel.
      */
-    private java.lang.String _grandTotalsHorizontalAlignment = "left";
+    private java.lang.String grandTotalsLabel = "Grand Total";
 
     /**
-     * Field _useDummyGroupFooterBackgroundColor
+     * Field grandTotalsHorizontalAlignment.
      */
-    private boolean _useDummyGroupFooterBackgroundColor = true;
+    private java.lang.String grandTotalsHorizontalAlignment = "left";
 
     /**
-     * keeps track of state for field:
-     * _useDummyGroupFooterBackgroundColor
+     * Field useDummyGroupFooterBackgroundColor.
      */
-    private boolean _has_useDummyGroupFooterBackgroundColor;
+    private boolean useDummyGroupFooterBackgroundColor = true;
 
     /**
-     * Field _dummyGroupFooterBackgroundColor
+     * Keeps track of whether primitive field
+     * useDummyGroupFooterBackgroundColor has been set already.
      */
-    private java.lang.String _dummyGroupFooterBackgroundColor = "#e0d0c0";
+    private boolean _hasuseDummyGroupFooterBackgroundColor;
 
     /**
-     * Field _useHorizontalGridlines
+     * Field dummyGroupFooterBackgroundColor.
      */
-    private boolean _useHorizontalGridlines = false;
+    private java.lang.String dummyGroupFooterBackgroundColor = "#e0d0c0";
 
     /**
-     * keeps track of state for field: _useHorizontalGridlines
+     * Field useHorizontalGridlines.
      */
-    private boolean _has_useHorizontalGridlines;
+    private boolean useHorizontalGridlines = false;
 
     /**
-     * Field _useVerticalGridlines
+     * Keeps track of whether primitive field
+     * useHorizontalGridlines has been set already.
      */
-    private boolean _useVerticalGridlines = false;
+    private boolean _hasuseHorizontalGridlines;
 
     /**
-     * keeps track of state for field: _useVerticalGridlines
+     * Field useVerticalGridlines.
      */
-    private boolean _has_useVerticalGridlines;
+    private boolean useVerticalGridlines = false;
 
     /**
-     * Field _horizontalGridlinesColor
+     * Keeps track of whether primitive field useVerticalGridlines
+     * has been set already.
      */
-    private java.lang.String _horizontalGridlinesColor = "#000000";
+    private boolean _hasuseVerticalGridlines;
 
     /**
-     * Field _verticalGridlinesColor
+     * Field horizontalGridlinesColor.
      */
-    private java.lang.String _verticalGridlinesColor = "#000000";
+    private java.lang.String horizontalGridlinesColor = "#000000";
 
     /**
-     * Field _groupHeaderFontName
+     * Field verticalGridlinesColor.
      */
-    private java.lang.String _groupHeaderFontName = "SansSerif";
+    private java.lang.String verticalGridlinesColor = "#000000";
 
     /**
-     * Field _groupHeaderFontStyle
+     * Field groupHeaderFontName.
      */
-    private int _groupHeaderFontStyle = 1;
+    private java.lang.String groupHeaderFontName = "SansSerif";
 
     /**
-     * keeps track of state for field: _groupHeaderFontStyle
+     * Field groupHeaderFontStyle.
      */
-    private boolean _has_groupHeaderFontStyle;
+    private int groupHeaderFontStyle = 1;
 
     /**
-     * Field _groupHeaderFontSize
+     * Keeps track of whether primitive field groupHeaderFontStyle
+     * has been set already.
      */
-    private int _groupHeaderFontSize = 11;
+    private boolean _hasgroupHeaderFontStyle;
 
     /**
-     * keeps track of state for field: _groupHeaderFontSize
+     * Field groupHeaderFontSize.
      */
-    private boolean _has_groupHeaderFontSize;
+    private int groupHeaderFontSize = 11;
 
     /**
-     * Field _groupHeaderFontColor
+     * Keeps track of whether primitive field groupHeaderFontSize
+     * has been set already.
      */
-    private java.lang.String _groupHeaderFontColor = "#000000";
+    private boolean _hasgroupHeaderFontSize;
 
     /**
-     * Field _groupFooterFontName
+     * Field groupHeaderFontColor.
      */
-    private java.lang.String _groupFooterFontName = "SansSerif";
+    private java.lang.String groupHeaderFontColor = "#000000";
 
     /**
-     * Field _groupFooterFontStyle
+     * Field groupFooterFontName.
      */
-    private int _groupFooterFontStyle = 1;
+    private java.lang.String groupFooterFontName = "SansSerif";
 
     /**
-     * keeps track of state for field: _groupFooterFontStyle
+     * Field groupFooterFontStyle.
      */
-    private boolean _has_groupFooterFontStyle;
+    private int groupFooterFontStyle = 1;
 
     /**
-     * Field _groupFooterFontSize
+     * Keeps track of whether primitive field groupFooterFontStyle
+     * has been set already.
      */
-    private int _groupFooterFontSize = 11;
+    private boolean _hasgroupFooterFontStyle;
 
     /**
-     * keeps track of state for field: _groupFooterFontSize
+     * Field groupFooterFontSize.
      */
-    private boolean _has_groupFooterFontSize;
+    private int groupFooterFontSize = 11;
 
     /**
-     * Field _groupFooterFontColor
+     * Keeps track of whether primitive field groupFooterFontSize
+     * has been set already.
      */
-    private java.lang.String _groupFooterFontColor = "#000000";
+    private boolean _hasgroupFooterFontSize;
 
     /**
-     * Field _columnHeaderFontName
+     * Field groupFooterFontColor.
      */
-    private java.lang.String _columnHeaderFontName = "SansSerif";
+    private java.lang.String groupFooterFontColor = "#000000";
 
     /**
-     * Field _columnHeaderFontStyle
+     * Field columnHeaderFontName.
      */
-    private int _columnHeaderFontStyle = 1;
+    private java.lang.String columnHeaderFontName = "SansSerif";
 
     /**
-     * keeps track of state for field: _columnHeaderFontStyle
+     * Field columnHeaderFontStyle.
      */
-    private boolean _has_columnHeaderFontStyle;
+    private int columnHeaderFontStyle = 1;
 
     /**
-     * Field _columnHeaderFontSize
+     * Keeps track of whether primitive field columnHeaderFontStyle
+     * has been set already.
      */
-    private int _columnHeaderFontSize = 12;
+    private boolean _hascolumnHeaderFontStyle;
 
     /**
-     * keeps track of state for field: _columnHeaderFontSize
+     * Field columnHeaderFontSize.
      */
-    private boolean _has_columnHeaderFontSize;
+    private int columnHeaderFontSize = 12;
 
     /**
-     * Field _columnHeaderFontColor
+     * Keeps track of whether primitive field columnHeaderFontSize
+     * has been set already.
      */
-    private java.lang.String _columnHeaderFontColor = "#000000";
+    private boolean _hascolumnHeaderFontSize;
 
     /**
-     * Field _columnHeaderGap
+     * Field columnHeaderFontColor.
      */
-    private int _columnHeaderGap = 2;
+    private java.lang.String columnHeaderFontColor = "#000000";
 
     /**
-     * keeps track of state for field: _columnHeaderGap
+     * Field columnHeaderGap.
      */
-    private boolean _has_columnHeaderGap;
+    private int columnHeaderGap = 2;
 
     /**
-     * Field _columnHeaderTopGap
+     * Keeps track of whether primitive field columnHeaderGap has
+     * been set already.
      */
-    private int _columnHeaderTopGap = 2;
+    private boolean _hascolumnHeaderGap;
 
     /**
-     * keeps track of state for field: _columnHeaderTopGap
+     * Field columnHeaderTopGap.
      */
-    private boolean _has_columnHeaderTopGap;
+    private int columnHeaderTopGap = 2;
 
     /**
-     * Field _itemsFontName
+     * Keeps track of whether primitive field columnHeaderTopGap
+     * has been set already.
      */
-    private java.lang.String _itemsFontName = "SansSerif";
+    private boolean _hascolumnHeaderTopGap;
 
     /**
-     * Field _itemsFontStyle
+     * Field itemsFontName.
      */
-    private int _itemsFontStyle = 1;
+    private java.lang.String itemsFontName = "SansSerif";
 
     /**
-     * keeps track of state for field: _itemsFontStyle
+     * Field itemsFontStyle.
      */
-    private boolean _has_itemsFontStyle;
+    private int itemsFontStyle = 1;
 
     /**
-     * Field _itemsFontSize
+     * Keeps track of whether primitive field itemsFontStyle has
+     * been set already.
      */
-    private int _itemsFontSize = 9;
+    private boolean _hasitemsFontStyle;
 
     /**
-     * keeps track of state for field: _itemsFontSize
+     * Field itemsFontSize.
      */
-    private boolean _has_itemsFontSize;
+    private int itemsFontSize = 9;
 
     /**
-     * Field _itemsFontColor
+     * Keeps track of whether primitive field itemsFontSize has
+     * been set already.
      */
-    private java.lang.String _itemsFontColor = "#000000";
+    private boolean _hasitemsFontSize;
 
     /**
-     * Field _horizontalOffset
+     * Field itemsFontColor.
      */
-    private int _horizontalOffset = 0;
+    private java.lang.String itemsFontColor = "#000000";
 
     /**
-     * keeps track of state for field: _horizontalOffset
+     * Field horizontalOffset.
      */
-    private boolean _has_horizontalOffset;
+    private int horizontalOffset = 0;
 
     /**
-     * Field _leftMargin
+     * Keeps track of whether primitive field horizontalOffset has
+     * been set already.
      */
-    private int _leftMargin = 10;
+    private boolean _hashorizontalOffset;
 
     /**
-     * keeps track of state for field: _leftMargin
+     * Field leftMargin.
      */
-    private boolean _has_leftMargin;
+    private int leftMargin = 10;
 
     /**
-     * Field _rightMargin
+     * Keeps track of whether primitive field leftMargin has been
+     * set already.
      */
-    private int _rightMargin = 10;
+    private boolean _hasleftMargin;
 
     /**
-     * keeps track of state for field: _rightMargin
+     * Field rightMargin.
      */
-    private boolean _has_rightMargin;
+    private int rightMargin = 10;
 
     /**
-     * Field _topMargin
+     * Keeps track of whether primitive field rightMargin has been
+     * set already.
      */
-    private int _topMargin = 10;
+    private boolean _hasrightMargin;
 
     /**
-     * keeps track of state for field: _topMargin
+     * Field topMargin.
      */
-    private boolean _has_topMargin;
+    private int topMargin = 10;
 
     /**
-     * Field _bottomMargin
+     * Keeps track of whether primitive field topMargin has been
+     * set already.
      */
-    private int _bottomMargin = 10;
+    private boolean _hastopMargin;
 
     /**
-     * keeps track of state for field: _bottomMargin
+     * Field bottomMargin.
      */
-    private boolean _has_bottomMargin;
+    private int bottomMargin = 10;
 
     /**
-     * Field _fieldList
+     * Keeps track of whether primitive field bottomMargin has been
+     * set already.
      */
-    private java.util.List _fieldList;
-
+    private boolean _hasbottomMargin;
 
-      //----------------/
-     //- Constructors -/
-    //----------------/
+    private java.util.List<org.pentaho.jfreereport.castormodel.reportspec.Field> fieldList;
 
-    public ReportSpec() 
-     {
+    public ReportSpec() {
         super();
         setReportName("JFreeReport-WizardReport");
         setReportDesc("Description");
         setQuery("");
         setMqlQuery("");
-        this._fieldMappingList = new java.util.ArrayList();
+        this.fieldMappingList = new java.util.ArrayList<org.pentaho.jfreereport.castormodel.reportspec.FieldMapping>();
         setPageFormat("LETTER");
         setOrientation("landscape");
         setRowBandingColor("#E0E0E0");
@@ -579,13 +588,8 @@ public class ReportSpec implements java.io.Serializable {
         setColumnHeaderFontColor("#000000");
         setItemsFontName("SansSerif");
         setItemsFontColor("#000000");
-        this._fieldList = new java.util.ArrayList();
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.ReportSpec()
-
-
-      //-----------/
-     //- Methods -/
-    //-----------/
+        this.fieldList = new java.util.ArrayList<org.pentaho.jfreereport.castormodel.reportspec.Field>();
+    }
 
     /**
      * 
@@ -594,11 +598,9 @@ public class ReportSpec implements java.io.Serializable {
      * @throws java.lang.IndexOutOfBoundsException if the index
      * given is outside the bounds of the collection
      */
-    public void addField(org.pentaho.jfreereport.castormodel.reportspec.Field vField)
-        throws java.lang.IndexOutOfBoundsException
-    {
-        this._fieldList.add(vField);
-    } //-- void addField(org.pentaho.jfreereport.castormodel.reportspec.Field) 
+    public void addField(final org.pentaho.jfreereport.castormodel.reportspec.Field vField) throws java.lang.IndexOutOfBoundsException {
+        this.fieldList.add(vField);
+    }
 
     /**
      * 
@@ -608,11 +610,9 @@ public class ReportSpec implements java.io.Serializable {
      * @throws java.lang.IndexOutOfBoundsException if the index
      * given is outside the bounds of the collection
      */
-    public void addField(int index, org.pentaho.jfreereport.castormodel.reportspec.Field vField)
-        throws java.lang.IndexOutOfBoundsException
-    {
-        this._fieldList.add(index, vField);
-    } //-- void addField(int, org.pentaho.jfreereport.castormodel.reportspec.Field) 
+    public void addField(final int index,final org.pentaho.jfreereport.castormodel.reportspec.Field vField) throws java.lang.IndexOutOfBoundsException {
+        this.fieldList.add(index, vField);
+    }
 
     /**
      * 
@@ -621,11 +621,9 @@ public class ReportSpec implements java.io.Serializable {
      * @throws java.lang.IndexOutOfBoundsException if the index
      * given is outside the bounds of the collection
      */
-    public void addFieldMapping(org.pentaho.jfreereport.castormodel.reportspec.FieldMapping vFieldMapping)
-        throws java.lang.IndexOutOfBoundsException
-    {
-        this._fieldMappingList.add(vFieldMapping);
-    } //-- void addFieldMapping(org.pentaho.jfreereport.castormodel.reportspec.FieldMapping) 
+    public void addFieldMapping(final org.pentaho.jfreereport.castormodel.reportspec.FieldMapping vFieldMapping) throws java.lang.IndexOutOfBoundsException {
+        this.fieldMappingList.add(vFieldMapping);
+    }
 
     /**
      * 
@@ -635,422 +633,365 @@ public class ReportSpec implements java.io.Serializable {
      * @throws java.lang.IndexOutOfBoundsException if the index
      * given is outside the bounds of the collection
      */
-    public void addFieldMapping(int index, org.pentaho.jfreereport.castormodel.reportspec.FieldMapping vFieldMapping)
-        throws java.lang.IndexOutOfBoundsException
-    {
-        this._fieldMappingList.add(index, vFieldMapping);
-    } //-- void addFieldMapping(int, org.pentaho.jfreereport.castormodel.reportspec.FieldMapping) 
+    public void addFieldMapping(final int index,final org.pentaho.jfreereport.castormodel.reportspec.FieldMapping vFieldMapping) throws java.lang.IndexOutOfBoundsException {
+        this.fieldMappingList.add(index, vFieldMapping);
+    }
 
     /**
      */
-    public void deleteBottomMargin()
-    {
-        this._has_bottomMargin= false;
-    } //-- void deleteBottomMargin() 
+    public void deleteBottomMargin() {
+        this._hasbottomMargin= false;
+    }
 
     /**
      */
-    public void deleteCalculateGrandTotals()
-    {
-        this._has_calculateGrandTotals= false;
-    } //-- void deleteCalculateGrandTotals() 
+    public void deleteCalculateGrandTotals() {
+        this._hascalculateGrandTotals= false;
+    }
 
     /**
      */
-    public void deleteColumnHeaderFontSize()
-    {
-        this._has_columnHeaderFontSize= false;
-    } //-- void deleteColumnHeaderFontSize() 
+    public void deleteColumnHeaderFontSize() {
+        this._hascolumnHeaderFontSize= false;
+    }
 
     /**
      */
-    public void deleteColumnHeaderFontStyle()
-    {
-        this._has_columnHeaderFontStyle= false;
-    } //-- void deleteColumnHeaderFontStyle() 
+    public void deleteColumnHeaderFontStyle() {
+        this._hascolumnHeaderFontStyle= false;
+    }
 
     /**
      */
-    public void deleteColumnHeaderGap()
-    {
-        this._has_columnHeaderGap= false;
-    } //-- void deleteColumnHeaderGap() 
+    public void deleteColumnHeaderGap() {
+        this._hascolumnHeaderGap= false;
+    }
 
     /**
      */
-    public void deleteColumnHeaderHeight()
-    {
-        this._has_columnHeaderHeight= false;
-    } //-- void deleteColumnHeaderHeight() 
+    public void deleteColumnHeaderHeight() {
+        this._hascolumnHeaderHeight= false;
+    }
 
     /**
      */
-    public void deleteColumnHeaderTopGap()
-    {
-        this._has_columnHeaderTopGap= false;
-    } //-- void deleteColumnHeaderTopGap() 
+    public void deleteColumnHeaderTopGap() {
+        this._hascolumnHeaderTopGap= false;
+    }
 
     /**
      */
-    public void deleteCustomPageFormatHeight()
-    {
-        this._has_customPageFormatHeight= false;
-    } //-- void deleteCustomPageFormatHeight() 
+    public void deleteCustomPageFormatHeight() {
+        this._hascustomPageFormatHeight= false;
+    }
 
     /**
      */
-    public void deleteCustomPageFormatWidth()
-    {
-        this._has_customPageFormatWidth= false;
-    } //-- void deleteCustomPageFormatWidth() 
+    public void deleteCustomPageFormatWidth() {
+        this._hascustomPageFormatWidth= false;
+    }
 
     /**
      */
-    public void deleteDoubleUnderlineExpression()
-    {
-        this._has_doubleUnderlineExpression= false;
-    } //-- void deleteDoubleUnderlineExpression() 
+    public void deleteDoubleUnderlineExpression() {
+        this._hasdoubleUnderlineExpression= false;
+    }
 
     /**
      */
-    public void deleteGenerateReportLevelColumnHeaders()
-    {
-        this._has_generateReportLevelColumnHeaders= false;
-    } //-- void deleteGenerateReportLevelColumnHeaders() 
+    public void deleteGenerateReportLevelColumnHeaders() {
+        this._hasgenerateReportLevelColumnHeaders= false;
+    }
 
     /**
      */
-    public void deleteGroupFooterFontSize()
-    {
-        this._has_groupFooterFontSize= false;
-    } //-- void deleteGroupFooterFontSize() 
+    public void deleteGroupFooterFontSize() {
+        this._hasgroupFooterFontSize= false;
+    }
 
     /**
      */
-    public void deleteGroupFooterFontStyle()
-    {
-        this._has_groupFooterFontStyle= false;
-    } //-- void deleteGroupFooterFontStyle() 
+    public void deleteGroupFooterFontStyle() {
+        this._hasgroupFooterFontStyle= false;
+    }
 
     /**
      */
-    public void deleteGroupHeaderFontSize()
-    {
-        this._has_groupHeaderFontSize= false;
-    } //-- void deleteGroupHeaderFontSize() 
+    public void deleteGroupHeaderFontSize() {
+        this._hasgroupHeaderFontSize= false;
+    }
 
     /**
      */
-    public void deleteGroupHeaderFontStyle()
-    {
-        this._has_groupHeaderFontStyle= false;
-    } //-- void deleteGroupHeaderFontStyle() 
+    public void deleteGroupHeaderFontStyle() {
+        this._hasgroupHeaderFontStyle= false;
+    }
 
     /**
      */
-    public void deleteHorizontalOffset()
-    {
-        this._has_horizontalOffset= false;
-    } //-- void deleteHorizontalOffset() 
+    public void deleteHorizontalOffset() {
+        this._hashorizontalOffset= false;
+    }
 
     /**
      */
-    public void deleteIsMDX()
-    {
-        this._has_isMDX= false;
-    } //-- void deleteIsMDX() 
+    public void deleteIsMDX() {
+        this._hasisMDX= false;
+    }
 
     /**
      */
-    public void deleteIsMQL()
-    {
-        this._has_isMQL= false;
-    } //-- void deleteIsMQL() 
+    public void deleteIsMQL() {
+        this._hasisMQL= false;
+    }
 
     /**
      */
-    public void deleteItemsFontSize()
-    {
-        this._has_itemsFontSize= false;
-    } //-- void deleteItemsFontSize() 
+    public void deleteItemsFontSize() {
+        this._hasitemsFontSize= false;
+    }
 
     /**
      */
-    public void deleteItemsFontStyle()
-    {
-        this._has_itemsFontStyle= false;
-    } //-- void deleteItemsFontStyle() 
+    public void deleteItemsFontStyle() {
+        this._hasitemsFontStyle= false;
+    }
 
     /**
      */
-    public void deleteLeftMargin()
-    {
-        this._has_leftMargin= false;
-    } //-- void deleteLeftMargin() 
+    public void deleteLeftMargin() {
+        this._hasleftMargin= false;
+    }
 
     /**
      */
-    public void deleteRightMargin()
-    {
-        this._has_rightMargin= false;
-    } //-- void deleteRightMargin() 
+    public void deleteRightMargin() {
+        this._hasrightMargin= false;
+    }
 
     /**
      */
-    public void deleteRowBandingInitialState()
-    {
-        this._has_rowBandingInitialState= false;
-    } //-- void deleteRowBandingInitialState() 
+    public void deleteRowBandingInitialState() {
+        this._hasrowBandingInitialState= false;
+    }
 
     /**
      */
-    public void deleteTopMargin()
-    {
-        this._has_topMargin= false;
-    } //-- void deleteTopMargin() 
+    public void deleteTopMargin() {
+        this._hastopMargin= false;
+    }
 
     /**
      */
-    public void deleteUseChart()
-    {
-        this._has_useChart= false;
-    } //-- void deleteUseChart() 
+    public void deleteUseChart() {
+        this._hasuseChart= false;
+    }
 
     /**
      */
-    public void deleteUseColumnHeaderBackgroundColor()
-    {
-        this._has_useColumnHeaderBackgroundColor= false;
-    } //-- void deleteUseColumnHeaderBackgroundColor() 
+    public void deleteUseColumnHeaderBackgroundColor() {
+        this._hasuseColumnHeaderBackgroundColor= false;
+    }
 
     /**
      */
-    public void deleteUseCustomPageFormat()
-    {
-        this._has_useCustomPageFormat= false;
-    } //-- void deleteUseCustomPageFormat() 
+    public void deleteUseCustomPageFormat() {
+        this._hasuseCustomPageFormat= false;
+    }
 
     /**
      */
-    public void deleteUseDummyGroupFooterBackgroundColor()
-    {
-        this._has_useDummyGroupFooterBackgroundColor= false;
-    } //-- void deleteUseDummyGroupFooterBackgroundColor() 
+    public void deleteUseDummyGroupFooterBackgroundColor() {
+        this._hasuseDummyGroupFooterBackgroundColor= false;
+    }
 
     /**
      */
-    public void deleteUseExpressionUnderlining()
-    {
-        this._has_useExpressionUnderlining= false;
-    } //-- void deleteUseExpressionUnderlining() 
+    public void deleteUseExpressionUnderlining() {
+        this._hasuseExpressionUnderlining= false;
+    }
 
     /**
      */
-    public void deleteUseHorizontalGridlines()
-    {
-        this._has_useHorizontalGridlines= false;
-    } //-- void deleteUseHorizontalGridlines() 
+    public void deleteUseHorizontalGridlines() {
+        this._hasuseHorizontalGridlines= false;
+    }
 
     /**
      */
-    public void deleteUseMasterDetail()
-    {
-        this._has_useMasterDetail= false;
-    } //-- void deleteUseMasterDetail() 
+    public void deleteUseMasterDetail() {
+        this._hasuseMasterDetail= false;
+    }
 
     /**
      */
-    public void deleteUseMasterDetailBanding()
-    {
-        this._has_useMasterDetailBanding= false;
-    } //-- void deleteUseMasterDetailBanding() 
+    public void deleteUseMasterDetailBanding() {
+        this._hasuseMasterDetailBanding= false;
+    }
 
     /**
      */
-    public void deleteUseMasterDetailGridlines()
-    {
-        this._has_useMasterDetailGridlines= false;
-    } //-- void deleteUseMasterDetailGridlines() 
+    public void deleteUseMasterDetailGridlines() {
+        this._hasuseMasterDetailGridlines= false;
+    }
 
     /**
      */
-    public void deleteUseRowBanding()
-    {
-        this._has_useRowBanding= false;
-    } //-- void deleteUseRowBanding() 
+    public void deleteUseRowBanding() {
+        this._hasuseRowBanding= false;
+    }
 
     /**
      */
-    public void deleteUseVerticalGridlines()
-    {
-        this._has_useVerticalGridlines= false;
-    } //-- void deleteUseVerticalGridlines() 
+    public void deleteUseVerticalGridlines() {
+        this._hasuseVerticalGridlines= false;
+    }
 
     /**
-     * Method enumerateField
-     * 
-     * 
+     * Method enumerateField.
      * 
      * @return an Enumeration over all possible elements of this
      * collection
      */
-    public java.util.Enumeration enumerateField()
-    {
-        return java.util.Collections.enumeration(this._fieldList);
-    } //-- java.util.Enumeration enumerateField() 
+    public java.util.Enumeration<? extends org.pentaho.jfreereport.castormodel.reportspec.Field> enumerateField() {
+        return java.util.Collections.enumeration(this.fieldList);
+    }
 
     /**
-     * Method enumerateFieldMapping
-     * 
-     * 
+     * Method enumerateFieldMapping.
      * 
      * @return an Enumeration over all possible elements of this
      * collection
      */
-    public java.util.Enumeration enumerateFieldMapping()
-    {
-        return java.util.Collections.enumeration(this._fieldMappingList);
-    } //-- java.util.Enumeration enumerateFieldMapping() 
+    public java.util.Enumeration<? extends org.pentaho.jfreereport.castormodel.reportspec.FieldMapping> enumerateFieldMapping() {
+        return java.util.Collections.enumeration(this.fieldMappingList);
+    }
 
     /**
      * Returns the value of field 'bottomMargin'.
      * 
      * @return the value of field 'BottomMargin'.
      */
-    public int getBottomMargin()
-    {
-        return this._bottomMargin;
-    } //-- int getBottomMargin() 
+    public int getBottomMargin() {
+        return this.bottomMargin;
+    }
 
     /**
      * Returns the value of field 'calculateGrandTotals'.
      * 
      * @return the value of field 'CalculateGrandTotals'.
      */
-    public boolean getCalculateGrandTotals()
-    {
-        return this._calculateGrandTotals;
-    } //-- boolean getCalculateGrandTotals() 
+    public boolean getCalculateGrandTotals() {
+        return this.calculateGrandTotals;
+    }
 
     /**
      * Returns the value of field 'chart'.
      * 
      * @return the value of field 'Chart'.
      */
-    public org.pentaho.jfreereport.castormodel.reportspec.Chart getChart()
-    {
-        return this._chart;
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.Chart getChart() 
+    public org.pentaho.jfreereport.castormodel.reportspec.Chart getChart() {
+        return this.chart;
+    }
 
     /**
      * Returns the value of field 'columnHeaderBackgroundColor'.
      * 
      * @return the value of field 'ColumnHeaderBackgroundColor'.
      */
-    public java.lang.String getColumnHeaderBackgroundColor()
-    {
-        return this._columnHeaderBackgroundColor;
-    } //-- java.lang.String getColumnHeaderBackgroundColor() 
+    public java.lang.String getColumnHeaderBackgroundColor() {
+        return this.columnHeaderBackgroundColor;
+    }
 
     /**
      * Returns the value of field 'columnHeaderFontColor'.
      * 
      * @return the value of field 'ColumnHeaderFontColor'.
      */
-    public java.lang.String getColumnHeaderFontColor()
-    {
-        return this._columnHeaderFontColor;
-    } //-- java.lang.String getColumnHeaderFontColor() 
+    public java.lang.String getColumnHeaderFontColor() {
+        return this.columnHeaderFontColor;
+    }
 
     /**
      * Returns the value of field 'columnHeaderFontName'.
      * 
      * @return the value of field 'ColumnHeaderFontName'.
      */
-    public java.lang.String getColumnHeaderFontName()
-    {
-        return this._columnHeaderFontName;
-    } //-- java.lang.String getColumnHeaderFontName() 
+    public java.lang.String getColumnHeaderFontName() {
+        return this.columnHeaderFontName;
+    }
 
     /**
      * Returns the value of field 'columnHeaderFontSize'.
      * 
      * @return the value of field 'ColumnHeaderFontSize'.
      */
-    public int getColumnHeaderFontSize()
-    {
-        return this._columnHeaderFontSize;
-    } //-- int getColumnHeaderFontSize() 
+    public int getColumnHeaderFontSize() {
+        return this.columnHeaderFontSize;
+    }
 
     /**
      * Returns the value of field 'columnHeaderFontStyle'.
      * 
      * @return the value of field 'ColumnHeaderFontStyle'.
      */
-    public int getColumnHeaderFontStyle()
-    {
-        return this._columnHeaderFontStyle;
-    } //-- int getColumnHeaderFontStyle() 
+    public int getColumnHeaderFontStyle() {
+        return this.columnHeaderFontStyle;
+    }
 
     /**
      * Returns the value of field 'columnHeaderGap'.
      * 
      * @return the value of field 'ColumnHeaderGap'.
      */
-    public int getColumnHeaderGap()
-    {
-        return this._columnHeaderGap;
-    } //-- int getColumnHeaderGap() 
+    public int getColumnHeaderGap() {
+        return this.columnHeaderGap;
+    }
 
     /**
      * Returns the value of field 'columnHeaderHeight'.
      * 
      * @return the value of field 'ColumnHeaderHeight'.
      */
-    public int getColumnHeaderHeight()
-    {
-        return this._columnHeaderHeight;
-    } //-- int getColumnHeaderHeight() 
+    public int getColumnHeaderHeight() {
+        return this.columnHeaderHeight;
+    }
 
     /**
      * Returns the value of field 'columnHeaderTopGap'.
      * 
      * @return the value of field 'ColumnHeaderTopGap'.
      */
-    public int getColumnHeaderTopGap()
-    {
-        return this._columnHeaderTopGap;
-    } //-- int getColumnHeaderTopGap() 
+    public int getColumnHeaderTopGap() {
+        return this.columnHeaderTopGap;
+    }
 
     /**
      * Returns the value of field 'customPageFormatHeight'.
      * 
      * @return the value of field 'CustomPageFormatHeight'.
      */
-    public int getCustomPageFormatHeight()
-    {
-        return this._customPageFormatHeight;
-    } //-- int getCustomPageFormatHeight() 
+    public int getCustomPageFormatHeight() {
+        return this.customPageFormatHeight;
+    }
 
     /**
      * Returns the value of field 'customPageFormatWidth'.
      * 
      * @return the value of field 'CustomPageFormatWidth'.
      */
-    public int getCustomPageFormatWidth()
-    {
-        return this._customPageFormatWidth;
-    } //-- int getCustomPageFormatWidth() 
+    public int getCustomPageFormatWidth() {
+        return this.customPageFormatWidth;
+    }
 
     /**
      * Returns the value of field 'doubleUnderlineExpression'.
      * 
      * @return the value of field 'DoubleUnderlineExpression'.
      */
-    public boolean getDoubleUnderlineExpression()
-    {
-        return this._doubleUnderlineExpression;
-    } //-- boolean getDoubleUnderlineExpression() 
+    public boolean getDoubleUnderlineExpression() {
+        return this.doubleUnderlineExpression;
+    }
 
     /**
      * Returns the value of field
@@ -1058,15 +999,12 @@ public class ReportSpec implements java.io.Serializable {
      * 
      * @return the value of field 'DummyGroupFooterBackgroundColor'.
      */
-    public java.lang.String getDummyGroupFooterBackgroundColor()
-    {
-        return this._dummyGroupFooterBackgroundColor;
-    } //-- java.lang.String getDummyGroupFooterBackgroundColor() 
+    public java.lang.String getDummyGroupFooterBackgroundColor() {
+        return this.dummyGroupFooterBackgroundColor;
+    }
 
     /**
-     * Method getField
-     * 
-     * 
+     * Method getField.
      * 
      * @param index
      * @throws java.lang.IndexOutOfBoundsException if the index
@@ -1075,51 +1013,40 @@ public class ReportSpec implements java.io.Serializable {
      * org.pentaho.jfreereport.castormodel.reportspec.Field at the
      * given index
      */
-    public org.pentaho.jfreereport.castormodel.reportspec.Field getField(int index)
-        throws java.lang.IndexOutOfBoundsException
-    {
+    public org.pentaho.jfreereport.castormodel.reportspec.Field getField(final int index) throws java.lang.IndexOutOfBoundsException {
         // check bounds for index
-        if (index < 0 || index >= this._fieldList.size()) {
-            throw new IndexOutOfBoundsException("getField: Index value '" + index + "' not in range [0.." + (this._fieldList.size() - 1) + "]");
+        if (index < 0 || index >= this.fieldList.size()) {
+            throw new IndexOutOfBoundsException("getField: Index value '" + index + "' not in range [0.." + (this.fieldList.size() - 1) + "]");
         }
-        
-        return (org.pentaho.jfreereport.castormodel.reportspec.Field) _fieldList.get(index);
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.Field getField(int) 
+
+        return fieldList.get(index);
+    }
 
     /**
-     * Method getField
-     * 
-     * 
+     * Method getField.Returns the contents of the collection in an
+     * Array.  <p>Note:  Just in case the collection contents are
+     * changing in another thread, we pass a 0-length Array of the
+     * correct type into the API call.  This way we <i>know</i>
+     * that the Array returned is of exactly the correct length.
      * 
      * @return this collection as an Array
      */
-    public org.pentaho.jfreereport.castormodel.reportspec.Field[] getField()
-    {
-        int size = this._fieldList.size();
-        org.pentaho.jfreereport.castormodel.reportspec.Field[] array = new org.pentaho.jfreereport.castormodel.reportspec.Field[size];
-        for (int index = 0; index < size; index++){
-            array[index] = (org.pentaho.jfreereport.castormodel.reportspec.Field) _fieldList.get(index);
-        }
-        
-        return array;
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.Field[] getField() 
+    public org.pentaho.jfreereport.castormodel.reportspec.Field[] getField() {
+        org.pentaho.jfreereport.castormodel.reportspec.Field[] array = new org.pentaho.jfreereport.castormodel.reportspec.Field[0];
+        return this.fieldList.toArray(array);
+    }
 
     /**
-     * Method getFieldCount
-     * 
-     * 
+     * Method getFieldCount.
      * 
      * @return the size of this collection
      */
-    public int getFieldCount()
-    {
-        return this._fieldList.size();
-    } //-- int getFieldCount() 
+    public int getFieldCount() {
+        return this.fieldList.size();
+    }
 
     /**
-     * Method getFieldMapping
-     * 
-     * 
+     * Method getFieldMapping.
      * 
      * @param index
      * @throws java.lang.IndexOutOfBoundsException if the index
@@ -1128,46 +1055,38 @@ public class ReportSpec implements java.io.Serializable {
      * org.pentaho.jfreereport.castormodel.reportspec.FieldMapping
      * at the given index
      */
-    public org.pentaho.jfreereport.castormodel.reportspec.FieldMapping getFieldMapping(int index)
-        throws java.lang.IndexOutOfBoundsException
-    {
+    public org.pentaho.jfreereport.castormodel.reportspec.FieldMapping getFieldMapping(final int index) throws java.lang.IndexOutOfBoundsException {
         // check bounds for index
-        if (index < 0 || index >= this._fieldMappingList.size()) {
-            throw new IndexOutOfBoundsException("getFieldMapping: Index value '" + index + "' not in range [0.." + (this._fieldMappingList.size() - 1) + "]");
+        if (index < 0 || index >= this.fieldMappingList.size()) {
+            throw new IndexOutOfBoundsException("getFieldMapping: Index value '" + index + "' not in range [0.." + (this.fieldMappingList.size() - 1) + "]");
         }
-        
-        return (org.pentaho.jfreereport.castormodel.reportspec.FieldMapping) _fieldMappingList.get(index);
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.FieldMapping getFieldMapping(int) 
+
+        return fieldMappingList.get(index);
+    }
 
     /**
-     * Method getFieldMapping
-     * 
-     * 
+     * Method getFieldMapping.Returns the contents of the
+     * collection in an Array.  <p>Note:  Just in case the
+     * collection contents are changing in another thread, we pass
+     * a 0-length Array of the correct type into the API call. 
+     * This way we <i>know</i> that the Array returned is of
+     * exactly the correct length.
      * 
      * @return this collection as an Array
      */
-    public org.pentaho.jfreereport.castormodel.reportspec.FieldMapping[] getFieldMapping()
-    {
-        int size = this._fieldMappingList.size();
-        org.pentaho.jfreereport.castormodel.reportspec.FieldMapping[] array = new org.pentaho.jfreereport.castormodel.reportspec.FieldMapping[size];
-        for (int index = 0; index < size; index++){
-            array[index] = (org.pentaho.jfreereport.castormodel.reportspec.FieldMapping) _fieldMappingList.get(index);
-        }
-        
-        return array;
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.FieldMapping[] getFieldMapping() 
+    public org.pentaho.jfreereport.castormodel.reportspec.FieldMapping[] getFieldMapping() {
+        org.pentaho.jfreereport.castormodel.reportspec.FieldMapping[] array = new org.pentaho.jfreereport.castormodel.reportspec.FieldMapping[0];
+        return this.fieldMappingList.toArray(array);
+    }
 
     /**
-     * Method getFieldMappingCount
-     * 
-     * 
+     * Method getFieldMappingCount.
      * 
      * @return the size of this collection
      */
-    public int getFieldMappingCount()
-    {
-        return this._fieldMappingList.size();
-    } //-- int getFieldMappingCount() 
+    public int getFieldMappingCount() {
+        return this.fieldMappingList.size();
+    }
 
     /**
      * Returns the value of field
@@ -1175,410 +1094,369 @@ public class ReportSpec implements java.io.Serializable {
      * 
      * @return the value of field 'GenerateReportLevelColumnHeaders'
      */
-    public boolean getGenerateReportLevelColumnHeaders()
-    {
-        return this._generateReportLevelColumnHeaders;
-    } //-- boolean getGenerateReportLevelColumnHeaders() 
+    public boolean getGenerateReportLevelColumnHeaders() {
+        return this.generateReportLevelColumnHeaders;
+    }
 
     /**
      * Returns the value of field 'grandTotalsHorizontalAlignment'.
      * 
      * @return the value of field 'GrandTotalsHorizontalAlignment'.
      */
-    public java.lang.String getGrandTotalsHorizontalAlignment()
-    {
-        return this._grandTotalsHorizontalAlignment;
-    } //-- java.lang.String getGrandTotalsHorizontalAlignment() 
+    public java.lang.String getGrandTotalsHorizontalAlignment() {
+        return this.grandTotalsHorizontalAlignment;
+    }
 
     /**
      * Returns the value of field 'grandTotalsLabel'.
      * 
      * @return the value of field 'GrandTotalsLabel'.
      */
-    public java.lang.String getGrandTotalsLabel()
-    {
-        return this._grandTotalsLabel;
-    } //-- java.lang.String getGrandTotalsLabel() 
+    public java.lang.String getGrandTotalsLabel() {
+        return this.grandTotalsLabel;
+    }
 
     /**
      * Returns the value of field 'groupFooterFontColor'.
      * 
      * @return the value of field 'GroupFooterFontColor'.
      */
-    public java.lang.String getGroupFooterFontColor()
-    {
-        return this._groupFooterFontColor;
-    } //-- java.lang.String getGroupFooterFontColor() 
+    public java.lang.String getGroupFooterFontColor() {
+        return this.groupFooterFontColor;
+    }
 
     /**
      * Returns the value of field 'groupFooterFontName'.
      * 
      * @return the value of field 'GroupFooterFontName'.
      */
-    public java.lang.String getGroupFooterFontName()
-    {
-        return this._groupFooterFontName;
-    } //-- java.lang.String getGroupFooterFontName() 
+    public java.lang.String getGroupFooterFontName() {
+        return this.groupFooterFontName;
+    }
 
     /**
      * Returns the value of field 'groupFooterFontSize'.
      * 
      * @return the value of field 'GroupFooterFontSize'.
      */
-    public int getGroupFooterFontSize()
-    {
-        return this._groupFooterFontSize;
-    } //-- int getGroupFooterFontSize() 
+    public int getGroupFooterFontSize() {
+        return this.groupFooterFontSize;
+    }
 
     /**
      * Returns the value of field 'groupFooterFontStyle'.
      * 
      * @return the value of field 'GroupFooterFontStyle'.
      */
-    public int getGroupFooterFontStyle()
-    {
-        return this._groupFooterFontStyle;
-    } //-- int getGroupFooterFontStyle() 
+    public int getGroupFooterFontStyle() {
+        return this.groupFooterFontStyle;
+    }
 
     /**
      * Returns the value of field 'groupHeaderFontColor'.
      * 
      * @return the value of field 'GroupHeaderFontColor'.
      */
-    public java.lang.String getGroupHeaderFontColor()
-    {
-        return this._groupHeaderFontColor;
-    } //-- java.lang.String getGroupHeaderFontColor() 
+    public java.lang.String getGroupHeaderFontColor() {
+        return this.groupHeaderFontColor;
+    }
 
     /**
      * Returns the value of field 'groupHeaderFontName'.
      * 
      * @return the value of field 'GroupHeaderFontName'.
      */
-    public java.lang.String getGroupHeaderFontName()
-    {
-        return this._groupHeaderFontName;
-    } //-- java.lang.String getGroupHeaderFontName() 
+    public java.lang.String getGroupHeaderFontName() {
+        return this.groupHeaderFontName;
+    }
 
     /**
      * Returns the value of field 'groupHeaderFontSize'.
      * 
      * @return the value of field 'GroupHeaderFontSize'.
      */
-    public int getGroupHeaderFontSize()
-    {
-        return this._groupHeaderFontSize;
-    } //-- int getGroupHeaderFontSize() 
+    public int getGroupHeaderFontSize() {
+        return this.groupHeaderFontSize;
+    }
 
     /**
      * Returns the value of field 'groupHeaderFontStyle'.
      * 
      * @return the value of field 'GroupHeaderFontStyle'.
      */
-    public int getGroupHeaderFontStyle()
-    {
-        return this._groupHeaderFontStyle;
-    } //-- int getGroupHeaderFontStyle() 
+    public int getGroupHeaderFontStyle() {
+        return this.groupHeaderFontStyle;
+    }
 
     /**
      * Returns the value of field 'horizontalGridlinesColor'.
      * 
      * @return the value of field 'HorizontalGridlinesColor'.
      */
-    public java.lang.String getHorizontalGridlinesColor()
-    {
-        return this._horizontalGridlinesColor;
-    } //-- java.lang.String getHorizontalGridlinesColor() 
+    public java.lang.String getHorizontalGridlinesColor() {
+        return this.horizontalGridlinesColor;
+    }
 
     /**
      * Returns the value of field 'horizontalOffset'.
      * 
      * @return the value of field 'HorizontalOffset'.
      */
-    public int getHorizontalOffset()
-    {
-        return this._horizontalOffset;
-    } //-- int getHorizontalOffset() 
+    public int getHorizontalOffset() {
+        return this.horizontalOffset;
+    }
 
     /**
      * Returns the value of field 'includeSrc'.
      * 
      * @return the value of field 'IncludeSrc'.
      */
-    public java.lang.String getIncludeSrc()
-    {
-        return this._includeSrc;
-    } //-- java.lang.String getIncludeSrc() 
+    public java.lang.String getIncludeSrc() {
+        return this.includeSrc;
+    }
 
     /**
      * Returns the value of field 'isMDX'.
      * 
      * @return the value of field 'IsMDX'.
      */
-    public boolean getIsMDX()
-    {
-        return this._isMDX;
-    } //-- boolean getIsMDX() 
+    public boolean getIsMDX() {
+        return this.isMDX;
+    }
 
     /**
      * Returns the value of field 'isMQL'.
      * 
      * @return the value of field 'IsMQL'.
      */
-    public boolean getIsMQL()
-    {
-        return this._isMQL;
-    } //-- boolean getIsMQL() 
+    public boolean getIsMQL() {
+        return this.isMQL;
+    }
 
     /**
      * Returns the value of field 'itemsFontColor'.
      * 
      * @return the value of field 'ItemsFontColor'.
      */
-    public java.lang.String getItemsFontColor()
-    {
-        return this._itemsFontColor;
-    } //-- java.lang.String getItemsFontColor() 
+    public java.lang.String getItemsFontColor() {
+        return this.itemsFontColor;
+    }
 
     /**
      * Returns the value of field 'itemsFontName'.
      * 
      * @return the value of field 'ItemsFontName'.
      */
-    public java.lang.String getItemsFontName()
-    {
-        return this._itemsFontName;
-    } //-- java.lang.String getItemsFontName() 
+    public java.lang.String getItemsFontName() {
+        return this.itemsFontName;
+    }
 
     /**
      * Returns the value of field 'itemsFontSize'.
      * 
      * @return the value of field 'ItemsFontSize'.
      */
-    public int getItemsFontSize()
-    {
-        return this._itemsFontSize;
-    } //-- int getItemsFontSize() 
+    public int getItemsFontSize() {
+        return this.itemsFontSize;
+    }
 
     /**
      * Returns the value of field 'itemsFontStyle'.
      * 
      * @return the value of field 'ItemsFontStyle'.
      */
-    public int getItemsFontStyle()
-    {
-        return this._itemsFontStyle;
-    } //-- int getItemsFontStyle() 
+    public int getItemsFontStyle() {
+        return this.itemsFontStyle;
+    }
 
     /**
      * Returns the value of field 'kettleStep'.
      * 
      * @return the value of field 'KettleStep'.
      */
-    public java.lang.String getKettleStep()
-    {
-        return this._kettleStep;
-    } //-- java.lang.String getKettleStep() 
+    public java.lang.String getKettleStep() {
+        return this.kettleStep;
+    }
 
     /**
      * Returns the value of field 'leftMargin'.
      * 
      * @return the value of field 'LeftMargin'.
      */
-    public int getLeftMargin()
-    {
-        return this._leftMargin;
-    } //-- int getLeftMargin() 
+    public int getLeftMargin() {
+        return this.leftMargin;
+    }
 
     /**
      * Returns the value of field 'mondrianCubeDefinitionPath'.
      * 
      * @return the value of field 'MondrianCubeDefinitionPath'.
      */
-    public java.lang.String getMondrianCubeDefinitionPath()
-    {
-        return this._mondrianCubeDefinitionPath;
-    } //-- java.lang.String getMondrianCubeDefinitionPath() 
+    public java.lang.String getMondrianCubeDefinitionPath() {
+        return this.mondrianCubeDefinitionPath;
+    }
 
     /**
      * Returns the value of field 'mqlQuery'.
      * 
      * @return the value of field 'MqlQuery'.
      */
-    public java.lang.String getMqlQuery()
-    {
-        return this._mqlQuery;
-    } //-- java.lang.String getMqlQuery() 
+    public java.lang.String getMqlQuery() {
+        return this.mqlQuery;
+    }
 
     /**
      * Returns the value of field 'orientation'.
      * 
      * @return the value of field 'Orientation'.
      */
-    public java.lang.String getOrientation()
-    {
-        return this._orientation;
-    } //-- java.lang.String getOrientation() 
+    public java.lang.String getOrientation() {
+        return this.orientation;
+    }
 
     /**
      * Returns the value of field 'pageFormat'.
      * 
      * @return the value of field 'PageFormat'.
      */
-    public java.lang.String getPageFormat()
-    {
-        return this._pageFormat;
-    } //-- java.lang.String getPageFormat() 
+    public java.lang.String getPageFormat() {
+        return this.pageFormat;
+    }
 
     /**
      * Returns the value of field 'query'.
      * 
      * @return the value of field 'Query'.
      */
-    public java.lang.String getQuery()
-    {
-        return this._query;
-    } //-- java.lang.String getQuery() 
+    public java.lang.String getQuery() {
+        return this.query;
+    }
 
     /**
      * Returns the value of field 'reportDesc'.
      * 
      * @return the value of field 'ReportDesc'.
      */
-    public java.lang.String getReportDesc()
-    {
-        return this._reportDesc;
-    } //-- java.lang.String getReportDesc() 
+    public java.lang.String getReportDesc() {
+        return this.reportDesc;
+    }
 
     /**
      * Returns the value of field 'reportName'.
      * 
      * @return the value of field 'ReportName'.
      */
-    public java.lang.String getReportName()
-    {
-        return this._reportName;
-    } //-- java.lang.String getReportName() 
+    public java.lang.String getReportName() {
+        return this.reportName;
+    }
 
     /**
      * Returns the value of field 'reportSpecChoice'.
      * 
      * @return the value of field 'ReportSpecChoice'.
      */
-    public org.pentaho.jfreereport.castormodel.reportspec.ReportSpecChoice getReportSpecChoice()
-    {
-        return this._reportSpecChoice;
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.ReportSpecChoice getReportSpecChoice() 
+    public org.pentaho.jfreereport.castormodel.reportspec.ReportSpecChoice getReportSpecChoice() {
+        return this.reportSpecChoice;
+    }
 
     /**
      * Returns the value of field 'rightMargin'.
      * 
      * @return the value of field 'RightMargin'.
      */
-    public int getRightMargin()
-    {
-        return this._rightMargin;
-    } //-- int getRightMargin() 
+    public int getRightMargin() {
+        return this.rightMargin;
+    }
 
     /**
      * Returns the value of field 'rowBandingColor'.
      * 
      * @return the value of field 'RowBandingColor'.
      */
-    public java.lang.String getRowBandingColor()
-    {
-        return this._rowBandingColor;
-    } //-- java.lang.String getRowBandingColor() 
+    public java.lang.String getRowBandingColor() {
+        return this.rowBandingColor;
+    }
 
     /**
      * Returns the value of field 'rowBandingInitialState'.
      * 
      * @return the value of field 'RowBandingInitialState'.
      */
-    public boolean getRowBandingInitialState()
-    {
-        return this._rowBandingInitialState;
-    } //-- boolean getRowBandingInitialState() 
+    public boolean getRowBandingInitialState() {
+        return this.rowBandingInitialState;
+    }
 
     /**
      * Returns the value of field 'templateName'.
      * 
      * @return the value of field 'TemplateName'.
      */
-    public java.lang.String getTemplateName()
-    {
-        return this._templateName;
-    } //-- java.lang.String getTemplateName() 
+    public java.lang.String getTemplateName() {
+        return this.templateName;
+    }
 
     /**
      * Returns the value of field 'templateSrc'.
      * 
      * @return the value of field 'TemplateSrc'.
      */
-    public java.lang.String getTemplateSrc()
-    {
-        return this._templateSrc;
-    } //-- java.lang.String getTemplateSrc() 
+    public java.lang.String getTemplateSrc() {
+        return this.templateSrc;
+    }
 
     /**
      * Returns the value of field 'tool'.
      * 
      * @return the value of field 'Tool'.
      */
-    public java.lang.String getTool()
-    {
-        return this._tool;
-    } //-- java.lang.String getTool() 
+    public java.lang.String getTool() {
+        return this.tool;
+    }
 
     /**
      * Returns the value of field 'toolVersion'.
      * 
      * @return the value of field 'ToolVersion'.
      */
-    public java.lang.String getToolVersion()
-    {
-        return this._toolVersion;
-    } //-- java.lang.String getToolVersion() 
+    public java.lang.String getToolVersion() {
+        return this.toolVersion;
+    }
 
     /**
      * Returns the value of field 'topMargin'.
      * 
      * @return the value of field 'TopMargin'.
      */
-    public int getTopMargin()
-    {
-        return this._topMargin;
-    } //-- int getTopMargin() 
+    public int getTopMargin() {
+        return this.topMargin;
+    }
 
     /**
      * Returns the value of field 'useChart'.
      * 
      * @return the value of field 'UseChart'.
      */
-    public boolean getUseChart()
-    {
-        return this._useChart;
-    } //-- boolean getUseChart() 
+    public boolean getUseChart() {
+        return this.useChart;
+    }
 
     /**
      * Returns the value of field 'useColumnHeaderBackgroundColor'.
      * 
      * @return the value of field 'UseColumnHeaderBackgroundColor'.
      */
-    public boolean getUseColumnHeaderBackgroundColor()
-    {
-        return this._useColumnHeaderBackgroundColor;
-    } //-- boolean getUseColumnHeaderBackgroundColor() 
+    public boolean getUseColumnHeaderBackgroundColor() {
+        return this.useColumnHeaderBackgroundColor;
+    }
 
     /**
      * Returns the value of field 'useCustomPageFormat'.
      * 
      * @return the value of field 'UseCustomPageFormat'.
      */
-    public boolean getUseCustomPageFormat()
-    {
-        return this._useCustomPageFormat;
-    } //-- boolean getUseCustomPageFormat() 
+    public boolean getUseCustomPageFormat() {
+        return this.useCustomPageFormat;
+    }
 
     /**
      * Returns the value of field
@@ -1587,570 +1465,452 @@ public class ReportSpec implements java.io.Serializable {
      * @return the value of field
      * 'UseDummyGroupFooterBackgroundColor'.
      */
-    public boolean getUseDummyGroupFooterBackgroundColor()
-    {
-        return this._useDummyGroupFooterBackgroundColor;
-    } //-- boolean getUseDummyGroupFooterBackgroundColor() 
+    public boolean getUseDummyGroupFooterBackgroundColor() {
+        return this.useDummyGroupFooterBackgroundColor;
+    }
 
     /**
      * Returns the value of field 'useExpressionUnderlining'.
      * 
      * @return the value of field 'UseExpressionUnderlining'.
      */
-    public boolean getUseExpressionUnderlining()
-    {
-        return this._useExpressionUnderlining;
-    } //-- boolean getUseExpressionUnderlining() 
+    public boolean getUseExpressionUnderlining() {
+        return this.useExpressionUnderlining;
+    }
 
     /**
      * Returns the value of field 'useHorizontalGridlines'.
      * 
      * @return the value of field 'UseHorizontalGridlines'.
      */
-    public boolean getUseHorizontalGridlines()
-    {
-        return this._useHorizontalGridlines;
-    } //-- boolean getUseHorizontalGridlines() 
+    public boolean getUseHorizontalGridlines() {
+        return this.useHorizontalGridlines;
+    }
 
     /**
      * Returns the value of field 'useMasterDetail'.
      * 
      * @return the value of field 'UseMasterDetail'.
      */
-    public boolean getUseMasterDetail()
-    {
-        return this._useMasterDetail;
-    } //-- boolean getUseMasterDetail() 
+    public boolean getUseMasterDetail() {
+        return this.useMasterDetail;
+    }
 
     /**
      * Returns the value of field 'useMasterDetailBanding'.
      * 
      * @return the value of field 'UseMasterDetailBanding'.
      */
-    public boolean getUseMasterDetailBanding()
-    {
-        return this._useMasterDetailBanding;
-    } //-- boolean getUseMasterDetailBanding() 
+    public boolean getUseMasterDetailBanding() {
+        return this.useMasterDetailBanding;
+    }
 
     /**
      * Returns the value of field 'useMasterDetailGridlines'.
      * 
      * @return the value of field 'UseMasterDetailGridlines'.
      */
-    public boolean getUseMasterDetailGridlines()
-    {
-        return this._useMasterDetailGridlines;
-    } //-- boolean getUseMasterDetailGridlines() 
+    public boolean getUseMasterDetailGridlines() {
+        return this.useMasterDetailGridlines;
+    }
 
     /**
      * Returns the value of field 'useRowBanding'.
      * 
      * @return the value of field 'UseRowBanding'.
      */
-    public boolean getUseRowBanding()
-    {
-        return this._useRowBanding;
-    } //-- boolean getUseRowBanding() 
+    public boolean getUseRowBanding() {
+        return this.useRowBanding;
+    }
 
     /**
      * Returns the value of field 'useVerticalGridlines'.
      * 
      * @return the value of field 'UseVerticalGridlines'.
      */
-    public boolean getUseVerticalGridlines()
-    {
-        return this._useVerticalGridlines;
-    } //-- boolean getUseVerticalGridlines() 
+    public boolean getUseVerticalGridlines() {
+        return this.useVerticalGridlines;
+    }
 
     /**
      * Returns the value of field 'verticalGridlinesColor'.
      * 
      * @return the value of field 'VerticalGridlinesColor'.
      */
-    public java.lang.String getVerticalGridlinesColor()
-    {
-        return this._verticalGridlinesColor;
-    } //-- java.lang.String getVerticalGridlinesColor() 
+    public java.lang.String getVerticalGridlinesColor() {
+        return this.verticalGridlinesColor;
+    }
 
     /**
      * Returns the value of field 'watermark'.
      * 
      * @return the value of field 'Watermark'.
      */
-    public org.pentaho.jfreereport.castormodel.reportspec.Watermark getWatermark()
-    {
-        return this._watermark;
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.Watermark getWatermark() 
+    public org.pentaho.jfreereport.castormodel.reportspec.Watermark getWatermark() {
+        return this.watermark;
+    }
 
     /**
      * Returns the value of field 'xmiPath'.
      * 
      * @return the value of field 'XmiPath'.
      */
-    public java.lang.String getXmiPath()
-    {
-        return this._xmiPath;
-    } //-- java.lang.String getXmiPath() 
+    public java.lang.String getXmiPath() {
+        return this.xmiPath;
+    }
 
     /**
-     * Method hasBottomMargin
-     * 
-     * 
+     * Method hasBottomMargin.
      * 
      * @return true if at least one BottomMargin has been added
      */
-    public boolean hasBottomMargin()
-    {
-        return this._has_bottomMargin;
-    } //-- boolean hasBottomMargin() 
+    public boolean hasBottomMargin() {
+        return this._hasbottomMargin;
+    }
 
     /**
-     * Method hasCalculateGrandTotals
-     * 
-     * 
+     * Method hasCalculateGrandTotals.
      * 
      * @return true if at least one CalculateGrandTotals has been
      * added
      */
-    public boolean hasCalculateGrandTotals()
-    {
-        return this._has_calculateGrandTotals;
-    } //-- boolean hasCalculateGrandTotals() 
+    public boolean hasCalculateGrandTotals() {
+        return this._hascalculateGrandTotals;
+    }
 
     /**
-     * Method hasColumnHeaderFontSize
-     * 
-     * 
+     * Method hasColumnHeaderFontSize.
      * 
      * @return true if at least one ColumnHeaderFontSize has been
      * added
      */
-    public boolean hasColumnHeaderFontSize()
-    {
-        return this._has_columnHeaderFontSize;
-    } //-- boolean hasColumnHeaderFontSize() 
+    public boolean hasColumnHeaderFontSize() {
+        return this._hascolumnHeaderFontSize;
+    }
 
     /**
-     * Method hasColumnHeaderFontStyle
-     * 
-     * 
+     * Method hasColumnHeaderFontStyle.
      * 
      * @return true if at least one ColumnHeaderFontStyle has been
      * added
      */
-    public boolean hasColumnHeaderFontStyle()
-    {
-        return this._has_columnHeaderFontStyle;
-    } //-- boolean hasColumnHeaderFontStyle() 
+    public boolean hasColumnHeaderFontStyle() {
+        return this._hascolumnHeaderFontStyle;
+    }
 
     /**
-     * Method hasColumnHeaderGap
-     * 
-     * 
+     * Method hasColumnHeaderGap.
      * 
      * @return true if at least one ColumnHeaderGap has been added
      */
-    public boolean hasColumnHeaderGap()
-    {
-        return this._has_columnHeaderGap;
-    } //-- boolean hasColumnHeaderGap() 
+    public boolean hasColumnHeaderGap() {
+        return this._hascolumnHeaderGap;
+    }
 
     /**
-     * Method hasColumnHeaderHeight
-     * 
-     * 
+     * Method hasColumnHeaderHeight.
      * 
      * @return true if at least one ColumnHeaderHeight has been adde
      */
-    public boolean hasColumnHeaderHeight()
-    {
-        return this._has_columnHeaderHeight;
-    } //-- boolean hasColumnHeaderHeight() 
+    public boolean hasColumnHeaderHeight() {
+        return this._hascolumnHeaderHeight;
+    }
 
     /**
-     * Method hasColumnHeaderTopGap
-     * 
-     * 
+     * Method hasColumnHeaderTopGap.
      * 
      * @return true if at least one ColumnHeaderTopGap has been adde
      */
-    public boolean hasColumnHeaderTopGap()
-    {
-        return this._has_columnHeaderTopGap;
-    } //-- boolean hasColumnHeaderTopGap() 
+    public boolean hasColumnHeaderTopGap() {
+        return this._hascolumnHeaderTopGap;
+    }
 
     /**
-     * Method hasCustomPageFormatHeight
-     * 
-     * 
+     * Method hasCustomPageFormatHeight.
      * 
      * @return true if at least one CustomPageFormatHeight has been
      * added
      */
-    public boolean hasCustomPageFormatHeight()
-    {
-        return this._has_customPageFormatHeight;
-    } //-- boolean hasCustomPageFormatHeight() 
+    public boolean hasCustomPageFormatHeight() {
+        return this._hascustomPageFormatHeight;
+    }
 
     /**
-     * Method hasCustomPageFormatWidth
-     * 
-     * 
+     * Method hasCustomPageFormatWidth.
      * 
      * @return true if at least one CustomPageFormatWidth has been
      * added
      */
-    public boolean hasCustomPageFormatWidth()
-    {
-        return this._has_customPageFormatWidth;
-    } //-- boolean hasCustomPageFormatWidth() 
+    public boolean hasCustomPageFormatWidth() {
+        return this._hascustomPageFormatWidth;
+    }
 
     /**
-     * Method hasDoubleUnderlineExpression
-     * 
-     * 
+     * Method hasDoubleUnderlineExpression.
      * 
      * @return true if at least one DoubleUnderlineExpression has
      * been added
      */
-    public boolean hasDoubleUnderlineExpression()
-    {
-        return this._has_doubleUnderlineExpression;
-    } //-- boolean hasDoubleUnderlineExpression() 
+    public boolean hasDoubleUnderlineExpression() {
+        return this._hasdoubleUnderlineExpression;
+    }
 
     /**
-     * Method hasGenerateReportLevelColumnHeaders
-     * 
-     * 
+     * Method hasGenerateReportLevelColumnHeaders.
      * 
      * @return true if at least one
      * GenerateReportLevelColumnHeaders has been added
      */
-    public boolean hasGenerateReportLevelColumnHeaders()
-    {
-        return this._has_generateReportLevelColumnHeaders;
-    } //-- boolean hasGenerateReportLevelColumnHeaders() 
+    public boolean hasGenerateReportLevelColumnHeaders() {
+        return this._hasgenerateReportLevelColumnHeaders;
+    }
 
     /**
-     * Method hasGroupFooterFontSize
-     * 
-     * 
+     * Method hasGroupFooterFontSize.
      * 
      * @return true if at least one GroupFooterFontSize has been
      * added
      */
-    public boolean hasGroupFooterFontSize()
-    {
-        return this._has_groupFooterFontSize;
-    } //-- boolean hasGroupFooterFontSize() 
+    public boolean hasGroupFooterFontSize() {
+        return this._hasgroupFooterFontSize;
+    }
 
     /**
-     * Method hasGroupFooterFontStyle
-     * 
-     * 
+     * Method hasGroupFooterFontStyle.
      * 
      * @return true if at least one GroupFooterFontStyle has been
      * added
      */
-    public boolean hasGroupFooterFontStyle()
-    {
-        return this._has_groupFooterFontStyle;
-    } //-- boolean hasGroupFooterFontStyle() 
+    public boolean hasGroupFooterFontStyle() {
+        return this._hasgroupFooterFontStyle;
+    }
 
     /**
-     * Method hasGroupHeaderFontSize
-     * 
-     * 
+     * Method hasGroupHeaderFontSize.
      * 
      * @return true if at least one GroupHeaderFontSize has been
      * added
      */
-    public boolean hasGroupHeaderFontSize()
-    {
-        return this._has_groupHeaderFontSize;
-    } //-- boolean hasGroupHeaderFontSize() 
+    public boolean hasGroupHeaderFontSize() {
+        return this._hasgroupHeaderFontSize;
+    }
 
     /**
-     * Method hasGroupHeaderFontStyle
-     * 
-     * 
+     * Method hasGroupHeaderFontStyle.
      * 
      * @return true if at least one GroupHeaderFontStyle has been
      * added
      */
-    public boolean hasGroupHeaderFontStyle()
-    {
-        return this._has_groupHeaderFontStyle;
-    } //-- boolean hasGroupHeaderFontStyle() 
+    public boolean hasGroupHeaderFontStyle() {
+        return this._hasgroupHeaderFontStyle;
+    }
 
     /**
-     * Method hasHorizontalOffset
-     * 
-     * 
+     * Method hasHorizontalOffset.
      * 
      * @return true if at least one HorizontalOffset has been added
      */
-    public boolean hasHorizontalOffset()
-    {
-        return this._has_horizontalOffset;
-    } //-- boolean hasHorizontalOffset() 
+    public boolean hasHorizontalOffset() {
+        return this._hashorizontalOffset;
+    }
 
     /**
-     * Method hasIsMDX
-     * 
-     * 
+     * Method hasIsMDX.
      * 
      * @return true if at least one IsMDX has been added
      */
-    public boolean hasIsMDX()
-    {
-        return this._has_isMDX;
-    } //-- boolean hasIsMDX() 
+    public boolean hasIsMDX() {
+        return this._hasisMDX;
+    }
 
     /**
-     * Method hasIsMQL
-     * 
-     * 
+     * Method hasIsMQL.
      * 
      * @return true if at least one IsMQL has been added
      */
-    public boolean hasIsMQL()
-    {
-        return this._has_isMQL;
-    } //-- boolean hasIsMQL() 
+    public boolean hasIsMQL() {
+        return this._hasisMQL;
+    }
 
     /**
-     * Method hasItemsFontSize
-     * 
-     * 
+     * Method hasItemsFontSize.
      * 
      * @return true if at least one ItemsFontSize has been added
      */
-    public boolean hasItemsFontSize()
-    {
-        return this._has_itemsFontSize;
-    } //-- boolean hasItemsFontSize() 
+    public boolean hasItemsFontSize() {
+        return this._hasitemsFontSize;
+    }
 
     /**
-     * Method hasItemsFontStyle
-     * 
-     * 
+     * Method hasItemsFontStyle.
      * 
      * @return true if at least one ItemsFontStyle has been added
      */
-    public boolean hasItemsFontStyle()
-    {
-        return this._has_itemsFontStyle;
-    } //-- boolean hasItemsFontStyle() 
+    public boolean hasItemsFontStyle() {
+        return this._hasitemsFontStyle;
+    }
 
     /**
-     * Method hasLeftMargin
-     * 
-     * 
+     * Method hasLeftMargin.
      * 
      * @return true if at least one LeftMargin has been added
      */
-    public boolean hasLeftMargin()
-    {
-        return this._has_leftMargin;
-    } //-- boolean hasLeftMargin() 
+    public boolean hasLeftMargin() {
+        return this._hasleftMargin;
+    }
 
     /**
-     * Method hasRightMargin
-     * 
-     * 
+     * Method hasRightMargin.
      * 
      * @return true if at least one RightMargin has been added
      */
-    public boolean hasRightMargin()
-    {
-        return this._has_rightMargin;
-    } //-- boolean hasRightMargin() 
+    public boolean hasRightMargin() {
+        return this._hasrightMargin;
+    }
 
     /**
-     * Method hasRowBandingInitialState
-     * 
-     * 
+     * Method hasRowBandingInitialState.
      * 
      * @return true if at least one RowBandingInitialState has been
      * added
      */
-    public boolean hasRowBandingInitialState()
-    {
-        return this._has_rowBandingInitialState;
-    } //-- boolean hasRowBandingInitialState() 
+    public boolean hasRowBandingInitialState() {
+        return this._hasrowBandingInitialState;
+    }
 
     /**
-     * Method hasTopMargin
-     * 
-     * 
+     * Method hasTopMargin.
      * 
      * @return true if at least one TopMargin has been added
      */
-    public boolean hasTopMargin()
-    {
-        return this._has_topMargin;
-    } //-- boolean hasTopMargin() 
+    public boolean hasTopMargin() {
+        return this._hastopMargin;
+    }
 
     /**
-     * Method hasUseChart
-     * 
-     * 
+     * Method hasUseChart.
      * 
      * @return true if at least one UseChart has been added
      */
-    public boolean hasUseChart()
-    {
-        return this._has_useChart;
-    } //-- boolean hasUseChart() 
+    public boolean hasUseChart() {
+        return this._hasuseChart;
+    }
 
     /**
-     * Method hasUseColumnHeaderBackgroundColor
-     * 
-     * 
+     * Method hasUseColumnHeaderBackgroundColor.
      * 
      * @return true if at least one UseColumnHeaderBackgroundColor
      * has been added
      */
-    public boolean hasUseColumnHeaderBackgroundColor()
-    {
-        return this._has_useColumnHeaderBackgroundColor;
-    } //-- boolean hasUseColumnHeaderBackgroundColor() 
+    public boolean hasUseColumnHeaderBackgroundColor() {
+        return this._hasuseColumnHeaderBackgroundColor;
+    }
 
     /**
-     * Method hasUseCustomPageFormat
-     * 
-     * 
+     * Method hasUseCustomPageFormat.
      * 
      * @return true if at least one UseCustomPageFormat has been
      * added
      */
-    public boolean hasUseCustomPageFormat()
-    {
-        return this._has_useCustomPageFormat;
-    } //-- boolean hasUseCustomPageFormat() 
+    public boolean hasUseCustomPageFormat() {
+        return this._hasuseCustomPageFormat;
+    }
 
     /**
-     * Method hasUseDummyGroupFooterBackgroundColor
-     * 
-     * 
+     * Method hasUseDummyGroupFooterBackgroundColor.
      * 
      * @return true if at least one
      * UseDummyGroupFooterBackgroundColor has been added
      */
-    public boolean hasUseDummyGroupFooterBackgroundColor()
-    {
-        return this._has_useDummyGroupFooterBackgroundColor;
-    } //-- boolean hasUseDummyGroupFooterBackgroundColor() 
+    public boolean hasUseDummyGroupFooterBackgroundColor() {
+        return this._hasuseDummyGroupFooterBackgroundColor;
+    }
 
     /**
-     * Method hasUseExpressionUnderlining
-     * 
-     * 
+     * Method hasUseExpressionUnderlining.
      * 
      * @return true if at least one UseExpressionUnderlining has
      * been added
      */
-    public boolean hasUseExpressionUnderlining()
-    {
-        return this._has_useExpressionUnderlining;
-    } //-- boolean hasUseExpressionUnderlining() 
+    public boolean hasUseExpressionUnderlining() {
+        return this._hasuseExpressionUnderlining;
+    }
 
     /**
-     * Method hasUseHorizontalGridlines
-     * 
-     * 
+     * Method hasUseHorizontalGridlines.
      * 
      * @return true if at least one UseHorizontalGridlines has been
      * added
      */
-    public boolean hasUseHorizontalGridlines()
-    {
-        return this._has_useHorizontalGridlines;
-    } //-- boolean hasUseHorizontalGridlines() 
+    public boolean hasUseHorizontalGridlines() {
+        return this._hasuseHorizontalGridlines;
+    }
 
     /**
-     * Method hasUseMasterDetail
-     * 
-     * 
+     * Method hasUseMasterDetail.
      * 
      * @return true if at least one UseMasterDetail has been added
      */
-    public boolean hasUseMasterDetail()
-    {
-        return this._has_useMasterDetail;
-    } //-- boolean hasUseMasterDetail() 
+    public boolean hasUseMasterDetail() {
+        return this._hasuseMasterDetail;
+    }
 
     /**
-     * Method hasUseMasterDetailBanding
-     * 
-     * 
+     * Method hasUseMasterDetailBanding.
      * 
      * @return true if at least one UseMasterDetailBanding has been
      * added
      */
-    public boolean hasUseMasterDetailBanding()
-    {
-        return this._has_useMasterDetailBanding;
-    } //-- boolean hasUseMasterDetailBanding() 
+    public boolean hasUseMasterDetailBanding() {
+        return this._hasuseMasterDetailBanding;
+    }
 
     /**
-     * Method hasUseMasterDetailGridlines
-     * 
-     * 
+     * Method hasUseMasterDetailGridlines.
      * 
      * @return true if at least one UseMasterDetailGridlines has
      * been added
      */
-    public boolean hasUseMasterDetailGridlines()
-    {
-        return this._has_useMasterDetailGridlines;
-    } //-- boolean hasUseMasterDetailGridlines() 
+    public boolean hasUseMasterDetailGridlines() {
+        return this._hasuseMasterDetailGridlines;
+    }
 
     /**
-     * Method hasUseRowBanding
-     * 
-     * 
+     * Method hasUseRowBanding.
      * 
      * @return true if at least one UseRowBanding has been added
      */
-    public boolean hasUseRowBanding()
-    {
-        return this._has_useRowBanding;
-    } //-- boolean hasUseRowBanding() 
+    public boolean hasUseRowBanding() {
+        return this._hasuseRowBanding;
+    }
 
     /**
-     * Method hasUseVerticalGridlines
-     * 
-     * 
+     * Method hasUseVerticalGridlines.
      * 
      * @return true if at least one UseVerticalGridlines has been
      * added
      */
-    public boolean hasUseVerticalGridlines()
-    {
-        return this._has_useVerticalGridlines;
-    } //-- boolean hasUseVerticalGridlines() 
+    public boolean hasUseVerticalGridlines() {
+        return this._hasuseVerticalGridlines;
+    }
 
     /**
      * Returns the value of field 'calculateGrandTotals'.
      * 
      * @return the value of field 'CalculateGrandTotals'.
      */
-    public boolean isCalculateGrandTotals()
-    {
-        return this._calculateGrandTotals;
-    } //-- boolean isCalculateGrandTotals() 
+    public boolean isCalculateGrandTotals() {
+        return this.calculateGrandTotals;
+    }
 
     /**
      * Returns the value of field 'doubleUnderlineExpression'.
      * 
      * @return the value of field 'DoubleUnderlineExpression'.
      */
-    public boolean isDoubleUnderlineExpression()
-    {
-        return this._doubleUnderlineExpression;
-    } //-- boolean isDoubleUnderlineExpression() 
+    public boolean isDoubleUnderlineExpression() {
+        return this.doubleUnderlineExpression;
+    }
 
     /**
      * Returns the value of field
@@ -2158,70 +1918,63 @@ public class ReportSpec implements java.io.Serializable {
      * 
      * @return the value of field 'GenerateReportLevelColumnHeaders'
      */
-    public boolean isGenerateReportLevelColumnHeaders()
-    {
-        return this._generateReportLevelColumnHeaders;
-    } //-- boolean isGenerateReportLevelColumnHeaders() 
+    public boolean isGenerateReportLevelColumnHeaders() {
+        return this.generateReportLevelColumnHeaders;
+    }
 
     /**
      * Returns the value of field 'isMDX'.
      * 
      * @return the value of field 'IsMDX'.
      */
-    public boolean isIsMDX()
-    {
-        return this._isMDX;
-    } //-- boolean isIsMDX() 
+    public boolean isIsMDX() {
+        return this.isMDX;
+    }
 
     /**
      * Returns the value of field 'isMQL'.
      * 
      * @return the value of field 'IsMQL'.
      */
-    public boolean isIsMQL()
-    {
-        return this._isMQL;
-    } //-- boolean isIsMQL() 
+    public boolean isIsMQL() {
+        return this.isMQL;
+    }
 
     /**
      * Returns the value of field 'rowBandingInitialState'.
      * 
      * @return the value of field 'RowBandingInitialState'.
      */
-    public boolean isRowBandingInitialState()
-    {
-        return this._rowBandingInitialState;
-    } //-- boolean isRowBandingInitialState() 
+    public boolean isRowBandingInitialState() {
+        return this.rowBandingInitialState;
+    }
 
     /**
      * Returns the value of field 'useChart'.
      * 
      * @return the value of field 'UseChart'.
      */
-    public boolean isUseChart()
-    {
-        return this._useChart;
-    } //-- boolean isUseChart() 
+    public boolean isUseChart() {
+        return this.useChart;
+    }
 
     /**
      * Returns the value of field 'useColumnHeaderBackgroundColor'.
      * 
      * @return the value of field 'UseColumnHeaderBackgroundColor'.
      */
-    public boolean isUseColumnHeaderBackgroundColor()
-    {
-        return this._useColumnHeaderBackgroundColor;
-    } //-- boolean isUseColumnHeaderBackgroundColor() 
+    public boolean isUseColumnHeaderBackgroundColor() {
+        return this.useColumnHeaderBackgroundColor;
+    }
 
     /**
      * Returns the value of field 'useCustomPageFormat'.
      * 
      * @return the value of field 'UseCustomPageFormat'.
      */
-    public boolean isUseCustomPageFormat()
-    {
-        return this._useCustomPageFormat;
-    } //-- boolean isUseCustomPageFormat() 
+    public boolean isUseCustomPageFormat() {
+        return this.useCustomPageFormat;
+    }
 
     /**
      * Returns the value of field
@@ -2230,124 +1983,106 @@ public class ReportSpec implements java.io.Serializable {
      * @return the value of field
      * 'UseDummyGroupFooterBackgroundColor'.
      */
-    public boolean isUseDummyGroupFooterBackgroundColor()
-    {
-        return this._useDummyGroupFooterBackgroundColor;
-    } //-- boolean isUseDummyGroupFooterBackgroundColor() 
+    public boolean isUseDummyGroupFooterBackgroundColor() {
+        return this.useDummyGroupFooterBackgroundColor;
+    }
 
     /**
      * Returns the value of field 'useExpressionUnderlining'.
      * 
      * @return the value of field 'UseExpressionUnderlining'.
      */
-    public boolean isUseExpressionUnderlining()
-    {
-        return this._useExpressionUnderlining;
-    } //-- boolean isUseExpressionUnderlining() 
+    public boolean isUseExpressionUnderlining() {
+        return this.useExpressionUnderlining;
+    }
 
     /**
      * Returns the value of field 'useHorizontalGridlines'.
      * 
      * @return the value of field 'UseHorizontalGridlines'.
      */
-    public boolean isUseHorizontalGridlines()
-    {
-        return this._useHorizontalGridlines;
-    } //-- boolean isUseHorizontalGridlines() 
+    public boolean isUseHorizontalGridlines() {
+        return this.useHorizontalGridlines;
+    }
 
     /**
      * Returns the value of field 'useMasterDetail'.
      * 
      * @return the value of field 'UseMasterDetail'.
      */
-    public boolean isUseMasterDetail()
-    {
-        return this._useMasterDetail;
-    } //-- boolean isUseMasterDetail() 
+    public boolean isUseMasterDetail() {
+        return this.useMasterDetail;
+    }
 
     /**
      * Returns the value of field 'useMasterDetailBanding'.
      * 
      * @return the value of field 'UseMasterDetailBanding'.
      */
-    public boolean isUseMasterDetailBanding()
-    {
-        return this._useMasterDetailBanding;
-    } //-- boolean isUseMasterDetailBanding() 
+    public boolean isUseMasterDetailBanding() {
+        return this.useMasterDetailBanding;
+    }
 
     /**
      * Returns the value of field 'useMasterDetailGridlines'.
      * 
      * @return the value of field 'UseMasterDetailGridlines'.
      */
-    public boolean isUseMasterDetailGridlines()
-    {
-        return this._useMasterDetailGridlines;
-    } //-- boolean isUseMasterDetailGridlines() 
+    public boolean isUseMasterDetailGridlines() {
+        return this.useMasterDetailGridlines;
+    }
 
     /**
      * Returns the value of field 'useRowBanding'.
      * 
      * @return the value of field 'UseRowBanding'.
      */
-    public boolean isUseRowBanding()
-    {
-        return this._useRowBanding;
-    } //-- boolean isUseRowBanding() 
+    public boolean isUseRowBanding() {
+        return this.useRowBanding;
+    }
 
     /**
      * Returns the value of field 'useVerticalGridlines'.
      * 
      * @return the value of field 'UseVerticalGridlines'.
      */
-    public boolean isUseVerticalGridlines()
-    {
-        return this._useVerticalGridlines;
-    } //-- boolean isUseVerticalGridlines() 
+    public boolean isUseVerticalGridlines() {
+        return this.useVerticalGridlines;
+    }
 
     /**
-     * Method isValid
-     * 
-     * 
+     * Method isValid.
      * 
      * @return true if this object is valid according to the schema
      */
-    public boolean isValid()
-    {
+    public boolean isValid() {
         try {
             validate();
-        }
-        catch (org.exolab.castor.xml.ValidationException vex) {
+        } catch (org.exolab.castor.xml.ValidationException vex) {
             return false;
         }
         return true;
-    } //-- boolean isValid() 
+    }
 
     /**
-     * Method iterateField
-     * 
-     * 
+     * Method iterateField.
      * 
      * @return an Iterator over all possible elements in this
      * collection
      */
-    public java.util.Iterator iterateField()
-    {
-        return this._fieldList.iterator();
-    } //-- java.util.Iterator iterateField() 
+    public java.util.Iterator<? extends org.pentaho.jfreereport.castormodel.reportspec.Field> iterateField() {
+        return this.fieldList.iterator();
+    }
 
     /**
-     * Method iterateFieldMapping
-     * 
-     * 
+     * Method iterateFieldMapping.
      * 
      * @return an Iterator over all possible elements in this
      * collection
      */
-    public java.util.Iterator iterateFieldMapping()
-    {
-        return this._fieldMappingList.iterator();
-    } //-- java.util.Iterator iterateFieldMapping() 
+    public java.util.Iterator<? extends org.pentaho.jfreereport.castormodel.reportspec.FieldMapping> iterateFieldMapping() {
+        return this.fieldMappingList.iterator();
+    }
 
     /**
      * 
@@ -2358,12 +2093,9 @@ public class ReportSpec implements java.io.Serializable {
      * @throws org.exolab.castor.xml.ValidationException if this
      * object is an invalid instance according to the schema
      */
-    public void marshal(java.io.Writer out)
-        throws org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException
-    {
-        
-        Marshaller.marshal(this, out);
-    } //-- void marshal(java.io.Writer) 
+    public void marshal(final java.io.Writer out) throws org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException {
+        org.exolab.castor.xml.Marshaller.marshal(this, out);
+    }
 
     /**
      * 
@@ -2376,93 +2108,75 @@ public class ReportSpec implements java.io.Serializable {
      * @throws org.exolab.castor.xml.MarshalException if object is
      * null or if any SAXException is thrown during marshaling
      */
-    public void marshal(org.xml.sax.ContentHandler handler)
-        throws java.io.IOException, org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException
-    {
-        
-        Marshaller.marshal(this, handler);
-    } //-- void marshal(org.xml.sax.ContentHandler) 
+    public void marshal(final org.xml.sax.ContentHandler handler) throws java.io.IOException, org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException {
+        org.exolab.castor.xml.Marshaller.marshal(this, handler);
+    }
 
     /**
      */
-    public void removeAllField()
-    {
-        this._fieldList.clear();
-    } //-- void removeAllField() 
+    public void removeAllField() {
+        this.fieldList.clear();
+    }
 
     /**
      */
-    public void removeAllFieldMapping()
-    {
-        this._fieldMappingList.clear();
-    } //-- void removeAllFieldMapping() 
+    public void removeAllFieldMapping() {
+        this.fieldMappingList.clear();
+    }
 
     /**
-     * Method removeField
-     * 
-     * 
+     * Method removeField.
      * 
      * @param vField
      * @return true if the object was removed from the collection.
      */
-    public boolean removeField(org.pentaho.jfreereport.castormodel.reportspec.Field vField)
-    {
-        boolean removed = _fieldList.remove(vField);
+    public boolean removeField(final org.pentaho.jfreereport.castormodel.reportspec.Field vField) {
+        boolean removed = fieldList.remove(vField);
         return removed;
-    } //-- boolean removeField(org.pentaho.jfreereport.castormodel.reportspec.Field) 
+    }
 
     /**
-     * Method removeFieldAt
-     * 
-     * 
+     * Method removeFieldAt.
      * 
      * @param index
      * @return the element removed from the collection
      */
-    public org.pentaho.jfreereport.castormodel.reportspec.Field removeFieldAt(int index)
-    {
-        Object obj = this._fieldList.remove(index);
+    public org.pentaho.jfreereport.castormodel.reportspec.Field removeFieldAt(final int index) {
+        java.lang.Object obj = this.fieldList.remove(index);
         return (org.pentaho.jfreereport.castormodel.reportspec.Field) obj;
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.Field removeFieldAt(int) 
+    }
 
     /**
-     * Method removeFieldMapping
-     * 
-     * 
+     * Method removeFieldMapping.
      * 
      * @param vFieldMapping
      * @return true if the object was removed from the collection.
      */
-    public boolean removeFieldMapping(org.pentaho.jfreereport.castormodel.reportspec.FieldMapping vFieldMapping)
-    {
-        boolean removed = _fieldMappingList.remove(vFieldMapping);
+    public boolean removeFieldMapping(final org.pentaho.jfreereport.castormodel.reportspec.FieldMapping vFieldMapping) {
+        boolean removed = fieldMappingList.remove(vFieldMapping);
         return removed;
-    } //-- boolean removeFieldMapping(org.pentaho.jfreereport.castormodel.reportspec.FieldMapping) 
+    }
 
     /**
-     * Method removeFieldMappingAt
-     * 
-     * 
+     * Method removeFieldMappingAt.
      * 
      * @param index
      * @return the element removed from the collection
      */
-    public org.pentaho.jfreereport.castormodel.reportspec.FieldMapping removeFieldMappingAt(int index)
-    {
-        Object obj = this._fieldMappingList.remove(index);
+    public org.pentaho.jfreereport.castormodel.reportspec.FieldMapping removeFieldMappingAt(final int index) {
+        java.lang.Object obj = this.fieldMappingList.remove(index);
         return (org.pentaho.jfreereport.castormodel.reportspec.FieldMapping) obj;
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.FieldMapping removeFieldMappingAt(int) 
+    }
 
     /**
      * Sets the value of field 'bottomMargin'.
      * 
      * @param bottomMargin the value of field 'bottomMargin'.
      */
-    public void setBottomMargin(int bottomMargin)
-    {
-        this._bottomMargin = bottomMargin;
-        this._has_bottomMargin = true;
-    } //-- void setBottomMargin(int) 
+    public void setBottomMargin(final int bottomMargin) {
+        this.bottomMargin = bottomMargin;
+        this._hasbottomMargin = true;
+    }
 
     /**
      * Sets the value of field 'calculateGrandTotals'.
@@ -2470,21 +2184,19 @@ public class ReportSpec implements java.io.Serializable {
      * @param calculateGrandTotals the value of field
      * 'calculateGrandTotals'.
      */
-    public void setCalculateGrandTotals(boolean calculateGrandTotals)
-    {
-        this._calculateGrandTotals = calculateGrandTotals;
-        this._has_calculateGrandTotals = true;
-    } //-- void setCalculateGrandTotals(boolean) 
+    public void setCalculateGrandTotals(final boolean calculateGrandTotals) {
+        this.calculateGrandTotals = calculateGrandTotals;
+        this._hascalculateGrandTotals = true;
+    }
 
     /**
      * Sets the value of field 'chart'.
      * 
      * @param chart the value of field 'chart'.
      */
-    public void setChart(org.pentaho.jfreereport.castormodel.reportspec.Chart chart)
-    {
-        this._chart = chart;
-    } //-- void setChart(org.pentaho.jfreereport.castormodel.reportspec.Chart) 
+    public void setChart(final org.pentaho.jfreereport.castormodel.reportspec.Chart chart) {
+        this.chart = chart;
+    }
 
     /**
      * Sets the value of field 'columnHeaderBackgroundColor'.
@@ -2492,10 +2204,9 @@ public class ReportSpec implements java.io.Serializable {
      * @param columnHeaderBackgroundColor the value of field
      * 'columnHeaderBackgroundColor'.
      */
-    public void setColumnHeaderBackgroundColor(java.lang.String columnHeaderBackgroundColor)
-    {
-        this._columnHeaderBackgroundColor = columnHeaderBackgroundColor;
-    } //-- void setColumnHeaderBackgroundColor(java.lang.String) 
+    public void setColumnHeaderBackgroundColor(final java.lang.String columnHeaderBackgroundColor) {
+        this.columnHeaderBackgroundColor = columnHeaderBackgroundColor;
+    }
 
     /**
      * Sets the value of field 'columnHeaderFontColor'.
@@ -2503,10 +2214,9 @@ public class ReportSpec implements java.io.Serializable {
      * @param columnHeaderFontColor the value of field
      * 'columnHeaderFontColor'.
      */
-    public void setColumnHeaderFontColor(java.lang.String columnHeaderFontColor)
-    {
-        this._columnHeaderFontColor = columnHeaderFontColor;
-    } //-- void setColumnHeaderFontColor(java.lang.String) 
+    public void setColumnHeaderFontColor(final java.lang.String columnHeaderFontColor) {
+        this.columnHeaderFontColor = columnHeaderFontColor;
+    }
 
     /**
      * Sets the value of field 'columnHeaderFontName'.
@@ -2514,10 +2224,9 @@ public class ReportSpec implements java.io.Serializable {
      * @param columnHeaderFontName the value of field
      * 'columnHeaderFontName'.
      */
-    public void setColumnHeaderFontName(java.lang.String columnHeaderFontName)
-    {
-        this._columnHeaderFontName = columnHeaderFontName;
-    } //-- void setColumnHeaderFontName(java.lang.String) 
+    public void setColumnHeaderFontName(final java.lang.String columnHeaderFontName) {
+        this.columnHeaderFontName = columnHeaderFontName;
+    }
 
     /**
      * Sets the value of field 'columnHeaderFontSize'.
@@ -2525,11 +2234,10 @@ public class ReportSpec implements java.io.Serializable {
      * @param columnHeaderFontSize the value of field
      * 'columnHeaderFontSize'.
      */
-    public void setColumnHeaderFontSize(int columnHeaderFontSize)
-    {
-        this._columnHeaderFontSize = columnHeaderFontSize;
-        this._has_columnHeaderFontSize = true;
-    } //-- void setColumnHeaderFontSize(int) 
+    public void setColumnHeaderFontSize(final int columnHeaderFontSize) {
+        this.columnHeaderFontSize = columnHeaderFontSize;
+        this._hascolumnHeaderFontSize = true;
+    }
 
     /**
      * Sets the value of field 'columnHeaderFontStyle'.
@@ -2537,22 +2245,20 @@ public class ReportSpec implements java.io.Serializable {
      * @param columnHeaderFontStyle the value of field
      * 'columnHeaderFontStyle'.
      */
-    public void setColumnHeaderFontStyle(int columnHeaderFontStyle)
-    {
-        this._columnHeaderFontStyle = columnHeaderFontStyle;
-        this._has_columnHeaderFontStyle = true;
-    } //-- void setColumnHeaderFontStyle(int) 
+    public void setColumnHeaderFontStyle(final int columnHeaderFontStyle) {
+        this.columnHeaderFontStyle = columnHeaderFontStyle;
+        this._hascolumnHeaderFontStyle = true;
+    }
 
     /**
      * Sets the value of field 'columnHeaderGap'.
      * 
      * @param columnHeaderGap the value of field 'columnHeaderGap'.
      */
-    public void setColumnHeaderGap(int columnHeaderGap)
-    {
-        this._columnHeaderGap = columnHeaderGap;
-        this._has_columnHeaderGap = true;
-    } //-- void setColumnHeaderGap(int) 
+    public void setColumnHeaderGap(final int columnHeaderGap) {
+        this.columnHeaderGap = columnHeaderGap;
+        this._hascolumnHeaderGap = true;
+    }
 
     /**
      * Sets the value of field 'columnHeaderHeight'.
@@ -2560,11 +2266,10 @@ public class ReportSpec implements java.io.Serializable {
      * @param columnHeaderHeight the value of field
      * 'columnHeaderHeight'.
      */
-    public void setColumnHeaderHeight(int columnHeaderHeight)
-    {
-        this._columnHeaderHeight = columnHeaderHeight;
-        this._has_columnHeaderHeight = true;
-    } //-- void setColumnHeaderHeight(int) 
+    public void setColumnHeaderHeight(final int columnHeaderHeight) {
+        this.columnHeaderHeight = columnHeaderHeight;
+        this._hascolumnHeaderHeight = true;
+    }
 
     /**
      * Sets the value of field 'columnHeaderTopGap'.
@@ -2572,11 +2277,10 @@ public class ReportSpec implements java.io.Serializable {
      * @param columnHeaderTopGap the value of field
      * 'columnHeaderTopGap'.
      */
-    public void setColumnHeaderTopGap(int columnHeaderTopGap)
-    {
-        this._columnHeaderTopGap = columnHeaderTopGap;
-        this._has_columnHeaderTopGap = true;
-    } //-- void setColumnHeaderTopGap(int) 
+    public void setColumnHeaderTopGap(final int columnHeaderTopGap) {
+        this.columnHeaderTopGap = columnHeaderTopGap;
+        this._hascolumnHeaderTopGap = true;
+    }
 
     /**
      * Sets the value of field 'customPageFormatHeight'.
@@ -2584,11 +2288,10 @@ public class ReportSpec implements java.io.Serializable {
      * @param customPageFormatHeight the value of field
      * 'customPageFormatHeight'.
      */
-    public void setCustomPageFormatHeight(int customPageFormatHeight)
-    {
-        this._customPageFormatHeight = customPageFormatHeight;
-        this._has_customPageFormatHeight = true;
-    } //-- void setCustomPageFormatHeight(int) 
+    public void setCustomPageFormatHeight(final int customPageFormatHeight) {
+        this.customPageFormatHeight = customPageFormatHeight;
+        this._hascustomPageFormatHeight = true;
+    }
 
     /**
      * Sets the value of field 'customPageFormatWidth'.
@@ -2596,11 +2299,10 @@ public class ReportSpec implements java.io.Serializable {
      * @param customPageFormatWidth the value of field
      * 'customPageFormatWidth'.
      */
-    public void setCustomPageFormatWidth(int customPageFormatWidth)
-    {
-        this._customPageFormatWidth = customPageFormatWidth;
-        this._has_customPageFormatWidth = true;
-    } //-- void setCustomPageFormatWidth(int) 
+    public void setCustomPageFormatWidth(final int customPageFormatWidth) {
+        this.customPageFormatWidth = customPageFormatWidth;
+        this._hascustomPageFormatWidth = true;
+    }
 
     /**
      * Sets the value of field 'doubleUnderlineExpression'.
@@ -2608,11 +2310,10 @@ public class ReportSpec implements java.io.Serializable {
      * @param doubleUnderlineExpression the value of field
      * 'doubleUnderlineExpression'.
      */
-    public void setDoubleUnderlineExpression(boolean doubleUnderlineExpression)
-    {
-        this._doubleUnderlineExpression = doubleUnderlineExpression;
-        this._has_doubleUnderlineExpression = true;
-    } //-- void setDoubleUnderlineExpression(boolean) 
+    public void setDoubleUnderlineExpression(final boolean doubleUnderlineExpression) {
+        this.doubleUnderlineExpression = doubleUnderlineExpression;
+        this._hasdoubleUnderlineExpression = true;
+    }
 
     /**
      * Sets the value of field 'dummyGroupFooterBackgroundColor'.
@@ -2620,10 +2321,9 @@ public class ReportSpec implements java.io.Serializable {
      * @param dummyGroupFooterBackgroundColor the value of field
      * 'dummyGroupFooterBackgroundColor'.
      */
-    public void setDummyGroupFooterBackgroundColor(java.lang.String dummyGroupFooterBackgroundColor)
-    {
-        this._dummyGroupFooterBackgroundColor = dummyGroupFooterBackgroundColor;
-    } //-- void setDummyGroupFooterBackgroundColor(java.lang.String) 
+    public void setDummyGroupFooterBackgroundColor(final java.lang.String dummyGroupFooterBackgroundColor) {
+        this.dummyGroupFooterBackgroundColor = dummyGroupFooterBackgroundColor;
+    }
 
     /**
      * 
@@ -2633,31 +2333,28 @@ public class ReportSpec implements java.io.Serializable {
      * @throws java.lang.IndexOutOfBoundsException if the index
      * given is outside the bounds of the collection
      */
-    public void setField(int index, org.pentaho.jfreereport.castormodel.reportspec.Field vField)
-        throws java.lang.IndexOutOfBoundsException
-    {
+    public void setField(final int index,final org.pentaho.jfreereport.castormodel.reportspec.Field vField) throws java.lang.IndexOutOfBoundsException {
         // check bounds for index
-        if (index < 0 || index >= this._fieldList.size()) {
-            throw new IndexOutOfBoundsException("setField: Index value '" + index + "' not in range [0.." + (this._fieldList.size() - 1) + "]");
+        if (index < 0 || index >= this.fieldList.size()) {
+            throw new IndexOutOfBoundsException("setField: Index value '" + index + "' not in range [0.." + (this.fieldList.size() - 1) + "]");
         }
-        
-        this._fieldList.set(index, vField);
-    } //-- void setField(int, org.pentaho.jfreereport.castormodel.reportspec.Field) 
+
+        this.fieldList.set(index, vField);
+    }
 
     /**
      * 
      * 
      * @param vFieldArray
      */
-    public void setField(org.pentaho.jfreereport.castormodel.reportspec.Field[] vFieldArray)
-    {
+    public void setField(final org.pentaho.jfreereport.castormodel.reportspec.Field[] vFieldArray) {
         //-- copy array
-        _fieldList.clear();
-        
+        fieldList.clear();
+
         for (int i = 0; i < vFieldArray.length; i++) {
-                this._fieldList.add(vFieldArray[i]);
+                this.fieldList.add(vFieldArray[i]);
         }
-    } //-- void setField(org.pentaho.jfreereport.castormodel.reportspec.Field) 
+    }
 
     /**
      * 
@@ -2667,31 +2364,28 @@ public class ReportSpec implements java.io.Serializable {
      * @throws java.lang.IndexOutOfBoundsException if the index
      * given is outside the bounds of the collection
      */
-    public void setFieldMapping(int index, org.pentaho.jfreereport.castormodel.reportspec.FieldMapping vFieldMapping)
-        throws java.lang.IndexOutOfBoundsException
-    {
+    public void setFieldMapping(final int index,final org.pentaho.jfreereport.castormodel.reportspec.FieldMapping vFieldMapping) throws java.lang.IndexOutOfBoundsException {
         // check bounds for index
-        if (index < 0 || index >= this._fieldMappingList.size()) {
-            throw new IndexOutOfBoundsException("setFieldMapping: Index value '" + index + "' not in range [0.." + (this._fieldMappingList.size() - 1) + "]");
+        if (index < 0 || index >= this.fieldMappingList.size()) {
+            throw new IndexOutOfBoundsException("setFieldMapping: Index value '" + index + "' not in range [0.." + (this.fieldMappingList.size() - 1) + "]");
         }
-        
-        this._fieldMappingList.set(index, vFieldMapping);
-    } //-- void setFieldMapping(int, org.pentaho.jfreereport.castormodel.reportspec.FieldMapping) 
+
+        this.fieldMappingList.set(index, vFieldMapping);
+    }
 
     /**
      * 
      * 
      * @param vFieldMappingArray
      */
-    public void setFieldMapping(org.pentaho.jfreereport.castormodel.reportspec.FieldMapping[] vFieldMappingArray)
-    {
+    public void setFieldMapping(final org.pentaho.jfreereport.castormodel.reportspec.FieldMapping[] vFieldMappingArray) {
         //-- copy array
-        _fieldMappingList.clear();
-        
+        fieldMappingList.clear();
+
         for (int i = 0; i < vFieldMappingArray.length; i++) {
-                this._fieldMappingList.add(vFieldMappingArray[i]);
+                this.fieldMappingList.add(vFieldMappingArray[i]);
         }
-    } //-- void setFieldMapping(org.pentaho.jfreereport.castormodel.reportspec.FieldMapping) 
+    }
 
     /**
      * Sets the value of field 'generateReportLevelColumnHeaders'.
@@ -2699,11 +2393,10 @@ public class ReportSpec implements java.io.Serializable {
      * @param generateReportLevelColumnHeaders the value of field
      * 'generateReportLevelColumnHeaders'.
      */
-    public void setGenerateReportLevelColumnHeaders(boolean generateReportLevelColumnHeaders)
-    {
-        this._generateReportLevelColumnHeaders = generateReportLevelColumnHeaders;
-        this._has_generateReportLevelColumnHeaders = true;
-    } //-- void setGenerateReportLevelColumnHeaders(boolean) 
+    public void setGenerateReportLevelColumnHeaders(final boolean generateReportLevelColumnHeaders) {
+        this.generateReportLevelColumnHeaders = generateReportLevelColumnHeaders;
+        this._hasgenerateReportLevelColumnHeaders = true;
+    }
 
     /**
      * Sets the value of field 'grandTotalsHorizontalAlignment'.
@@ -2711,20 +2404,18 @@ public class ReportSpec implements java.io.Serializable {
      * @param grandTotalsHorizontalAlignment the value of field
      * 'grandTotalsHorizontalAlignment'.
      */
-    public void setGrandTotalsHorizontalAlignment(java.lang.String grandTotalsHorizontalAlignment)
-    {
-        this._grandTotalsHorizontalAlignment = grandTotalsHorizontalAlignment;
-    } //-- void setGrandTotalsHorizontalAlignment(java.lang.String) 
+    public void setGrandTotalsHorizontalAlignment(final java.lang.String grandTotalsHorizontalAlignment) {
+        this.grandTotalsHorizontalAlignment = grandTotalsHorizontalAlignment;
+    }
 
     /**
      * Sets the value of field 'grandTotalsLabel'.
      * 
      * @param grandTotalsLabel the value of field 'grandTotalsLabel'
      */
-    public void setGrandTotalsLabel(java.lang.String grandTotalsLabel)
-    {
-        this._grandTotalsLabel = grandTotalsLabel;
-    } //-- void setGrandTotalsLabel(java.lang.String) 
+    public void setGrandTotalsLabel(final java.lang.String grandTotalsLabel) {
+        this.grandTotalsLabel = grandTotalsLabel;
+    }
 
     /**
      * Sets the value of field 'groupFooterFontColor'.
@@ -2732,10 +2423,9 @@ public class ReportSpec implements java.io.Serializable {
      * @param groupFooterFontColor the value of field
      * 'groupFooterFontColor'.
      */
-    public void setGroupFooterFontColor(java.lang.String groupFooterFontColor)
-    {
-        this._groupFooterFontColor = groupFooterFontColor;
-    } //-- void setGroupFooterFontColor(java.lang.String) 
+    public void setGroupFooterFontColor(final java.lang.String groupFooterFontColor) {
+        this.groupFooterFontColor = groupFooterFontColor;
+    }
 
     /**
      * Sets the value of field 'groupFooterFontName'.
@@ -2743,10 +2433,9 @@ public class ReportSpec implements java.io.Serializable {
      * @param groupFooterFontName the value of field
      * 'groupFooterFontName'.
      */
-    public void setGroupFooterFontName(java.lang.String groupFooterFontName)
-    {
-        this._groupFooterFontName = groupFooterFontName;
-    } //-- void setGroupFooterFontName(java.lang.String) 
+    public void setGroupFooterFontName(final java.lang.String groupFooterFontName) {
+        this.groupFooterFontName = groupFooterFontName;
+    }
 
     /**
      * Sets the value of field 'groupFooterFontSize'.
@@ -2754,11 +2443,10 @@ public class ReportSpec implements java.io.Serializable {
      * @param groupFooterFontSize the value of field
      * 'groupFooterFontSize'.
      */
-    public void setGroupFooterFontSize(int groupFooterFontSize)
-    {
-        this._groupFooterFontSize = groupFooterFontSize;
-        this._has_groupFooterFontSize = true;
-    } //-- void setGroupFooterFontSize(int) 
+    public void setGroupFooterFontSize(final int groupFooterFontSize) {
+        this.groupFooterFontSize = groupFooterFontSize;
+        this._hasgroupFooterFontSize = true;
+    }
 
     /**
      * Sets the value of field 'groupFooterFontStyle'.
@@ -2766,11 +2454,10 @@ public class ReportSpec implements java.io.Serializable {
      * @param groupFooterFontStyle the value of field
      * 'groupFooterFontStyle'.
      */
-    public void setGroupFooterFontStyle(int groupFooterFontStyle)
-    {
-        this._groupFooterFontStyle = groupFooterFontStyle;
-        this._has_groupFooterFontStyle = true;
-    } //-- void setGroupFooterFontStyle(int) 
+    public void setGroupFooterFontStyle(final int groupFooterFontStyle) {
+        this.groupFooterFontStyle = groupFooterFontStyle;
+        this._hasgroupFooterFontStyle = true;
+    }
 
     /**
      * Sets the value of field 'groupHeaderFontColor'.
@@ -2778,10 +2465,9 @@ public class ReportSpec implements java.io.Serializable {
      * @param groupHeaderFontColor the value of field
      * 'groupHeaderFontColor'.
      */
-    public void setGroupHeaderFontColor(java.lang.String groupHeaderFontColor)
-    {
-        this._groupHeaderFontColor = groupHeaderFontColor;
-    } //-- void setGroupHeaderFontColor(java.lang.String) 
+    public void setGroupHeaderFontColor(final java.lang.String groupHeaderFontColor) {
+        this.groupHeaderFontColor = groupHeaderFontColor;
+    }
 
     /**
      * Sets the value of field 'groupHeaderFontName'.
@@ -2789,10 +2475,9 @@ public class ReportSpec implements java.io.Serializable {
      * @param groupHeaderFontName the value of field
      * 'groupHeaderFontName'.
      */
-    public void setGroupHeaderFontName(java.lang.String groupHeaderFontName)
-    {
-        this._groupHeaderFontName = groupHeaderFontName;
-    } //-- void setGroupHeaderFontName(java.lang.String) 
+    public void setGroupHeaderFontName(final java.lang.String groupHeaderFontName) {
+        this.groupHeaderFontName = groupHeaderFontName;
+    }
 
     /**
      * Sets the value of field 'groupHeaderFontSize'.
@@ -2800,11 +2485,10 @@ public class ReportSpec implements java.io.Serializable {
      * @param groupHeaderFontSize the value of field
      * 'groupHeaderFontSize'.
      */
-    public void setGroupHeaderFontSize(int groupHeaderFontSize)
-    {
-        this._groupHeaderFontSize = groupHeaderFontSize;
-        this._has_groupHeaderFontSize = true;
-    } //-- void setGroupHeaderFontSize(int) 
+    public void setGroupHeaderFontSize(final int groupHeaderFontSize) {
+        this.groupHeaderFontSize = groupHeaderFontSize;
+        this._hasgroupHeaderFontSize = true;
+    }
 
     /**
      * Sets the value of field 'groupHeaderFontStyle'.
@@ -2812,11 +2496,10 @@ public class ReportSpec implements java.io.Serializable {
      * @param groupHeaderFontStyle the value of field
      * 'groupHeaderFontStyle'.
      */
-    public void setGroupHeaderFontStyle(int groupHeaderFontStyle)
-    {
-        this._groupHeaderFontStyle = groupHeaderFontStyle;
-        this._has_groupHeaderFontStyle = true;
-    } //-- void setGroupHeaderFontStyle(int) 
+    public void setGroupHeaderFontStyle(final int groupHeaderFontStyle) {
+        this.groupHeaderFontStyle = groupHeaderFontStyle;
+        this._hasgroupHeaderFontStyle = true;
+    }
 
     /**
      * Sets the value of field 'horizontalGridlinesColor'.
@@ -2824,116 +2507,105 @@ public class ReportSpec implements java.io.Serializable {
      * @param horizontalGridlinesColor the value of field
      * 'horizontalGridlinesColor'.
      */
-    public void setHorizontalGridlinesColor(java.lang.String horizontalGridlinesColor)
-    {
-        this._horizontalGridlinesColor = horizontalGridlinesColor;
-    } //-- void setHorizontalGridlinesColor(java.lang.String) 
+    public void setHorizontalGridlinesColor(final java.lang.String horizontalGridlinesColor) {
+        this.horizontalGridlinesColor = horizontalGridlinesColor;
+    }
 
     /**
      * Sets the value of field 'horizontalOffset'.
      * 
      * @param horizontalOffset the value of field 'horizontalOffset'
      */
-    public void setHorizontalOffset(int horizontalOffset)
-    {
-        this._horizontalOffset = horizontalOffset;
-        this._has_horizontalOffset = true;
-    } //-- void setHorizontalOffset(int) 
+    public void setHorizontalOffset(final int horizontalOffset) {
+        this.horizontalOffset = horizontalOffset;
+        this._hashorizontalOffset = true;
+    }
 
     /**
      * Sets the value of field 'includeSrc'.
      * 
      * @param includeSrc the value of field 'includeSrc'.
      */
-    public void setIncludeSrc(java.lang.String includeSrc)
-    {
-        this._includeSrc = includeSrc;
-    } //-- void setIncludeSrc(java.lang.String) 
+    public void setIncludeSrc(final java.lang.String includeSrc) {
+        this.includeSrc = includeSrc;
+    }
 
     /**
      * Sets the value of field 'isMDX'.
      * 
      * @param isMDX the value of field 'isMDX'.
      */
-    public void setIsMDX(boolean isMDX)
-    {
-        this._isMDX = isMDX;
-        this._has_isMDX = true;
-    } //-- void setIsMDX(boolean) 
+    public void setIsMDX(final boolean isMDX) {
+        this.isMDX = isMDX;
+        this._hasisMDX = true;
+    }
 
     /**
      * Sets the value of field 'isMQL'.
      * 
      * @param isMQL the value of field 'isMQL'.
      */
-    public void setIsMQL(boolean isMQL)
-    {
-        this._isMQL = isMQL;
-        this._has_isMQL = true;
-    } //-- void setIsMQL(boolean) 
+    public void setIsMQL(final boolean isMQL) {
+        this.isMQL = isMQL;
+        this._hasisMQL = true;
+    }
 
     /**
      * Sets the value of field 'itemsFontColor'.
      * 
      * @param itemsFontColor the value of field 'itemsFontColor'.
      */
-    public void setItemsFontColor(java.lang.String itemsFontColor)
-    {
-        this._itemsFontColor = itemsFontColor;
-    } //-- void setItemsFontColor(java.lang.String) 
+    public void setItemsFontColor(final java.lang.String itemsFontColor) {
+        this.itemsFontColor = itemsFontColor;
+    }
 
     /**
      * Sets the value of field 'itemsFontName'.
      * 
      * @param itemsFontName the value of field 'itemsFontName'.
      */
-    public void setItemsFontName(java.lang.String itemsFontName)
-    {
-        this._itemsFontName = itemsFontName;
-    } //-- void setItemsFontName(java.lang.String) 
+    public void setItemsFontName(final java.lang.String itemsFontName) {
+        this.itemsFontName = itemsFontName;
+    }
 
     /**
      * Sets the value of field 'itemsFontSize'.
      * 
      * @param itemsFontSize the value of field 'itemsFontSize'.
      */
-    public void setItemsFontSize(int itemsFontSize)
-    {
-        this._itemsFontSize = itemsFontSize;
-        this._has_itemsFontSize = true;
-    } //-- void setItemsFontSize(int) 
+    public void setItemsFontSize(final int itemsFontSize) {
+        this.itemsFontSize = itemsFontSize;
+        this._hasitemsFontSize = true;
+    }
 
     /**
      * Sets the value of field 'itemsFontStyle'.
      * 
      * @param itemsFontStyle the value of field 'itemsFontStyle'.
      */
-    public void setItemsFontStyle(int itemsFontStyle)
-    {
-        this._itemsFontStyle = itemsFontStyle;
-        this._has_itemsFontStyle = true;
-    } //-- void setItemsFontStyle(int) 
+    public void setItemsFontStyle(final int itemsFontStyle) {
+        this.itemsFontStyle = itemsFontStyle;
+        this._hasitemsFontStyle = true;
+    }
 
     /**
      * Sets the value of field 'kettleStep'.
      * 
      * @param kettleStep the value of field 'kettleStep'.
      */
-    public void setKettleStep(java.lang.String kettleStep)
-    {
-        this._kettleStep = kettleStep;
-    } //-- void setKettleStep(java.lang.String) 
+    public void setKettleStep(final java.lang.String kettleStep) {
+        this.kettleStep = kettleStep;
+    }
 
     /**
      * Sets the value of field 'leftMargin'.
      * 
      * @param leftMargin the value of field 'leftMargin'.
      */
-    public void setLeftMargin(int leftMargin)
-    {
-        this._leftMargin = leftMargin;
-        this._has_leftMargin = true;
-    } //-- void setLeftMargin(int) 
+    public void setLeftMargin(final int leftMargin) {
+        this.leftMargin = leftMargin;
+        this._hasleftMargin = true;
+    }
 
     /**
      * Sets the value of field 'mondrianCubeDefinitionPath'.
@@ -2941,101 +2613,91 @@ public class ReportSpec implements java.io.Serializable {
      * @param mondrianCubeDefinitionPath the value of field
      * 'mondrianCubeDefinitionPath'.
      */
-    public void setMondrianCubeDefinitionPath(java.lang.String mondrianCubeDefinitionPath)
-    {
-        this._mondrianCubeDefinitionPath = mondrianCubeDefinitionPath;
-    } //-- void setMondrianCubeDefinitionPath(java.lang.String) 
+    public void setMondrianCubeDefinitionPath(final java.lang.String mondrianCubeDefinitionPath) {
+        this.mondrianCubeDefinitionPath = mondrianCubeDefinitionPath;
+    }
 
     /**
      * Sets the value of field 'mqlQuery'.
      * 
      * @param mqlQuery the value of field 'mqlQuery'.
      */
-    public void setMqlQuery(java.lang.String mqlQuery)
-    {
-        this._mqlQuery = mqlQuery;
-    } //-- void setMqlQuery(java.lang.String) 
+    public void setMqlQuery(final java.lang.String mqlQuery) {
+        this.mqlQuery = mqlQuery;
+    }
 
     /**
      * Sets the value of field 'orientation'.
      * 
      * @param orientation the value of field 'orientation'.
      */
-    public void setOrientation(java.lang.String orientation)
-    {
-        this._orientation = orientation;
-    } //-- void setOrientation(java.lang.String) 
+    public void setOrientation(final java.lang.String orientation) {
+        this.orientation = orientation;
+    }
 
     /**
      * Sets the value of field 'pageFormat'.
      * 
      * @param pageFormat the value of field 'pageFormat'.
      */
-    public void setPageFormat(java.lang.String pageFormat)
-    {
-        this._pageFormat = pageFormat;
-    } //-- void setPageFormat(java.lang.String) 
+    public void setPageFormat(final java.lang.String pageFormat) {
+        this.pageFormat = pageFormat;
+    }
 
     /**
      * Sets the value of field 'query'.
      * 
      * @param query the value of field 'query'.
      */
-    public void setQuery(java.lang.String query)
-    {
-        this._query = query;
-    } //-- void setQuery(java.lang.String) 
+    public void setQuery(final java.lang.String query) {
+        this.query = query;
+    }
 
     /**
      * Sets the value of field 'reportDesc'.
      * 
      * @param reportDesc the value of field 'reportDesc'.
      */
-    public void setReportDesc(java.lang.String reportDesc)
-    {
-        this._reportDesc = reportDesc;
-    } //-- void setReportDesc(java.lang.String) 
+    public void setReportDesc(final java.lang.String reportDesc) {
+        this.reportDesc = reportDesc;
+    }
 
     /**
      * Sets the value of field 'reportName'.
      * 
      * @param reportName the value of field 'reportName'.
      */
-    public void setReportName(java.lang.String reportName)
-    {
-        this._reportName = reportName;
-    } //-- void setReportName(java.lang.String) 
+    public void setReportName(final java.lang.String reportName) {
+        this.reportName = reportName;
+    }
 
     /**
      * Sets the value of field 'reportSpecChoice'.
      * 
      * @param reportSpecChoice the value of field 'reportSpecChoice'
      */
-    public void setReportSpecChoice(org.pentaho.jfreereport.castormodel.reportspec.ReportSpecChoice reportSpecChoice)
-    {
-        this._reportSpecChoice = reportSpecChoice;
-    } //-- void setReportSpecChoice(org.pentaho.jfreereport.castormodel.reportspec.ReportSpecChoice) 
+    public void setReportSpecChoice(final org.pentaho.jfreereport.castormodel.reportspec.ReportSpecChoice reportSpecChoice) {
+        this.reportSpecChoice = reportSpecChoice;
+    }
 
     /**
      * Sets the value of field 'rightMargin'.
      * 
      * @param rightMargin the value of field 'rightMargin'.
      */
-    public void setRightMargin(int rightMargin)
-    {
-        this._rightMargin = rightMargin;
-        this._has_rightMargin = true;
-    } //-- void setRightMargin(int) 
+    public void setRightMargin(final int rightMargin) {
+        this.rightMargin = rightMargin;
+        this._hasrightMargin = true;
+    }
 
     /**
      * Sets the value of field 'rowBandingColor'.
      * 
      * @param rowBandingColor the value of field 'rowBandingColor'.
      */
-    public void setRowBandingColor(java.lang.String rowBandingColor)
-    {
-        this._rowBandingColor = rowBandingColor;
-    } //-- void setRowBandingColor(java.lang.String) 
+    public void setRowBandingColor(final java.lang.String rowBandingColor) {
+        this.rowBandingColor = rowBandingColor;
+    }
 
     /**
      * Sets the value of field 'rowBandingInitialState'.
@@ -3043,73 +2705,66 @@ public class ReportSpec implements java.io.Serializable {
      * @param rowBandingInitialState the value of field
      * 'rowBandingInitialState'.
      */
-    public void setRowBandingInitialState(boolean rowBandingInitialState)
-    {
-        this._rowBandingInitialState = rowBandingInitialState;
-        this._has_rowBandingInitialState = true;
-    } //-- void setRowBandingInitialState(boolean) 
+    public void setRowBandingInitialState(final boolean rowBandingInitialState) {
+        this.rowBandingInitialState = rowBandingInitialState;
+        this._hasrowBandingInitialState = true;
+    }
 
     /**
      * Sets the value of field 'templateName'.
      * 
      * @param templateName the value of field 'templateName'.
      */
-    public void setTemplateName(java.lang.String templateName)
-    {
-        this._templateName = templateName;
-    } //-- void setTemplateName(java.lang.String) 
+    public void setTemplateName(final java.lang.String templateName) {
+        this.templateName = templateName;
+    }
 
     /**
      * Sets the value of field 'templateSrc'.
      * 
      * @param templateSrc the value of field 'templateSrc'.
      */
-    public void setTemplateSrc(java.lang.String templateSrc)
-    {
-        this._templateSrc = templateSrc;
-    } //-- void setTemplateSrc(java.lang.String) 
+    public void setTemplateSrc(final java.lang.String templateSrc) {
+        this.templateSrc = templateSrc;
+    }
 
     /**
      * Sets the value of field 'tool'.
      * 
      * @param tool the value of field 'tool'.
      */
-    public void setTool(java.lang.String tool)
-    {
-        this._tool = tool;
-    } //-- void setTool(java.lang.String) 
+    public void setTool(final java.lang.String tool) {
+        this.tool = tool;
+    }
 
     /**
      * Sets the value of field 'toolVersion'.
      * 
      * @param toolVersion the value of field 'toolVersion'.
      */
-    public void setToolVersion(java.lang.String toolVersion)
-    {
-        this._toolVersion = toolVersion;
-    } //-- void setToolVersion(java.lang.String) 
+    public void setToolVersion(final java.lang.String toolVersion) {
+        this.toolVersion = toolVersion;
+    }
 
     /**
      * Sets the value of field 'topMargin'.
      * 
      * @param topMargin the value of field 'topMargin'.
      */
-    public void setTopMargin(int topMargin)
-    {
-        this._topMargin = topMargin;
-        this._has_topMargin = true;
-    } //-- void setTopMargin(int) 
+    public void setTopMargin(final int topMargin) {
+        this.topMargin = topMargin;
+        this._hastopMargin = true;
+    }
 
     /**
      * Sets the value of field 'useChart'.
      * 
      * @param useChart the value of field 'useChart'.
      */
-    public void setUseChart(boolean useChart)
-    {
-        this._useChart = useChart;
-        this._has_useChart = true;
-    } //-- void setUseChart(boolean) 
+    public void setUseChart(final boolean useChart) {
+        this.useChart = useChart;
+        this._hasuseChart = true;
+    }
 
     /**
      * Sets the value of field 'useColumnHeaderBackgroundColor'.
@@ -3117,11 +2772,10 @@ public class ReportSpec implements java.io.Serializable {
      * @param useColumnHeaderBackgroundColor the value of field
      * 'useColumnHeaderBackgroundColor'.
      */
-    public void setUseColumnHeaderBackgroundColor(boolean useColumnHeaderBackgroundColor)
-    {
-        this._useColumnHeaderBackgroundColor = useColumnHeaderBackgroundColor;
-        this._has_useColumnHeaderBackgroundColor = true;
-    } //-- void setUseColumnHeaderBackgroundColor(boolean) 
+    public void setUseColumnHeaderBackgroundColor(final boolean useColumnHeaderBackgroundColor) {
+        this.useColumnHeaderBackgroundColor = useColumnHeaderBackgroundColor;
+        this._hasuseColumnHeaderBackgroundColor = true;
+    }
 
     /**
      * Sets the value of field 'useCustomPageFormat'.
@@ -3129,11 +2783,10 @@ public class ReportSpec implements java.io.Serializable {
      * @param useCustomPageFormat the value of field
      * 'useCustomPageFormat'.
      */
-    public void setUseCustomPageFormat(boolean useCustomPageFormat)
-    {
-        this._useCustomPageFormat = useCustomPageFormat;
-        this._has_useCustomPageFormat = true;
-    } //-- void setUseCustomPageFormat(boolean) 
+    public void setUseCustomPageFormat(final boolean useCustomPageFormat) {
+        this.useCustomPageFormat = useCustomPageFormat;
+        this._hasuseCustomPageFormat = true;
+    }
 
     /**
      * Sets the value of field
@@ -3142,11 +2795,10 @@ public class ReportSpec implements java.io.Serializable {
      * @param useDummyGroupFooterBackgroundColor the value of field
      * 'useDummyGroupFooterBackgroundColor'.
      */
-    public void setUseDummyGroupFooterBackgroundColor(boolean useDummyGroupFooterBackgroundColor)
-    {
-        this._useDummyGroupFooterBackgroundColor = useDummyGroupFooterBackgroundColor;
-        this._has_useDummyGroupFooterBackgroundColor = true;
-    } //-- void setUseDummyGroupFooterBackgroundColor(boolean) 
+    public void setUseDummyGroupFooterBackgroundColor(final boolean useDummyGroupFooterBackgroundColor) {
+        this.useDummyGroupFooterBackgroundColor = useDummyGroupFooterBackgroundColor;
+        this._hasuseDummyGroupFooterBackgroundColor = true;
+    }
 
     /**
      * Sets the value of field 'useExpressionUnderlining'.
@@ -3154,11 +2806,10 @@ public class ReportSpec implements java.io.Serializable {
      * @param useExpressionUnderlining the value of field
      * 'useExpressionUnderlining'.
      */
-    public void setUseExpressionUnderlining(boolean useExpressionUnderlining)
-    {
-        this._useExpressionUnderlining = useExpressionUnderlining;
-        this._has_useExpressionUnderlining = true;
-    } //-- void setUseExpressionUnderlining(boolean) 
+    public void setUseExpressionUnderlining(final boolean useExpressionUnderlining) {
+        this.useExpressionUnderlining = useExpressionUnderlining;
+        this._hasuseExpressionUnderlining = true;
+    }
 
     /**
      * Sets the value of field 'useHorizontalGridlines'.
@@ -3166,22 +2817,20 @@ public class ReportSpec implements java.io.Serializable {
      * @param useHorizontalGridlines the value of field
      * 'useHorizontalGridlines'.
      */
-    public void setUseHorizontalGridlines(boolean useHorizontalGridlines)
-    {
-        this._useHorizontalGridlines = useHorizontalGridlines;
-        this._has_useHorizontalGridlines = true;
-    } //-- void setUseHorizontalGridlines(boolean) 
+    public void setUseHorizontalGridlines(final boolean useHorizontalGridlines) {
+        this.useHorizontalGridlines = useHorizontalGridlines;
+        this._hasuseHorizontalGridlines = true;
+    }
 
     /**
      * Sets the value of field 'useMasterDetail'.
      * 
      * @param useMasterDetail the value of field 'useMasterDetail'.
      */
-    public void setUseMasterDetail(boolean useMasterDetail)
-    {
-        this._useMasterDetail = useMasterDetail;
-        this._has_useMasterDetail = true;
-    } //-- void setUseMasterDetail(boolean) 
+    public void setUseMasterDetail(final boolean useMasterDetail) {
+        this.useMasterDetail = useMasterDetail;
+        this._hasuseMasterDetail = true;
+    }
 
     /**
      * Sets the value of field 'useMasterDetailBanding'.
@@ -3189,11 +2838,10 @@ public class ReportSpec implements java.io.Serializable {
      * @param useMasterDetailBanding the value of field
      * 'useMasterDetailBanding'.
      */
-    public void setUseMasterDetailBanding(boolean useMasterDetailBanding)
-    {
-        this._useMasterDetailBanding = useMasterDetailBanding;
-        this._has_useMasterDetailBanding = true;
-    } //-- void setUseMasterDetailBanding(boolean) 
+    public void setUseMasterDetailBanding(final boolean useMasterDetailBanding) {
+        this.useMasterDetailBanding = useMasterDetailBanding;
+        this._hasuseMasterDetailBanding = true;
+    }
 
     /**
      * Sets the value of field 'useMasterDetailGridlines'.
@@ -3201,22 +2849,20 @@ public class ReportSpec implements java.io.Serializable {
      * @param useMasterDetailGridlines the value of field
      * 'useMasterDetailGridlines'.
      */
-    public void setUseMasterDetailGridlines(boolean useMasterDetailGridlines)
-    {
-        this._useMasterDetailGridlines = useMasterDetailGridlines;
-        this._has_useMasterDetailGridlines = true;
-    } //-- void setUseMasterDetailGridlines(boolean) 
+    public void setUseMasterDetailGridlines(final boolean useMasterDetailGridlines) {
+        this.useMasterDetailGridlines = useMasterDetailGridlines;
+        this._hasuseMasterDetailGridlines = true;
+    }
 
     /**
      * Sets the value of field 'useRowBanding'.
      * 
      * @param useRowBanding the value of field 'useRowBanding'.
      */
-    public void setUseRowBanding(boolean useRowBanding)
-    {
-        this._useRowBanding = useRowBanding;
-        this._has_useRowBanding = true;
-    } //-- void setUseRowBanding(boolean) 
+    public void setUseRowBanding(final boolean useRowBanding) {
+        this.useRowBanding = useRowBanding;
+        this._hasuseRowBanding = true;
+    }
 
     /**
      * Sets the value of field 'useVerticalGridlines'.
@@ -3224,11 +2870,10 @@ public class ReportSpec implements java.io.Serializable {
      * @param useVerticalGridlines the value of field
      * 'useVerticalGridlines'.
      */
-    public void setUseVerticalGridlines(boolean useVerticalGridlines)
-    {
-        this._useVerticalGridlines = useVerticalGridlines;
-        this._has_useVerticalGridlines = true;
-    } //-- void setUseVerticalGridlines(boolean) 
+    public void setUseVerticalGridlines(final boolean useVerticalGridlines) {
+        this.useVerticalGridlines = useVerticalGridlines;
+        this._hasuseVerticalGridlines = true;
+    }
 
     /**
      * Sets the value of field 'verticalGridlinesColor'.
@@ -3236,35 +2881,30 @@ public class ReportSpec implements java.io.Serializable {
      * @param verticalGridlinesColor the value of field
      * 'verticalGridlinesColor'.
      */
-    public void setVerticalGridlinesColor(java.lang.String verticalGridlinesColor)
-    {
-        this._verticalGridlinesColor = verticalGridlinesColor;
-    } //-- void setVerticalGridlinesColor(java.lang.String) 
+    public void setVerticalGridlinesColor(final java.lang.String verticalGridlinesColor) {
+        this.verticalGridlinesColor = verticalGridlinesColor;
+    }
 
     /**
      * Sets the value of field 'watermark'.
      * 
      * @param watermark the value of field 'watermark'.
      */
-    public void setWatermark(org.pentaho.jfreereport.castormodel.reportspec.Watermark watermark)
-    {
-        this._watermark = watermark;
-    } //-- void setWatermark(org.pentaho.jfreereport.castormodel.reportspec.Watermark) 
+    public void setWatermark(final org.pentaho.jfreereport.castormodel.reportspec.Watermark watermark) {
+        this.watermark = watermark;
+    }
 
     /**
      * Sets the value of field 'xmiPath'.
      * 
      * @param xmiPath the value of field 'xmiPath'.
      */
-    public void setXmiPath(java.lang.String xmiPath)
-    {
-        this._xmiPath = xmiPath;
-    } //-- void setXmiPath(java.lang.String) 
+    public void setXmiPath(final java.lang.String xmiPath) {
+        this.xmiPath = xmiPath;
+    }
 
     /**
-     * Method unmarshal
-     * 
-     * 
+     * Method unmarshal.
      * 
      * @param reader
      * @throws org.exolab.castor.xml.MarshalException if object is
@@ -3274,11 +2914,9 @@ public class ReportSpec implements java.io.Serializable {
      * @return the unmarshaled
      * org.pentaho.jfreereport.castormodel.reportspec.ReportSpec
      */
-    public static org.pentaho.jfreereport.castormodel.reportspec.ReportSpec unmarshal(java.io.Reader reader)
-        throws org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException
-    {
-        return (org.pentaho.jfreereport.castormodel.reportspec.ReportSpec) Unmarshaller.unmarshal(org.pentaho.jfreereport.castormodel.reportspec.ReportSpec.class, reader);
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.ReportSpec unmarshal(java.io.Reader) 
+    public static org.pentaho.jfreereport.castormodel.reportspec.ReportSpec unmarshal(final java.io.Reader reader) throws org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException {
+        return (org.pentaho.jfreereport.castormodel.reportspec.ReportSpec) org.exolab.castor.xml.Unmarshaller.unmarshal(org.pentaho.jfreereport.castormodel.reportspec.ReportSpec.class, reader);
+    }
 
     /**
      * 
@@ -3286,11 +2924,9 @@ public class ReportSpec implements java.io.Serializable {
      * @throws org.exolab.castor.xml.ValidationException if this
      * object is an invalid instance according to the schema
      */
-    public void validate()
-        throws org.exolab.castor.xml.ValidationException
-    {
+    public void validate() throws org.exolab.castor.xml.ValidationException {
         org.exolab.castor.xml.Validator validator = new org.exolab.castor.xml.Validator();
         validator.validate(this);
-    } //-- void validate() 
+    }
 
 }

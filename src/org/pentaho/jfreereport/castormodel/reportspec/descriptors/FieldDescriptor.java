@@ -1,78 +1,74 @@
 /*
  * This class was automatically generated with 
- * <a href="http://www.castor.org">Castor 1.0.5</a>, using an XML
+ * <a href="http://www.castor.org">Castor 1.4.1</a>, using an XML
  * Schema.
  * $Id$
  */
 
-package org.pentaho.jfreereport.castormodel.reportspec;
+package org.pentaho.jfreereport.castormodel.reportspec.descriptors;
+
+  //---------------------------------/
+ //- Imported classes and packages -/
+//---------------------------------/
+
+import org.pentaho.jfreereport.castormodel.reportspec.Field;
 
 /**
- * Class FieldDescriptor.
+ * 
  * 
  * @version $Revision$ $Date$
  */
 public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescriptorImpl {
 
-
-      //--------------------------/
-     //- Class/Member Variables -/
-    //--------------------------/
+    /**
+     * Field _elementDefinition.
+     */
+    private boolean _elementDefinition;
 
     /**
-     * Field elementDefinition
+     * Field _nsPrefix.
      */
-    private boolean elementDefinition;
+    private java.lang.String _nsPrefix;
 
     /**
-     * Field nsPrefix
+     * Field _nsURI.
      */
-    private java.lang.String nsPrefix;
+    private java.lang.String _nsURI;
 
     /**
-     * Field nsURI
+     * Field _xmlName.
      */
-    private java.lang.String nsURI;
+    private java.lang.String _xmlName;
 
     /**
-     * Field xmlName
+     * Field _identity.
      */
-    private java.lang.String xmlName;
+    private org.exolab.castor.xml.XMLFieldDescriptor _identity;
 
-    /**
-     * Field identity
-     */
-    private org.exolab.castor.xml.XMLFieldDescriptor identity;
-
-
-      //----------------/
-     //- Constructors -/
-    //----------------/
-
-    public FieldDescriptor() 
-     {
+    public FieldDescriptor() {
         super();
-        xmlName = "field";
-        elementDefinition = true;
-        
+        _xmlName = "field";
+        _elementDefinition = true;
+
         //-- set grouping compositor
         setCompositorAsSequence();
         org.exolab.castor.xml.util.XMLFieldDescriptorImpl  desc           = null;
         org.exolab.castor.mapping.FieldHandler             handler        = null;
         org.exolab.castor.xml.FieldValidator               fieldValidator = null;
         //-- initialize attribute descriptors
-        
-        //-- _useChart
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_useChart", "use-chart", org.exolab.castor.xml.NodeType.Attribute);
+
+        //-- useChart
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "useChart", "use-chart", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasUseChart())
-                    return null;
+                if (!target.hasUseChart()) { return null; }
                 return (target.getUseChart() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -83,38 +79,42 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deleteUseChart();
                         return;
                     }
-                    target.setUseChart( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setUseChart( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _useChart
+
+        //-- validation code for: useChart
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _showChartAboveGroupHeader
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_showChartAboveGroupHeader", "show-chart-above-group-header", org.exolab.castor.xml.NodeType.Attribute);
+        //-- showChartAboveGroupHeader
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "showChartAboveGroupHeader", "show-chart-above-group-header", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasShowChartAboveGroupHeader())
-                    return null;
+                if (!target.hasShowChartAboveGroupHeader()) { return null; }
                 return (target.getShowChartAboveGroupHeader() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -125,38 +125,42 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deleteShowChartAboveGroupHeader();
                         return;
                     }
-                    target.setShowChartAboveGroupHeader( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setShowChartAboveGroupHeader( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _showChartAboveGroupHeader
+
+        //-- validation code for: showChartAboveGroupHeader
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _isCalculatedColumn
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_isCalculatedColumn", "is-calculated-column", org.exolab.castor.xml.NodeType.Attribute);
+        //-- isCalculatedColumn
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "isCalculatedColumn", "is-calculated-column", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasIsCalculatedColumn())
-                    return null;
+                if (!target.hasIsCalculatedColumn()) { return null; }
                 return (target.getIsCalculatedColumn() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -167,75 +171,84 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deleteIsCalculatedColumn();
                         return;
                     }
-                    target.setIsCalculatedColumn( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setIsCalculatedColumn( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _isCalculatedColumn
+
+        //-- validation code for: isCalculatedColumn
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _calculatedColumnFunction
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_calculatedColumnFunction", "calculated-column-function", org.exolab.castor.xml.NodeType.Attribute);
+        //-- calculatedColumnFunction
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "calculatedColumnFunction", "calculated-column-function", org.exolab.castor.xml.NodeType.Attribute);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
                 return target.getCalculatedColumnFunction();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     Field target = (Field) object;
                     target.setCalculatedColumnFunction( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _calculatedColumnFunction
+
+        //-- validation code for: calculatedColumnFunction
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _isDetail
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_isDetail", "is-detail", org.exolab.castor.xml.NodeType.Attribute);
+        //-- isDetail
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "isDetail", "is-detail", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasIsDetail())
-                    return null;
+                if (!target.hasIsDetail()) { return null; }
                 return (target.getIsDetail() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -246,38 +259,42 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deleteIsDetail();
                         return;
                     }
-                    target.setIsDetail( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setIsDetail( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _isDetail
+
+        //-- validation code for: isDetail
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _isRowHeader
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_isRowHeader", "is-row-header", org.exolab.castor.xml.NodeType.Attribute);
+        //-- isRowHeader
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "isRowHeader", "is-row-header", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasIsRowHeader())
-                    return null;
+                if (!target.hasIsRowHeader()) { return null; }
                 return (target.getIsRowHeader() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -288,114 +305,128 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deleteIsRowHeader();
                         return;
                     }
-                    target.setIsRowHeader( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setIsRowHeader( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _isRowHeader
+
+        //-- validation code for: isRowHeader
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _name
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_name", "name", org.exolab.castor.xml.NodeType.Attribute);
+        //-- name
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "name", "name", org.exolab.castor.xml.NodeType.Attribute);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
                 return target.getName();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     Field target = (Field) object;
                     target.setName( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setRequired(true);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _name
+
+        //-- validation code for: name
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         fieldValidator.setMinOccurs(1);
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _levelName
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_levelName", "level-name", org.exolab.castor.xml.NodeType.Attribute);
+        //-- levelName
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "levelName", "level-name", org.exolab.castor.xml.NodeType.Attribute);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
                 return target.getLevelName();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     Field target = (Field) object;
                     target.setLevelName( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _levelName
+
+        //-- validation code for: levelName
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _createGroupHeader
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_createGroupHeader", "create-group-header", org.exolab.castor.xml.NodeType.Attribute);
+        //-- createGroupHeader
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "createGroupHeader", "create-group-header", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasCreateGroupHeader())
-                    return null;
+                if (!target.hasCreateGroupHeader()) { return null; }
                 return (target.getCreateGroupHeader() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -406,148 +437,167 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deleteCreateGroupHeader();
                         return;
                     }
-                    target.setCreateGroupHeader( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setCreateGroupHeader( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _createGroupHeader
+
+        //-- validation code for: createGroupHeader
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _displayName
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_displayName", "display-name", org.exolab.castor.xml.NodeType.Attribute);
+        //-- displayName
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "displayName", "display-name", org.exolab.castor.xml.NodeType.Attribute);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
                 return target.getDisplayName();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     Field target = (Field) object;
                     target.setDisplayName( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _displayName
+
+        //-- validation code for: displayName
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _nullString
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_nullString", "null-string", org.exolab.castor.xml.NodeType.Attribute);
+        //-- nullString
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "nullString", "null-string", org.exolab.castor.xml.NodeType.Attribute);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
                 return target.getNullString();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     Field target = (Field) object;
                     target.setNullString( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _nullString
+
+        //-- validation code for: nullString
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _width
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.math.BigDecimal.class, "_width", "width", org.exolab.castor.xml.NodeType.Attribute);
+        //-- width
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.math.BigDecimal.class, "width", "width", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
                 return target.getWidth();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     Field target = (Field) object;
                     target.setWidth( (java.math.BigDecimal) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return new java.math.BigDecimal(0);
             }
         };
         desc.setImmutable(true);
+        desc.setSchemaType("decimal");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _width
+
+        //-- validation code for: width
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.DecimalValidator typeValidator = new org.exolab.castor.xml.validators.DecimalValidator();
+            org.exolab.castor.xml.validators.DecimalValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.DecimalValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _widthLocked
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_widthLocked", "width-locked", org.exolab.castor.xml.NodeType.Attribute);
+        //-- widthLocked
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "widthLocked", "width-locked", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasWidthLocked())
-                    return null;
+                if (!target.hasWidthLocked()) { return null; }
                 return (target.getWidthLocked() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -558,38 +608,42 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deleteWidthLocked();
                         return;
                     }
-                    target.setWidthLocked( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setWidthLocked( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _widthLocked
+
+        //-- validation code for: widthLocked
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _isWidthPercent
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_isWidthPercent", "is-width-percent", org.exolab.castor.xml.NodeType.Attribute);
+        //-- isWidthPercent
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "isWidthPercent", "is-width-percent", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasIsWidthPercent())
-                    return null;
+                if (!target.hasIsWidthPercent()) { return null; }
                 return (target.getIsWidthPercent() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -600,112 +654,126 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deleteIsWidthPercent();
                         return;
                     }
-                    target.setIsWidthPercent( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setIsWidthPercent( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _isWidthPercent
+
+        //-- validation code for: isWidthPercent
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _horizontalAlignment
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_horizontalAlignment", "horizontal-alignment", org.exolab.castor.xml.NodeType.Attribute);
+        //-- horizontalAlignment
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "horizontalAlignment", "horizontal-alignment", org.exolab.castor.xml.NodeType.Attribute);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
                 return target.getHorizontalAlignment();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     Field target = (Field) object;
                     target.setHorizontalAlignment( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _horizontalAlignment
+
+        //-- validation code for: horizontalAlignment
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _verticalAlignment
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_verticalAlignment", "vertical-alignment", org.exolab.castor.xml.NodeType.Attribute);
+        //-- verticalAlignment
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "verticalAlignment", "vertical-alignment", org.exolab.castor.xml.NodeType.Attribute);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
                 return target.getVerticalAlignment();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     Field target = (Field) object;
                     target.setVerticalAlignment( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _verticalAlignment
+
+        //-- validation code for: verticalAlignment
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _type
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_type", "type", org.exolab.castor.xml.NodeType.Attribute);
+        //-- type
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "type", "type", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasType())
-                    return null;
+                if (!target.hasType()) { return null; }
                 return new java.lang.Integer(target.getType());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -716,112 +784,128 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deleteType();
                         return;
                     }
-                    target.setType( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setType( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _type
+
+        //-- validation code for: type
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _format
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_format", "format", org.exolab.castor.xml.NodeType.Attribute);
+        //-- format
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "format", "format", org.exolab.castor.xml.NodeType.Attribute);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
                 return target.getFormat();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     Field target = (Field) object;
                     target.setFormat( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _format
+
+        //-- validation code for: format
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _expression
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_expression", "expression", org.exolab.castor.xml.NodeType.Attribute);
+        //-- expression
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "expression", "expression", org.exolab.castor.xml.NodeType.Attribute);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
                 return target.getExpression();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     Field target = (Field) object;
                     target.setExpression( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _expression
+
+        //-- validation code for: expression
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _useItemHide
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_useItemHide", "use-item-hide", org.exolab.castor.xml.NodeType.Attribute);
+        //-- useItemHide
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "useItemHide", "use-item-hide", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasUseItemHide())
-                    return null;
+                if (!target.hasUseItemHide()) { return null; }
                 return (target.getUseItemHide() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -832,38 +916,42 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deleteUseItemHide();
                         return;
                     }
-                    target.setUseItemHide( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setUseItemHide( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _useItemHide
+
+        //-- validation code for: useItemHide
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _calculateGroupTotals
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_calculateGroupTotals", "calculate-group-totals", org.exolab.castor.xml.NodeType.Attribute);
+        //-- calculateGroupTotals
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "calculateGroupTotals", "calculate-group-totals", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasCalculateGroupTotals())
-                    return null;
+                if (!target.hasCalculateGroupTotals()) { return null; }
                 return (target.getCalculateGroupTotals() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -874,149 +962,168 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deleteCalculateGroupTotals();
                         return;
                     }
-                    target.setCalculateGroupTotals( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setCalculateGroupTotals( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _calculateGroupTotals
+
+        //-- validation code for: calculateGroupTotals
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _groupTotalsLabel
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_groupTotalsLabel", "group-totals-label", org.exolab.castor.xml.NodeType.Attribute);
+        //-- groupTotalsLabel
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "groupTotalsLabel", "group-totals-label", org.exolab.castor.xml.NodeType.Attribute);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
                 return target.getGroupTotalsLabel();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     Field target = (Field) object;
                     target.setGroupTotalsLabel( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _groupTotalsLabel
+
+        //-- validation code for: groupTotalsLabel
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _groupTotalsHorizontalAlignment
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_groupTotalsHorizontalAlignment", "group-totals-horizontal-alignment", org.exolab.castor.xml.NodeType.Attribute);
+        //-- groupTotalsHorizontalAlignment
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "groupTotalsHorizontalAlignment", "group-totals-horizontal-alignment", org.exolab.castor.xml.NodeType.Attribute);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
                 return target.getGroupTotalsHorizontalAlignment();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     Field target = (Field) object;
                     target.setGroupTotalsHorizontalAlignment( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _groupTotalsHorizontalAlignment
+
+        //-- validation code for: groupTotalsHorizontalAlignment
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _fontName
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_fontName", "font-name", org.exolab.castor.xml.NodeType.Attribute);
+        //-- fontName
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "fontName", "font-name", org.exolab.castor.xml.NodeType.Attribute);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
                 return target.getFontName();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     Field target = (Field) object;
                     target.setFontName( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _fontName
+
+        //-- validation code for: fontName
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _fontStyle
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_fontStyle", "font-style", org.exolab.castor.xml.NodeType.Attribute);
+        //-- fontStyle
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "fontStyle", "font-style", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasFontStyle())
-                    return null;
+                if (!target.hasFontStyle()) { return null; }
                 return new java.lang.Integer(target.getFontStyle());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1027,38 +1134,44 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deleteFontStyle();
                         return;
                     }
-                    target.setFontStyle( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setFontStyle( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _fontStyle
+
+        //-- validation code for: fontStyle
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _fontSize
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Integer.TYPE, "_fontSize", "font-size", org.exolab.castor.xml.NodeType.Attribute);
+        //-- fontSize
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Integer.TYPE, "fontSize", "font-size", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasFontSize())
-                    return null;
+                if (!target.hasFontSize()) { return null; }
                 return new java.lang.Integer(target.getFontSize());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1069,112 +1182,128 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deleteFontSize();
                         return;
                     }
-                    target.setFontSize( ((java.lang.Integer)value).intValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setFontSize( ((java.lang.Integer) value).intValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("int");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _fontSize
+
+        //-- validation code for: fontSize
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.IntegerValidator typeValidator = new org.exolab.castor.xml.validators.IntegerValidator();
+            org.exolab.castor.xml.validators.IntValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.IntValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-2147483648);
+            typeValidator.setMaxInclusive(2147483647);
         }
         desc.setValidator(fieldValidator);
-        //-- _fontColor
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_fontColor", "font-color", org.exolab.castor.xml.NodeType.Attribute);
+        //-- fontColor
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "fontColor", "font-color", org.exolab.castor.xml.NodeType.Attribute);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
                 return target.getFontColor();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     Field target = (Field) object;
                     target.setFontColor( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _fontColor
+
+        //-- validation code for: fontColor
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _backgroundColor
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_backgroundColor", "background-color", org.exolab.castor.xml.NodeType.Attribute);
+        //-- backgroundColor
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "backgroundColor", "background-color", org.exolab.castor.xml.NodeType.Attribute);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
                 return target.getBackgroundColor();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     Field target = (Field) object;
                     target.setBackgroundColor( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _backgroundColor
+
+        //-- validation code for: backgroundColor
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _useBackgroundColor
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_useBackgroundColor", "use-background-color", org.exolab.castor.xml.NodeType.Attribute);
+        //-- useBackgroundColor
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "useBackgroundColor", "use-background-color", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasUseBackgroundColor())
-                    return null;
+                if (!target.hasUseBackgroundColor()) { return null; }
                 return (target.getUseBackgroundColor() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1185,75 +1314,84 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deleteUseBackgroundColor();
                         return;
                     }
-                    target.setUseBackgroundColor( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setUseBackgroundColor( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _useBackgroundColor
+
+        //-- validation code for: useBackgroundColor
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _groupFooterBackgroundColor
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_groupFooterBackgroundColor", "group-footer-background-color", org.exolab.castor.xml.NodeType.Attribute);
+        //-- groupFooterBackgroundColor
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "groupFooterBackgroundColor", "group-footer-background-color", org.exolab.castor.xml.NodeType.Attribute);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
                 return target.getGroupFooterBackgroundColor();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     Field target = (Field) object;
                     target.setGroupFooterBackgroundColor( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _groupFooterBackgroundColor
+
+        //-- validation code for: groupFooterBackgroundColor
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _useGroupFooterBackgroundColor
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_useGroupFooterBackgroundColor", "use-group-footer-background-color", org.exolab.castor.xml.NodeType.Attribute);
+        //-- useGroupFooterBackgroundColor
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "useGroupFooterBackgroundColor", "use-group-footer-background-color", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasUseGroupFooterBackgroundColor())
-                    return null;
+                if (!target.hasUseGroupFooterBackgroundColor()) { return null; }
                 return (target.getUseGroupFooterBackgroundColor() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1264,38 +1402,42 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deleteUseGroupFooterBackgroundColor();
                         return;
                     }
-                    target.setUseGroupFooterBackgroundColor( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setUseGroupFooterBackgroundColor( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _useGroupFooterBackgroundColor
+
+        //-- validation code for: useGroupFooterBackgroundColor
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _groupPageBreak
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_groupPageBreak", "group-page-break", org.exolab.castor.xml.NodeType.Attribute);
+        //-- groupPageBreak
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "groupPageBreak", "group-page-break", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasGroupPageBreak())
-                    return null;
+                if (!target.hasGroupPageBreak()) { return null; }
                 return (target.getGroupPageBreak() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1306,38 +1448,42 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deleteGroupPageBreak();
                         return;
                     }
-                    target.setGroupPageBreak( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setGroupPageBreak( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _groupPageBreak
+
+        //-- validation code for: groupPageBreak
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _pageBreakBeforeGroup
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_pageBreakBeforeGroup", "page-break-before-group", org.exolab.castor.xml.NodeType.Attribute);
+        //-- pageBreakBeforeGroup
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "pageBreakBeforeGroup", "page-break-before-group", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasPageBreakBeforeGroup())
-                    return null;
+                if (!target.hasPageBreakBeforeGroup()) { return null; }
                 return (target.getPageBreakBeforeGroup() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1348,38 +1494,42 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deletePageBreakBeforeGroup();
                         return;
                     }
-                    target.setPageBreakBeforeGroup( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setPageBreakBeforeGroup( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _pageBreakBeforeGroup
+
+        //-- validation code for: pageBreakBeforeGroup
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _pageBreakAfterGroup
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_pageBreakAfterGroup", "page-break-after-group", org.exolab.castor.xml.NodeType.Attribute);
+        //-- pageBreakAfterGroup
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "pageBreakAfterGroup", "page-break-after-group", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasPageBreakAfterGroup())
-                    return null;
+                if (!target.hasPageBreakAfterGroup()) { return null; }
                 return (target.getPageBreakAfterGroup() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1390,38 +1540,42 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deletePageBreakAfterGroup();
                         return;
                     }
-                    target.setPageBreakAfterGroup( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setPageBreakAfterGroup( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _pageBreakAfterGroup
+
+        //-- validation code for: pageBreakAfterGroup
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _pageBreakBeforeHeader
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_pageBreakBeforeHeader", "page-break-before-header", org.exolab.castor.xml.NodeType.Attribute);
+        //-- pageBreakBeforeHeader
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "pageBreakBeforeHeader", "page-break-before-header", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasPageBreakBeforeHeader())
-                    return null;
+                if (!target.hasPageBreakBeforeHeader()) { return null; }
                 return (target.getPageBreakBeforeHeader() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1432,38 +1586,42 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deletePageBreakBeforeHeader();
                         return;
                     }
-                    target.setPageBreakBeforeHeader( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setPageBreakBeforeHeader( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _pageBreakBeforeHeader
+
+        //-- validation code for: pageBreakBeforeHeader
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _pageBreakAfterHeader
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_pageBreakAfterHeader", "page-break-after-header", org.exolab.castor.xml.NodeType.Attribute);
+        //-- pageBreakAfterHeader
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "pageBreakAfterHeader", "page-break-after-header", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasPageBreakAfterHeader())
-                    return null;
+                if (!target.hasPageBreakAfterHeader()) { return null; }
                 return (target.getPageBreakAfterHeader() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1474,38 +1632,42 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deletePageBreakAfterHeader();
                         return;
                     }
-                    target.setPageBreakAfterHeader( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setPageBreakAfterHeader( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _pageBreakAfterHeader
+
+        //-- validation code for: pageBreakAfterHeader
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _pageBreakBeforeFooter
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_pageBreakBeforeFooter", "page-break-before-footer", org.exolab.castor.xml.NodeType.Attribute);
+        //-- pageBreakBeforeFooter
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "pageBreakBeforeFooter", "page-break-before-footer", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasPageBreakBeforeFooter())
-                    return null;
+                if (!target.hasPageBreakBeforeFooter()) { return null; }
                 return (target.getPageBreakBeforeFooter() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1516,38 +1678,42 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deletePageBreakBeforeFooter();
                         return;
                     }
-                    target.setPageBreakBeforeFooter( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setPageBreakBeforeFooter( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _pageBreakBeforeFooter
+
+        //-- validation code for: pageBreakBeforeFooter
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _pageBreakAfterFooter
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_pageBreakAfterFooter", "page-break-after-footer", org.exolab.castor.xml.NodeType.Attribute);
+        //-- pageBreakAfterFooter
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "pageBreakAfterFooter", "page-break-after-footer", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasPageBreakAfterFooter())
-                    return null;
+                if (!target.hasPageBreakAfterFooter()) { return null; }
                 return (target.getPageBreakAfterFooter() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1558,38 +1724,42 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deletePageBreakAfterFooter();
                         return;
                     }
-                    target.setPageBreakAfterFooter( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setPageBreakAfterFooter( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _pageBreakAfterFooter
+
+        //-- validation code for: pageBreakAfterFooter
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _repeatGroupHeader
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_repeatGroupHeader", "repeat-group-header", org.exolab.castor.xml.NodeType.Attribute);
+        //-- repeatGroupHeader
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "repeatGroupHeader", "repeat-group-header", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasRepeatGroupHeader())
-                    return null;
+                if (!target.hasRepeatGroupHeader()) { return null; }
                 return (target.getRepeatGroupHeader() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1600,38 +1770,42 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deleteRepeatGroupHeader();
                         return;
                     }
-                    target.setRepeatGroupHeader( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setRepeatGroupHeader( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _repeatGroupHeader
+
+        //-- validation code for: repeatGroupHeader
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _useTrafficLighting
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_useTrafficLighting", "use-traffic-lighting", org.exolab.castor.xml.NodeType.Attribute);
+        //-- useTrafficLighting
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "useTrafficLighting", "use-traffic-lighting", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasUseTrafficLighting())
-                    return null;
+                if (!target.hasUseTrafficLighting()) { return null; }
                 return (target.getUseTrafficLighting() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1642,38 +1816,42 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deleteUseTrafficLighting();
                         return;
                     }
-                    target.setUseTrafficLighting( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setUseTrafficLighting( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _useTrafficLighting
+
+        //-- validation code for: useTrafficLighting
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _trafficLightingUseAbsoluteValue
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_trafficLightingUseAbsoluteValue", "traffic-lighting-use-absolute-value", org.exolab.castor.xml.NodeType.Attribute);
+        //-- trafficLightingUseAbsoluteValue
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "trafficLightingUseAbsoluteValue", "traffic-lighting-use-absolute-value", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasTrafficLightingUseAbsoluteValue())
-                    return null;
+                if (!target.hasTrafficLightingUseAbsoluteValue()) { return null; }
                 return (target.getTrafficLightingUseAbsoluteValue() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1684,38 +1862,42 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deleteTrafficLightingUseAbsoluteValue();
                         return;
                     }
-                    target.setTrafficLightingUseAbsoluteValue( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setTrafficLightingUseAbsoluteValue( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _trafficLightingUseAbsoluteValue
+
+        //-- validation code for: trafficLightingUseAbsoluteValue
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _trafficLightingUseOppositeLogic
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Boolean.TYPE, "_trafficLightingUseOppositeLogic", "traffic-lighting-use-opposite-logic", org.exolab.castor.xml.NodeType.Attribute);
+        //-- trafficLightingUseOppositeLogic
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Boolean.TYPE, "trafficLightingUseOppositeLogic", "traffic-lighting-use-opposite-logic", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasTrafficLightingUseOppositeLogic())
-                    return null;
+                if (!target.hasTrafficLightingUseOppositeLogic()) { return null; }
                 return (target.getTrafficLightingUseOppositeLogic() ? java.lang.Boolean.TRUE : java.lang.Boolean.FALSE);
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1726,149 +1908,168 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deleteTrafficLightingUseOppositeLogic();
                         return;
                     }
-                    target.setTrafficLightingUseOppositeLogic( ((java.lang.Boolean)value).booleanValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setTrafficLightingUseOppositeLogic( ((java.lang.Boolean) value).booleanValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("boolean");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _trafficLightingUseOppositeLogic
+
+        //-- validation code for: trafficLightingUseOppositeLogic
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.BooleanValidator typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
+            org.exolab.castor.xml.validators.BooleanValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.BooleanValidator();
             fieldValidator.setValidator(typeValidator);
         }
         desc.setValidator(fieldValidator);
-        //-- _trafficLightingRedColor
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_trafficLightingRedColor", "traffic-lighting-red-color", org.exolab.castor.xml.NodeType.Attribute);
+        //-- trafficLightingRedColor
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "trafficLightingRedColor", "traffic-lighting-red-color", org.exolab.castor.xml.NodeType.Attribute);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
                 return target.getTrafficLightingRedColor();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     Field target = (Field) object;
                     target.setTrafficLightingRedColor( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _trafficLightingRedColor
+
+        //-- validation code for: trafficLightingRedColor
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _trafficLightingYellowColor
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_trafficLightingYellowColor", "traffic-lighting-yellow-color", org.exolab.castor.xml.NodeType.Attribute);
+        //-- trafficLightingYellowColor
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "trafficLightingYellowColor", "traffic-lighting-yellow-color", org.exolab.castor.xml.NodeType.Attribute);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
                 return target.getTrafficLightingYellowColor();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     Field target = (Field) object;
                     target.setTrafficLightingYellowColor( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _trafficLightingYellowColor
+
+        //-- validation code for: trafficLightingYellowColor
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _trafficLightingGreenColor
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_trafficLightingGreenColor", "traffic-lighting-green-color", org.exolab.castor.xml.NodeType.Attribute);
+        //-- trafficLightingGreenColor
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "trafficLightingGreenColor", "traffic-lighting-green-color", org.exolab.castor.xml.NodeType.Attribute);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
                 return target.getTrafficLightingGreenColor();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     Field target = (Field) object;
                     target.setTrafficLightingGreenColor( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("string");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _trafficLightingGreenColor
+
+        //-- validation code for: trafficLightingGreenColor
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-        //-- _trafficLightingRedValue
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Double.TYPE, "_trafficLightingRedValue", "traffic-lighting-red-value", org.exolab.castor.xml.NodeType.Attribute);
+        //-- trafficLightingRedValue
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Double.TYPE, "trafficLightingRedValue", "traffic-lighting-red-value", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasTrafficLightingRedValue())
-                    return null;
+                if (!target.hasTrafficLightingRedValue()) { return null; }
                 return new java.lang.Double(target.getTrafficLightingRedValue());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1879,38 +2080,46 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deleteTrafficLightingRedValue();
                         return;
                     }
-                    target.setTrafficLightingRedValue( ((java.lang.Double)value).doubleValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setTrafficLightingRedValue( ((java.lang.Double) value).doubleValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("double");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _trafficLightingRedValue
+
+        //-- validation code for: trafficLightingRedValue
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.DoubleValidator typeValidator = new org.exolab.castor.xml.validators.DoubleValidator();
+            org.exolab.castor.xml.validators.DoubleValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.DoubleValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-1.7976931348623157E308);
+            typeValidator.setMaxInclusive(1.7976931348623157E308);
+            typeValidator.setPositiveInfinity(java.lang.Double.POSITIVE_INFINITY);
+            typeValidator.setNegativeInfinity(java.lang.Double.NEGATIVE_INFINITY);
         }
         desc.setValidator(fieldValidator);
-        //-- _trafficLightingYellowValue
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Double.TYPE, "_trafficLightingYellowValue", "traffic-lighting-yellow-value", org.exolab.castor.xml.NodeType.Attribute);
+        //-- trafficLightingYellowValue
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Double.TYPE, "trafficLightingYellowValue", "traffic-lighting-yellow-value", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasTrafficLightingYellowValue())
-                    return null;
+                if (!target.hasTrafficLightingYellowValue()) { return null; }
                 return new java.lang.Double(target.getTrafficLightingYellowValue());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1921,38 +2130,46 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deleteTrafficLightingYellowValue();
                         return;
                     }
-                    target.setTrafficLightingYellowValue( ((java.lang.Double)value).doubleValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setTrafficLightingYellowValue( ((java.lang.Double) value).doubleValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("double");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _trafficLightingYellowValue
+
+        //-- validation code for: trafficLightingYellowValue
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.DoubleValidator typeValidator = new org.exolab.castor.xml.validators.DoubleValidator();
+            org.exolab.castor.xml.validators.DoubleValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.DoubleValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-1.7976931348623157E308);
+            typeValidator.setMaxInclusive(1.7976931348623157E308);
+            typeValidator.setPositiveInfinity(java.lang.Double.POSITIVE_INFINITY);
+            typeValidator.setNegativeInfinity(java.lang.Double.NEGATIVE_INFINITY);
         }
         desc.setValidator(fieldValidator);
-        //-- _trafficLightingGreenValue
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(Double.TYPE, "_trafficLightingGreenValue", "traffic-lighting-green-value", org.exolab.castor.xml.NodeType.Attribute);
+        //-- trafficLightingGreenValue
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.Double.TYPE, "trafficLightingGreenValue", "traffic-lighting-green-value", org.exolab.castor.xml.NodeType.Attribute);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
-                if(!target.hasTrafficLightingGreenValue())
-                    return null;
+                if (!target.hasTrafficLightingGreenValue()) { return null; }
                 return new java.lang.Double(target.getTrafficLightingGreenValue());
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
@@ -1963,80 +2180,93 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                         target.deleteTrafficLightingGreenValue();
                         return;
                     }
-                    target.setTrafficLightingGreenValue( ((java.lang.Double)value).doubleValue());
-                }
-                catch (java.lang.Exception ex) {
+                    target.setTrafficLightingGreenValue( ((java.lang.Double) value).doubleValue());
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("double");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _trafficLightingGreenValue
+
+        //-- validation code for: trafficLightingGreenValue
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
-            org.exolab.castor.xml.validators.DoubleValidator typeValidator = new org.exolab.castor.xml.validators.DoubleValidator();
+            org.exolab.castor.xml.validators.DoubleValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.DoubleValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setMinInclusive(-1.7976931348623157E308);
+            typeValidator.setMaxInclusive(1.7976931348623157E308);
+            typeValidator.setPositiveInfinity(java.lang.Double.POSITIVE_INFINITY);
+            typeValidator.setNegativeInfinity(java.lang.Double.NEGATIVE_INFINITY);
         }
         desc.setValidator(fieldValidator);
         //-- initialize element descriptors
-        
-        //-- _chart
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(org.pentaho.jfreereport.castormodel.reportspec.Chart.class, "_chart", "chart", org.exolab.castor.xml.NodeType.Element);
+
+        //-- chart
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(org.pentaho.jfreereport.castormodel.reportspec.Chart.class, "chart", "chart", org.exolab.castor.xml.NodeType.Element);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
                 return target.getChart();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     Field target = (Field) object;
                     target.setChart( (org.pentaho.jfreereport.castormodel.reportspec.Chart) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return new org.pentaho.jfreereport.castormodel.reportspec.Chart();
             }
         };
+        desc.setSchemaType("org.pentaho.jfreereport.castormodel.reportspec.Chart");
         desc.setHandler(handler);
         desc.setMultivalued(false);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _chart
+        addSequenceElement(desc);
+
+        //-- validation code for: chart
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         { //-- local scope
         }
         desc.setValidator(fieldValidator);
-        //-- _calculatedColumnsList
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_calculatedColumnsList", "calculated-columns", org.exolab.castor.xml.NodeType.Element);
+        //-- calculatedColumnsList
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "calculatedColumnsList", "calculated-columns", org.exolab.castor.xml.NodeType.Element);
         desc.setImmutable(true);
         handler = new org.exolab.castor.xml.XMLFieldHandler() {
+            @Override
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
             {
                 Field target = (Field) object;
                 return target.getCalculatedColumns();
             }
+            @Override
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
             {
                 try {
                     Field target = (Field) object;
                     target.addCalculatedColumns( (java.lang.String) value);
-                }
-                catch (java.lang.Exception ex) {
+                } catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
                 }
             }
@@ -2048,142 +2278,113 @@ public class FieldDescriptor extends org.exolab.castor.xml.util.XMLClassDescript
                     throw new IllegalStateException(ex.toString());
                 }
             }
-            public java.lang.Object newInstance( java.lang.Object parent ) {
+            @Override
+            @SuppressWarnings("unused")
+            public java.lang.Object newInstance(java.lang.Object parent) {
                 return null;
             }
         };
+        desc.setSchemaType("list");
+        desc.setComponentType("string");
         desc.setHandler(handler);
         desc.setMultivalued(true);
         addFieldDescriptor(desc);
-        
-        //-- validation code for: _calculatedColumnsList
+        addSequenceElement(desc);
+
+        //-- validation code for: calculatedColumnsList
         fieldValidator = new org.exolab.castor.xml.FieldValidator();
         fieldValidator.setMinOccurs(0);
         { //-- local scope
-            org.exolab.castor.xml.validators.StringValidator typeValidator = new org.exolab.castor.xml.validators.StringValidator();
-            typeValidator.setWhiteSpace("preserve");
+            org.exolab.castor.xml.validators.StringValidator typeValidator;
+            typeValidator = new org.exolab.castor.xml.validators.StringValidator();
             fieldValidator.setValidator(typeValidator);
+            typeValidator.setWhiteSpace("preserve");
         }
         desc.setValidator(fieldValidator);
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.FieldDescriptor()
-
-
-      //-----------/
-     //- Methods -/
-    //-----------/
+    }
 
     /**
-     * Method getAccessMode
-     * 
-     * 
+     * Method getAccessMode.
      * 
      * @return the access mode specified for this class.
      */
-    public org.exolab.castor.mapping.AccessMode getAccessMode()
-    {
+    @Override()
+    public org.exolab.castor.mapping.AccessMode getAccessMode() {
         return null;
-    } //-- org.exolab.castor.mapping.AccessMode getAccessMode() 
+    }
 
     /**
-     * Method getExtends
-     * 
-     * 
-     * 
-     * @return the class descriptor of the class extended by this
-     * class.
-     */
-    public org.exolab.castor.mapping.ClassDescriptor getExtends()
-    {
-        return null;
-    } //-- org.exolab.castor.mapping.ClassDescriptor getExtends() 
-
-    /**
-     * Method getIdentity
-     * 
-     * 
+     * Method getIdentity.
      * 
      * @return the identity field, null if this class has no
      * identity.
      */
-    public org.exolab.castor.mapping.FieldDescriptor getIdentity()
-    {
-        return identity;
-    } //-- org.exolab.castor.mapping.FieldDescriptor getIdentity() 
+    @Override()
+    public org.exolab.castor.mapping.FieldDescriptor getIdentity() {
+        return _identity;
+    }
 
     /**
-     * Method getJavaClass
-     * 
-     * 
+     * Method getJavaClass.
      * 
      * @return the Java class represented by this descriptor.
      */
-    public java.lang.Class getJavaClass()
-    {
+    @Override()
+    public java.lang.Class getJavaClass() {
         return org.pentaho.jfreereport.castormodel.reportspec.Field.class;
-    } //-- java.lang.Class getJavaClass() 
+    }
 
     /**
-     * Method getNameSpacePrefix
+     * Method getNameSpacePrefix.
      * 
-     * 
-     * 
-     * @return the namespace prefix to use when marshalling as XML.
+     * @return the namespace prefix to use when marshaling as XML.
      */
-    public java.lang.String getNameSpacePrefix()
-    {
-        return nsPrefix;
-    } //-- java.lang.String getNameSpacePrefix() 
+    @Override()
+    public java.lang.String getNameSpacePrefix() {
+        return _nsPrefix;
+    }
 
     /**
-     * Method getNameSpaceURI
+     * Method getNameSpaceURI.
      * 
-     * 
-     * 
-     * @return the namespace URI used when marshalling and
-     * unmarshalling as XML.
+     * @return the namespace URI used when marshaling and
+     * unmarshaling as XML.
      */
-    public java.lang.String getNameSpaceURI()
-    {
-        return nsURI;
-    } //-- java.lang.String getNameSpaceURI() 
+    @Override()
+    public java.lang.String getNameSpaceURI() {
+        return _nsURI;
+    }
 
     /**
-     * Method getValidator
-     * 
-     * 
+     * Method getValidator.
      * 
      * @return a specific validator for the class described by this
      * ClassDescriptor.
      */
-    public org.exolab.castor.xml.TypeValidator getValidator()
-    {
+    @Override()
+    public org.exolab.castor.xml.TypeValidator getValidator() {
         return this;
-    } //-- org.exolab.castor.xml.TypeValidator getValidator() 
+    }
 
     /**
-     * Method getXMLName
-     * 
-     * 
+     * Method getXMLName.
      * 
      * @return the XML Name for the Class being described.
      */
-    public java.lang.String getXMLName()
-    {
-        return xmlName;
-    } //-- java.lang.String getXMLName() 
+    @Override()
+    public java.lang.String getXMLName() {
+        return _xmlName;
+    }
 
     /**
-     * Method isElementDefinition
-     * 
-     * 
+     * Method isElementDefinition.
      * 
      * @return true if XML schema definition of this Class is that
      * of a global
      * element or element with anonymous type definition.
      */
-    public boolean isElementDefinition()
-    {
-        return elementDefinition;
-    } //-- boolean isElementDefinition() 
+    public boolean isElementDefinition() {
+        return _elementDefinition;
+    }
 
 }

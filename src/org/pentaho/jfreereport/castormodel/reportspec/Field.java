@@ -1,435 +1,442 @@
 /*
  * This class was automatically generated with 
- * <a href="http://www.castor.org">Castor 1.0.5</a>, using an XML
+ * <a href="http://www.castor.org">Castor 1.4.1</a>, using an XML
  * Schema.
  * $Id$
  */
 
 package org.pentaho.jfreereport.castormodel.reportspec;
 
-  //---------------------------------/
- //- Imported classes and packages -/
-//---------------------------------/
-
-import org.exolab.castor.xml.Marshaller;
-import org.exolab.castor.xml.Unmarshaller;
-
 /**
- * Class Field.
+ * 
  * 
  * @version $Revision$ $Date$
  */
+@SuppressWarnings("serial")
 public class Field implements java.io.Serializable {
 
-
-      //--------------------------/
-     //- Class/Member Variables -/
-    //--------------------------/
-
-    /**
-     * Field _useChart
-     */
-    private boolean _useChart = false;
-
     /**
-     * keeps track of state for field: _useChart
+     * Field useChart.
      */
-    private boolean _has_useChart;
+    private boolean useChart = false;
 
     /**
-     * Field _showChartAboveGroupHeader
+     * Keeps track of whether primitive field useChart has been set
+     * already.
      */
-    private boolean _showChartAboveGroupHeader = false;
+    private boolean _hasuseChart;
 
     /**
-     * keeps track of state for field: _showChartAboveGroupHeader
+     * Field showChartAboveGroupHeader.
      */
-    private boolean _has_showChartAboveGroupHeader;
+    private boolean showChartAboveGroupHeader = false;
 
     /**
-     * Field _isCalculatedColumn
+     * Keeps track of whether primitive field
+     * showChartAboveGroupHeader has been set already.
      */
-    private boolean _isCalculatedColumn = false;
+    private boolean _hasshowChartAboveGroupHeader;
 
     /**
-     * keeps track of state for field: _isCalculatedColumn
+     * Field isCalculatedColumn.
      */
-    private boolean _has_isCalculatedColumn;
+    private boolean isCalculatedColumn = false;
 
     /**
-     * Field _calculatedColumnFunction
+     * Keeps track of whether primitive field isCalculatedColumn
+     * has been set already.
      */
-    private java.lang.String _calculatedColumnFunction = "sum";
+    private boolean _hasisCalculatedColumn;
 
     /**
-     * Field _isDetail
+     * Field calculatedColumnFunction.
      */
-    private boolean _isDetail = true;
+    private java.lang.String calculatedColumnFunction = "sum";
 
     /**
-     * keeps track of state for field: _isDetail
+     * Field isDetail.
      */
-    private boolean _has_isDetail;
+    private boolean isDetail = true;
 
     /**
-     * Field _isRowHeader
+     * Keeps track of whether primitive field isDetail has been set
+     * already.
      */
-    private boolean _isRowHeader = false;
+    private boolean _hasisDetail;
 
     /**
-     * keeps track of state for field: _isRowHeader
+     * Field isRowHeader.
      */
-    private boolean _has_isRowHeader;
+    private boolean isRowHeader = false;
 
     /**
-     * Field _name
+     * Keeps track of whether primitive field isRowHeader has been
+     * set already.
      */
-    private java.lang.String _name;
+    private boolean _hasisRowHeader;
 
     /**
-     * Field _levelName
+     * Field name.
      */
-    private java.lang.String _levelName;
+    private java.lang.String name;
 
     /**
-     * Field _createGroupHeader
+     * Field levelName.
      */
-    private boolean _createGroupHeader = true;
+    private java.lang.String levelName;
 
     /**
-     * keeps track of state for field: _createGroupHeader
+     * Field createGroupHeader.
      */
-    private boolean _has_createGroupHeader;
+    private boolean createGroupHeader = true;
 
     /**
-     * Field _displayName
+     * Keeps track of whether primitive field createGroupHeader has
+     * been set already.
      */
-    private java.lang.String _displayName;
+    private boolean _hascreateGroupHeader;
 
     /**
-     * Field _nullString
+     * Field displayName.
      */
-    private java.lang.String _nullString = "-";
+    private java.lang.String displayName;
 
     /**
-     * Field _width
+     * Field nullString.
      */
-    private java.math.BigDecimal _width = new java.math.BigDecimal("15");
+    private java.lang.String nullString = "-";
 
     /**
-     * Field _widthLocked
+     * Field width.
      */
-    private boolean _widthLocked = false;
+    private java.math.BigDecimal width = new java.math.BigDecimal("15");
 
     /**
-     * keeps track of state for field: _widthLocked
+     * Field widthLocked.
      */
-    private boolean _has_widthLocked;
+    private boolean widthLocked = false;
 
     /**
-     * Field _isWidthPercent
+     * Keeps track of whether primitive field widthLocked has been
+     * set already.
      */
-    private boolean _isWidthPercent = true;
+    private boolean _haswidthLocked;
 
     /**
-     * keeps track of state for field: _isWidthPercent
+     * Field isWidthPercent.
      */
-    private boolean _has_isWidthPercent;
+    private boolean isWidthPercent = true;
 
     /**
-     * Field _horizontalAlignment
+     * Keeps track of whether primitive field isWidthPercent has
+     * been set already.
      */
-    private java.lang.String _horizontalAlignment = "center";
+    private boolean _hasisWidthPercent;
 
     /**
-     * Field _verticalAlignment
+     * Field horizontalAlignment.
      */
-    private java.lang.String _verticalAlignment = "middle";
+    private java.lang.String horizontalAlignment = "center";
 
     /**
-     * Field _type
+     * Field verticalAlignment.
      */
-    private int _type = 12;
+    private java.lang.String verticalAlignment = "middle";
 
     /**
-     * keeps track of state for field: _type
+     * Field type.
      */
-    private boolean _has_type;
+    private int type = 12;
 
     /**
-     * Field _format
+     * Keeps track of whether primitive field type has been set
+     * already.
      */
-    private java.lang.String _format = "";
+    private boolean _hastype;
 
     /**
-     * Field _expression
+     * Field format.
      */
-    private java.lang.String _expression = "none";
+    private java.lang.String format = "";
 
     /**
-     * Field _useItemHide
+     * Field expression.
      */
-    private boolean _useItemHide = false;
+    private java.lang.String expression = "none";
 
     /**
-     * keeps track of state for field: _useItemHide
+     * Field useItemHide.
      */
-    private boolean _has_useItemHide;
+    private boolean useItemHide = false;
 
     /**
-     * Field _calculateGroupTotals
+     * Keeps track of whether primitive field useItemHide has been
+     * set already.
      */
-    private boolean _calculateGroupTotals = true;
+    private boolean _hasuseItemHide;
 
     /**
-     * keeps track of state for field: _calculateGroupTotals
+     * Field calculateGroupTotals.
      */
-    private boolean _has_calculateGroupTotals;
+    private boolean calculateGroupTotals = true;
 
     /**
-     * Field _groupTotalsLabel
+     * Keeps track of whether primitive field calculateGroupTotals
+     * has been set already.
      */
-    private java.lang.String _groupTotalsLabel = "Total";
+    private boolean _hascalculateGroupTotals;
 
     /**
-     * Field _groupTotalsHorizontalAlignment
+     * Field groupTotalsLabel.
      */
-    private java.lang.String _groupTotalsHorizontalAlignment = "left";
+    private java.lang.String groupTotalsLabel = "Total";
 
     /**
-     * Field _fontName
+     * Field groupTotalsHorizontalAlignment.
      */
-    private java.lang.String _fontName;
+    private java.lang.String groupTotalsHorizontalAlignment = "left";
 
     /**
-     * Field _fontStyle
+     * Field fontName.
      */
-    private int _fontStyle = -1;
+    private java.lang.String fontName;
 
     /**
-     * keeps track of state for field: _fontStyle
+     * Field fontStyle.
      */
-    private boolean _has_fontStyle;
+    private int fontStyle = -1;
 
     /**
-     * Field _fontSize
+     * Keeps track of whether primitive field fontStyle has been
+     * set already.
      */
-    private int _fontSize = -1;
+    private boolean _hasfontStyle;
 
     /**
-     * keeps track of state for field: _fontSize
+     * Field fontSize.
      */
-    private boolean _has_fontSize;
+    private int fontSize = -1;
 
     /**
-     * Field _fontColor
+     * Keeps track of whether primitive field fontSize has been set
+     * already.
      */
-    private java.lang.String _fontColor;
+    private boolean _hasfontSize;
 
     /**
-     * Field _backgroundColor
+     * Field fontColor.
      */
-    private java.lang.String _backgroundColor = "#FFFFFF";
+    private java.lang.String fontColor;
 
     /**
-     * Field _useBackgroundColor
+     * Field backgroundColor.
      */
-    private boolean _useBackgroundColor = false;
+    private java.lang.String backgroundColor = "#FFFFFF";
 
     /**
-     * keeps track of state for field: _useBackgroundColor
+     * Field useBackgroundColor.
      */
-    private boolean _has_useBackgroundColor;
+    private boolean useBackgroundColor = false;
 
     /**
-     * Field _groupFooterBackgroundColor
+     * Keeps track of whether primitive field useBackgroundColor
+     * has been set already.
      */
-    private java.lang.String _groupFooterBackgroundColor = "#c0d0e0";
+    private boolean _hasuseBackgroundColor;
 
     /**
-     * Field _useGroupFooterBackgroundColor
+     * Field groupFooterBackgroundColor.
      */
-    private boolean _useGroupFooterBackgroundColor = true;
+    private java.lang.String groupFooterBackgroundColor = "#c0d0e0";
 
     /**
-     * keeps track of state for field: _useGroupFooterBackgroundColo
+     * Field useGroupFooterBackgroundColor.
      */
-    private boolean _has_useGroupFooterBackgroundColor;
+    private boolean useGroupFooterBackgroundColor = true;
 
     /**
-     * Field _groupPageBreak
+     * Keeps track of whether primitive field
+     * useGroupFooterBackgroundColor has been set already.
      */
-    private boolean _groupPageBreak;
+    private boolean _hasuseGroupFooterBackgroundColor;
 
     /**
-     * keeps track of state for field: _groupPageBreak
+     * Field groupPageBreak.
      */
-    private boolean _has_groupPageBreak;
+    private boolean groupPageBreak;
 
     /**
-     * Field _pageBreakBeforeGroup
+     * Keeps track of whether primitive field groupPageBreak has
+     * been set already.
      */
-    private boolean _pageBreakBeforeGroup;
+    private boolean _hasgroupPageBreak;
 
     /**
-     * keeps track of state for field: _pageBreakBeforeGroup
+     * Field pageBreakBeforeGroup.
      */
-    private boolean _has_pageBreakBeforeGroup;
+    private boolean pageBreakBeforeGroup;
 
     /**
-     * Field _pageBreakAfterGroup
+     * Keeps track of whether primitive field pageBreakBeforeGroup
+     * has been set already.
      */
-    private boolean _pageBreakAfterGroup;
+    private boolean _haspageBreakBeforeGroup;
 
     /**
-     * keeps track of state for field: _pageBreakAfterGroup
+     * Field pageBreakAfterGroup.
      */
-    private boolean _has_pageBreakAfterGroup;
+    private boolean pageBreakAfterGroup;
 
     /**
-     * Field _pageBreakBeforeHeader
+     * Keeps track of whether primitive field pageBreakAfterGroup
+     * has been set already.
      */
-    private boolean _pageBreakBeforeHeader = false;
+    private boolean _haspageBreakAfterGroup;
 
     /**
-     * keeps track of state for field: _pageBreakBeforeHeader
+     * Field pageBreakBeforeHeader.
      */
-    private boolean _has_pageBreakBeforeHeader;
+    private boolean pageBreakBeforeHeader = false;
 
     /**
-     * Field _pageBreakAfterHeader
+     * Keeps track of whether primitive field pageBreakBeforeHeader
+     * has been set already.
      */
-    private boolean _pageBreakAfterHeader = false;
+    private boolean _haspageBreakBeforeHeader;
 
     /**
-     * keeps track of state for field: _pageBreakAfterHeader
+     * Field pageBreakAfterHeader.
      */
-    private boolean _has_pageBreakAfterHeader;
+    private boolean pageBreakAfterHeader = false;
 
     /**
-     * Field _pageBreakBeforeFooter
+     * Keeps track of whether primitive field pageBreakAfterHeader
+     * has been set already.
      */
-    private boolean _pageBreakBeforeFooter = false;
+    private boolean _haspageBreakAfterHeader;
 
     /**
-     * keeps track of state for field: _pageBreakBeforeFooter
+     * Field pageBreakBeforeFooter.
      */
-    private boolean _has_pageBreakBeforeFooter;
+    private boolean pageBreakBeforeFooter = false;
 
     /**
-     * Field _pageBreakAfterFooter
+     * Keeps track of whether primitive field pageBreakBeforeFooter
+     * has been set already.
      */
-    private boolean _pageBreakAfterFooter = false;
+    private boolean _haspageBreakBeforeFooter;
 
     /**
-     * keeps track of state for field: _pageBreakAfterFooter
+     * Field pageBreakAfterFooter.
      */
-    private boolean _has_pageBreakAfterFooter;
+    private boolean pageBreakAfterFooter = false;
 
     /**
-     * Field _repeatGroupHeader
+     * Keeps track of whether primitive field pageBreakAfterFooter
+     * has been set already.
      */
-    private boolean _repeatGroupHeader = false;
+    private boolean _haspageBreakAfterFooter;
 
     /**
-     * keeps track of state for field: _repeatGroupHeader
+     * Field repeatGroupHeader.
      */
-    private boolean _has_repeatGroupHeader;
+    private boolean repeatGroupHeader = false;
 
     /**
-     * Field _useTrafficLighting
+     * Keeps track of whether primitive field repeatGroupHeader has
+     * been set already.
      */
-    private boolean _useTrafficLighting = false;
+    private boolean _hasrepeatGroupHeader;
 
     /**
-     * keeps track of state for field: _useTrafficLighting
+     * Field useTrafficLighting.
      */
-    private boolean _has_useTrafficLighting;
+    private boolean useTrafficLighting = false;
 
     /**
-     * Field _trafficLightingUseAbsoluteValue
+     * Keeps track of whether primitive field useTrafficLighting
+     * has been set already.
      */
-    private boolean _trafficLightingUseAbsoluteValue = false;
+    private boolean _hasuseTrafficLighting;
 
     /**
-     * keeps track of state for field:
-     * _trafficLightingUseAbsoluteValue
+     * Field trafficLightingUseAbsoluteValue.
      */
-    private boolean _has_trafficLightingUseAbsoluteValue;
+    private boolean trafficLightingUseAbsoluteValue = false;
 
     /**
-     * Field _trafficLightingUseOppositeLogic
+     * Keeps track of whether primitive field
+     * trafficLightingUseAbsoluteValue has been set already.
      */
-    private boolean _trafficLightingUseOppositeLogic = false;
+    private boolean _hastrafficLightingUseAbsoluteValue;
 
     /**
-     * keeps track of state for field:
-     * _trafficLightingUseOppositeLogic
+     * Field trafficLightingUseOppositeLogic.
      */
-    private boolean _has_trafficLightingUseOppositeLogic;
+    private boolean trafficLightingUseOppositeLogic = false;
 
     /**
-     * Field _trafficLightingRedColor
+     * Keeps track of whether primitive field
+     * trafficLightingUseOppositeLogic has been set already.
      */
-    private java.lang.String _trafficLightingRedColor = "#FF0000";
+    private boolean _hastrafficLightingUseOppositeLogic;
 
     /**
-     * Field _trafficLightingYellowColor
+     * Field trafficLightingRedColor.
      */
-    private java.lang.String _trafficLightingYellowColor = "#FFFF00";
+    private java.lang.String trafficLightingRedColor = "#FF0000";
 
     /**
-     * Field _trafficLightingGreenColor
+     * Field trafficLightingYellowColor.
      */
-    private java.lang.String _trafficLightingGreenColor = "#00FF00";
+    private java.lang.String trafficLightingYellowColor = "#FFFF00";
 
     /**
-     * Field _trafficLightingRedValue
+     * Field trafficLightingGreenColor.
      */
-    private double _trafficLightingRedValue = 250000;
+    private java.lang.String trafficLightingGreenColor = "#00FF00";
 
     /**
-     * keeps track of state for field: _trafficLightingRedValue
+     * Field trafficLightingRedValue.
      */
-    private boolean _has_trafficLightingRedValue;
+    private double trafficLightingRedValue = 250000;
 
     /**
-     * Field _trafficLightingYellowValue
+     * Keeps track of whether primitive field
+     * trafficLightingRedValue has been set already.
      */
-    private double _trafficLightingYellowValue = 500000;
+    private boolean _hastrafficLightingRedValue;
 
     /**
-     * keeps track of state for field: _trafficLightingYellowValue
+     * Field trafficLightingYellowValue.
      */
-    private boolean _has_trafficLightingYellowValue;
+    private double trafficLightingYellowValue = 500000;
 
     /**
-     * Field _trafficLightingGreenValue
+     * Keeps track of whether primitive field
+     * trafficLightingYellowValue has been set already.
      */
-    private double _trafficLightingGreenValue = 750000;
+    private boolean _hastrafficLightingYellowValue;
 
     /**
-     * keeps track of state for field: _trafficLightingGreenValue
+     * Field trafficLightingGreenValue.
      */
-    private boolean _has_trafficLightingGreenValue;
+    private double trafficLightingGreenValue = 750000;
 
     /**
-     * Field _chart
+     * Keeps track of whether primitive field
+     * trafficLightingGreenValue has been set already.
      */
-    private org.pentaho.jfreereport.castormodel.reportspec.Chart _chart;
+    private boolean _hastrafficLightingGreenValue;
 
     /**
-     * Field _calculatedColumnsList
+     * Field chart.
      */
-    private java.util.List _calculatedColumnsList;
-
+    private org.pentaho.jfreereport.castormodel.reportspec.Chart chart;
 
-      //----------------/
-     //- Constructors -/
-    //----------------/
+    private java.util.List<java.lang.String> calculatedColumnsList;
 
-    public Field() 
-     {
+    public Field() {
         super();
         setCalculatedColumnFunction("sum");
         setNullString("-");
@@ -445,13 +452,8 @@ public class Field implements java.io.Serializable {
         setTrafficLightingRedColor("#FF0000");
         setTrafficLightingYellowColor("#FFFF00");
         setTrafficLightingGreenColor("#00FF00");
-        this._calculatedColumnsList = new java.util.ArrayList();
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.Field()
-
-
-      //-----------/
-     //- Methods -/
-    //-----------/
+        this.calculatedColumnsList = new java.util.ArrayList<java.lang.String>();
+    }
 
     /**
      * 
@@ -460,11 +462,9 @@ public class Field implements java.io.Serializable {
      * @throws java.lang.IndexOutOfBoundsException if the index
      * given is outside the bounds of the collection
      */
-    public void addCalculatedColumns(java.lang.String vCalculatedColumns)
-        throws java.lang.IndexOutOfBoundsException
-    {
-        this._calculatedColumnsList.add(vCalculatedColumns);
-    } //-- void addCalculatedColumns(java.lang.String) 
+    public void addCalculatedColumns(final java.lang.String vCalculatedColumns) throws java.lang.IndexOutOfBoundsException {
+        this.calculatedColumnsList.add(vCalculatedColumns);
+    }
 
     /**
      * 
@@ -474,638 +474,558 @@ public class Field implements java.io.Serializable {
      * @throws java.lang.IndexOutOfBoundsException if the index
      * given is outside the bounds of the collection
      */
-    public void addCalculatedColumns(int index, java.lang.String vCalculatedColumns)
-        throws java.lang.IndexOutOfBoundsException
-    {
-        this._calculatedColumnsList.add(index, vCalculatedColumns);
-    } //-- void addCalculatedColumns(int, java.lang.String) 
+    public void addCalculatedColumns(final int index,final java.lang.String vCalculatedColumns) throws java.lang.IndexOutOfBoundsException {
+        this.calculatedColumnsList.add(index, vCalculatedColumns);
+    }
 
     /**
      */
-    public void deleteCalculateGroupTotals()
-    {
-        this._has_calculateGroupTotals= false;
-    } //-- void deleteCalculateGroupTotals() 
+    public void deleteCalculateGroupTotals() {
+        this._hascalculateGroupTotals= false;
+    }
 
     /**
      */
-    public void deleteCreateGroupHeader()
-    {
-        this._has_createGroupHeader= false;
-    } //-- void deleteCreateGroupHeader() 
+    public void deleteCreateGroupHeader() {
+        this._hascreateGroupHeader= false;
+    }
 
     /**
      */
-    public void deleteFontSize()
-    {
-        this._has_fontSize= false;
-    } //-- void deleteFontSize() 
+    public void deleteFontSize() {
+        this._hasfontSize= false;
+    }
 
     /**
      */
-    public void deleteFontStyle()
-    {
-        this._has_fontStyle= false;
-    } //-- void deleteFontStyle() 
+    public void deleteFontStyle() {
+        this._hasfontStyle= false;
+    }
 
     /**
      */
-    public void deleteGroupPageBreak()
-    {
-        this._has_groupPageBreak= false;
-    } //-- void deleteGroupPageBreak() 
+    public void deleteGroupPageBreak() {
+        this._hasgroupPageBreak= false;
+    }
 
     /**
      */
-    public void deleteIsCalculatedColumn()
-    {
-        this._has_isCalculatedColumn= false;
-    } //-- void deleteIsCalculatedColumn() 
+    public void deleteIsCalculatedColumn() {
+        this._hasisCalculatedColumn= false;
+    }
 
     /**
      */
-    public void deleteIsDetail()
-    {
-        this._has_isDetail= false;
-    } //-- void deleteIsDetail() 
+    public void deleteIsDetail() {
+        this._hasisDetail= false;
+    }
 
     /**
      */
-    public void deleteIsRowHeader()
-    {
-        this._has_isRowHeader= false;
-    } //-- void deleteIsRowHeader() 
+    public void deleteIsRowHeader() {
+        this._hasisRowHeader= false;
+    }
 
     /**
      */
-    public void deleteIsWidthPercent()
-    {
-        this._has_isWidthPercent= false;
-    } //-- void deleteIsWidthPercent() 
+    public void deleteIsWidthPercent() {
+        this._hasisWidthPercent= false;
+    }
 
     /**
      */
-    public void deletePageBreakAfterFooter()
-    {
-        this._has_pageBreakAfterFooter= false;
-    } //-- void deletePageBreakAfterFooter() 
+    public void deletePageBreakAfterFooter() {
+        this._haspageBreakAfterFooter= false;
+    }
 
     /**
      */
-    public void deletePageBreakAfterGroup()
-    {
-        this._has_pageBreakAfterGroup= false;
-    } //-- void deletePageBreakAfterGroup() 
+    public void deletePageBreakAfterGroup() {
+        this._haspageBreakAfterGroup= false;
+    }
 
     /**
      */
-    public void deletePageBreakAfterHeader()
-    {
-        this._has_pageBreakAfterHeader= false;
-    } //-- void deletePageBreakAfterHeader() 
+    public void deletePageBreakAfterHeader() {
+        this._haspageBreakAfterHeader= false;
+    }
 
     /**
      */
-    public void deletePageBreakBeforeFooter()
-    {
-        this._has_pageBreakBeforeFooter= false;
-    } //-- void deletePageBreakBeforeFooter() 
+    public void deletePageBreakBeforeFooter() {
+        this._haspageBreakBeforeFooter= false;
+    }
 
     /**
      */
-    public void deletePageBreakBeforeGroup()
-    {
-        this._has_pageBreakBeforeGroup= false;
-    } //-- void deletePageBreakBeforeGroup() 
+    public void deletePageBreakBeforeGroup() {
+        this._haspageBreakBeforeGroup= false;
+    }
 
     /**
      */
-    public void deletePageBreakBeforeHeader()
-    {
-        this._has_pageBreakBeforeHeader= false;
-    } //-- void deletePageBreakBeforeHeader() 
+    public void deletePageBreakBeforeHeader() {
+        this._haspageBreakBeforeHeader= false;
+    }
 
     /**
      */
-    public void deleteRepeatGroupHeader()
-    {
-        this._has_repeatGroupHeader= false;
-    } //-- void deleteRepeatGroupHeader() 
+    public void deleteRepeatGroupHeader() {
+        this._hasrepeatGroupHeader= false;
+    }
 
     /**
      */
-    public void deleteShowChartAboveGroupHeader()
-    {
-        this._has_showChartAboveGroupHeader= false;
-    } //-- void deleteShowChartAboveGroupHeader() 
+    public void deleteShowChartAboveGroupHeader() {
+        this._hasshowChartAboveGroupHeader= false;
+    }
 
     /**
      */
-    public void deleteTrafficLightingGreenValue()
-    {
-        this._has_trafficLightingGreenValue= false;
-    } //-- void deleteTrafficLightingGreenValue() 
+    public void deleteTrafficLightingGreenValue() {
+        this._hastrafficLightingGreenValue= false;
+    }
 
     /**
      */
-    public void deleteTrafficLightingRedValue()
-    {
-        this._has_trafficLightingRedValue= false;
-    } //-- void deleteTrafficLightingRedValue() 
+    public void deleteTrafficLightingRedValue() {
+        this._hastrafficLightingRedValue= false;
+    }
 
     /**
      */
-    public void deleteTrafficLightingUseAbsoluteValue()
-    {
-        this._has_trafficLightingUseAbsoluteValue= false;
-    } //-- void deleteTrafficLightingUseAbsoluteValue() 
+    public void deleteTrafficLightingUseAbsoluteValue() {
+        this._hastrafficLightingUseAbsoluteValue= false;
+    }
 
     /**
      */
-    public void deleteTrafficLightingUseOppositeLogic()
-    {
-        this._has_trafficLightingUseOppositeLogic= false;
-    } //-- void deleteTrafficLightingUseOppositeLogic() 
+    public void deleteTrafficLightingUseOppositeLogic() {
+        this._hastrafficLightingUseOppositeLogic= false;
+    }
 
     /**
      */
-    public void deleteTrafficLightingYellowValue()
-    {
-        this._has_trafficLightingYellowValue= false;
-    } //-- void deleteTrafficLightingYellowValue() 
+    public void deleteTrafficLightingYellowValue() {
+        this._hastrafficLightingYellowValue= false;
+    }
 
     /**
      */
-    public void deleteType()
-    {
-        this._has_type= false;
-    } //-- void deleteType() 
+    public void deleteType() {
+        this._hastype= false;
+    }
 
     /**
      */
-    public void deleteUseBackgroundColor()
-    {
-        this._has_useBackgroundColor= false;
-    } //-- void deleteUseBackgroundColor() 
+    public void deleteUseBackgroundColor() {
+        this._hasuseBackgroundColor= false;
+    }
 
     /**
      */
-    public void deleteUseChart()
-    {
-        this._has_useChart= false;
-    } //-- void deleteUseChart() 
+    public void deleteUseChart() {
+        this._hasuseChart= false;
+    }
 
     /**
      */
-    public void deleteUseGroupFooterBackgroundColor()
-    {
-        this._has_useGroupFooterBackgroundColor= false;
-    } //-- void deleteUseGroupFooterBackgroundColor() 
+    public void deleteUseGroupFooterBackgroundColor() {
+        this._hasuseGroupFooterBackgroundColor= false;
+    }
 
     /**
      */
-    public void deleteUseItemHide()
-    {
-        this._has_useItemHide= false;
-    } //-- void deleteUseItemHide() 
+    public void deleteUseItemHide() {
+        this._hasuseItemHide= false;
+    }
 
     /**
      */
-    public void deleteUseTrafficLighting()
-    {
-        this._has_useTrafficLighting= false;
-    } //-- void deleteUseTrafficLighting() 
+    public void deleteUseTrafficLighting() {
+        this._hasuseTrafficLighting= false;
+    }
 
     /**
      */
-    public void deleteWidthLocked()
-    {
-        this._has_widthLocked= false;
-    } //-- void deleteWidthLocked() 
+    public void deleteWidthLocked() {
+        this._haswidthLocked= false;
+    }
 
     /**
-     * Method enumerateCalculatedColumns
-     * 
-     * 
+     * Method enumerateCalculatedColumns.
      * 
      * @return an Enumeration over all possible elements of this
      * collection
      */
-    public java.util.Enumeration enumerateCalculatedColumns()
-    {
-        return java.util.Collections.enumeration(this._calculatedColumnsList);
-    } //-- java.util.Enumeration enumerateCalculatedColumns() 
+    public java.util.Enumeration<? extends java.lang.String> enumerateCalculatedColumns() {
+        return java.util.Collections.enumeration(this.calculatedColumnsList);
+    }
 
     /**
      * Returns the value of field 'backgroundColor'.
      * 
      * @return the value of field 'BackgroundColor'.
      */
-    public java.lang.String getBackgroundColor()
-    {
-        return this._backgroundColor;
-    } //-- java.lang.String getBackgroundColor() 
+    public java.lang.String getBackgroundColor() {
+        return this.backgroundColor;
+    }
 
     /**
      * Returns the value of field 'calculateGroupTotals'.
      * 
      * @return the value of field 'CalculateGroupTotals'.
      */
-    public boolean getCalculateGroupTotals()
-    {
-        return this._calculateGroupTotals;
-    } //-- boolean getCalculateGroupTotals() 
+    public boolean getCalculateGroupTotals() {
+        return this.calculateGroupTotals;
+    }
 
     /**
      * Returns the value of field 'calculatedColumnFunction'.
      * 
      * @return the value of field 'CalculatedColumnFunction'.
      */
-    public java.lang.String getCalculatedColumnFunction()
-    {
-        return this._calculatedColumnFunction;
-    } //-- java.lang.String getCalculatedColumnFunction() 
+    public java.lang.String getCalculatedColumnFunction() {
+        return this.calculatedColumnFunction;
+    }
 
     /**
-     * Method getCalculatedColumns
-     * 
-     * 
+     * Method getCalculatedColumns.
      * 
      * @param index
      * @throws java.lang.IndexOutOfBoundsException if the index
      * given is outside the bounds of the collection
      * @return the value of the java.lang.String at the given index
      */
-    public java.lang.String getCalculatedColumns(int index)
-        throws java.lang.IndexOutOfBoundsException
-    {
+    public java.lang.String getCalculatedColumns(final int index) throws java.lang.IndexOutOfBoundsException {
         // check bounds for index
-        if (index < 0 || index >= this._calculatedColumnsList.size()) {
-            throw new IndexOutOfBoundsException("getCalculatedColumns: Index value '" + index + "' not in range [0.." + (this._calculatedColumnsList.size() - 1) + "]");
+        if (index < 0 || index >= this.calculatedColumnsList.size()) {
+            throw new IndexOutOfBoundsException("getCalculatedColumns: Index value '" + index + "' not in range [0.." + (this.calculatedColumnsList.size() - 1) + "]");
         }
-        
-        return (String)_calculatedColumnsList.get(index);
-    } //-- java.lang.String getCalculatedColumns(int) 
+
+        return (java.lang.String) calculatedColumnsList.get(index);
+    }
 
     /**
-     * Method getCalculatedColumns
-     * 
-     * 
+     * Method getCalculatedColumns.Returns the contents of the
+     * collection in an Array.  <p>Note:  Just in case the
+     * collection contents are changing in another thread, we pass
+     * a 0-length Array of the correct type into the API call. 
+     * This way we <i>know</i> that the Array returned is of
+     * exactly the correct length.
      * 
      * @return this collection as an Array
      */
-    public java.lang.String[] getCalculatedColumns()
-    {
-        int size = this._calculatedColumnsList.size();
-        java.lang.String[] array = new java.lang.String[size];
-        for (int index = 0; index < size; index++){
-            array[index] = (String)_calculatedColumnsList.get(index);
-        }
-        
-        return array;
-    } //-- java.lang.String[] getCalculatedColumns() 
+    public java.lang.String[] getCalculatedColumns() {
+        java.lang.String[] array = new java.lang.String[0];
+        return this.calculatedColumnsList.toArray(array);
+    }
 
     /**
-     * Method getCalculatedColumnsCount
-     * 
-     * 
+     * Method getCalculatedColumnsCount.
      * 
      * @return the size of this collection
      */
-    public int getCalculatedColumnsCount()
-    {
-        return this._calculatedColumnsList.size();
-    } //-- int getCalculatedColumnsCount() 
+    public int getCalculatedColumnsCount() {
+        return this.calculatedColumnsList.size();
+    }
 
     /**
      * Returns the value of field 'chart'.
      * 
      * @return the value of field 'Chart'.
      */
-    public org.pentaho.jfreereport.castormodel.reportspec.Chart getChart()
-    {
-        return this._chart;
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.Chart getChart() 
+    public org.pentaho.jfreereport.castormodel.reportspec.Chart getChart() {
+        return this.chart;
+    }
 
     /**
      * Returns the value of field 'createGroupHeader'.
      * 
      * @return the value of field 'CreateGroupHeader'.
      */
-    public boolean getCreateGroupHeader()
-    {
-        return this._createGroupHeader;
-    } //-- boolean getCreateGroupHeader() 
+    public boolean getCreateGroupHeader() {
+        return this.createGroupHeader;
+    }
 
     /**
      * Returns the value of field 'displayName'.
      * 
      * @return the value of field 'DisplayName'.
      */
-    public java.lang.String getDisplayName()
-    {
-        return this._displayName;
-    } //-- java.lang.String getDisplayName() 
+    public java.lang.String getDisplayName() {
+        return this.displayName;
+    }
 
     /**
      * Returns the value of field 'expression'.
      * 
      * @return the value of field 'Expression'.
      */
-    public java.lang.String getExpression()
-    {
-        return this._expression;
-    } //-- java.lang.String getExpression() 
+    public java.lang.String getExpression() {
+        return this.expression;
+    }
 
     /**
      * Returns the value of field 'fontColor'.
      * 
      * @return the value of field 'FontColor'.
      */
-    public java.lang.String getFontColor()
-    {
-        return this._fontColor;
-    } //-- java.lang.String getFontColor() 
+    public java.lang.String getFontColor() {
+        return this.fontColor;
+    }
 
     /**
      * Returns the value of field 'fontName'.
      * 
      * @return the value of field 'FontName'.
      */
-    public java.lang.String getFontName()
-    {
-        return this._fontName;
-    } //-- java.lang.String getFontName() 
+    public java.lang.String getFontName() {
+        return this.fontName;
+    }
 
     /**
      * Returns the value of field 'fontSize'.
      * 
      * @return the value of field 'FontSize'.
      */
-    public int getFontSize()
-    {
-        return this._fontSize;
-    } //-- int getFontSize() 
+    public int getFontSize() {
+        return this.fontSize;
+    }
 
     /**
      * Returns the value of field 'fontStyle'.
      * 
      * @return the value of field 'FontStyle'.
      */
-    public int getFontStyle()
-    {
-        return this._fontStyle;
-    } //-- int getFontStyle() 
+    public int getFontStyle() {
+        return this.fontStyle;
+    }
 
     /**
      * Returns the value of field 'format'.
      * 
      * @return the value of field 'Format'.
      */
-    public java.lang.String getFormat()
-    {
-        return this._format;
-    } //-- java.lang.String getFormat() 
+    public java.lang.String getFormat() {
+        return this.format;
+    }
 
     /**
      * Returns the value of field 'groupFooterBackgroundColor'.
      * 
      * @return the value of field 'GroupFooterBackgroundColor'.
      */
-    public java.lang.String getGroupFooterBackgroundColor()
-    {
-        return this._groupFooterBackgroundColor;
-    } //-- java.lang.String getGroupFooterBackgroundColor() 
+    public java.lang.String getGroupFooterBackgroundColor() {
+        return this.groupFooterBackgroundColor;
+    }
 
     /**
      * Returns the value of field 'groupPageBreak'.
      * 
      * @return the value of field 'GroupPageBreak'.
      */
-    public boolean getGroupPageBreak()
-    {
-        return this._groupPageBreak;
-    } //-- boolean getGroupPageBreak() 
+    public boolean getGroupPageBreak() {
+        return this.groupPageBreak;
+    }
 
     /**
      * Returns the value of field 'groupTotalsHorizontalAlignment'.
      * 
      * @return the value of field 'GroupTotalsHorizontalAlignment'.
      */
-    public java.lang.String getGroupTotalsHorizontalAlignment()
-    {
-        return this._groupTotalsHorizontalAlignment;
-    } //-- java.lang.String getGroupTotalsHorizontalAlignment() 
+    public java.lang.String getGroupTotalsHorizontalAlignment() {
+        return this.groupTotalsHorizontalAlignment;
+    }
 
     /**
      * Returns the value of field 'groupTotalsLabel'.
      * 
      * @return the value of field 'GroupTotalsLabel'.
      */
-    public java.lang.String getGroupTotalsLabel()
-    {
-        return this._groupTotalsLabel;
-    } //-- java.lang.String getGroupTotalsLabel() 
+    public java.lang.String getGroupTotalsLabel() {
+        return this.groupTotalsLabel;
+    }
 
     /**
      * Returns the value of field 'horizontalAlignment'.
      * 
      * @return the value of field 'HorizontalAlignment'.
      */
-    public java.lang.String getHorizontalAlignment()
-    {
-        return this._horizontalAlignment;
-    } //-- java.lang.String getHorizontalAlignment() 
+    public java.lang.String getHorizontalAlignment() {
+        return this.horizontalAlignment;
+    }
 
     /**
      * Returns the value of field 'isCalculatedColumn'.
      * 
      * @return the value of field 'IsCalculatedColumn'.
      */
-    public boolean getIsCalculatedColumn()
-    {
-        return this._isCalculatedColumn;
-    } //-- boolean getIsCalculatedColumn() 
+    public boolean getIsCalculatedColumn() {
+        return this.isCalculatedColumn;
+    }
 
     /**
      * Returns the value of field 'isDetail'.
      * 
      * @return the value of field 'IsDetail'.
      */
-    public boolean getIsDetail()
-    {
-        return this._isDetail;
-    } //-- boolean getIsDetail() 
+    public boolean getIsDetail() {
+        return this.isDetail;
+    }
 
     /**
      * Returns the value of field 'isRowHeader'.
      * 
      * @return the value of field 'IsRowHeader'.
      */
-    public boolean getIsRowHeader()
-    {
-        return this._isRowHeader;
-    } //-- boolean getIsRowHeader() 
+    public boolean getIsRowHeader() {
+        return this.isRowHeader;
+    }
 
     /**
      * Returns the value of field 'isWidthPercent'.
      * 
      * @return the value of field 'IsWidthPercent'.
      */
-    public boolean getIsWidthPercent()
-    {
-        return this._isWidthPercent;
-    } //-- boolean getIsWidthPercent() 
+    public boolean getIsWidthPercent() {
+        return this.isWidthPercent;
+    }
 
     /**
      * Returns the value of field 'levelName'.
      * 
      * @return the value of field 'LevelName'.
      */
-    public java.lang.String getLevelName()
-    {
-        return this._levelName;
-    } //-- java.lang.String getLevelName() 
+    public java.lang.String getLevelName() {
+        return this.levelName;
+    }
 
     /**
      * Returns the value of field 'name'.
      * 
      * @return the value of field 'Name'.
      */
-    public java.lang.String getName()
-    {
-        return this._name;
-    } //-- java.lang.String getName() 
+    public java.lang.String getName() {
+        return this.name;
+    }
 
     /**
      * Returns the value of field 'nullString'.
      * 
      * @return the value of field 'NullString'.
      */
-    public java.lang.String getNullString()
-    {
-        return this._nullString;
-    } //-- java.lang.String getNullString() 
+    public java.lang.String getNullString() {
+        return this.nullString;
+    }
 
     /**
      * Returns the value of field 'pageBreakAfterFooter'.
      * 
      * @return the value of field 'PageBreakAfterFooter'.
      */
-    public boolean getPageBreakAfterFooter()
-    {
-        return this._pageBreakAfterFooter;
-    } //-- boolean getPageBreakAfterFooter() 
+    public boolean getPageBreakAfterFooter() {
+        return this.pageBreakAfterFooter;
+    }
 
     /**
      * Returns the value of field 'pageBreakAfterGroup'.
      * 
      * @return the value of field 'PageBreakAfterGroup'.
      */
-    public boolean getPageBreakAfterGroup()
-    {
-        return this._pageBreakAfterGroup;
-    } //-- boolean getPageBreakAfterGroup() 
+    public boolean getPageBreakAfterGroup() {
+        return this.pageBreakAfterGroup;
+    }
 
     /**
      * Returns the value of field 'pageBreakAfterHeader'.
      * 
      * @return the value of field 'PageBreakAfterHeader'.
      */
-    public boolean getPageBreakAfterHeader()
-    {
-        return this._pageBreakAfterHeader;
-    } //-- boolean getPageBreakAfterHeader() 
+    public boolean getPageBreakAfterHeader() {
+        return this.pageBreakAfterHeader;
+    }
 
     /**
      * Returns the value of field 'pageBreakBeforeFooter'.
      * 
      * @return the value of field 'PageBreakBeforeFooter'.
      */
-    public boolean getPageBreakBeforeFooter()
-    {
-        return this._pageBreakBeforeFooter;
-    } //-- boolean getPageBreakBeforeFooter() 
+    public boolean getPageBreakBeforeFooter() {
+        return this.pageBreakBeforeFooter;
+    }
 
     /**
      * Returns the value of field 'pageBreakBeforeGroup'.
      * 
      * @return the value of field 'PageBreakBeforeGroup'.
      */
-    public boolean getPageBreakBeforeGroup()
-    {
-        return this._pageBreakBeforeGroup;
-    } //-- boolean getPageBreakBeforeGroup() 
+    public boolean getPageBreakBeforeGroup() {
+        return this.pageBreakBeforeGroup;
+    }
 
     /**
      * Returns the value of field 'pageBreakBeforeHeader'.
      * 
      * @return the value of field 'PageBreakBeforeHeader'.
      */
-    public boolean getPageBreakBeforeHeader()
-    {
-        return this._pageBreakBeforeHeader;
-    } //-- boolean getPageBreakBeforeHeader() 
+    public boolean getPageBreakBeforeHeader() {
+        return this.pageBreakBeforeHeader;
+    }
 
     /**
      * Returns the value of field 'repeatGroupHeader'.
      * 
      * @return the value of field 'RepeatGroupHeader'.
      */
-    public boolean getRepeatGroupHeader()
-    {
-        return this._repeatGroupHeader;
-    } //-- boolean getRepeatGroupHeader() 
+    public boolean getRepeatGroupHeader() {
+        return this.repeatGroupHeader;
+    }
 
     /**
      * Returns the value of field 'showChartAboveGroupHeader'.
      * 
      * @return the value of field 'ShowChartAboveGroupHeader'.
      */
-    public boolean getShowChartAboveGroupHeader()
-    {
-        return this._showChartAboveGroupHeader;
-    } //-- boolean getShowChartAboveGroupHeader() 
+    public boolean getShowChartAboveGroupHeader() {
+        return this.showChartAboveGroupHeader;
+    }
 
     /**
      * Returns the value of field 'trafficLightingGreenColor'.
      * 
      * @return the value of field 'TrafficLightingGreenColor'.
      */
-    public java.lang.String getTrafficLightingGreenColor()
-    {
-        return this._trafficLightingGreenColor;
-    } //-- java.lang.String getTrafficLightingGreenColor() 
+    public java.lang.String getTrafficLightingGreenColor() {
+        return this.trafficLightingGreenColor;
+    }
 
     /**
      * Returns the value of field 'trafficLightingGreenValue'.
      * 
      * @return the value of field 'TrafficLightingGreenValue'.
      */
-    public double getTrafficLightingGreenValue()
-    {
-        return this._trafficLightingGreenValue;
-    } //-- double getTrafficLightingGreenValue() 
+    public double getTrafficLightingGreenValue() {
+        return this.trafficLightingGreenValue;
+    }
 
     /**
      * Returns the value of field 'trafficLightingRedColor'.
      * 
      * @return the value of field 'TrafficLightingRedColor'.
      */
-    public java.lang.String getTrafficLightingRedColor()
-    {
-        return this._trafficLightingRedColor;
-    } //-- java.lang.String getTrafficLightingRedColor() 
+    public java.lang.String getTrafficLightingRedColor() {
+        return this.trafficLightingRedColor;
+    }
 
     /**
      * Returns the value of field 'trafficLightingRedValue'.
      * 
      * @return the value of field 'TrafficLightingRedValue'.
      */
-    public double getTrafficLightingRedValue()
-    {
-        return this._trafficLightingRedValue;
-    } //-- double getTrafficLightingRedValue() 
+    public double getTrafficLightingRedValue() {
+        return this.trafficLightingRedValue;
+    }
 
     /**
      * Returns the value of field
@@ -1113,10 +1033,9 @@ public class Field implements java.io.Serializable {
      * 
      * @return the value of field 'TrafficLightingUseAbsoluteValue'.
      */
-    public boolean getTrafficLightingUseAbsoluteValue()
-    {
-        return this._trafficLightingUseAbsoluteValue;
-    } //-- boolean getTrafficLightingUseAbsoluteValue() 
+    public boolean getTrafficLightingUseAbsoluteValue() {
+        return this.trafficLightingUseAbsoluteValue;
+    }
 
     /**
      * Returns the value of field
@@ -1124,632 +1043,518 @@ public class Field implements java.io.Serializable {
      * 
      * @return the value of field 'TrafficLightingUseOppositeLogic'.
      */
-    public boolean getTrafficLightingUseOppositeLogic()
-    {
-        return this._trafficLightingUseOppositeLogic;
-    } //-- boolean getTrafficLightingUseOppositeLogic() 
+    public boolean getTrafficLightingUseOppositeLogic() {
+        return this.trafficLightingUseOppositeLogic;
+    }
 
     /**
      * Returns the value of field 'trafficLightingYellowColor'.
      * 
      * @return the value of field 'TrafficLightingYellowColor'.
      */
-    public java.lang.String getTrafficLightingYellowColor()
-    {
-        return this._trafficLightingYellowColor;
-    } //-- java.lang.String getTrafficLightingYellowColor() 
+    public java.lang.String getTrafficLightingYellowColor() {
+        return this.trafficLightingYellowColor;
+    }
 
     /**
      * Returns the value of field 'trafficLightingYellowValue'.
      * 
      * @return the value of field 'TrafficLightingYellowValue'.
      */
-    public double getTrafficLightingYellowValue()
-    {
-        return this._trafficLightingYellowValue;
-    } //-- double getTrafficLightingYellowValue() 
+    public double getTrafficLightingYellowValue() {
+        return this.trafficLightingYellowValue;
+    }
 
     /**
      * Returns the value of field 'type'.
      * 
      * @return the value of field 'Type'.
      */
-    public int getType()
-    {
-        return this._type;
-    } //-- int getType() 
+    public int getType() {
+        return this.type;
+    }
 
     /**
      * Returns the value of field 'useBackgroundColor'.
      * 
      * @return the value of field 'UseBackgroundColor'.
      */
-    public boolean getUseBackgroundColor()
-    {
-        return this._useBackgroundColor;
-    } //-- boolean getUseBackgroundColor() 
+    public boolean getUseBackgroundColor() {
+        return this.useBackgroundColor;
+    }
 
     /**
      * Returns the value of field 'useChart'.
      * 
      * @return the value of field 'UseChart'.
      */
-    public boolean getUseChart()
-    {
-        return this._useChart;
-    } //-- boolean getUseChart() 
+    public boolean getUseChart() {
+        return this.useChart;
+    }
 
     /**
      * Returns the value of field 'useGroupFooterBackgroundColor'.
      * 
      * @return the value of field 'UseGroupFooterBackgroundColor'.
      */
-    public boolean getUseGroupFooterBackgroundColor()
-    {
-        return this._useGroupFooterBackgroundColor;
-    } //-- boolean getUseGroupFooterBackgroundColor() 
+    public boolean getUseGroupFooterBackgroundColor() {
+        return this.useGroupFooterBackgroundColor;
+    }
 
     /**
      * Returns the value of field 'useItemHide'.
      * 
      * @return the value of field 'UseItemHide'.
      */
-    public boolean getUseItemHide()
-    {
-        return this._useItemHide;
-    } //-- boolean getUseItemHide() 
+    public boolean getUseItemHide() {
+        return this.useItemHide;
+    }
 
     /**
      * Returns the value of field 'useTrafficLighting'.
      * 
      * @return the value of field 'UseTrafficLighting'.
      */
-    public boolean getUseTrafficLighting()
-    {
-        return this._useTrafficLighting;
-    } //-- boolean getUseTrafficLighting() 
+    public boolean getUseTrafficLighting() {
+        return this.useTrafficLighting;
+    }
 
     /**
      * Returns the value of field 'verticalAlignment'.
      * 
      * @return the value of field 'VerticalAlignment'.
      */
-    public java.lang.String getVerticalAlignment()
-    {
-        return this._verticalAlignment;
-    } //-- java.lang.String getVerticalAlignment() 
+    public java.lang.String getVerticalAlignment() {
+        return this.verticalAlignment;
+    }
 
     /**
      * Returns the value of field 'width'.
      * 
      * @return the value of field 'Width'.
      */
-    public java.math.BigDecimal getWidth()
-    {
-        return this._width;
-    } //-- java.math.BigDecimal getWidth() 
+    public java.math.BigDecimal getWidth() {
+        return this.width;
+    }
 
     /**
      * Returns the value of field 'widthLocked'.
      * 
      * @return the value of field 'WidthLocked'.
      */
-    public boolean getWidthLocked()
-    {
-        return this._widthLocked;
-    } //-- boolean getWidthLocked() 
+    public boolean getWidthLocked() {
+        return this.widthLocked;
+    }
 
     /**
-     * Method hasCalculateGroupTotals
-     * 
-     * 
+     * Method hasCalculateGroupTotals.
      * 
      * @return true if at least one CalculateGroupTotals has been
      * added
      */
-    public boolean hasCalculateGroupTotals()
-    {
-        return this._has_calculateGroupTotals;
-    } //-- boolean hasCalculateGroupTotals() 
+    public boolean hasCalculateGroupTotals() {
+        return this._hascalculateGroupTotals;
+    }
 
     /**
-     * Method hasCreateGroupHeader
-     * 
-     * 
+     * Method hasCreateGroupHeader.
      * 
      * @return true if at least one CreateGroupHeader has been added
      */
-    public boolean hasCreateGroupHeader()
-    {
-        return this._has_createGroupHeader;
-    } //-- boolean hasCreateGroupHeader() 
+    public boolean hasCreateGroupHeader() {
+        return this._hascreateGroupHeader;
+    }
 
     /**
-     * Method hasFontSize
-     * 
-     * 
+     * Method hasFontSize.
      * 
      * @return true if at least one FontSize has been added
      */
-    public boolean hasFontSize()
-    {
-        return this._has_fontSize;
-    } //-- boolean hasFontSize() 
+    public boolean hasFontSize() {
+        return this._hasfontSize;
+    }
 
     /**
-     * Method hasFontStyle
-     * 
-     * 
+     * Method hasFontStyle.
      * 
      * @return true if at least one FontStyle has been added
      */
-    public boolean hasFontStyle()
-    {
-        return this._has_fontStyle;
-    } //-- boolean hasFontStyle() 
+    public boolean hasFontStyle() {
+        return this._hasfontStyle;
+    }
 
     /**
-     * Method hasGroupPageBreak
-     * 
-     * 
+     * Method hasGroupPageBreak.
      * 
      * @return true if at least one GroupPageBreak has been added
      */
-    public boolean hasGroupPageBreak()
-    {
-        return this._has_groupPageBreak;
-    } //-- boolean hasGroupPageBreak() 
+    public boolean hasGroupPageBreak() {
+        return this._hasgroupPageBreak;
+    }
 
     /**
-     * Method hasIsCalculatedColumn
-     * 
-     * 
+     * Method hasIsCalculatedColumn.
      * 
      * @return true if at least one IsCalculatedColumn has been adde
      */
-    public boolean hasIsCalculatedColumn()
-    {
-        return this._has_isCalculatedColumn;
-    } //-- boolean hasIsCalculatedColumn() 
+    public boolean hasIsCalculatedColumn() {
+        return this._hasisCalculatedColumn;
+    }
 
     /**
-     * Method hasIsDetail
-     * 
-     * 
+     * Method hasIsDetail.
      * 
      * @return true if at least one IsDetail has been added
      */
-    public boolean hasIsDetail()
-    {
-        return this._has_isDetail;
-    } //-- boolean hasIsDetail() 
+    public boolean hasIsDetail() {
+        return this._hasisDetail;
+    }
 
     /**
-     * Method hasIsRowHeader
-     * 
-     * 
+     * Method hasIsRowHeader.
      * 
      * @return true if at least one IsRowHeader has been added
      */
-    public boolean hasIsRowHeader()
-    {
-        return this._has_isRowHeader;
-    } //-- boolean hasIsRowHeader() 
+    public boolean hasIsRowHeader() {
+        return this._hasisRowHeader;
+    }
 
     /**
-     * Method hasIsWidthPercent
-     * 
-     * 
+     * Method hasIsWidthPercent.
      * 
      * @return true if at least one IsWidthPercent has been added
      */
-    public boolean hasIsWidthPercent()
-    {
-        return this._has_isWidthPercent;
-    } //-- boolean hasIsWidthPercent() 
+    public boolean hasIsWidthPercent() {
+        return this._hasisWidthPercent;
+    }
 
     /**
-     * Method hasPageBreakAfterFooter
-     * 
-     * 
+     * Method hasPageBreakAfterFooter.
      * 
      * @return true if at least one PageBreakAfterFooter has been
      * added
      */
-    public boolean hasPageBreakAfterFooter()
-    {
-        return this._has_pageBreakAfterFooter;
-    } //-- boolean hasPageBreakAfterFooter() 
+    public boolean hasPageBreakAfterFooter() {
+        return this._haspageBreakAfterFooter;
+    }
 
     /**
-     * Method hasPageBreakAfterGroup
-     * 
-     * 
+     * Method hasPageBreakAfterGroup.
      * 
      * @return true if at least one PageBreakAfterGroup has been
      * added
      */
-    public boolean hasPageBreakAfterGroup()
-    {
-        return this._has_pageBreakAfterGroup;
-    } //-- boolean hasPageBreakAfterGroup() 
+    public boolean hasPageBreakAfterGroup() {
+        return this._haspageBreakAfterGroup;
+    }
 
     /**
-     * Method hasPageBreakAfterHeader
-     * 
-     * 
+     * Method hasPageBreakAfterHeader.
      * 
      * @return true if at least one PageBreakAfterHeader has been
      * added
      */
-    public boolean hasPageBreakAfterHeader()
-    {
-        return this._has_pageBreakAfterHeader;
-    } //-- boolean hasPageBreakAfterHeader() 
+    public boolean hasPageBreakAfterHeader() {
+        return this._haspageBreakAfterHeader;
+    }
 
     /**
-     * Method hasPageBreakBeforeFooter
-     * 
-     * 
+     * Method hasPageBreakBeforeFooter.
      * 
      * @return true if at least one PageBreakBeforeFooter has been
      * added
      */
-    public boolean hasPageBreakBeforeFooter()
-    {
-        return this._has_pageBreakBeforeFooter;
-    } //-- boolean hasPageBreakBeforeFooter() 
+    public boolean hasPageBreakBeforeFooter() {
+        return this._haspageBreakBeforeFooter;
+    }
 
     /**
-     * Method hasPageBreakBeforeGroup
-     * 
-     * 
+     * Method hasPageBreakBeforeGroup.
      * 
      * @return true if at least one PageBreakBeforeGroup has been
      * added
      */
-    public boolean hasPageBreakBeforeGroup()
-    {
-        return this._has_pageBreakBeforeGroup;
-    } //-- boolean hasPageBreakBeforeGroup() 
+    public boolean hasPageBreakBeforeGroup() {
+        return this._haspageBreakBeforeGroup;
+    }
 
     /**
-     * Method hasPageBreakBeforeHeader
-     * 
-     * 
+     * Method hasPageBreakBeforeHeader.
      * 
      * @return true if at least one PageBreakBeforeHeader has been
      * added
      */
-    public boolean hasPageBreakBeforeHeader()
-    {
-        return this._has_pageBreakBeforeHeader;
-    } //-- boolean hasPageBreakBeforeHeader() 
+    public boolean hasPageBreakBeforeHeader() {
+        return this._haspageBreakBeforeHeader;
+    }
 
     /**
-     * Method hasRepeatGroupHeader
-     * 
-     * 
+     * Method hasRepeatGroupHeader.
      * 
      * @return true if at least one RepeatGroupHeader has been added
      */
-    public boolean hasRepeatGroupHeader()
-    {
-        return this._has_repeatGroupHeader;
-    } //-- boolean hasRepeatGroupHeader() 
+    public boolean hasRepeatGroupHeader() {
+        return this._hasrepeatGroupHeader;
+    }
 
     /**
-     * Method hasShowChartAboveGroupHeader
-     * 
-     * 
+     * Method hasShowChartAboveGroupHeader.
      * 
      * @return true if at least one ShowChartAboveGroupHeader has
      * been added
      */
-    public boolean hasShowChartAboveGroupHeader()
-    {
-        return this._has_showChartAboveGroupHeader;
-    } //-- boolean hasShowChartAboveGroupHeader() 
+    public boolean hasShowChartAboveGroupHeader() {
+        return this._hasshowChartAboveGroupHeader;
+    }
 
     /**
-     * Method hasTrafficLightingGreenValue
-     * 
-     * 
+     * Method hasTrafficLightingGreenValue.
      * 
      * @return true if at least one TrafficLightingGreenValue has
      * been added
      */
-    public boolean hasTrafficLightingGreenValue()
-    {
-        return this._has_trafficLightingGreenValue;
-    } //-- boolean hasTrafficLightingGreenValue() 
+    public boolean hasTrafficLightingGreenValue() {
+        return this._hastrafficLightingGreenValue;
+    }
 
     /**
-     * Method hasTrafficLightingRedValue
-     * 
-     * 
+     * Method hasTrafficLightingRedValue.
      * 
      * @return true if at least one TrafficLightingRedValue has
      * been added
      */
-    public boolean hasTrafficLightingRedValue()
-    {
-        return this._has_trafficLightingRedValue;
-    } //-- boolean hasTrafficLightingRedValue() 
+    public boolean hasTrafficLightingRedValue() {
+        return this._hastrafficLightingRedValue;
+    }
 
     /**
-     * Method hasTrafficLightingUseAbsoluteValue
-     * 
-     * 
+     * Method hasTrafficLightingUseAbsoluteValue.
      * 
      * @return true if at least one TrafficLightingUseAbsoluteValue
      * has been added
      */
-    public boolean hasTrafficLightingUseAbsoluteValue()
-    {
-        return this._has_trafficLightingUseAbsoluteValue;
-    } //-- boolean hasTrafficLightingUseAbsoluteValue() 
+    public boolean hasTrafficLightingUseAbsoluteValue() {
+        return this._hastrafficLightingUseAbsoluteValue;
+    }
 
     /**
-     * Method hasTrafficLightingUseOppositeLogic
-     * 
-     * 
+     * Method hasTrafficLightingUseOppositeLogic.
      * 
      * @return true if at least one TrafficLightingUseOppositeLogic
      * has been added
      */
-    public boolean hasTrafficLightingUseOppositeLogic()
-    {
-        return this._has_trafficLightingUseOppositeLogic;
-    } //-- boolean hasTrafficLightingUseOppositeLogic() 
+    public boolean hasTrafficLightingUseOppositeLogic() {
+        return this._hastrafficLightingUseOppositeLogic;
+    }
 
     /**
-     * Method hasTrafficLightingYellowValue
-     * 
-     * 
+     * Method hasTrafficLightingYellowValue.
      * 
      * @return true if at least one TrafficLightingYellowValue has
      * been added
      */
-    public boolean hasTrafficLightingYellowValue()
-    {
-        return this._has_trafficLightingYellowValue;
-    } //-- boolean hasTrafficLightingYellowValue() 
+    public boolean hasTrafficLightingYellowValue() {
+        return this._hastrafficLightingYellowValue;
+    }
 
     /**
-     * Method hasType
-     * 
-     * 
+     * Method hasType.
      * 
      * @return true if at least one Type has been added
      */
-    public boolean hasType()
-    {
-        return this._has_type;
-    } //-- boolean hasType() 
+    public boolean hasType() {
+        return this._hastype;
+    }
 
     /**
-     * Method hasUseBackgroundColor
-     * 
-     * 
+     * Method hasUseBackgroundColor.
      * 
      * @return true if at least one UseBackgroundColor has been adde
      */
-    public boolean hasUseBackgroundColor()
-    {
-        return this._has_useBackgroundColor;
-    } //-- boolean hasUseBackgroundColor() 
+    public boolean hasUseBackgroundColor() {
+        return this._hasuseBackgroundColor;
+    }
 
     /**
-     * Method hasUseChart
-     * 
-     * 
+     * Method hasUseChart.
      * 
      * @return true if at least one UseChart has been added
      */
-    public boolean hasUseChart()
-    {
-        return this._has_useChart;
-    } //-- boolean hasUseChart() 
+    public boolean hasUseChart() {
+        return this._hasuseChart;
+    }
 
     /**
-     * Method hasUseGroupFooterBackgroundColor
-     * 
-     * 
+     * Method hasUseGroupFooterBackgroundColor.
      * 
      * @return true if at least one UseGroupFooterBackgroundColor
      * has been added
      */
-    public boolean hasUseGroupFooterBackgroundColor()
-    {
-        return this._has_useGroupFooterBackgroundColor;
-    } //-- boolean hasUseGroupFooterBackgroundColor() 
+    public boolean hasUseGroupFooterBackgroundColor() {
+        return this._hasuseGroupFooterBackgroundColor;
+    }
 
     /**
-     * Method hasUseItemHide
-     * 
-     * 
+     * Method hasUseItemHide.
      * 
      * @return true if at least one UseItemHide has been added
      */
-    public boolean hasUseItemHide()
-    {
-        return this._has_useItemHide;
-    } //-- boolean hasUseItemHide() 
+    public boolean hasUseItemHide() {
+        return this._hasuseItemHide;
+    }
 
     /**
-     * Method hasUseTrafficLighting
-     * 
-     * 
+     * Method hasUseTrafficLighting.
      * 
      * @return true if at least one UseTrafficLighting has been adde
      */
-    public boolean hasUseTrafficLighting()
-    {
-        return this._has_useTrafficLighting;
-    } //-- boolean hasUseTrafficLighting() 
+    public boolean hasUseTrafficLighting() {
+        return this._hasuseTrafficLighting;
+    }
 
     /**
-     * Method hasWidthLocked
-     * 
-     * 
+     * Method hasWidthLocked.
      * 
      * @return true if at least one WidthLocked has been added
      */
-    public boolean hasWidthLocked()
-    {
-        return this._has_widthLocked;
-    } //-- boolean hasWidthLocked() 
+    public boolean hasWidthLocked() {
+        return this._haswidthLocked;
+    }
 
     /**
      * Returns the value of field 'calculateGroupTotals'.
      * 
      * @return the value of field 'CalculateGroupTotals'.
      */
-    public boolean isCalculateGroupTotals()
-    {
-        return this._calculateGroupTotals;
-    } //-- boolean isCalculateGroupTotals() 
+    public boolean isCalculateGroupTotals() {
+        return this.calculateGroupTotals;
+    }
 
     /**
      * Returns the value of field 'createGroupHeader'.
      * 
      * @return the value of field 'CreateGroupHeader'.
      */
-    public boolean isCreateGroupHeader()
-    {
-        return this._createGroupHeader;
-    } //-- boolean isCreateGroupHeader() 
+    public boolean isCreateGroupHeader() {
+        return this.createGroupHeader;
+    }
 
     /**
      * Returns the value of field 'groupPageBreak'.
      * 
      * @return the value of field 'GroupPageBreak'.
      */
-    public boolean isGroupPageBreak()
-    {
-        return this._groupPageBreak;
-    } //-- boolean isGroupPageBreak() 
+    public boolean isGroupPageBreak() {
+        return this.groupPageBreak;
+    }
 
     /**
      * Returns the value of field 'isCalculatedColumn'.
      * 
      * @return the value of field 'IsCalculatedColumn'.
      */
-    public boolean isIsCalculatedColumn()
-    {
-        return this._isCalculatedColumn;
-    } //-- boolean isIsCalculatedColumn() 
+    public boolean isIsCalculatedColumn() {
+        return this.isCalculatedColumn;
+    }
 
     /**
      * Returns the value of field 'isDetail'.
      * 
      * @return the value of field 'IsDetail'.
      */
-    public boolean isIsDetail()
-    {
-        return this._isDetail;
-    } //-- boolean isIsDetail() 
+    public boolean isIsDetail() {
+        return this.isDetail;
+    }
 
     /**
      * Returns the value of field 'isRowHeader'.
      * 
      * @return the value of field 'IsRowHeader'.
      */
-    public boolean isIsRowHeader()
-    {
-        return this._isRowHeader;
-    } //-- boolean isIsRowHeader() 
+    public boolean isIsRowHeader() {
+        return this.isRowHeader;
+    }
 
     /**
      * Returns the value of field 'isWidthPercent'.
      * 
      * @return the value of field 'IsWidthPercent'.
      */
-    public boolean isIsWidthPercent()
-    {
-        return this._isWidthPercent;
-    } //-- boolean isIsWidthPercent() 
+    public boolean isIsWidthPercent() {
+        return this.isWidthPercent;
+    }
 
     /**
      * Returns the value of field 'pageBreakAfterFooter'.
      * 
      * @return the value of field 'PageBreakAfterFooter'.
      */
-    public boolean isPageBreakAfterFooter()
-    {
-        return this._pageBreakAfterFooter;
-    } //-- boolean isPageBreakAfterFooter() 
+    public boolean isPageBreakAfterFooter() {
+        return this.pageBreakAfterFooter;
+    }
 
     /**
      * Returns the value of field 'pageBreakAfterGroup'.
      * 
      * @return the value of field 'PageBreakAfterGroup'.
      */
-    public boolean isPageBreakAfterGroup()
-    {
-        return this._pageBreakAfterGroup;
-    } //-- boolean isPageBreakAfterGroup() 
+    public boolean isPageBreakAfterGroup() {
+        return this.pageBreakAfterGroup;
+    }
 
     /**
      * Returns the value of field 'pageBreakAfterHeader'.
      * 
      * @return the value of field 'PageBreakAfterHeader'.
      */
-    public boolean isPageBreakAfterHeader()
-    {
-        return this._pageBreakAfterHeader;
-    } //-- boolean isPageBreakAfterHeader() 
+    public boolean isPageBreakAfterHeader() {
+        return this.pageBreakAfterHeader;
+    }
 
     /**
      * Returns the value of field 'pageBreakBeforeFooter'.
      * 
      * @return the value of field 'PageBreakBeforeFooter'.
      */
-    public boolean isPageBreakBeforeFooter()
-    {
-        return this._pageBreakBeforeFooter;
-    } //-- boolean isPageBreakBeforeFooter() 
+    public boolean isPageBreakBeforeFooter() {
+        return this.pageBreakBeforeFooter;
+    }
 
     /**
      * Returns the value of field 'pageBreakBeforeGroup'.
      * 
      * @return the value of field 'PageBreakBeforeGroup'.
      */
-    public boolean isPageBreakBeforeGroup()
-    {
-        return this._pageBreakBeforeGroup;
-    } //-- boolean isPageBreakBeforeGroup() 
+    public boolean isPageBreakBeforeGroup() {
+        return this.pageBreakBeforeGroup;
+    }
 
     /**
      * Returns the value of field 'pageBreakBeforeHeader'.
      * 
      * @return the value of field 'PageBreakBeforeHeader'.
      */
-    public boolean isPageBreakBeforeHeader()
-    {
-        return this._pageBreakBeforeHeader;
-    } //-- boolean isPageBreakBeforeHeader() 
+    public boolean isPageBreakBeforeHeader() {
+        return this.pageBreakBeforeHeader;
+    }
 
     /**
      * Returns the value of field 'repeatGroupHeader'.
      * 
      * @return the value of field 'RepeatGroupHeader'.
      */
-    public boolean isRepeatGroupHeader()
-    {
-        return this._repeatGroupHeader;
-    } //-- boolean isRepeatGroupHeader() 
+    public boolean isRepeatGroupHeader() {
+        return this.repeatGroupHeader;
+    }
 
     /**
      * Returns the value of field 'showChartAboveGroupHeader'.
      * 
      * @return the value of field 'ShowChartAboveGroupHeader'.
      */
-    public boolean isShowChartAboveGroupHeader()
-    {
-        return this._showChartAboveGroupHeader;
-    } //-- boolean isShowChartAboveGroupHeader() 
+    public boolean isShowChartAboveGroupHeader() {
+        return this.showChartAboveGroupHeader;
+    }
 
     /**
      * Returns the value of field
@@ -1757,10 +1562,9 @@ public class Field implements java.io.Serializable {
      * 
      * @return the value of field 'TrafficLightingUseAbsoluteValue'.
      */
-    public boolean isTrafficLightingUseAbsoluteValue()
-    {
-        return this._trafficLightingUseAbsoluteValue;
-    } //-- boolean isTrafficLightingUseAbsoluteValue() 
+    public boolean isTrafficLightingUseAbsoluteValue() {
+        return this.trafficLightingUseAbsoluteValue;
+    }
 
     /**
      * Returns the value of field
@@ -1768,101 +1572,87 @@ public class Field implements java.io.Serializable {
      * 
      * @return the value of field 'TrafficLightingUseOppositeLogic'.
      */
-    public boolean isTrafficLightingUseOppositeLogic()
-    {
-        return this._trafficLightingUseOppositeLogic;
-    } //-- boolean isTrafficLightingUseOppositeLogic() 
+    public boolean isTrafficLightingUseOppositeLogic() {
+        return this.trafficLightingUseOppositeLogic;
+    }
 
     /**
      * Returns the value of field 'useBackgroundColor'.
      * 
      * @return the value of field 'UseBackgroundColor'.
      */
-    public boolean isUseBackgroundColor()
-    {
-        return this._useBackgroundColor;
-    } //-- boolean isUseBackgroundColor() 
+    public boolean isUseBackgroundColor() {
+        return this.useBackgroundColor;
+    }
 
     /**
      * Returns the value of field 'useChart'.
      * 
      * @return the value of field 'UseChart'.
      */
-    public boolean isUseChart()
-    {
-        return this._useChart;
-    } //-- boolean isUseChart() 
+    public boolean isUseChart() {
+        return this.useChart;
+    }
 
     /**
      * Returns the value of field 'useGroupFooterBackgroundColor'.
      * 
      * @return the value of field 'UseGroupFooterBackgroundColor'.
      */
-    public boolean isUseGroupFooterBackgroundColor()
-    {
-        return this._useGroupFooterBackgroundColor;
-    } //-- boolean isUseGroupFooterBackgroundColor() 
+    public boolean isUseGroupFooterBackgroundColor() {
+        return this.useGroupFooterBackgroundColor;
+    }
 
     /**
      * Returns the value of field 'useItemHide'.
      * 
      * @return the value of field 'UseItemHide'.
      */
-    public boolean isUseItemHide()
-    {
-        return this._useItemHide;
-    } //-- boolean isUseItemHide() 
+    public boolean isUseItemHide() {
+        return this.useItemHide;
+    }
 
     /**
      * Returns the value of field 'useTrafficLighting'.
      * 
      * @return the value of field 'UseTrafficLighting'.
      */
-    public boolean isUseTrafficLighting()
-    {
-        return this._useTrafficLighting;
-    } //-- boolean isUseTrafficLighting() 
+    public boolean isUseTrafficLighting() {
+        return this.useTrafficLighting;
+    }
 
     /**
-     * Method isValid
-     * 
-     * 
+     * Method isValid.
      * 
      * @return true if this object is valid according to the schema
      */
-    public boolean isValid()
-    {
+    public boolean isValid() {
         try {
             validate();
-        }
-        catch (org.exolab.castor.xml.ValidationException vex) {
+        } catch (org.exolab.castor.xml.ValidationException vex) {
             return false;
         }
         return true;
-    } //-- boolean isValid() 
+    }
 
     /**
      * Returns the value of field 'widthLocked'.
      * 
      * @return the value of field 'WidthLocked'.
      */
-    public boolean isWidthLocked()
-    {
-        return this._widthLocked;
-    } //-- boolean isWidthLocked() 
+    public boolean isWidthLocked() {
+        return this.widthLocked;
+    }
 
     /**
-     * Method iterateCalculatedColumns
-     * 
-     * 
+     * Method iterateCalculatedColumns.
      * 
      * @return an Iterator over all possible elements in this
      * collection
      */
-    public java.util.Iterator iterateCalculatedColumns()
-    {
-        return this._calculatedColumnsList.iterator();
-    } //-- java.util.Iterator iterateCalculatedColumns() 
+    public java.util.Iterator<? extends java.lang.String> iterateCalculatedColumns() {
+        return this.calculatedColumnsList.iterator();
+    }
 
     /**
      * 
@@ -1873,12 +1663,9 @@ public class Field implements java.io.Serializable {
      * @throws org.exolab.castor.xml.ValidationException if this
      * object is an invalid instance according to the schema
      */
-    public void marshal(java.io.Writer out)
-        throws org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException
-    {
-        
-        Marshaller.marshal(this, out);
-    } //-- void marshal(java.io.Writer) 
+    public void marshal(final java.io.Writer out) throws org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException {
+        org.exolab.castor.xml.Marshaller.marshal(this, out);
+    }
 
     /**
      * 
@@ -1891,57 +1678,46 @@ public class Field implements java.io.Serializable {
      * @throws org.exolab.castor.xml.MarshalException if object is
      * null or if any SAXException is thrown during marshaling
      */
-    public void marshal(org.xml.sax.ContentHandler handler)
-        throws java.io.IOException, org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException
-    {
-        
-        Marshaller.marshal(this, handler);
-    } //-- void marshal(org.xml.sax.ContentHandler) 
+    public void marshal(final org.xml.sax.ContentHandler handler) throws java.io.IOException, org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException {
+        org.exolab.castor.xml.Marshaller.marshal(this, handler);
+    }
 
     /**
      */
-    public void removeAllCalculatedColumns()
-    {
-        this._calculatedColumnsList.clear();
-    } //-- void removeAllCalculatedColumns() 
+    public void removeAllCalculatedColumns() {
+        this.calculatedColumnsList.clear();
+    }
 
     /**
-     * Method removeCalculatedColumns
-     * 
-     * 
+     * Method removeCalculatedColumns.
      * 
      * @param vCalculatedColumns
      * @return true if the object was removed from the collection.
      */
-    public boolean removeCalculatedColumns(java.lang.String vCalculatedColumns)
-    {
-        boolean removed = _calculatedColumnsList.remove(vCalculatedColumns);
+    public boolean removeCalculatedColumns(final java.lang.String vCalculatedColumns) {
+        boolean removed = calculatedColumnsList.remove(vCalculatedColumns);
         return removed;
-    } //-- boolean removeCalculatedColumns(java.lang.String) 
+    }
 
     /**
-     * Method removeCalculatedColumnsAt
-     * 
-     * 
+     * Method removeCalculatedColumnsAt.
      * 
      * @param index
      * @return the element removed from the collection
      */
-    public java.lang.String removeCalculatedColumnsAt(int index)
-    {
-        Object obj = this._calculatedColumnsList.remove(index);
-        return (String)obj;
-    } //-- java.lang.String removeCalculatedColumnsAt(int) 
+    public java.lang.String removeCalculatedColumnsAt(final int index) {
+        java.lang.Object obj = this.calculatedColumnsList.remove(index);
+        return (java.lang.String) obj;
+    }
 
     /**
      * Sets the value of field 'backgroundColor'.
      * 
      * @param backgroundColor the value of field 'backgroundColor'.
      */
-    public void setBackgroundColor(java.lang.String backgroundColor)
-    {
-        this._backgroundColor = backgroundColor;
-    } //-- void setBackgroundColor(java.lang.String) 
+    public void setBackgroundColor(final java.lang.String backgroundColor) {
+        this.backgroundColor = backgroundColor;
+    }
 
     /**
      * Sets the value of field 'calculateGroupTotals'.
@@ -1949,11 +1725,10 @@ public class Field implements java.io.Serializable {
      * @param calculateGroupTotals the value of field
      * 'calculateGroupTotals'.
      */
-    public void setCalculateGroupTotals(boolean calculateGroupTotals)
-    {
-        this._calculateGroupTotals = calculateGroupTotals;
-        this._has_calculateGroupTotals = true;
-    } //-- void setCalculateGroupTotals(boolean) 
+    public void setCalculateGroupTotals(final boolean calculateGroupTotals) {
+        this.calculateGroupTotals = calculateGroupTotals;
+        this._hascalculateGroupTotals = true;
+    }
 
     /**
      * Sets the value of field 'calculatedColumnFunction'.
@@ -1961,10 +1736,9 @@ public class Field implements java.io.Serializable {
      * @param calculatedColumnFunction the value of field
      * 'calculatedColumnFunction'.
      */
-    public void setCalculatedColumnFunction(java.lang.String calculatedColumnFunction)
-    {
-        this._calculatedColumnFunction = calculatedColumnFunction;
-    } //-- void setCalculatedColumnFunction(java.lang.String) 
+    public void setCalculatedColumnFunction(final java.lang.String calculatedColumnFunction) {
+        this.calculatedColumnFunction = calculatedColumnFunction;
+    }
 
     /**
      * 
@@ -1974,41 +1748,37 @@ public class Field implements java.io.Serializable {
      * @throws java.lang.IndexOutOfBoundsException if the index
      * given is outside the bounds of the collection
      */
-    public void setCalculatedColumns(int index, java.lang.String vCalculatedColumns)
-        throws java.lang.IndexOutOfBoundsException
-    {
+    public void setCalculatedColumns(final int index,final java.lang.String vCalculatedColumns) throws java.lang.IndexOutOfBoundsException {
         // check bounds for index
-        if (index < 0 || index >= this._calculatedColumnsList.size()) {
-            throw new IndexOutOfBoundsException("setCalculatedColumns: Index value '" + index + "' not in range [0.." + (this._calculatedColumnsList.size() - 1) + "]");
+        if (index < 0 || index >= this.calculatedColumnsList.size()) {
+            throw new IndexOutOfBoundsException("setCalculatedColumns: Index value '" + index + "' not in range [0.." + (this.calculatedColumnsList.size() - 1) + "]");
         }
-        
-        this._calculatedColumnsList.set(index, vCalculatedColumns);
-    } //-- void setCalculatedColumns(int, java.lang.String) 
+
+        this.calculatedColumnsList.set(index, vCalculatedColumns);
+    }
 
     /**
      * 
      * 
      * @param vCalculatedColumnsArray
      */
-    public void setCalculatedColumns(java.lang.String[] vCalculatedColumnsArray)
-    {
+    public void setCalculatedColumns(final java.lang.String[] vCalculatedColumnsArray) {
         //-- copy array
-        _calculatedColumnsList.clear();
-        
+        calculatedColumnsList.clear();
+
         for (int i = 0; i < vCalculatedColumnsArray.length; i++) {
-                this._calculatedColumnsList.add(vCalculatedColumnsArray[i]);
+                this.calculatedColumnsList.add(vCalculatedColumnsArray[i]);
         }
-    } //-- void setCalculatedColumns(java.lang.String) 
+    }
 
     /**
      * Sets the value of field 'chart'.
      * 
      * @param chart the value of field 'chart'.
      */
-    public void setChart(org.pentaho.jfreereport.castormodel.reportspec.Chart chart)
-    {
-        this._chart = chart;
-    } //-- void setChart(org.pentaho.jfreereport.castormodel.reportspec.Chart) 
+    public void setChart(final org.pentaho.jfreereport.castormodel.reportspec.Chart chart) {
+        this.chart = chart;
+    }
 
     /**
      * Sets the value of field 'createGroupHeader'.
@@ -2016,83 +1786,75 @@ public class Field implements java.io.Serializable {
      * @param createGroupHeader the value of field
      * 'createGroupHeader'.
      */
-    public void setCreateGroupHeader(boolean createGroupHeader)
-    {
-        this._createGroupHeader = createGroupHeader;
-        this._has_createGroupHeader = true;
-    } //-- void setCreateGroupHeader(boolean) 
+    public void setCreateGroupHeader(final boolean createGroupHeader) {
+        this.createGroupHeader = createGroupHeader;
+        this._hascreateGroupHeader = true;
+    }
 
     /**
      * Sets the value of field 'displayName'.
      * 
      * @param displayName the value of field 'displayName'.
      */
-    public void setDisplayName(java.lang.String displayName)
-    {
-        this._displayName = displayName;
-    } //-- void setDisplayName(java.lang.String) 
+    public void setDisplayName(final java.lang.String displayName) {
+        this.displayName = displayName;
+    }
 
     /**
      * Sets the value of field 'expression'.
      * 
      * @param expression the value of field 'expression'.
      */
-    public void setExpression(java.lang.String expression)
-    {
-        this._expression = expression;
-    } //-- void setExpression(java.lang.String) 
+    public void setExpression(final java.lang.String expression) {
+        this.expression = expression;
+    }
 
     /**
      * Sets the value of field 'fontColor'.
      * 
      * @param fontColor the value of field 'fontColor'.
      */
-    public void setFontColor(java.lang.String fontColor)
-    {
-        this._fontColor = fontColor;
-    } //-- void setFontColor(java.lang.String) 
+    public void setFontColor(final java.lang.String fontColor) {
+        this.fontColor = fontColor;
+    }
 
     /**
      * Sets the value of field 'fontName'.
      * 
      * @param fontName the value of field 'fontName'.
      */
-    public void setFontName(java.lang.String fontName)
-    {
-        this._fontName = fontName;
-    } //-- void setFontName(java.lang.String) 
+    public void setFontName(final java.lang.String fontName) {
+        this.fontName = fontName;
+    }
 
     /**
      * Sets the value of field 'fontSize'.
      * 
      * @param fontSize the value of field 'fontSize'.
      */
-    public void setFontSize(int fontSize)
-    {
-        this._fontSize = fontSize;
-        this._has_fontSize = true;
-    } //-- void setFontSize(int) 
+    public void setFontSize(final int fontSize) {
+        this.fontSize = fontSize;
+        this._hasfontSize = true;
+    }
 
     /**
      * Sets the value of field 'fontStyle'.
      * 
      * @param fontStyle the value of field 'fontStyle'.
      */
-    public void setFontStyle(int fontStyle)
-    {
-        this._fontStyle = fontStyle;
-        this._has_fontStyle = true;
-    } //-- void setFontStyle(int) 
+    public void setFontStyle(final int fontStyle) {
+        this.fontStyle = fontStyle;
+        this._hasfontStyle = true;
+    }
 
     /**
      * Sets the value of field 'format'.
      * 
      * @param format the value of field 'format'.
      */
-    public void setFormat(java.lang.String format)
-    {
-        this._format = format;
-    } //-- void setFormat(java.lang.String) 
+    public void setFormat(final java.lang.String format) {
+        this.format = format;
+    }
 
     /**
      * Sets the value of field 'groupFooterBackgroundColor'.
@@ -2100,21 +1862,19 @@ public class Field implements java.io.Serializable {
      * @param groupFooterBackgroundColor the value of field
      * 'groupFooterBackgroundColor'.
      */
-    public void setGroupFooterBackgroundColor(java.lang.String groupFooterBackgroundColor)
-    {
-        this._groupFooterBackgroundColor = groupFooterBackgroundColor;
-    } //-- void setGroupFooterBackgroundColor(java.lang.String) 
+    public void setGroupFooterBackgroundColor(final java.lang.String groupFooterBackgroundColor) {
+        this.groupFooterBackgroundColor = groupFooterBackgroundColor;
+    }
 
     /**
      * Sets the value of field 'groupPageBreak'.
      * 
      * @param groupPageBreak the value of field 'groupPageBreak'.
      */
-    public void setGroupPageBreak(boolean groupPageBreak)
-    {
-        this._groupPageBreak = groupPageBreak;
-        this._has_groupPageBreak = true;
-    } //-- void setGroupPageBreak(boolean) 
+    public void setGroupPageBreak(final boolean groupPageBreak) {
+        this.groupPageBreak = groupPageBreak;
+        this._hasgroupPageBreak = true;
+    }
 
     /**
      * Sets the value of field 'groupTotalsHorizontalAlignment'.
@@ -2122,20 +1882,18 @@ public class Field implements java.io.Serializable {
      * @param groupTotalsHorizontalAlignment the value of field
      * 'groupTotalsHorizontalAlignment'.
      */
-    public void setGroupTotalsHorizontalAlignment(java.lang.String groupTotalsHorizontalAlignment)
-    {
-        this._groupTotalsHorizontalAlignment = groupTotalsHorizontalAlignment;
-    } //-- void setGroupTotalsHorizontalAlignment(java.lang.String) 
+    public void setGroupTotalsHorizontalAlignment(final java.lang.String groupTotalsHorizontalAlignment) {
+        this.groupTotalsHorizontalAlignment = groupTotalsHorizontalAlignment;
+    }
 
     /**
      * Sets the value of field 'groupTotalsLabel'.
      * 
      * @param groupTotalsLabel the value of field 'groupTotalsLabel'
      */
-    public void setGroupTotalsLabel(java.lang.String groupTotalsLabel)
-    {
-        this._groupTotalsLabel = groupTotalsLabel;
-    } //-- void setGroupTotalsLabel(java.lang.String) 
+    public void setGroupTotalsLabel(final java.lang.String groupTotalsLabel) {
+        this.groupTotalsLabel = groupTotalsLabel;
+    }
 
     /**
      * Sets the value of field 'horizontalAlignment'.
@@ -2143,10 +1901,9 @@ public class Field implements java.io.Serializable {
      * @param horizontalAlignment the value of field
      * 'horizontalAlignment'.
      */
-    public void setHorizontalAlignment(java.lang.String horizontalAlignment)
-    {
-        this._horizontalAlignment = horizontalAlignment;
-    } //-- void setHorizontalAlignment(java.lang.String) 
+    public void setHorizontalAlignment(final java.lang.String horizontalAlignment) {
+        this.horizontalAlignment = horizontalAlignment;
+    }
 
     /**
      * Sets the value of field 'isCalculatedColumn'.
@@ -2154,74 +1911,67 @@ public class Field implements java.io.Serializable {
      * @param isCalculatedColumn the value of field
      * 'isCalculatedColumn'.
      */
-    public void setIsCalculatedColumn(boolean isCalculatedColumn)
-    {
-        this._isCalculatedColumn = isCalculatedColumn;
-        this._has_isCalculatedColumn = true;
-    } //-- void setIsCalculatedColumn(boolean) 
+    public void setIsCalculatedColumn(final boolean isCalculatedColumn) {
+        this.isCalculatedColumn = isCalculatedColumn;
+        this._hasisCalculatedColumn = true;
+    }
 
     /**
      * Sets the value of field 'isDetail'.
      * 
      * @param isDetail the value of field 'isDetail'.
      */
-    public void setIsDetail(boolean isDetail)
-    {
-        this._isDetail = isDetail;
-        this._has_isDetail = true;
-    } //-- void setIsDetail(boolean) 
+    public void setIsDetail(final boolean isDetail) {
+        this.isDetail = isDetail;
+        this._hasisDetail = true;
+    }
 
     /**
      * Sets the value of field 'isRowHeader'.
      * 
      * @param isRowHeader the value of field 'isRowHeader'.
      */
-    public void setIsRowHeader(boolean isRowHeader)
-    {
-        this._isRowHeader = isRowHeader;
-        this._has_isRowHeader = true;
-    } //-- void setIsRowHeader(boolean) 
+    public void setIsRowHeader(final boolean isRowHeader) {
+        this.isRowHeader = isRowHeader;
+        this._hasisRowHeader = true;
+    }
 
     /**
      * Sets the value of field 'isWidthPercent'.
      * 
      * @param isWidthPercent the value of field 'isWidthPercent'.
      */
-    public void setIsWidthPercent(boolean isWidthPercent)
-    {
-        this._isWidthPercent = isWidthPercent;
-        this._has_isWidthPercent = true;
-    } //-- void setIsWidthPercent(boolean) 
+    public void setIsWidthPercent(final boolean isWidthPercent) {
+        this.isWidthPercent = isWidthPercent;
+        this._hasisWidthPercent = true;
+    }
 
     /**
      * Sets the value of field 'levelName'.
      * 
      * @param levelName the value of field 'levelName'.
      */
-    public void setLevelName(java.lang.String levelName)
-    {
-        this._levelName = levelName;
-    } //-- void setLevelName(java.lang.String) 
+    public void setLevelName(final java.lang.String levelName) {
+        this.levelName = levelName;
+    }
 
     /**
      * Sets the value of field 'name'.
      * 
      * @param name the value of field 'name'.
      */
-    public void setName(java.lang.String name)
-    {
-        this._name = name;
-    } //-- void setName(java.lang.String) 
+    public void setName(final java.lang.String name) {
+        this.name = name;
+    }
 
     /**
      * Sets the value of field 'nullString'.
      * 
      * @param nullString the value of field 'nullString'.
      */
-    public void setNullString(java.lang.String nullString)
-    {
-        this._nullString = nullString;
-    } //-- void setNullString(java.lang.String) 
+    public void setNullString(final java.lang.String nullString) {
+        this.nullString = nullString;
+    }
 
     /**
      * Sets the value of field 'pageBreakAfterFooter'.
@@ -2229,11 +1979,10 @@ public class Field implements java.io.Serializable {
      * @param pageBreakAfterFooter the value of field
      * 'pageBreakAfterFooter'.
      */
-    public void setPageBreakAfterFooter(boolean pageBreakAfterFooter)
-    {
-        this._pageBreakAfterFooter = pageBreakAfterFooter;
-        this._has_pageBreakAfterFooter = true;
-    } //-- void setPageBreakAfterFooter(boolean) 
+    public void setPageBreakAfterFooter(final boolean pageBreakAfterFooter) {
+        this.pageBreakAfterFooter = pageBreakAfterFooter;
+        this._haspageBreakAfterFooter = true;
+    }
 
     /**
      * Sets the value of field 'pageBreakAfterGroup'.
@@ -2241,11 +1990,10 @@ public class Field implements java.io.Serializable {
      * @param pageBreakAfterGroup the value of field
      * 'pageBreakAfterGroup'.
      */
-    public void setPageBreakAfterGroup(boolean pageBreakAfterGroup)
-    {
-        this._pageBreakAfterGroup = pageBreakAfterGroup;
-        this._has_pageBreakAfterGroup = true;
-    } //-- void setPageBreakAfterGroup(boolean) 
+    public void setPageBreakAfterGroup(final boolean pageBreakAfterGroup) {
+        this.pageBreakAfterGroup = pageBreakAfterGroup;
+        this._haspageBreakAfterGroup = true;
+    }
 
     /**
      * Sets the value of field 'pageBreakAfterHeader'.
@@ -2253,11 +2001,10 @@ public class Field implements java.io.Serializable {
      * @param pageBreakAfterHeader the value of field
      * 'pageBreakAfterHeader'.
      */
-    public void setPageBreakAfterHeader(boolean pageBreakAfterHeader)
-    {
-        this._pageBreakAfterHeader = pageBreakAfterHeader;
-        this._has_pageBreakAfterHeader = true;
-    } //-- void setPageBreakAfterHeader(boolean) 
+    public void setPageBreakAfterHeader(final boolean pageBreakAfterHeader) {
+        this.pageBreakAfterHeader = pageBreakAfterHeader;
+        this._haspageBreakAfterHeader = true;
+    }
 
     /**
      * Sets the value of field 'pageBreakBeforeFooter'.
@@ -2265,11 +2012,10 @@ public class Field implements java.io.Serializable {
      * @param pageBreakBeforeFooter the value of field
      * 'pageBreakBeforeFooter'.
      */
-    public void setPageBreakBeforeFooter(boolean pageBreakBeforeFooter)
-    {
-        this._pageBreakBeforeFooter = pageBreakBeforeFooter;
-        this._has_pageBreakBeforeFooter = true;
-    } //-- void setPageBreakBeforeFooter(boolean) 
+    public void setPageBreakBeforeFooter(final boolean pageBreakBeforeFooter) {
+        this.pageBreakBeforeFooter = pageBreakBeforeFooter;
+        this._haspageBreakBeforeFooter = true;
+    }
 
     /**
      * Sets the value of field 'pageBreakBeforeGroup'.
@@ -2277,11 +2023,10 @@ public class Field implements java.io.Serializable {
      * @param pageBreakBeforeGroup the value of field
      * 'pageBreakBeforeGroup'.
      */
-    public void setPageBreakBeforeGroup(boolean pageBreakBeforeGroup)
-    {
-        this._pageBreakBeforeGroup = pageBreakBeforeGroup;
-        this._has_pageBreakBeforeGroup = true;
-    } //-- void setPageBreakBeforeGroup(boolean) 
+    public void setPageBreakBeforeGroup(final boolean pageBreakBeforeGroup) {
+        this.pageBreakBeforeGroup = pageBreakBeforeGroup;
+        this._haspageBreakBeforeGroup = true;
+    }
 
     /**
      * Sets the value of field 'pageBreakBeforeHeader'.
@@ -2289,11 +2034,10 @@ public class Field implements java.io.Serializable {
      * @param pageBreakBeforeHeader the value of field
      * 'pageBreakBeforeHeader'.
      */
-    public void setPageBreakBeforeHeader(boolean pageBreakBeforeHeader)
-    {
-        this._pageBreakBeforeHeader = pageBreakBeforeHeader;
-        this._has_pageBreakBeforeHeader = true;
-    } //-- void setPageBreakBeforeHeader(boolean) 
+    public void setPageBreakBeforeHeader(final boolean pageBreakBeforeHeader) {
+        this.pageBreakBeforeHeader = pageBreakBeforeHeader;
+        this._haspageBreakBeforeHeader = true;
+    }
 
     /**
      * Sets the value of field 'repeatGroupHeader'.
@@ -2301,11 +2045,10 @@ public class Field implements java.io.Serializable {
      * @param repeatGroupHeader the value of field
      * 'repeatGroupHeader'.
      */
-    public void setRepeatGroupHeader(boolean repeatGroupHeader)
-    {
-        this._repeatGroupHeader = repeatGroupHeader;
-        this._has_repeatGroupHeader = true;
-    } //-- void setRepeatGroupHeader(boolean) 
+    public void setRepeatGroupHeader(final boolean repeatGroupHeader) {
+        this.repeatGroupHeader = repeatGroupHeader;
+        this._hasrepeatGroupHeader = true;
+    }
 
     /**
      * Sets the value of field 'showChartAboveGroupHeader'.
@@ -2313,11 +2056,10 @@ public class Field implements java.io.Serializable {
      * @param showChartAboveGroupHeader the value of field
      * 'showChartAboveGroupHeader'.
      */
-    public void setShowChartAboveGroupHeader(boolean showChartAboveGroupHeader)
-    {
-        this._showChartAboveGroupHeader = showChartAboveGroupHeader;
-        this._has_showChartAboveGroupHeader = true;
-    } //-- void setShowChartAboveGroupHeader(boolean) 
+    public void setShowChartAboveGroupHeader(final boolean showChartAboveGroupHeader) {
+        this.showChartAboveGroupHeader = showChartAboveGroupHeader;
+        this._hasshowChartAboveGroupHeader = true;
+    }
 
     /**
      * Sets the value of field 'trafficLightingGreenColor'.
@@ -2325,10 +2067,9 @@ public class Field implements java.io.Serializable {
      * @param trafficLightingGreenColor the value of field
      * 'trafficLightingGreenColor'.
      */
-    public void setTrafficLightingGreenColor(java.lang.String trafficLightingGreenColor)
-    {
-        this._trafficLightingGreenColor = trafficLightingGreenColor;
-    } //-- void setTrafficLightingGreenColor(java.lang.String) 
+    public void setTrafficLightingGreenColor(final java.lang.String trafficLightingGreenColor) {
+        this.trafficLightingGreenColor = trafficLightingGreenColor;
+    }
 
     /**
      * Sets the value of field 'trafficLightingGreenValue'.
@@ -2336,11 +2077,10 @@ public class Field implements java.io.Serializable {
      * @param trafficLightingGreenValue the value of field
      * 'trafficLightingGreenValue'.
      */
-    public void setTrafficLightingGreenValue(double trafficLightingGreenValue)
-    {
-        this._trafficLightingGreenValue = trafficLightingGreenValue;
-        this._has_trafficLightingGreenValue = true;
-    } //-- void setTrafficLightingGreenValue(double) 
+    public void setTrafficLightingGreenValue(final double trafficLightingGreenValue) {
+        this.trafficLightingGreenValue = trafficLightingGreenValue;
+        this._hastrafficLightingGreenValue = true;
+    }
 
     /**
      * Sets the value of field 'trafficLightingRedColor'.
@@ -2348,10 +2088,9 @@ public class Field implements java.io.Serializable {
      * @param trafficLightingRedColor the value of field
      * 'trafficLightingRedColor'.
      */
-    public void setTrafficLightingRedColor(java.lang.String trafficLightingRedColor)
-    {
-        this._trafficLightingRedColor = trafficLightingRedColor;
-    } //-- void setTrafficLightingRedColor(java.lang.String) 
+    public void setTrafficLightingRedColor(final java.lang.String trafficLightingRedColor) {
+        this.trafficLightingRedColor = trafficLightingRedColor;
+    }
 
     /**
      * Sets the value of field 'trafficLightingRedValue'.
@@ -2359,11 +2098,10 @@ public class Field implements java.io.Serializable {
      * @param trafficLightingRedValue the value of field
      * 'trafficLightingRedValue'.
      */
-    public void setTrafficLightingRedValue(double trafficLightingRedValue)
-    {
-        this._trafficLightingRedValue = trafficLightingRedValue;
-        this._has_trafficLightingRedValue = true;
-    } //-- void setTrafficLightingRedValue(double) 
+    public void setTrafficLightingRedValue(final double trafficLightingRedValue) {
+        this.trafficLightingRedValue = trafficLightingRedValue;
+        this._hastrafficLightingRedValue = true;
+    }
 
     /**
      * Sets the value of field 'trafficLightingUseAbsoluteValue'.
@@ -2371,11 +2109,10 @@ public class Field implements java.io.Serializable {
      * @param trafficLightingUseAbsoluteValue the value of field
      * 'trafficLightingUseAbsoluteValue'.
      */
-    public void setTrafficLightingUseAbsoluteValue(boolean trafficLightingUseAbsoluteValue)
-    {
-        this._trafficLightingUseAbsoluteValue = trafficLightingUseAbsoluteValue;
-        this._has_trafficLightingUseAbsoluteValue = true;
-    } //-- void setTrafficLightingUseAbsoluteValue(boolean) 
+    public void setTrafficLightingUseAbsoluteValue(final boolean trafficLightingUseAbsoluteValue) {
+        this.trafficLightingUseAbsoluteValue = trafficLightingUseAbsoluteValue;
+        this._hastrafficLightingUseAbsoluteValue = true;
+    }
 
     /**
      * Sets the value of field 'trafficLightingUseOppositeLogic'.
@@ -2383,11 +2120,10 @@ public class Field implements java.io.Serializable {
      * @param trafficLightingUseOppositeLogic the value of field
      * 'trafficLightingUseOppositeLogic'.
      */
-    public void setTrafficLightingUseOppositeLogic(boolean trafficLightingUseOppositeLogic)
-    {
-        this._trafficLightingUseOppositeLogic = trafficLightingUseOppositeLogic;
-        this._has_trafficLightingUseOppositeLogic = true;
-    } //-- void setTrafficLightingUseOppositeLogic(boolean) 
+    public void setTrafficLightingUseOppositeLogic(final boolean trafficLightingUseOppositeLogic) {
+        this.trafficLightingUseOppositeLogic = trafficLightingUseOppositeLogic;
+        this._hastrafficLightingUseOppositeLogic = true;
+    }
 
     /**
      * Sets the value of field 'trafficLightingYellowColor'.
@@ -2395,10 +2131,9 @@ public class Field implements java.io.Serializable {
      * @param trafficLightingYellowColor the value of field
      * 'trafficLightingYellowColor'.
      */
-    public void setTrafficLightingYellowColor(java.lang.String trafficLightingYellowColor)
-    {
-        this._trafficLightingYellowColor = trafficLightingYellowColor;
-    } //-- void setTrafficLightingYellowColor(java.lang.String) 
+    public void setTrafficLightingYellowColor(final java.lang.String trafficLightingYellowColor) {
+        this.trafficLightingYellowColor = trafficLightingYellowColor;
+    }
 
     /**
      * Sets the value of field 'trafficLightingYellowValue'.
@@ -2406,22 +2141,20 @@ public class Field implements java.io.Serializable {
      * @param trafficLightingYellowValue the value of field
      * 'trafficLightingYellowValue'.
      */
-    public void setTrafficLightingYellowValue(double trafficLightingYellowValue)
-    {
-        this._trafficLightingYellowValue = trafficLightingYellowValue;
-        this._has_trafficLightingYellowValue = true;
-    } //-- void setTrafficLightingYellowValue(double) 
+    public void setTrafficLightingYellowValue(final double trafficLightingYellowValue) {
+        this.trafficLightingYellowValue = trafficLightingYellowValue;
+        this._hastrafficLightingYellowValue = true;
+    }
 
     /**
      * Sets the value of field 'type'.
      * 
      * @param type the value of field 'type'.
      */
-    public void setType(int type)
-    {
-        this._type = type;
-        this._has_type = true;
-    } //-- void setType(int) 
+    public void setType(final int type) {
+        this.type = type;
+        this._hastype = true;
+    }
 
     /**
      * Sets the value of field 'useBackgroundColor'.
@@ -2429,22 +2162,20 @@ public class Field implements java.io.Serializable {
      * @param useBackgroundColor the value of field
      * 'useBackgroundColor'.
      */
-    public void setUseBackgroundColor(boolean useBackgroundColor)
-    {
-        this._useBackgroundColor = useBackgroundColor;
-        this._has_useBackgroundColor = true;
-    } //-- void setUseBackgroundColor(boolean) 
+    public void setUseBackgroundColor(final boolean useBackgroundColor) {
+        this.useBackgroundColor = useBackgroundColor;
+        this._hasuseBackgroundColor = true;
+    }
 
     /**
      * Sets the value of field 'useChart'.
      * 
      * @param useChart the value of field 'useChart'.
      */
-    public void setUseChart(boolean useChart)
-    {
-        this._useChart = useChart;
-        this._has_useChart = true;
-    } //-- void setUseChart(boolean) 
+    public void setUseChart(final boolean useChart) {
+        this.useChart = useChart;
+        this._hasuseChart = true;
+    }
 
     /**
      * Sets the value of field 'useGroupFooterBackgroundColor'.
@@ -2452,22 +2183,20 @@ public class Field implements java.io.Serializable {
      * @param useGroupFooterBackgroundColor the value of field
      * 'useGroupFooterBackgroundColor'.
      */
-    public void setUseGroupFooterBackgroundColor(boolean useGroupFooterBackgroundColor)
-    {
-        this._useGroupFooterBackgroundColor = useGroupFooterBackgroundColor;
-        this._has_useGroupFooterBackgroundColor = true;
-    } //-- void setUseGroupFooterBackgroundColor(boolean) 
+    public void setUseGroupFooterBackgroundColor(final boolean useGroupFooterBackgroundColor) {
+        this.useGroupFooterBackgroundColor = useGroupFooterBackgroundColor;
+        this._hasuseGroupFooterBackgroundColor = true;
+    }
 
     /**
      * Sets the value of field 'useItemHide'.
      * 
      * @param useItemHide the value of field 'useItemHide'.
      */
-    public void setUseItemHide(boolean useItemHide)
-    {
-        this._useItemHide = useItemHide;
-        this._has_useItemHide = true;
-    } //-- void setUseItemHide(boolean) 
+    public void setUseItemHide(final boolean useItemHide) {
+        this.useItemHide = useItemHide;
+        this._hasuseItemHide = true;
+    }
 
     /**
      * Sets the value of field 'useTrafficLighting'.
@@ -2475,11 +2204,10 @@ public class Field implements java.io.Serializable {
      * @param useTrafficLighting the value of field
      * 'useTrafficLighting'.
      */
-    public void setUseTrafficLighting(boolean useTrafficLighting)
-    {
-        this._useTrafficLighting = useTrafficLighting;
-        this._has_useTrafficLighting = true;
-    } //-- void setUseTrafficLighting(boolean) 
+    public void setUseTrafficLighting(final boolean useTrafficLighting) {
+        this.useTrafficLighting = useTrafficLighting;
+        this._hasuseTrafficLighting = true;
+    }
 
     /**
      * Sets the value of field 'verticalAlignment'.
@@ -2487,36 +2215,31 @@ public class Field implements java.io.Serializable {
      * @param verticalAlignment the value of field
      * 'verticalAlignment'.
      */
-    public void setVerticalAlignment(java.lang.String verticalAlignment)
-    {
-        this._verticalAlignment = verticalAlignment;
-    } //-- void setVerticalAlignment(java.lang.String) 
+    public void setVerticalAlignment(final java.lang.String verticalAlignment) {
+        this.verticalAlignment = verticalAlignment;
+    }
 
     /**
      * Sets the value of field 'width'.
      * 
      * @param width the value of field 'width'.
      */
-    public void setWidth(java.math.BigDecimal width)
-    {
-        this._width = width;
-    } //-- void setWidth(java.math.BigDecimal) 
+    public void setWidth(final java.math.BigDecimal width) {
+        this.width = width;
+    }
 
     /**
      * Sets the value of field 'widthLocked'.
      * 
      * @param widthLocked the value of field 'widthLocked'.
      */
-    public void setWidthLocked(boolean widthLocked)
-    {
-        this._widthLocked = widthLocked;
-        this._has_widthLocked = true;
-    } //-- void setWidthLocked(boolean) 
+    public void setWidthLocked(final boolean widthLocked) {
+        this.widthLocked = widthLocked;
+        this._haswidthLocked = true;
+    }
 
     /**
-     * Method unmarshal
-     * 
-     * 
+     * Method unmarshal.
      * 
      * @param reader
      * @throws org.exolab.castor.xml.MarshalException if object is
@@ -2526,11 +2249,9 @@ public class Field implements java.io.Serializable {
      * @return the unmarshaled
      * org.pentaho.jfreereport.castormodel.reportspec.Field
      */
-    public static org.pentaho.jfreereport.castormodel.reportspec.Field unmarshal(java.io.Reader reader)
-        throws org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException
-    {
-        return (org.pentaho.jfreereport.castormodel.reportspec.Field) Unmarshaller.unmarshal(org.pentaho.jfreereport.castormodel.reportspec.Field.class, reader);
-    } //-- org.pentaho.jfreereport.castormodel.reportspec.Field unmarshal(java.io.Reader) 
+    public static org.pentaho.jfreereport.castormodel.reportspec.Field unmarshal(final java.io.Reader reader) throws org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException {
+        return (org.pentaho.jfreereport.castormodel.reportspec.Field) org.exolab.castor.xml.Unmarshaller.unmarshal(org.pentaho.jfreereport.castormodel.reportspec.Field.class, reader);
+    }
 
     /**
      * 
@@ -2538,11 +2259,9 @@ public class Field implements java.io.Serializable {
      * @throws org.exolab.castor.xml.ValidationException if this
      * object is an invalid instance according to the schema
      */
-    public void validate()
-        throws org.exolab.castor.xml.ValidationException
-    {
+    public void validate() throws org.exolab.castor.xml.ValidationException {
         org.exolab.castor.xml.Validator validator = new org.exolab.castor.xml.Validator();
         validator.validate(this);
-    } //-- void validate() 
+    }
 
 }

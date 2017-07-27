@@ -29,13 +29,13 @@
 	</target>
 
 	<target name="generate-castor-src" depends="init" description="Generate Java source files from XSD.">
-		<taskdef name="castor-srcgen" classname="org.exolab.castor.tools.ant.taskdefs.CastorSourceGenTask" classpathref="classpath" />
+		<taskdef name="castor-srcgen" classname="org.castor.anttask.CastorCodeGenTask" classpathref="classpath" />
 		<castor-srcgen file="${report-spec-xsd}" todir="src" package="org.pentaho.jfreereport.castormodel.reportspec" types="j2" warnings="false" testable="false"/>
 		<!--castor-srcgen file="${report-xsd}" todir="src" package="org.pentaho.jfreereport.castormodel.jfree" types="j2" warnings="false" /-->
 	</target>
 
 	<target name="generate-castor-src-nomarshall" depends="init" description="Generate Java source files from XSD.">
-		<taskdef name="castor-srcgen" classname="org.exolab.castor.tools.ant.taskdefs.CastorSourceGenTask" classpathref="classpath" />
+		<taskdef name="castor-srcgen" classname="org.castor.anttask.CastorCodeGenTask" classpathref="classpath" />
 		<castor-srcgen file="${report-spec-xsd}" todir="src" package="org.pentaho.jfreereport.castormodel.reportspec" types="j2" warnings="false" nomarshall="true" testable="false"/>
 		<!-- castor-srcgen file="${report-xsd}" todir="src" package="org.pentaho.jfreereport.castormodel.jfree" types="j2" warnings="false" nomarshall="true"/-->
 	</target>

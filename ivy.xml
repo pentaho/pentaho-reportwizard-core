@@ -6,7 +6,7 @@
     <configurations>
     	<conf name="default"/>
     	<conf name="test" visibility="private"/>
-    	<conf name="codegen" visibility="private"/>
+    	<conf name="codegen" visibility="private" extends="default"/>
     	<conf name="source"/>
     </configurations>
     
@@ -17,8 +17,13 @@
     
     <dependencies defaultconf="default->default">
     	<dependency org="commons-logging" name="commons-logging" rev="1.1" />
-    	<dependency org="commons-lang" name="commons-lang" rev="2.2" />
-    	<dependency org="org.codehaus.castor" name="castor" rev="1.0.5" transitive="false" conf="codegen->default"/>
+    	<dependency org="org.apache.commons" name="commons-lang3" rev="3.0" />
+		  <dependency org="org.codehaus.castor" name="castor-anttasks" rev="1.4.1" transitive="false" conf="codegen->default"/>
+      <dependency org="org.codehaus.castor" name="castor-codegen" rev="1.4.1" transitive="false" conf="codegen->default"/>
+      <dependency org="org.codehaus.castor" name="castor-xml" rev="1.4.1" transitive="false" conf="codegen->default"/>
+      <dependency org="org.codehaus.castor" name="castor-core" rev="1.4.1" transitive="false" conf="codegen->default"/>
+      <dependency org="org.codehaus.castor" name="castor-xml-schema" rev="1.4.1" transitive="false" conf="codegen->default"/>
+
 	    <dependency org="dom4j" name="dom4j" rev="1.6.1">
 	      <exclude org="xml-apis" name="xml-apis" />
 	    </dependency>
