@@ -1,9 +1,9 @@
-#Wed Jun 28 18:26:59 MSK 2017
-org.pentaho.jfreereport.castormodel.reportspec.ReportSpec=org.pentaho.jfreereport.castormodel.reportspec.descriptors.ReportSpecDescriptor
+#Mon Jan 29 11:16:17 EST 2018
 --=listing properties --
+org.pentaho.jfreereport.castormodel.reportspec.ReportSpec=org.pentaho.jfreereport.castormodel.reportspec.descriptors.ReportSpecDescriptor
 org.pentaho.jfreereport.castormodel.reportspec.Field=org.pentaho.jfreereport.castormodel.reportspec.descriptors.FieldDescriptor
 org.pentaho.jfreereport.castormodel.reportspec.Series=org.pentaho.jfreereport.castormodel.reportspec.descriptors.SeriesDescriptor
-org.pentaho.jfreereport.castormodel.reportspec.ReportSpecChoice=org.pentaho.jfreereport.castormodel.reportspec.descriptors.ReportSpecChoiceDescriptor
 org.pentaho.jfreereport.castormodel.reportspec.FieldMapping=org.pentaho.jfreereport.castormodel.reportspec.descriptors.FieldMappingDescriptor
+org.pentaho.jfreereport.castormodel.reportspec.ReportSpecChoice=org.pentaho.jfreereport.castormodel.reportspec.descriptors.ReportSpecChoiceDescriptor
 org.pentaho.jfreereport.castormodel.reportspec.Watermark=org.pentaho.jfreereport.castormodel.reportspec.descriptors.WatermarkDescriptor
 org.pentaho.jfreereport.castormodel.reportspec.Chart=org.pentaho.jfreereport.castormodel.reportspec.descriptors.ChartDescriptor
