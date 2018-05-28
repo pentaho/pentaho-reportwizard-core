@@ -1,4 +1,4 @@
-#Wed Jun 28 18:26:59 MSK 2017
+#Mon May 28 08:24:16 EDT 2018
 org.pentaho.jfreereport.castormodel.reportspec.ReportSpec=org.pentaho.jfreereport.castormodel.reportspec.descriptors.ReportSpecDescriptor
 --=listing properties --
 org.pentaho.jfreereport.castormodel.reportspec.Field=org.pentaho.jfreereport.castormodel.reportspec.descriptors.FieldDescriptor
