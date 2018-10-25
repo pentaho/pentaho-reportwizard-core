@@ -10,7 +10,7 @@
   <parent>
     <groupId>org.pentaho</groupId>
     <artifactId>pentaho-ce-jar-parent-pom</artifactId>
-    <version>8.1.0.0-SNAPSHOT</version>
+    <version>8.1.0.5-646</version>
   </parent>
 
   <licenses>
@@ -34,7 +34,7 @@
     <commons-logging.version>1.1</commons-logging.version>
     <dom4j.version>1.6.1</dom4j.version>
     <junit.version>4.3.1</junit.version>
-    <pentaho-reporting.version>${project.version}</pentaho-reporting.version>
+    <pentaho-reporting.version>8.1.0.5-646</pentaho-reporting.version>
     <license.licenseName>lgpl_v2_1</license.licenseName>
   </properties>
 
