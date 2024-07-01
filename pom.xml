@@ -10,7 +10,7 @@
   <parent>
     <groupId>org.pentaho</groupId>
     <artifactId>pentaho-ce-jar-parent-pom</artifactId>
-    <version>10.1.0.0-SNAPSHOT</version>
+    <version>10.1.0.1-348</version>
   </parent>
 
   <licenses>
@@ -32,7 +32,7 @@
     <castor-maven-plugin.version>2.1</castor-maven-plugin.version>
     <commons-lang3.version>3.0</commons-lang3.version>
     <junit.version>4.3.1</junit.version>
-    <pentaho-reporting.version>10.1.0.0-SNAPSHOT</pentaho-reporting.version>
+    <pentaho-reporting.version>10.1.0.1-348</pentaho-reporting.version>
     <license.licenseName>lgpl_v2_1</license.licenseName>
   </properties>
 
