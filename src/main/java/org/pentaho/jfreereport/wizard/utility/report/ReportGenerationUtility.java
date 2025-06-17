@@ -33,7 +33,6 @@ import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.dom.DOMDocumentFactory;
 import org.dom4j.io.OutputFormat;
-import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
 import org.pentaho.jfreereport.castormodel.reportspec.Chart;
 import org.pentaho.jfreereport.castormodel.reportspec.Field;
@@ -342,20 +341,6 @@ public class ReportGenerationUtility {
         label.setText( f.getDisplayName() );
         percentSum += width;
       }
-    }
-  }
-
-  public static void mergeTemplate( File templateFile, File generatedJFreeReportFile, OutputStream mergeStream ) {
-    if ( !templateFile.exists() || !generatedJFreeReportFile.exists() ) {
-      return;
-    }
-    SAXReader reader = new SAXReader( false );
-    try {
-      Document templateDoc = reader.read( templateFile );
-      Document generatedDoc = reader.read( generatedJFreeReportFile );
-      mergeTemplate( templateDoc, generatedDoc, mergeStream );
-    } catch ( Exception e ) {
-      getLogger().error( e.getMessage(), e );
     }
   }
 

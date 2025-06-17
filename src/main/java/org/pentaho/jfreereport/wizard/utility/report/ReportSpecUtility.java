@@ -22,14 +22,11 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.sql.Types;
 import java.util.Enumeration;
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
 import org.dom4j.Document;
 import org.dom4j.Element;
-import org.dom4j.Node;
-import org.dom4j.io.SAXReader;
 import org.pentaho.jfreereport.castormodel.reportspec.Chart;
 import org.pentaho.jfreereport.castormodel.reportspec.Field;
 import org.pentaho.jfreereport.castormodel.reportspec.ReportSpec;
@@ -327,25 +324,6 @@ public class ReportSpecUtility {
     return jfreeExpression;
   }
 
-  private static HashMap templateGroupMap = new HashMap();
-
-  public static int getNumberOfGroupsInTemplate( String templatePath ) {
-    // create DOM for templateFile
-    if ( templatePath == null ) {
-      return 0;
-    }
-    SAXReader reader = new SAXReader();
-    try {
-      if ( !templateGroupMap.containsKey( templatePath ) ) {
-        Document templateDoc = reader.read( templatePath );
-        templateGroupMap.put( templatePath, new Integer( getNumberOfGroupsInTemplate( templateDoc ) ) );
-      }
-      return ( (Integer) templateGroupMap.get( templatePath ) ).intValue();
-    } catch ( Exception e ) {
-    }
-    return 0;
-  }
-
   public static int getNumberOfGroupsInTemplate( Document templateDoc ) {
     int numGroups = 0;
     try {
@@ -364,82 +342,4 @@ public class ReportSpecUtility {
     return numGroups;
   }
 
-  public static List<Element> getParserConfigElements( String reportPath ) {
-    List<Element> elements = new LinkedList<Element>();
-    SAXReader reader = new SAXReader();
-    try {
-      File in = new File( reportPath );
-      Document document = reader.read( in );
-      List parserConfigProperties = document.selectNodes( "/report/parser-config/*" ); //$NON-NLS-1$
-      for ( int i = 0; i < parserConfigProperties.size(); i++ ) {
-        Element parserConfigProperty = (Element) parserConfigProperties.get( i );
-        elements.add( parserConfigProperty );
-      }
-    } catch ( Exception e ) {
-      e.printStackTrace( System.err );
-    }
-    return elements;
-  }
-
-  public static boolean doesHeaderExistForGroup( String templateFileName, int groupNumber ) {
-    try {
-      File templateFile = new File( templateFileName );
-      SAXReader reader = new SAXReader();
-      Document templateDoc = reader.read( templateFile );
-      List groups = templateDoc.selectNodes( "/report/groups/*" ); //$NON-NLS-1$
-      Element groupElement = (Element) groups.get( groupNumber );
-      Element groupHeader = (Element) groupElement.selectSingleNode( "groupheader" ); //$NON-NLS-1$
-      if ( groupHeader != null ) {
-        return true;
-      }
-    } catch ( Exception e ) {
-    }
-    return false;
-  }
-
-  public static List getParserConfigKeys( String reportPath, String type ) {
-    List list = new LinkedList();
-    SAXReader reader = new SAXReader();
-    try {
-      File in = new File( reportPath );
-      Document document = reader.read( in );
-      List parserConfigProperties = document.selectNodes( "/report/parser-config/*" ); //$NON-NLS-1$
-      for ( int i = 0; i < parserConfigProperties.size(); i++ ) {
-        Element parserConfigProperty = (Element) parserConfigProperties.get( i );
-        Node commentNode = parserConfigProperty.selectSingleNode( "comment()" ); //$NON-NLS-1$
-        if ( commentNode != null ) {
-          String commentString = commentNode.getText().trim();
-          if ( commentString.equalsIgnoreCase( type ) ) {
-            list.add( parserConfigProperty.attributeValue( "name" ) ); //$NON-NLS-1$
-          }
-        }
-      }
-    } catch ( Exception e ) {
-      e.printStackTrace( System.err );
-    }
-    return list;
-  }
-
-  public static List getParserConfigValues( String reportPath, String type ) {
-    List list = new LinkedList();
-    SAXReader reader = new SAXReader();
-    try {
-      File in = new File( reportPath );
-      Document document = reader.read( in );
-      List parserConfigProperties = document.selectNodes( "/report/parser-config/*" ); //$NON-NLS-1$
-      for ( int i = 0; i < parserConfigProperties.size(); i++ ) {
-        Element parserConfigProperty = (Element) parserConfigProperties.get( i );
-        Node commentNode = parserConfigProperty.selectSingleNode( "comment()" ); //$NON-NLS-1$
-        if ( commentNode != null ) {
-          String commentString = commentNode.getText().trim();
-          if ( commentString.equalsIgnoreCase( type ) ) {
-            list.add( parserConfigProperty.getText() ); //$NON-NLS-1$
-          }
-        }
-      }
-    } catch ( Exception e ) {
-      e.printStackTrace( System.err );
-    }
-    return list;
-  }
 }
